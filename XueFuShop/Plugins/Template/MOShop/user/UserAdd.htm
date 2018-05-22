@@ -1,0 +1,133 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>员工<$base.GetAddUpdate()$></h1>
+                </div>
+                <form action="" method="post" id="add_staff" autocomplete="off">
+                    <html:if expression="base.ExistsSonCompany">
+                    <div class="form_group">
+                        <label class="form_txt" for="CompanyID">公司名称：</label>
+                        <select class="form_select" id="CompanyID" name="CompanyID"<$(base.UserID == userID?" disabled":"") $>>
+                        <option value="">请选择公司</option>
+                        <html:foreach expression="CompanyInfo company in SonCompanyList">
+                        <option value="<$company.CompanyId$>"<$(company.CompanyId == user.CompanyID?" selected":"") $>><$company.CompanyName$></option>
+                        </html:foreach>
+                        </select>
+                    </div>
+                    </html:if>
+                    <div class="form_group">
+                        <label class="form_txt" for="UserName"><span class="red">*</span>用户ID：</label>
+                        <input class="form_con" type="text" name="UserName" id="UserName" value="<$user.UserName$>"<$(user.ID > 0?" disabled":"")$>>
+                        <div class="tip">5-20位以字母开头、可带数字"_"、"."的字串</div>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="Mobile"><span class="red">*</span>移动电话：</label>
+                        <input class="form_con" type="text" name="Mobile" id="Mobile" value="<$user.Mobile$>"<$((user.ID > 0 && !base.CompareUserPower("UpdateMobile",PowerCheckType.Single))?" disabled":"")$>>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="Email"><span class="red">*</span>电子邮箱：</label>
+                        <input class="form_con" type="email" name="Email" id="Email" value="<$user.Email$>">
+                    </div>
+                    <html:if expression="userID < 0">
+                    <div class="form_group">
+                        <label class="form_txt" for="UserPassword"><span class="red">*</span>密码：</label>
+                        <input class="form_con" type="password" name="UserPassword" id="UserPassword">
+                        <div class="tip">密码长度大于6位少于16位</div>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="UserPassword2"><span class="red">*</span>重复密码：</label>
+                        <input class="form_con" type="password" name="UserPassword2" id="UserPassword2">
+                    </div>
+                    </html:if>
+                    <div class="form_group">
+                        <label class="form_txt" for="RealName"><span class="red">*</span>真实姓名：</label>
+                        <input class="form_con" type="text" name="RealName" id="RealName" value="<$user.RealName$>"<$((user.ID > 0 && !base.CompareUserPower("UpdateRealName",PowerCheckType.Single))?" disabled":"")$>>
+                    </div>
+                    <html:if expression="base.CompareUserPower("ShowIDCard",PowerCheckType.Single)">
+                    <div class="form_group">
+                        <label class="form_txt" for="IDCard"><span class="red">*</span>身份证号码：</label>
+                        <input class="form_con" type="text" name="IDCard" id="IDCard" value="<$user.IDCard$>">
+                    </div>
+                    </html:if>
+                    <html:if expression="base.CompareUserPower("ShowEntryDate",PowerCheckType.Single)">
+                        <div class="form_group">
+                            <label class="form_txt" for="EntryDate"><span class="red">*</span>入职时间：</label>
+                            <input class="form_con Wdate" type="text" name="EntryDate" id="EntryDate" value="<$user.EntryDate$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})">
+                        </div>
+                    </html:if>
+                    <div class="form_group">
+                        <label class="form_txt" for="">性别：</label>
+                        <input name="Sex" id="Sex_1" type="radio" value="1" checked>
+                        <label class="form_radio_lbl" for="Sex_0">男</label>
+                        <input name="Sex" id="Sex_2" type="radio" value="2"<$(user.Sex == 2?" checked":"")$>>
+                        <label class="form_radio_lbl" for="Sex_1">女</label>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for=""><span class="red">*</span>工作岗位：</label>
+                        <select class="form_select department" name="Department" id="Department" required>
+                            <option value="">请选择部门</option>
+                            <html:foreach expression="PostInfo department in departmentList">
+                            <option value="<$department.PostId$>"<$(department.PostId == user.Department?" selected":"")$>><$department.PostName$></option>
+                            </html:foreach>
+                        </select>
+                        <select class="form_select postlist<$(userID < 0?" hide":"")$>" name="WorkingPostID" id="WorkingPostID" required>
+                            <option value="">请选择岗位</option>
+                            <html:foreach expression="PostInfo studyPost in workingPostList">
+                            <option value="<$studyPost.PostId$>"<$(studyPost.PostId == user.WorkingPostID?" selected":"")$>><$studyPost.PostName$></option>
+                            </html:foreach>
+                        </select>
+                        <label class="form_txt originalpost" for="">店内岗位：</label>
+                        <input class="form_con postname" type="text" name="WorkingPostName" id="WorkingPostName" value="<$user.PostName$>">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for=""><span class="red">*</span>学习岗位：</label>
+                        <select class="form_select" name="StudyPostID" id="StudyPostID" required>
+                            <option value="">请选择学习岗位</option>
+                            <html:foreach expression="PostInfo studyPost in studyPostList">
+                            <option value="<$studyPost.PostId$>"<$(studyPost.PostId == user.StudyPostID?" selected":"")$>><$studyPost.PostName$></option>
+                            </html:foreach>
+                        </select>
+                        <div class="tip">正在进行哪个岗位的课程学习</div>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="QQ">QQ：</label>
+                        <input class="form_con" type="text" name="QQ" id="QQ" value="<$user.QQ$>">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt">状态：</label>
+                        <input name="Status" type="radio" value="<$(int)UserState.Normal$>"<$(user.Status == (int)UserState.Normal?" checked":"")$> required>
+                        <label>正常</label>
+                        <input name="Status" type="radio" value="<$(int)UserState.Free$>"<$(user.Status == (int)UserState.Free?" checked":"")$>>
+                        <label>不考核</label>
+                        <input name="Status" type="radio" value="<$(int)UserState.Frozen$>"<$(user.Status == (int)UserState.Frozen?" checked":"")$>>
+                        <label>冻结</label>
+                        <input name="Status" type="radio" value="<$(int)UserState.Other$>"<$(user.Status == (int)UserState.Other?" checked":"")$>>
+                        <label>其他</label>
+                    </div>
+                    <html:if expression="base.CompareUserPower("AddUser,UpdateUser",PowerCheckType.OR)">
+                    <div class="form_group form_submit action">
+                        <input class="form_zjyg_button" type="submit" value="确定">
+                        <input type="hidden" name="Action" value="PostBack" />
+                        <input type="hidden" name="UserID" id="UserID" value="<$user.ID$>" />
+                    </div>
+                    </html:if>
+                </form>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+    <script type="text/javascript" src="<html:templatePath>/My97DatePicker/WdatePicker.js"></script>
+</body>
+</html>

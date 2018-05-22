@@ -1,0 +1,64 @@
+
+.a-down{color:#ff6600;text-decoration:underline; }
+.intro-box{border:1px solid #ccc;margin:10px 0;padding:15px;background:#f3f3f3;line-height:1.8em; }
+.p-other{font-size:1.17em;margin:20px 0 10px; }
+.p-author{font-size:1.17em;text-align:right;margin:0 10px 10px; }
+.p-author a{color:#cc0000;text-decoration:underline; }
+.p-author a:hover{text-decoration:none;}
+.each-box{overflow:hidden;clear:both;padding:15px 0; }
+.intro-area{float:left;margin-left:20px;display:inline;width:300px;line-height:1.7em; }
+.h2-title{font-size:1.17em;padding:5px 0 10px;color:#cc0000;}
+
+a.a-mail{color:#ff6600;text-decoration:underline;}
+a.a-mail:hover{text-decoration:none;}
+
+
+
+
+
+/* so-popbox */
+.so-popbox .s-sopop-close{background:url(../images/ccico.png) no-repeat;}
+.so-popConfirm .so-popbox-cont{background:url(../images/icon-tip.png) no-repeat ;}
+.so-openmask{position:fixed;_position:absolute;top:-2px;left:0px;width:100%;height:0px;background:#000;filter:alpha(opacity=40);opacity:0.4;z-index:1100;}
+.so-popbox{border:1px solid #777;background:#fff;text-align:left;z-index:1120;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;box-shadow:0px 0px 12px #666;-webkit-box-shadow:0px 0px 12px #666;-moz-box-shadow:0px 0px 12px #666;height: 205px;}
+.h2-sopop{height:32px;line-height:31px;background:#26c1a2;padding-left:15px;font-weight:bold;-moz-border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0;border-bottom:1px solid #dbdbdb;font-size: 14px;color: #fff;}
+
+
+
+.h2-sopop-move{cursor:move;}
+.so-popbox .s-sopop-close{position:absolute;top:2px;right:4px;width:25px;height:25px;background-position:0 -133px; text-indent:-999em; overflow:hidden; cursor:hand; cursor:pointer;}
+.so-popbox .s-sopop-out-close{top:-12px;right:-12px;background-position:0 0;}
+.so-popbox-cont{position: relative;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px; margin: 0 auto; width: 279px; height: 120px;padding-top: 50px;overflow: hidden;}
+
+.so-popbox-cont .resphone-pic{float: left;width: 42px;height: 42px;display: block;}
+.so-popbox-cont .soboxphone-right{float: left;margin-left: 10px;width: 220px;}
+.so-popbox-cont .soboxphone-right .soboxphone-yz{font-size: 14px;color: #4c4c4c;}
+.so-popbox-cont .soboxphone-right .soboxphone-yz2{color: #999;padding-top: 4px;padding-bottom: 10px;}
+.so-popbox-cont .soboxphone-right .yzm{ width: 110px;height: 35px; border: 1px solid #ccc; line-height: 35px; padding: 0 5px;float: left;}
+.so-popbox-cont .soboxphone-right .yzm2{width: 75px;height: 37px; border: 1px solid #ccc; line-height: 35px;margin-left: 15px;font-size: 14px;color: #fff;background-color: #18bd9c;}
+.so-popbox-cont .soboxphone-right .yz-a{width: 75px; height: 34px; border: 1px solid #ccc; line-height: 35px; margin-left: 5px; font-size: 14px; color: #fff; background-color: #18bd9c; display: block; text-align: center; float: left;}
+
+
+
+.so-popbox-cont .soboxphone-right .send{margin-top: 5px;}
+.p-so-popBtn{position: absolute; /* left: 59%; bottom: 40px;*/   left: 105px; bottom: 1px; }
+.so-popAlert .so-popbox-cont{padding:15px 15px 10px 15px;}
+.so-popConfirm .so-popbox-cont{padding:20px 20px 20px 85px;background-position:50px 16px;}
+
+.so-popTip-1{border:1px solid #f4b23f;background:#fff2c1;box-shadow:1px 1px 2px #bbb;-webkit-box-shadow:1px 1px 2px #bbb;-moz-box-shadow:1px 1px 2px #bbb;}
+.so-popTip-1 .so-popbox-cont{padding:8px;}
+.so-popTip-2{border:1px solid #ff812d;background:#ffffd0;color:#f00;}
+.so-popAlert .p-so-popBtn{padding:5px 0 15px;}
+.so-loading{border:0px solid #fff;font-size:1.18em;box-shadow:1px 1px 1px #666;-webkit-box-shadow:1px 1px 1px #666;-moz-box-shadow:1px 1px 1px #666;}
+.so-loading .so-popbox-cont{padding:20px;text-align:center;background:url(../images/loading.gif) no-repeat center 45%;}
+.so-loading .s-sopop-close{display:none;}
+a.a-sopop-btn{/*width: 75px;height: 37px; border: 1px solid #ccc;*/ line-height: 35px;/*margin-left: 15px;*/font-size: 14px;/*color: #fff;background-color: #18bd9c;*/display: block;text-align: center;}
+/*span.s-sopop-btn{display: -moz-inline-stack;display:inline-block;*display:inline;*zoom:1;background-position:100% -40px;height:25px;line-height:23px;padding:0 15px 0 0;}*/
+
+/*a.a-sopop-cancel{background-position:0 -70px;color:#444;}*/
+a.a-sopop-cancel span.s-sopop-btn{background-position:100% -70px;}
+
+
+.so-overTip .s-sopop-close{top:-9px;left:25px;width:17px;height:9px;background-position:0 -101px;}
+
+

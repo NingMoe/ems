@@ -1,0 +1,28 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+</head>
+
+<html:if expression="RequestHelper.GetQueryString<string>("v")!="pop"">
+<body>
+	<html:include file="Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        		<div class="art_orderBox">
+                    <div id="CartProductAjax"></div>
+                </div>
+        </div>
+        <html:include file="Foot.htm" />
+<html:else>
+<body class="popCart">
+    <div id="CartProductAjax" class="popCartBox">
+    </div>
+    </html:if>
+		<script language="javascript" type="text/javascript" src="<html:templatePath>/Js/Cart.js" ></script> 
+</body>
+</html>

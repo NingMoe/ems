@@ -1,0 +1,90 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>HR人资报表</h1>
+                </div>
+                <div id="hr_report">
+                    <html:if expression="base.ExistsSonCompany && base.CompareUserPower("ManageGroupCompany",PowerCheckType.Single)">
+                    <form action="" method="get" autocomplete="off">
+                        <div class="form_group form_center">
+                            <label class="form_txt" for="CompanyID">公司：</label>
+                            <select class="form_select form_long" id="CompanyID" name="CompanyID">
+                            <option value="">请选择公司</option>
+                            <html:foreach expression="CompanyInfo company in SonCompanyList">
+                            <option value="<$company.CompanyId$>"<$(company.CompanyId == CompanyID?" selected":"") $>><$company.CompanyName$></option>
+                            </html:foreach>
+                            </select>
+                            <label class="form_txt" for="">截止时间：</label>
+                            <input class="form_con Wdate" type="text" name="SearchEndDate" id="SearchEndDate" value="<$EndDate.ToString("d")$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})">
+                            <input class="form_button" id="SearchButton" type="submit" value="搜 索">
+                            <input type="hidden" name="Action" id="Action" value="Search" >
+                        </div>
+                    </form>
+                    </html:if>
+                    <html:if expression="!base.ExistsSonCompany || Action=="Search" || !base.CompareUserPower("ManageGroupCompany", PowerCheckType.Single)">
+                    <div class="filter_range">
+                        筛选区域<a class="filter_range_btn"><i class="icon-flex"></i><span>展开</span></a>
+                    </div>
+                    <table class="content_select hide">
+                        <tr>
+                            <td class="leftlist">岗位选择<br><a class="select_all" href="javascript:void(0);">[全选/取消]</a></td>
+                            <td class="postname">
+                                <ul class="clearfix checkbox-li">
+                                    <html:foreach expression="PostInfo studyPost in PostList">
+                                    <li data-id="<$studyPost.PostId$>"<$(StringHelper.CompareSingleString(PostIdCondition,studyPost.PostId.ToString())?" class=\"current\"":"")$>><$studyPost.PostName$></li>
+                                    </html:foreach>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="leftlist">通过状态</td>
+                            <td class="tgstate">
+                                <ul class="clearfix">
+                                    <li id="style1" class="current"><span>绿灯</span></li>
+                                    <li id="style2" class="current"><span>紫灯</span></li>
+                                    <li id="style3" class="current"><span>黄灯</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="tips">
+                        <ul class="clearfix">
+                            <li>说明：</li>
+                            <li>绿色代表已通过</li>
+                            <li>黄色代表正在学习的岗位</li>
+                            <li>紫色代表岗位课程已通过但综合认证考试未通过</li>
+                        </ul>
+                    </div>
+                    <div class="ReportList">
+                        <$ReportContentHtml$>
+                    </div>
+                    </html:if>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+    <script type="text/javascript" src="<html:templatePath>/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+var GetCatId=function(){
+    var idstr="0";
+    var Postidstr="";
+    $(".checkbox-li li.current").each(function(){Postidstr=Postidstr+","+$(this).data("id");});
+    window.location.href="HRReport.aspx?Action=Search&PostIdCondition="+Postidstr.substr(1)+"&SearchEndDate=<$EndDate.ToString("d")$>&CompanyID=<$CompanyID$>";
+}
+</script>
+</body>
+</html>

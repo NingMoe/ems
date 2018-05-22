@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="5413" QuestionNum="25" SingleNum="11" MultiNum="1" PanDunNum="13">
+  <Single>
+    <QuestionInfo1 id="145418">
+      <Question>福克斯的原型车为（    ）概念车，这款概念车在那个时代已经非常有超前意识了，具有玻璃纤维车身，更大的18寸轮毂，更强的动力。</Question>
+      <A>Egoista</A>
+      <B>Platz</B>
+      <C>Ghia</C>
+      <D>Instict</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145418</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="145432">
+      <Question>在高配版本的福克斯车型上采用SONY音响设计，配合上（       ）扬声器，形成很好的环绕式的音域效果，犹如坐在剧院内一般。顾问在六方位绕车时也可重点向客户进行演示介绍。</Question>
+      <A>8个</A>
+      <B>9个</B>
+      <C>12个</C>
+      <D>6个</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145432</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="145429">
+      <Question>福克斯的发动机采用了（      ），不仅质量更轻，同时散热性能出色，有助于降低油耗，是目前豪华高档轿车所使用的材质，档次更高。</Question>
+      <A>铜锌合金材质</A>
+      <B>铸铁材质</B>
+      <C>全铝合金材质</C>
+      <D>铝镁合金材质</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145429</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="145433">
+      <Question>福克斯配有（     ）个泊车雷达，并且带有自动泊车功能，可实现平行泊车和垂直泊车，彻底解放了驾驶员双手。无论是在复杂的地下停车场和拥挤的小区环境内，倒车停车更安全。</Question>
+      <A>12个</A>
+      <B>10个</B>
+      <C>4个</C>
+      <D>8个</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145433</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="145420">
+      <Question>福克斯采用箭鱼式造型大灯，并且前大灯配备（    ），在行驶的过程中，无论是后备箱放着重物，或者上下桥、上下坡等情况，通过开启此项功能，都能随时保持大灯的水平视线照射，从而提升行车安全。</Question>
+      <A>大灯高度调节功能</A>
+      <B>远近光灯自动切换功能</B>
+      <C>弯道辅助照明系统</C>
+      <D>伴我回家功能</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145420</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="145422">
+      <Question>福克斯的后悬采用的是（    ），和同级别其他竞争车型相比具有显著优势，对于后轮的动态表现有显著的提升效果，在考虑到了车辆操控性的同时，更兼顾了后排乘员的乘坐舒适性。</Question>
+      <A>拖曳臂式半独立悬挂</A>
+      <B>双横臂式独立悬挂</B>
+      <C>扭力梁式半独立悬挂</C>
+      <D>多连杆式独立悬挂</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145422</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="145428">
+      <Question>福克斯顶配车型的尾灯采用（     ），不仅点亮美观，同时发光速度更快，能够起到很好的警示效果，和豪华高档轿车的尾灯一样。</Question>
+      <A>激光大灯</A>
+      <B>卤素灯</B>
+      <C>氙气灯</C>
+      <D>LED灯</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145428</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="145434">
+      <Question>福克斯的EcoBoost125直喷涡轮增压发动机，除了获得沃德十佳发动机之外，并且连续（      ）获得“年度国际发动机大奖”这项殊荣。我方顾问在介绍发动机技术优势方面可重点向客户提及该发动机的荣誉。</Question>
+      <A>3年</A>
+      <B>4年</B>
+      <C>5年</C>
+      <D>2年</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145434</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="145435">
+      <Question>福克斯配有TVC弯道扭力智能分配系统，能够实现每秒（      ）的频率感应道路变化，同时能让前轮之间的扭力传递更平衡，让车内乘员乘坐舒适度更高。</Question>
+      <A>100次</A>
+      <B>80次</B>
+      <C>30次</C>
+      <D>50次</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145435</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="145424">
+      <Question>福克斯的灯组功能配备非常全面，拥有（       ），它的作用是在车主下班回家之后，发动机熄火后，大灯能延时照明一段时间，帮助车主看清地上的水坑等一些物体，设计非常人性化。</Question>
+      <A>LED日间行车灯</A>
+      <B>伴我回家功能</B>
+      <C>远近光灯自动切换功能</C>
+      <D>弯道辅助照明系统</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145424</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="145425">
+      <Question>福克斯两厢车型的后备箱容积可以达到（      ）的储物空间，并且非常规整。作为家庭用车，无论购物、郊游或者去机场接朋友都不成问题，实用性大大提高。</Question>
+      <A>356L</A>
+      <B>330L</B>
+      <C>320L</C>
+      <D>326L</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145425</QuestionId>
+    </QuestionInfo11>
+  </Single>
+  <Multi>
+    <QuestionInfo1 id="145436">
+      <Question>2017款的福克斯在车载多媒体技术方面使用了SYNC技术，具有（    ）等优势。顾问在六方位绕车时需逐一演示给客户看，并向客户强调这些功能在车主未来的用车生活中能提供很大的帮助，让出行更便捷，同时也是福克斯车型档次和科技化的价值体现。</Question>
+      <A>采用第三代的技术，更先进</A>
+      <B>8英寸电容触控大屏</B>
+      <C>语音识别优化、语音导航功能一应俱全</C>
+      <D>支持Applink和Carplay</D>
+      <Answer>ABCD</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>2</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145436</QuestionId>
+    </QuestionInfo1>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="145444">
+      <Question>福克斯配有~发动机远程控制系统~，在短暂的停留或等待红绿灯时，发动机会自动熄火，当需要再次起步时再发动，在这个过程中更有效节省能耗。</Question>
+      <A>发动机启停系统</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145444</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="145457">
+      <Question>在科技化配备方面，福克斯还拥有~BMS环保智能电池管理系统~，它的工作原理是：蓄电池仅在车辆制动时充电，加速时发动机动力都用于车辆提速，SRC系统降低了发动机负荷，减少了发动机给电池充电的时间，提升动力表现的同时，降低油耗。</Question>
+      <A>SRC电池智能充电系统</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145457</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="145451">
+      <Question>在车身线条方面，福克斯的侧面具有两条俯冲式的车身线条，像运动员起跑的姿势，蓄势待发，增加了其运动气息。而顶部勾勒的车身线条也非常符合空气动力学车身结构设计，降低风阻系数的同时更节省油耗。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145451</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="145449">
+      <Question>福克斯采用A柱~后移~的设计，这样做的目的是：1.让驾驶员获得更大，更广的视野效果 2.大倾角的A柱设计在车辆受到正面撞击时，能更有效地抗击撞击，保证驾驶舱的完整性。</Question>
+      <A>前移</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145449</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="145440">
+      <Question>福克斯的前脸造型采用~直瀑布式格栅~前脸设计，整体的视觉效果非常有冲击力，增加了前脸的力量感和运动气息。</Question>
+      <A>阿斯顿马丁大开口式</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145440</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="145455">
+      <Question>在细节的设计上，福克斯的副驾驶席手套箱内部非常宽大，并且配有植绒设计，物品摆放在其中行驶过程中不会发出声响，非常贴心。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145455</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="145456">
+      <Question>福克斯配有VIS可变进气歧管的技术，当发动机转速较低时，将~缩短~进气歧管的长度，而当发动机转速较高时，将~增长~进气歧管长度，确保车辆更强劲的动力输出，提升动力效能。</Question>
+      <A>增长~缩短</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145456</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="145452">
+      <Question>福克斯配备了~手动儿童安全门锁~，家长带着10岁以下的儿童出行，车主不用下车去后门上进行操作，直接坐在驾驶舱内按下操控键即可，非常方便贴心。</Question>
+      <A>电动儿童安全门锁</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145452</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="145454">
+      <Question>福克斯在整个内饰用料方面非常实在，在仪表台和人体经常接触的地方均采用~硬质塑料材质~，摸上去更具质感，是车型档次和品质工艺的体现。</Question>
+      <A>搪塑工艺</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145454</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="145450">
+      <Question>福克斯采用~旋钮式一键启动功能~，发动车辆更方便快捷，同时也凸显了车型的档次，是豪华高档轿车上的主流配备。</Question>
+      <A>按键式一键启动功能</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145450</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="145437">
+      <Question>第一代的福克斯采用刀锋式悬挂设计，在当时和同级别的车型高尔夫等车型的扭力梁悬挂相比，可以说是独霸市场的技术亮点，兼顾了车辆的操控性和舒适性。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145437</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="145453">
+      <Question>福克斯采用鲨鱼造型式尾灯设计，造型更动感。配合上LED的尾灯，发光速度快，能起到更好的警示效果。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145453</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="145439">
+      <Question>第三代的福克斯车型可以说在动力系统方面全面升级，外观和内饰方面也发生了颠覆性的变化，语音系统更具智能化和科技化。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>145439</QuestionId>
+    </QuestionInfo13>
+  </PanDuan>
+</TestPaper>

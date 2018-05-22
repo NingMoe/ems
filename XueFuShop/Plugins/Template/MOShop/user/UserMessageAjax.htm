@@ -1,0 +1,22 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+                        <html:foreach expression="UserMessageInfo userMessage in userMessageList">
+                        <div class="reply">
+                            <div class="question">
+                                <div class="q-info">
+                                    <span>提问者</span>
+                                    <span class="red pl10"><$userMessage.UserName $></span>
+                                    <em class="pl10"><$userMessage.PostDate $></em>
+                                </div>
+                                <div class="q-con">Q：<$userMessage.Content $></div>
+                            </div>
+                            <html:if expression="!string.IsNullOrEmpty(userMessage.AdminReplyContent)">
+                            <div class="answer">
+                                <div class="a-con">A：<$userMessage.AdminReplyContent $></div>
+                                <span class="red">管理员 于<em class="pl10 pr10"><$userMessage.AdminReplyDate $></em>回复</span>
+                            </div>
+                            </html:if>
+                        </div>
+                        </html:foreach>
+                        <$commonPagerClass.ShowPage()$>

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseAjax.aspx.cs" Inherits="MobileEMS.CourseAjax" %>

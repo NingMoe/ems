@@ -1,0 +1,101 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="./css/bundle-db2c1.css">
+	<link rel="stylesheet" type="text/css" href="./css/order_buy.css">
+    <link rel="stylesheet" type="text/css" href="./css/tip-yellowsimple.css" />
+</head>
+<body>
+    <html:include file="Top.htm" />
+
+	<div class="wrap clearfix logoBar pt100">
+        <div class="position">
+            <p>当前位置：<a href="index.html">首页</a>>><a class="active">订单购买</a><span class="returnhome"><a href="index.html">返回首页</a></span></p>
+        </div>
+        <form action="order_cash.html" enctype="multipart/form-data" method="post">
+            <div class="bgcwhite">
+                <div class="clearfix ntop">
+                    <div class="logo">
+                        <a>结算中心</a>
+                    </div>
+                    <div class="process">
+                        <div class="node">
+                            <i class="icon-checked-1 node-icon"></i><span class="text">确认订单</span>
+                        </div>
+                        <div class="node">
+                            <div class="line"></div><i class="icon-unchecked-2 node-icon"></i><span class="text">支付订单</span>
+                        </div>
+                        <div class="node last">
+                            <div class="line"></div><i class="icon-unchecked-3 node-icon"></i><span class="text">订单完成</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <!--  -->
+                <div class="wrap">
+                    <div class="section detailList">        
+                        <div class="head">
+                            <ul>
+                                <li class="col1"><b>商品清单</b></li>
+                                <li class="col2">原价</li>
+                                <li class="col3">数量</li>
+                                <li class="col4">套餐优惠</li>
+                                <li class="col5">促销优惠</li>
+                                <li class="col6">小计</li>
+                            </ul>
+                        </div>
+                        <div class="body" id="product-area">
+                            <ul class="package master" data-productid="601133" data-producttype="1" data-quantity="1" data-productname="韩语生活会话基础【6月班】">
+                                <li class="col1">韩语生活会话基础【6月班】</li>
+                                <li class="col2">¥1050</li>
+                                <li class="col3">1</li>
+                                <li class="col4">¥0</li>
+                                <li class="col5">¥157.5</li>
+                                <li class="col6">¥892.5</li>
+                            </ul>
+                        </div>
+                        <div class="foot">
+                            <label>合计</label> ¥<span class="total" id="subtotal-price">892.5</span>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+            <div class="section pdlr0" style="border-bottom:none;">
+                <div class="totalPrice">
+                    <div class="wrap">
+                        <span class="label">还需支付</span><span class="price2 ml15">¥</span><span class="price2" id="total-price">892.5</span>
+                        <a href="javascript:;"><input class="sureBtn ml15 mr30" type="submit" name="" id="sureBtn" value="提交订单"></a>
+                    </div>
+                </div>
+                <div class="legaltips"></div>
+            </div>
+        </form>
+    </div>
+
+    <html:include file="Foot.htm" />
+
+    <script type="text/javascript">
+        $(".handle-codeInp").click(function(){
+            $(".fl .codeInp").slideToggle();
+            $(".fl .code-btn").slideToggle();
+        });
+
+        $(".handle-inviteInp").click(function(){
+            $(".fl .inviteInp").slideToggle();
+            $(".fl .invite-btn").slideToggle();
+        });
+    </script>
+
+    <!--<script type="text/javascript">
+    $(function(e) {
+        var vali=new Validators();
+        $("#btn").bind("click", vali.subByJs);
+    });
+    </script>-->
+
+</body>
+</html>

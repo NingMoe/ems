@@ -1,0 +1,63 @@
+<!--头部导航-->
+	<div class="artWarp art_head">
+        		  <div class="linkbox">
+                  			<ul>
+                                    <html:if expression="base.UserID==0">
+                                    <li class="spinner">
+                                    <a href="/EngLish/User/Login.aspx" class="hovlink" >Login</a>
+                                    <html:if expression="LoginPlugins.ReadEnabledLoginPluginsList().Count>0">
+                                    <div class="downlist">
+                                            <html:foreach expression="LoginPluginsInfo loginPlugins in LoginPlugins.ReadEnabledLoginPluginsList()">
+                                            <p><a href="/Plugins/Login/<$loginPlugins.Key$>/Login.aspx?RedirectUrl="><img src="<$loginPlugins.Photo$>" /></a></p>
+                                            </html:foreach><!--
+                                            <p><a href="#"><img src="<html:templatePath>/images/gam_ico05.png"></a></p>
+                                            <p><a href="#"><img src="<html:templatePath>/images/gam_ico04.png"></a></a></p>
+                                            <p><a href="#"><img src="<html:templatePath>/images/gam_ico03.png"></a></a></p>
+                                            <p><a href="#"><img src="<html:templatePath>/images/gam_ico02.png"></a></a></p>
+                                            <p><a href="#"><img src="<html:templatePath>/images/gam_ico01.png"></a></a></p>-->
+                                    </div>
+                                    </html:if>
+                                    </li>
+                                    <li> <a href="/EngLish/User/Register.aspx">Sign up</a></li>
+                                    <html:else><li><a href="/EngLish/User/Index.aspx"><$base.UserName$></a></li>
+                                    <li><a href="/User/Logout.aspx">Logout</a></li></html:if>
+                            		<li><a href="/EngLish/">Home<$CookiesHelper.ReadCookieValue("LanguagePack")$></a></li>
+                                    <li><a href="/Ajax.aspx?Action=ChangeLanguagePack&Language=&Url=<$RequestHelper.RawUrl$>">中文</a></li>
+                                    <li class="spinner">
+                                    <a href="#" class="hovlink" >Share</a>
+                                    <div id="ckepop" class="downlist">
+                                            <!--<p><a href="#"><img src="<html:templatePath>/images/gam_ico05.png"></a></p>
+                                            <p><a href="#"><img src="<html:templatePath>/images/gam_ico04.png"></a></p>
+                                            <p><a href="#"><img src="<html:templatePath>/images/gam_ico03.png"></a></p>
+                                            <p><a href="#"><img src="<html:templatePath>/images/gam_ico02.png"></a></p>
+                                            <p><a href="#"><img src="<html:templatePath>/images/gam_ico01.png"></a></p>-->
+                                    <!-- JiaThis Button BEGIN -->
+                                            <p><a class="jiathis_button_qzone"></a><br /></p>
+                                            <p><a class="jiathis_button_tsina"></a><br /></p>
+                                            <p><a class="jiathis_button_renren"></a><br /></p>
+                                            <p><a class="jiathis_button_tqq"></a><br /></p>
+                                            <p><a class="jiathis_button_tianya"></a></p>
+                                    <!-- JiaThis Button END -->
+                                    </div>
+                                    </li>
+                                    <li><a  class="lightwindow page-options" params="lightwindow_width=900,lightwindow_height=600,lightwindow_type=external"  href="/EngLish/Cart.aspx?v=pop"><img src="<html:templatePath>/images/icon_01.png" alt="Cart" ></a></li>
+                            </ul>
+          </div>
+                  <div class="logo" id="totop"></div>
+        </div>
+        <!--切换banner-->
+        <div  class="artWarp">
+        		<div class="art_banner">
+                        <div id="art_bannerBox" style="overflow: hidden; width: 848px; height:378px; position: relative;">
+                            <ul id="art_bannerContentID" style=" width: 1696px; height: 378px;">
+                                <li><a href="#"><img src="<html:templatePath>/images/blueart_banner01.jpg"></a></li>
+                                <li><a href="#"><img src="<html:templatePath>/images/blueart_banner02.jpg"></a></li>
+                            </ul>
+                        </div>
+						<div class="art_shiftnavbar"><ul id="shiftTab" ><li></li><li></li></ul></div>
+                </div>
+        </div>
+        <script type="text/javascript">
+					/*********DIV + CSS开始等待、间歇滚动、点击控制左右滑动实例(缓动)***************/
+					new Marquee(["art_bannerBox","art_bannerContentID","shiftTab","onclick"],2,[0.5,20],848,378,20,5000,5000)	//DIV + CSS开始等待、间歇滚动、TAB点击切换、点击控制左右滑动实例(缓动)
+			 </script>

@@ -1,0 +1,25 @@
+    <div class="header">
+        <div class="main">
+            <div class="top">
+                <div class="logo"><a href="/Bussiness.aspx"><img src="<html:templatePath>/images/logo_index.png"></a></div>
+                <div class="inform">
+                    <a><$AdminGroupBLL.ReadAdminGroupCache(base.UserGroupID).Name$>：<$base.UserRealName$> [<$base.UserName$>]</a>
+                    <span class="line">|</span>
+                    <a href="/User/UserInfoShow.aspx">会员中心</a>
+                    <span class="line">|</span>
+                    <a href="Logout.aspx">退出</a>
+                </div>
+                <ul class="nav">
+                    <!-- <li><a href="/">首页</a></li>
+                    <li><a href="/Product.aspx">选课中心</a></li> -->
+                    <html:if expression="base.CompareUserPower("PostStudy",PowerCheckType.Single)">
+                    <li><a href="/User/CourseCenter.aspx">学习大厅</a></li>
+                    <html:if expression="!StringHelper.CompareSingleString("400,401,402,403,404",CookiesHelper.ReadCookieValue("UserStudyPostId"))">
+                    <li><a href="/User/Download.aspx">下载中心</a></li>
+                    </html:if>
+                    </html:if>
+                    <li><a href="/Help-I6.aspx">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>

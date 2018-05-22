@@ -1,0 +1,55 @@
+﻿<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:foreach expression="UserMessageInfo userMessage in userMessageList">
+<div class="inforBox">
+    <div class="BBS">
+        <div class="talkbox">
+            <div class="visiter"><$userMessage.UserName $><span class="date"><$userMessage.PostDate $></span></div>
+            <p><html:if expression="!string.IsNullOrEmpty(userMessage.Title)"><$userMessage.Title $><br /></html:if><$userMessage.Content $></p>    
+        </div>
+        <div class="imgbox"><img src="<html:templatePath>/images/buyer_pic02.png" alt=""></div>
+    </div>
+    <hr class="art_hr"/>
+    <div class="BBS" id="LeaveMessage<$userMessage.ID$>">
+        <html:if expression="!string.IsNullOrEmpty(userMessage.AdminReplyContent)">
+        <div class="replay">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="22%" align="left" valign="top" class="name"><a href="#">蓝蝶</a>回复：</td>
+                    <td width="78%" align="left" valign="top"><$userMessage.AdminReplyContent $></td>
+                </tr>
+            </table>
+        </div>
+        </html:if>
+        <html:foreach expression="UserMessageInfo sonUserMessage in UserMessageBLL.ReadSonUserMessage(userMessage.ID, base.UserID)">
+        <div class="replay">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="22%" align="left" valign="top" class="name"><a href="#">我</a>回复：</td>
+                    <td width="78%" align="left" valign="top"><$sonUserMessage.Content $></td>
+                </tr>
+            </table>
+        </div>
+        <html:if expression="!string.IsNullOrEmpty(sonUserMessage.AdminReplyContent)">
+        <div class="replay">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="22%" align="left" valign="top" class="name"><a href="#">蓝蝶</a>回复：</td>
+                    <td width="78%" align="left" valign="top"><$sonUserMessage.AdminReplyContent $></td>
+                </tr>
+            </table>
+        </div>
+        </html:if>
+        </html:foreach>
+        <div class="messageBt" data-id="<$userMessage.ID$>" onclick="addMessageWin(<$userMessage.ID$>)"><img src="<html:templatePath>/images/bt_01.png"></div>
+    </div>
+    <!--提交留言-->
+    <div class="BBS" id="SubmitMessage<$userMessage.ID$>">
+    </div>
+</div>
+<div class="height10"></div>
+</html:foreach>
+<div class="height10"></div>
+<div><$ajaxPagerClass.ShowPage()$></div>

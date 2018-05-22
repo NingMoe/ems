@@ -1,0 +1,180 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>员工列表</h1>
+                    <p class="count_staff"> 员工数量上限为 <$currentCompany.UserNum$> 人，还可添加 <$(currentCompany.UserNum - (int.Parse(dt.Rows[0][0].ToString()) - int.Parse(dt.Rows[0][1].ToString())))$> 人；目前正常状态 <$dt.Rows[0][3]$> 人，不考核状态 <$dt.Rows[0][5]$> 人，冻结状态 <$dt.Rows[0][4]$> 人<!--；过往已删除 <$dt.Rows[0][1]$> 人-->。</p>
+                </div>
+                <div id="staff_list">
+                    <form action="" method="get" autocomplete="off">
+                        <div class="filter">
+                            <div class="filter_area">
+                                <a class="filter_btn active">筛选区域<i class="icon-flex"></i><span>展开</span></a>
+                            </div>
+                            <table class="filter_table hide">
+                                <tbody>
+                                    <html:if expression="base.ExistsSonCompany">
+                                    <tr>
+                                        <td class="filter_label">公司</td>
+                                        <td class="filter_content" colspan="3">
+                                            <select name="CompanyID" id="CompanyID" class="form_select">
+                                                <option value="">请选择公司</option>
+                                                <html:foreach expression="CompanyInfo company in SonCompanyList">
+                                                <option value="<$company.CompanyId$>"<$(company.CompanyId == companyID?" selected":"")$>><$company.CompanyName$></option>
+                                                </html:foreach>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    </html:if>
+                                    <tr>
+                                        <td class="filter_label">ID</td>
+                                        <td class="filter_content" colspan="3">
+                                            <input class="form_con form_long" type="text" name="UserId" id="UserId" value="<$RequestHelper.GetQueryString<string>("UserId")$>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label">姓名</td>
+                                        <td class="filter_content">
+                                            <input class="form_con form_long" type="text" name="RealName" id="RealName" value="<$RequestHelper.GetQueryString<string>("RealName")$>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label">工作岗位</td>
+                                        <td class="filter_content">
+                                            <select class="form_select postlist form_long" name="WorkingPostID" id="WorkingPostID">
+                                                <option value="">请选择岗位</option>
+                                                <html:foreach expression="PostInfo studyPost in workingPostList">
+                                                <option value="<$studyPost.PostId$>"<$(studyPost.PostId == RequestHelper.GetQueryString<int>("WorkingPostID")?" selected":"")$>><$studyPost.PostName$></option>
+                                                </html:foreach>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label">Email</td>
+                                        <td class="filter_content">
+                                            <input class="form_con form_long" type="text" name="Email" id="Email" value="<$RequestHelper.GetQueryString<string>("Email")$>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label">手机</td>
+                                        <td class="filter_content">
+                                            <input class="form_con form_long" type="text" name="Mobile" id="Mobile" value="<$RequestHelper.GetQueryString<string>("Mobile")$>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label" colspan="4">                                  
+                                            <input class="form_button" id="search" type="submit" value="搜 索">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+
+                    <div class="listblock">
+                        <ul>
+                            <html:csharp>string url = RequestHelper.FilterRequestQueryString(new string[] {"State","Page"});</html:csharp>
+                            <a href="?<$(string.IsNullOrEmpty(url)?"":url+"&")$>State=<$(int)UserState.Normal$>"><li<$(state==(int)UserState.Normal?" class=\"liston\"":"")$>>正常用户</li></a>
+                            <a href="?<$(string.IsNullOrEmpty(url)?"":url+"&")$>State=<$(int)UserState.Frozen$>"><li<$(state==(int)UserState.Frozen?" class=\"liston\"":"")$>>冻结用户</li></a>
+                            <a href="?<$(string.IsNullOrEmpty(url)?"":url+"&")$>State=<$(int)UserState.Free$>"><li<$(state==(int)UserState.Free?" class=\"liston\"":"")$>>不考核用户</li></a>
+                            <html:if expression="base.CompareUserPower("ReadDeleteUser",PowerCheckType.Single)">
+                            <a href="?<$(string.IsNullOrEmpty(url)?"":url+"&")$>State=<$(int)UserState.Del$>"><li<$(state==(int)UserState.Del?" class=\"liston\"":"")$>>删除用户</li></a>
+                            </html:if>
+                        </ul>   
+                    </div>
+                    <table class="evaluation_sheet staff_list">
+                        <tr>
+                            <th class="id">选择</th>
+                            <th class="userid">用户ID</th>
+                            <th class="name">姓名</th>
+                            <th class="post">职位</th>
+                            <th class="email">手机</th>
+                            <th class="permission">员工权限</th>
+                            <th class="logintime">最近登录时间</th>
+                            <th class="state">状态</th>
+                            <th class="manage">管理</th>
+                        </tr>
+                        <html:foreach expression="UserInfo user in userList">
+                        <tr>
+                            <td><input name="SelectID" type="checkbox" title="<$user.ID$>" value="<$user.ID$>" <$(user.ID == base.UserID?"disabled":"")$>></td>
+                            <td><$user.UserName$></td>
+                            <td><$user.RealName$></td>
+                            <td><$PostBLL.ReadPost(user.WorkingPostID).PostName$></td>
+                            <td><$user.Mobile$></td>
+                            <td><$(user.GroupID == 36?"考试人员":AdminGroupBLL.ReadAdminGroupCache(user.GroupID).Name)$></td>
+                            <td><$user.LastLoginDate$></td>
+                            <td><$EnumHelper.ReadEnumChineseName<UserState>(user.Status)$></td>
+                            <td>
+                                <html:if expression="user.ID != base.UserID">
+                                <span class="handle">
+                                    <html:if expression="base.CompareUserPower("UpdateUserPassword",PowerCheckType.Single)">
+                                    <a class="changeuserpassword" data-id="<$user.ID$>" href="#" title="修改密码" alt="修改密码"><i class="iconfont icon-xiugaimima"></i></a>
+                                    </html:if>
+                                    <html:if expression="base.CompareUserPower("ReadUser,UpdateUser",PowerCheckType.OR)">
+                                    <a class="edit" href="UserAdd.aspx?ID=<$user.ID$>&ReturnURL=<$ServerHelper.UrlEncode(RequestHelper.RawUrl)$>" title="修改" alt="修改"><i class="iconfont icon-bianji"></i></a>
+                                    </html:if>
+                                    <html:if expression="base.CompareUserPower("DeleteUser",PowerCheckType.Single)">
+                                    <a class="delete" href="javascript:deleteItems('<$user.ID$>');" title="删除" alt="删除"><i class="iconfont icon-iconfontshanchu"></i></a>
+                                    </html:if>
+                                </span>
+                                </html:if>
+                            </td>
+                        </tr>
+                        </html:foreach>
+                    </table>
+                    <$CommonPager.ShowPage()$>
+                    <html:if expression="base.CompareUserPower("AddUser,DeleteUser,FreezeUser,UnFreezeUser",PowerCheckType.OR)">
+                    <div class="action">
+                        <html:if expression="state ==(int)UserState.Normal">
+                        <html:if expression="base.CompareUserPower("AddUser",PowerCheckType.Single)">
+                        <input type="button" name="AddButton" id="AddButton" value=" 添 加 " class="button" onclick="newPage('UserAdd.aspx')">&nbsp;
+                        </html:if>
+                        <html:if expression="base.CompareUserPower("DeleteUser",PowerCheckType.Single)">
+                        <input type="button" name="DeleteButton" id="DeleteButton" value=" 删 除 " class="button">&nbsp;
+                        </html:if>
+                        <html:if expression="state!=(int)UserState.Frozen && base.CompareUserPower("FreezeUser",PowerCheckType.Single)">
+                        <input type="button" name="FreezeButton" id="FreezeButton" value=" 冻 结 " class="button">&nbsp;
+                        </html:if>
+                        <html:if expression="state!=(int)UserState.Free && base.CompareUserPower("FreeUser",PowerCheckType.Single)">
+                        <input type="button" name="FreeButton" id="FreeButton" value=" 不考核 " class="button">
+                        </html:if>
+                        <html:else>
+                        <html:if expression="state!=(int)UserState.Normal && base.CompareUserPower("UnFreezeUser",PowerCheckType.Single)">
+                        <input type="button" name="UnFreezeButton" id="UnFreezeButton" value=" 激 活 " class="button">&nbsp;
+                        </html:if>
+                        </html:if>
+                    </div>
+                    </html:if>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+    <script type="text/javascript">
+        $(function(){
+            $(".changeuserpassword").click(function(event) {
+                layer.open({            
+                    type: 2,
+                    title: '修改密码',
+                    area: ['500px', '300px'],
+                    skin: 'layui-layer-rim', //加上边框
+                    shadeClose: true,
+                    scrollbar: false,
+                    content: 'LayerPage.aspx?Action=ChangeUserPassword&UserID='+ $(this).data('id')
+                }); 
+            });
+        })
+    </script>
+</body>
+</html>

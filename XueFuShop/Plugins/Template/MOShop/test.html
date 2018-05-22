@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>考试 - 孟特</title>
+    <link rel="shortcut icon" type="image/ico" href="./images/favicon.ico">
+    <link rel="bookmark" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/total.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/soboxtest.css">
+
+</head>
+<body class="bodytest">
+
+    <div class="container-fluid wrap">
+        <!-- main -->
+        <div class="publictest">
+            <div class="container">
+                <div class="position">
+                    <span class="returnhome"><a href="index.html">返回首页</a></span>
+                </div>
+                <div class="subject">
+                    <span class="title">考试名称：孟特</span>
+                    <span class="time"><i class="hui-icon-timer"></i>剩余时间<a class="last">10:00</a></span>
+                </div>
+                <div class="clearfix public">
+                    <div class="testleft">
+                        <div class="info">
+                            <div class="time">考试时长：10分钟</div>
+                            <div class="total">考试总分：100分</div>
+                            <div class="num">试题总量：共25道。其中单项选择题：13道；多项选择题：2道；判断题：10道</div>
+                        </div>
+                        <div class="choose" id="choose">
+                            <div class="hd">
+                                <ul class="clearfix">
+                                    <li class="on"><a href="javascript:;">单项选择题</a></li>
+                                    <li><a href="javascript:;">多项选择题</a></li>
+                                    <li><a href="javascript:;">判断题</a></li>
+                                </ul>
+                            </div>
+                            <div class="bd">
+                                <ul class="clearfix" id="radio">
+                                    <li class="on"><a href="javascript:;">1</a></li>
+                                    <li><a href="javascript:;">2</a></li>
+                                    <li><a href="javascript:;">3</a></li>
+                                    <li><a href="javascript:;">4</a></li>
+                                    <li><a href="javascript:;">5</a></li>
+                                    <li><a href="javascript:;">6</a></li>
+                                    <li><a href="javascript:;">7</a></li>
+                                    <li><a href="javascript:;">8</a></li>
+                                    <li><a href="javascript:;">9</a></li>
+                                    <li><a href="javascript:;">10</a></li>
+                                    <li><a href="javascript:;">11</a></li>
+                                    <li><a href="javascript:;">12</a></li>
+                                    <li><a href="javascript:;">13</a></li>
+                                </ul>
+                                <ul class="clearfix" id="checkbox">
+                                    <li class="on"><a href="javascript:;">1</a></li>
+                                    <li><a href="javascript:;">2</a></li>
+                                </ul>
+                                <ul class="clearfix" id="judge">
+                                    <li class="on"><a href="javascript:;">1</a></li>
+                                    <li><a href="javascript:;">2</a></li>
+                                    <li><a href="javascript:;">3</a></li>
+                                    <li><a href="javascript:;">4</a></li>
+                                    <li><a href="javascript:;">5</a></li>
+                                    <li><a href="javascript:;">6</a></li>
+                                    <li><a href="javascript:;">7</a></li>
+                                    <li><a href="javascript:;">8</a></li>
+                                    <li><a href="javascript:;">9</a></li>
+                                    <li><a href="javascript:;">10</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testright">
+                        <div class="btitle"><img src="./images/testtopic.png" alt="">试题</div>
+                        <div class="btopic">
+                            <div class="testcontent"></div>
+                            <div class="clearfix operation">
+                                <a href="javascript:;" class="testbtn nextquestion">下一道</a>
+                                <a href="javascript:;" class="testbtn pause">暂停</a>
+                                <a href="javascript:;" class="testbtn complete">交卷</a>                                
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+    
+
+            </div>
+        </div>
+        <!-- main -->
+        
+    </div>
+
+
+<div class="right-nav">
+    <ul>
+        <li><a id="xujnxmpb" onclick="pyRegisterCvt()" class="qqonlineconsult" href="javascript:;" target="_blank"><div class="sidebox qq" style="width: 54px; background: rgb(211, 8, 48);"><span class="qq"></span>在线咨询</div></a></li>
+        <li id="tel"><a href="javascript:;"><div class="sidebox" style="width: 54px; background: rgb(0, 0, 0);"><span class="tel"></span><strong>400 720 7200</strong></div></a></li>
+        <li><a href="help.html"><div class="sidebox" style="width: 54px; background: rgb(0, 0, 0);"><span class="help"></span>帮助中心</div></a></li>
+        <li><a href="javascript:;"><div class="sidebox"><span class="feedback"></span>意见反馈</div></a></li>
+        <li class="gotop-nav" style="display: none;"><a href="javascript:goPageTop();" class="sidetop"><div class="sidebox"><span class="gotop"></span>返回顶部</div></a></li>
+    </ul>
+</div>
+
+ 
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./js/mt-index2016.js"></script>
+<script type="text/javascript" src="./js/test.js"></script>
+
+<script src="./js/jquery.SuperSlide.2.1.1.js"></script>
+
+<script type="text/javascript">
+    jQuery("#choose").slide({ trigger:"click" });
+</script>
+
+<script src="./js/jquery.sobox.test.js"></script>
+
+<script>
+    $('.complete').click(function () {
+        $.sobox.pop({
+            cls:'subsidy-box',
+            drag :false, // 是否可拖动
+            maskClick : true, // 点击背景关闭内容
+
+            title:'友情提示',
+            width:550,
+            content:'<div class="title">恭喜您通过这次考试！</div><div class="exam">本次考试总分：100分，你的得分是：<span class="active">100</span>分</div>',
+            btn:[
+                {text:'返回首页'}
+            ]
+
+        });
+        return false;
+    });
+</script>
+</body>
+
+</html>

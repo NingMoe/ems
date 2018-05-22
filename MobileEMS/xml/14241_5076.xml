@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="5076" QuestionNum="25" SingleNum="8" MultiNum="2" PanDunNum="15">
+  <Single>
+    <QuestionInfo1 id="136259">
+      <Question>在座椅功能部分，DS 4S中高配车型的前排座椅拥有（）调节，让车内乘员可以更精确地调整到最佳坐姿，操作便利，配合可四向调节的中空式头枕设计，大大提升行车安全及舒适性。</Question>
+      <A>四向电动</A>
+      <B>六向电动</B>
+      <C>六向手动</C>
+      <D>四向手动</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>B</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136259</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="136253">
+      <Question>DS 4S全系标配有（）安全气囊，为车内乘员提供了周全的安全保护，配合牢固的车身结构，可谓刚柔并济。</Question>
+      <A>4</A>
+      <B>8</B>
+      <C>2</C>
+      <D>6</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136253</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="136258">
+      <Question>DS 4S的方向盘采用真皮包裹，手感舒适，搭配大面积镀铬设计元素，视觉感官也十分出色，同时方向盘还拥有（），使不同体型的车主都能调整到最佳的驾姿，提升行车的舒适性及安全性。</Question>
+      <A>四向手动调节</A>
+      <B>两向电动调节</B>
+      <C>四向电动调节</C>
+      <D>两向手动调节</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136258</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="136247">
+      <Question>DS 4S最高配备了（ ）的钻石切割工艺铝合金轮毂，造型大气美观，回头率高！此外DS 4S的胎宽达到了235mm，拥有出色的抓地力，行车稳定性及制动性能更有保障，这是我方销售顾问应和顾客强调的重点！</Question>
+      <A>16英寸</A>
+      <B>18英寸</B>
+      <C>15英寸</C>
+      <D>17英寸</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136247</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="136249">
+      <Question>DS 4S不但操控性卓越，在实用性部分也非常的突出，其后备箱容积达到了395L，同时后排座椅还具备（）功能，使车辆拥有更出色的空间拓展性，满足更高的储物需求，无论是日常使用或是旅行出游，都游刃有余。</Question>
+      <A>整体翻折</A>
+      <B>滑移</B>
+      <C>4/6翻折</C>
+      <D>5/5翻折</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136249</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="136252">
+      <Question>DS 4S采用了无骨雨刷设计，其更贴合前挡风玻璃，刮拭更干净，同时DS 4S还配备了（   ）功能，在雨天行车时，能够智能感应，避免了车主频繁操作的困扰，让行车更安全！</Question>
+      <A>雨量感应</A>
+      <B>无极调节</B>
+      <C>车速+雨量感应</C>
+      <D>车速感应</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136252</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="136254">
+      <Question>在驻车系统部分，DS 4S采用了（）系统，相较于传统的驻车系统，其拥有操作简便，节省空间等优势，这也是当前主流豪华车所采用的形式，足可见DS 4S科技感十足。</Question>
+      <A>电子驻车制动</A>
+      <B>手拉式制动</B>
+      <C>感应式驻车制动</C>
+      <D>脚踩式制动</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136254</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="136248">
+      <Question>DS 4S中高配车型配备了（   ），相较传统的灯组形式，具有点亮速度更快、照明亮度更高、使用寿命更长等优势，是豪华车型采用的灯组形式。</Question>
+      <A>LED灯组</A>
+      <B>激光灯组</B>
+      <C>氙气灯组</C>
+      <D>卤素灯组</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136248</QuestionId>
+    </QuestionInfo8>
+  </Single>
+  <Multi>
+    <QuestionInfo1 id="136261">
+      <Question>DS 4S的方向盘不但造型别致，其功能也非常丰富，其拥有（  ）等功能，帮助车主在行车过程中双手不用离开方向盘就可以实现诸多操作，使行车更安全，我方销售顾问应着重予以介绍。</Question>
+      <A>空调风速及模式调节</A>
+      <B>音量快拨</B>
+      <C>定速巡航</C>
+      <D>换挡拨片</D>
+      <Answer>BCD</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>2</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136261</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="136263">
+      <Question>除了大灯灯组外，DS 4S的（   ）也同样采用LED灯组形式，堪称同级唯一！不仅凸显了豪华档次，同时也增加了行车的安全性，让车辆在各种行车状况下都能拥有较强的辨识度！</Question>
+      <A>雾灯</A>
+      <B>转向灯</B>
+      <C>日间行车灯</C>
+      <D>高位制动灯</D>
+      <Answer>ABCD</Answer>
+      <CustomerAnswer>AB</CustomerAnswer>
+      <Style>2</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136263</QuestionId>
+    </QuestionInfo2>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="136266">
+      <Question>在后排乘坐部分，DS 4S除了拥有2715mm的超长轴距外，DS 4S还配有同级独有的航空头枕及带杯架功能的后排中央扶手，让后排乘员拥有更理想的舒适体验，享受贵宾级的礼遇。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136266</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="136275">
+      <Question>DS 4S配备有LED日间行车灯设计，不但造型美观，在白天行车时，更能起到出色的警示效果，提升行车安全性。我方顾问应强调，这是主流豪华高档车型必备的安全配备，安全配置领先同级！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136275</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="136269">
+      <Question>DS 4S在外观细节部分做得非常厚道，其发动机盖采用的是~铰链式支撑杆~，车主在打开发动机舱时，操作更便捷省力，即使是力气较小的女性也能轻松进行操作，该项配置也体现了DS 4S的人性化设计！</Question>
+      <A>液压挺杆</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136269</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="136273">
+      <Question>DS 4S采用了双L型LED尾灯，其造型独特，辨识度高，同时LED光源拥有响应快、亮度高、能耗低等特点，在夜间行车的辨识度及警示效果更理想，让行车安全更有保障！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136273</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="136277">
+      <Question>在内饰部分，我方销售顾问还应特别强调，DS 4S在车内用料方面十分注重车内人员的健康，其采用了食品级材质无沥青阻尼片、车内大量采用软性材质覆盖，确保无污染的乘坐环境，车内空气质量领先国标数十倍，让您和您的家人乘坐更安心！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136277</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="136265">
+      <Question>DS 4S不但形式高档，同时功能丰富，其具备的~大灯延时关闭~功能可以依据周围光线的明暗开启和关闭大灯，在周围环境突然变暗的情况下，仍能保证驾驶员前方视野的明亮程度，为驾驶员提供了便利，更增强了安全保障，这是我方顾问在介绍灯组时的重点内容。</Question>
+      <A>大灯自动开启</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136265</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="136274">
+      <Question>DS 4S在主动安全部分非常全面，除了全系配有ESP动态稳定控制系统外，还配备了坡道启动辅助系统及紧急制动系统，前者能在坡道起步时防止溜车，后者则能在紧急制动时有效缩短制动距离，最大化规避风险发生，确保行车安全。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136274</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="136280">
+      <Question>夜间行车时，后方车辆开启的远光灯会照射到内后视镜并反射到驾驶者眼睛，影响行车安全，DS 4S配备有~手动防眩目内后视镜~，能自动弱化强光，提升夜间行车安全，我方销售顾问应强调，这是高端车必备的安全配备！</Question>
+      <A>自动防眩目内后视镜</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136280</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="136272">
+      <Question>DS 4S配备有前后驻车雷达，在倒车时利用超声波原理计算出与前后方障碍物之间的距离，并通过声音提示给驾驶者，配合倒车影像系统，双管齐下，使车主停车、倒车更便捷安全。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136272</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="136282">
+      <Question>DS 4S配备有7寸彩色触摸显示屏，响应速度快，操作便捷，支持行车信息显示、GPS导航、倒车影像、DS CONNECT等丰富功能，不但彰显了车辆的档次感，同时也丰富了乘员的车内娱乐体验。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136282</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="136271">
+      <Question>DS 4S全系都配有ESP动态稳定控制系统，当车辆有转向不足或转向过度的趋势时，传感器就会迅速对车轮实施制动，产生相反的转矩而使汽车保持在原来的车道上。我方顾问应向顾客说明，这是当前最先进的主动安全配置！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136271</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="136270">
+      <Question>DS 4S采用防紫外线隔热玻璃，能有效阻隔紫外线侵袭，为全车乘员提供健康舒适的驾乘环境，同时其后排车窗还采用了高档私密玻璃，确保后排乘员的隐私，尽显尊贵与档次，这是同级竞品所不具备的优势配备。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>0</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136270</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="136267">
+      <Question>DS 4S的方向盘采用“D型”设计，该设计方式能使车主进出车辆时更方便，同时在行车时，也能增加驾驶员膝部空间，让驾驶更轻松惬意。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136267</QuestionId>
+    </QuestionInfo13>
+    <QuestionInfo14 id="136278">
+      <Question>DS 4S配备有AQS空气质量控制系统，在车辆行驶过程中，当空气质量传感器探测到污染气体，系统就会自动启动~外循环~，防止有害气体进入到车内，最大限度地确保了车内的空气质量，让乘坐更安心。</Question>
+      <A>内循环</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>0</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136278</QuestionId>
+    </QuestionInfo14>
+    <QuestionInfo15 id="136276">
+      <Question>DS 4S采用了双涡管增压系统，相较于传统的单涡管增压系统，其可以将四个气缸所产生的废气分成两组去带动涡轮叶片，减少相互之间的干扰，同时可持续推动涡轮叶片，有效减少涡轮迟滞，让车主在更低转速区间就能体验到充沛动力，让驾驭更激情！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136276</QuestionId>
+    </QuestionInfo15>
+  </PanDuan>
+</TestPaper>

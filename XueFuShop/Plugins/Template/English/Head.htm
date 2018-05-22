@@ -1,0 +1,29 @@
+﻿    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="<$Keywords$>" name="keywords"/>
+    <meta content="<$Description$>" name="description"/>
+    <meta content="<$Copyright$>" name="copyright"/>
+    <meta content="<$Author$>" name="author"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><$Title$></title>
+    	<link href="<html:templatePath>/css/bluearts.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="<html:templatePath>/css/lightwindow.css" />
+    	<script type="text/javascript" src="<html:templatePath>/js/MSClass.js"></script>
+		<script type="text/javascript" src="<html:templatePath>/js/prototype.js"></script>
+        <script type="text/javascript" src="<html:templatePath>/js/effects.js"></script>
+        <script type="text/javascript" src="<html:templatePath>/js/lightwindow.js"></script>
+        <script type="text/javascript" src="<html:templatePath>/js/jquery-1.9.0.js"></script>
+        <script language="javascript" type="text/javascript" src="/Admin/Js/Common.js" ></script>
+        <script>
+		//jQuery.noConflict(); 
+			jQuery(document).ready(function($){
+				
+				$(".hovlink").mouseover(function(){
+					$(this).next("div").slideDown(500);
+					});
+				$(".spinner").mouseleave(function(){
+					$(this).children("div").slideUp(500);
+					});
+					
+			})
+    </script>

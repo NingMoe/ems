@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="XueFuShop.Admin.MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title><%=XueFuShop.Common.Global.ProductName%>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="layui-v2.2.5/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="Style/style.css" media="all" /> 
+    <link rel="stylesheet" type="text/css" id="IconFontPath" href="">
+    <script language="javascript" type="text/javascript">var globalPopCloseRefresh=<%=XueFuShop.Common.ShopConfig.ReadConfigInfo().PopCloseRefresh.ToString() %>; var globalNamePrefix = "<%=XueFuShop.Common.ShopConfig.ReadConfigInfo().NamePrefix%>"; var globalIDPrefix = "<%=XueFuShop.Common.ShopConfig.ReadConfigInfo().IDPrefix%>";</script>
+    <script language="javascript" type="text/javascript" src="Js/Common.js" ></script>
+    <script language="javascript" type="text/javascript" src="Js/Admin.js" ></script> 
+    <%if(Request.RawUrl.IndexOf("Add.aspx")==-1){ %>
+    <script type="text/javascript" src="Pop/lhgcore.min.js"></script>
+	<script type="text/javascript" src="Pop/lhgdialog.min.js?s=chrome"></script>	 
+	<%} %>
+</head>
+<body>
+    <form id="aspnetForm" runat="server" autocomplete="off">
+    <div class="mainBody">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>        <script type="text/javascript" src="layui-v2.2.5/layui/layui.js"></script>
+    <script type="text/javascript">
+        layui.config({
+            base: 'js/laymodules/' //你的模块目录
+        }).use('index'); //加载入口
+    </script>
+</body>
+</html>

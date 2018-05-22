@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>光洋化学应用材料科技（昆山）有限公司</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.movebg.js"></script>
+<script type="text/javascript" src="js/jquery.anchor.1.0.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6f278b45ab9940b19df7c01e8ee5fbea";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</head>
+
+<body>
+<div class="laytop">
+  <div class="navarea w1300">
+        <div class="logo"></div>
+        <div class="nav">
+            <ul>
+                <li><a href="#Area1" class="smooth">防冻/冷却液</a></li>
+                <li><a href="#Area2" class="smooth">自动变速箱油</a></li>
+                <li><a href="#Area3" class="smooth">超级合成刹车油</a></li>
+                <li><a href="#Area4" class="smooth">汽车用品</a></li>
+                <li><a href="#Area5" class="smooth">汽车养护</a></li>
+            </ul>
+            <div class="move-bg"></div>
+        </div>
+    </div>
+</div>
+<div style="height:70px;"></div>
+<div class="layQ w1300" id="Area1">
+    <img src="images/1.jpg" alt="">
+    <img src="images/2.jpg" alt="">
+</div>
+
+<div class="layQ w1300" id="Area2">
+    <img src="images/3.jpg" alt="">
+    <img src="images/4.jpg" alt="">
+</div>
+
+<div class="layQ w1300" id="Area3">
+    <img src="images/5.jpg" alt="">
+    <img src="images/7.jpg" alt="">
+</div>
+
+<div class="layQ w1300" id="Area4">
+    <img src="images/8.jpg" alt="">
+    <img src="images/6.jpg" alt="">
+</div>
+
+<div class="layQ w1300" id="Area5">
+    <img src="images/9.jpg" alt="">
+    <img src="images/10.jpg" alt="">
+    <img src="images/11.jpg" alt="">
+    <img src="images/12.jpg" alt="">
+</div>
+
+<div class="copyright w1300">
+    <p>光洋化学应用材料科技（昆山）有限公司</p>
+</div>
+<script>
+$(function(){
+	$(".smooth").zxxAnchor({anchortag: "href"});
+	$(".nav").movebg({width:140,extra:0,speed:300,rebound_speed:400});
+	$(".nav ul li").last().click(function(){$("#contactus").show();});//.mouseleave(function(){$("#contactus").hide();});
+	$("#QA ul li").click(function(){
+		var $QAnswer=$("#QAnswer"),x=$(this).offset();
+		$QAnswer.show();
+		$QAnswer.offset({left:x.left,top:x.top+30});
+		$QAnswer.css({"width":$(this).css("width")+40});
+		$QAnswer.html("<article><section><span>问："+$(this).text()+"</span></section><section><span>答：</span>"+$(this).attr("data-content")+"</section></article>");
+	});//.mouseleave(function(){$("#QAnswer").hide();});
+	$("#map").click(function(){$("#allmap").toggle(500);});	
+	$(document).click(function(event){if($(event.target).closest("#item-contactus,#QA ul li,#map").length == 0){$("#contactus,#QAnswer,#allmap").hide();}});
+})
+//$(document).ready(function() {
+//	$(window).scroll(function() {
+//		if($(window).scrollTop()>=110){
+//			$(".laytop").addClass("fixedNav");
+//			$(".laytop").css("position","fixed");
+//		}else{
+//			$(".laytop").removeClass("fixedNav");
+//			$(".laytop").css("position","absolute");
+//		}
+//	});
+//})
+</script>
+</body>
+</html>
+

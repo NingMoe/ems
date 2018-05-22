@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="renderer" content="webkit">
+	<title>EMS后台</title>
+	<link href="css/manage.css" rel="stylesheet">
+	<link href="http://at.alicdn.com/t/font_lia7i77eqdw2vs4i.css" rel="stylesheet">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/manage.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="main">
+			<div class="top">
+				<div class="logo"><a href="javascript:"><img src="images/logo_index.png"></a></div>
+				<div class="inform">
+					<a href="javascript:">账号管理</a>
+					<span class="line">|</span>
+					<a href="javascript:">退出</a>
+				</div>
+				<ul class="nav">
+					<li><a href="">首页</a></li>
+					<li><a href="">选课中心</a></li>
+					<li><a href="">关于我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container main">
+		<div class="left">
+			<ul class="tabs">
+				<li class="on">
+					<a href="javascript:">
+						<i class="icon manage"></i>
+						<span>管理</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:">
+						<i class="icon account"></i>
+						<span>账号</span>
+					</a>
+				</li>
+			</ul>
+			<div class="tabs_nav">
+				<ul>
+					<li>
+						<h2>公司管理</h2>
+						<div class="tabs_nav_con">
+							<a href="stafflist.html">员工列表</a>
+							<a href="addstaff.html">增加员工</a>
+						</div>
+					</li>
+					<li>
+						<h2>课程管理</h2>
+						<div class="tabs_nav_con">
+							<a>课程列表</a>
+							<a>增加课程</a>
+						</div>
+					</li>
+					<li>
+						<h2>评价指标</h2>
+						<div class="tabs_nav_con">
+							<a href="evaluating_indicator.html">评价指标</a>
+							<a href="evaluation_sheet.html">评估表</a>
+							<a href="qualified_rate.html">通过率</a>
+							<a href="post_list.html">岗位列表</a>
+							<a class="current" href="index_list.html">指标列表</a>
+							<a href="add_index.html">增加指标</a>
+							<a href="individuate_evaluation.html">个人评估</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="right">
+			<div class="right_content">
+				<div class="title">
+					<h1>成绩列表</h1>
+				</div>
+				<div id="score_list">
+					<form action="" method="post">
+						<div class="form_group form_center">
+							<label class="form_txt" for="CompanyName">公司：</label>
+							<input class="form_con form_long" type="text" name="CompanyName" id="CompanyName">
+							<label class="form_txt" for="SearchId">用户名：</label>
+							<input class="form_con" type="text" name="SearchId" id="SearchId">
+							<label class="form_txt" for="SearchName">姓名：</label>
+							<input class="form_con" type="text" name="SearchName" id="SearchName">
+							<label class="form_txt" for="CourseName">课程名称：</label>
+							<input class="form_con form_long" type="text" name="CourseName" id="CourseName">
+							<input class="form_cjlb_button" name="search" id="search" type="submit" value="搜 索">
+						</div>
+					</form>
+					<table class="score_list evaluation_sheet">
+						<tr>
+							<th class="course">课程名称</th>
+							<th class="score">分数</th>
+							<th class="name">用户名</th>
+							<th class="company">公司名称</th>
+							<th class="time">考试时间</th>
+						</tr>
+						<tr>
+							<td>汽车是怎样设计制造的 之 方案策划</td>
+							<td>80</td>
+							<td>陈信文</td>
+							<td>上海孟特</td>
+							<td>2017-2-21 12:00:00</td>
+						</tr>
+						<tr>
+							<td>顾问式销售 之 热情接待</td>
+							<td>90</td>
+							<td>陈信文</td>
+							<td>上海孟特</td>
+							<td>2017-2-21 12:00:00</td>
+						</tr>
+						<tr>
+							<td>孟特销售工具应用与说明</td>
+							<td>100</td>
+							<td>陈信文</td>
+							<td>上海孟特</td>
+							<td>2017-2-21 12:00:00</td>
+						</tr>
+					</table>
+					<div class="listPage">
+						<div id="MyPager">
+							<div class="pageCss">
+								<ul class="disCount">
+									<li>共有12条</li>
+									<li>当前1/1页</li>
+								</ul>
+								<ul class="prenextType">
+									<li><<</li>
+									<li><</li>
+								</ul>
+								<ul class="numType">
+									<li id="currentPage">1</li>
+								</ul>
+								<ul class="prenextType">
+									<li>></li>
+									<li>>></li>
+								</ul>
+								<ul class="listType">
+									<span>&nbsp;跳转</span>
+									<li><input min="1" id="page" name="page" class="page" type="number"></li>
+									<span>页</span>
+									<input id="confirm" name="confirm" class="confirm" onclick="" value="确认" type="submit">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="main">
+			Copyright © 2007-2016 Mentor On Site , All Rights Reserved
+		</div>
+	</div>
+</body>
+</html>

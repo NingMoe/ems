@@ -1,0 +1,119 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+</head>
+
+<body>
+<html:include file="Top.htm" />
+        
+                       <!--内容部分-->
+        <div  class="artWarp art_content">
+        		<!--左侧内容-->
+        		<div class="leftcon">
+                	<html:include file="Menu.htm" />
+                        <!--购物商城-->
+                        <h3><$ShopConfig.ReadConfigInfo().Title$></h3>
+                        <div class="art_artworkIntro"><$ShopConfig.ReadConfigInfo().Description$></div>
+                        <!--标题-->
+                        <div class="art_titlebox">
+                        		<!--标题-->
+                        		<a class="more" href="Product-C1.aspx">更多</a>
+                            	<!--标题-->
+                                <div class="title">艺术品</div>
+                        </div>
+                        <!--艺术品列表-->
+                        <div class="art_artworkList">
+                        		<ul>
+                                        <html:foreach expression="ProductInfo product in CateProductList("1", 4)">
+                                        <li>
+                                               <a href="/ProductDetail-I<$product.ID$>.aspx"><img src="<$product.Photo.Replace("Original","120-120")$>" onload="photoLoad(this,120,120)"/></a>
+                                                <p><a href="/ProductDetail-I<$product.ID$>.aspx"><$product.Name$></a></p>
+                                        </li>                
+                                        </html:foreach>
+                                  </ul>
+                         </div>
+                        <!--标题-->
+                        <div class="art_titlebox">
+                        		<!--标题-->
+                        		<a class="more" href="Product-C2.aspx">更多</a>
+                            	<!--标题-->
+                                <div class="title">餐  具</div>
+                        </div>
+                        <!--餐具列表-->
+                        <div class="art_artworkList">
+                        		<ul>
+                                		<html:foreach expression="ProductInfo product in CateProductList("2", 4)">
+                                        <li>
+                                               <a href="/ProductDetail-I<$product.ID$>.aspx"><img src="<$product.Photo.Replace("Original","120-120")$>" onload="photoLoad(this,120,120)"/></a>
+                                                <p><a href="/ProductDetail-I<$product.ID$>.aspx"><$product.Name$></a></p>
+                                        </li>                
+                                        </html:foreach>
+                                   </ul>
+                        </div>
+                        <!--标题-->
+                        <div class="art_titlebox">
+                        		<!--标题-->
+                        		<a class="more" href="Product-C3.aspx">更多</a>
+                            	<!--标题-->
+                                <div class="title">服  饰</div>
+                        </div>
+                        <!--服饰列表-->
+                        <div class="art_artworkList">
+                        		<ul>
+                                		<html:foreach expression="ProductInfo product in CateProductList("3", 4)">
+                                        <li>
+                                               <a href="/ProductDetail-I<$product.ID$>.aspx"><img src="<$product.Photo.Replace("Original","120-120")$>" onload="photoLoad(this,120,120)"/></a>
+                                                <p><a href="/ProductDetail-I<$product.ID$>.aspx"><$product.Name$></a></p>
+                                        </li>                
+                                        </html:foreach>
+                                 </ul>
+                         </div>
+                        <!--标题-->
+                        <div class="art_titlebox">
+                        		<!--标题-->
+                        		<a class="more" href="Product-C4.aspx">更多</a>
+                            	<!--标题-->
+                                <div class="title">装饰品</div>
+                        </div>
+                        <!--装饰品列表-->
+                        <div class="art_artworkList">
+                        		<ul>
+                                		<html:foreach expression="ProductInfo product in CateProductList("4", 4)">
+                                        <li>
+                                               <a href="/ProductDetail-I<$product.ID$>.aspx"><img src="<$product.Photo.Replace("Original","120-120")$>" onload="photoLoad(this,120,120)"/></a>
+                                                <p><a href="/ProductDetail-I<$product.ID$>.aspx"><$product.Name$></a></p>
+                                        </li>                
+                                        </html:foreach>
+                                </ul>
+                        </div>
+                        <div class="art_titlebox">
+                        		<!--标题-->
+                        		<a class="more" href="Product-C5.aspx">更多</a>
+                            	<!--标题-->
+                                <div class="title">家具</div>
+                        </div>
+                        <!--家具列表-->
+                        <div class="art_artworkList">
+                        		<ul>
+                                		<html:foreach expression="ProductInfo product in CateProductList("5", 4)">
+                                        <li>
+                                               <a href="/ProductDetail-I<$product.ID$>.aspx"><img src="<$product.Photo.Replace("Original","120-120")$>" onload="photoLoad(this,120,120)"/></a>
+                                                <p><a href="/ProductDetail-I<$product.ID$>.aspx"><$product.Name$></a></p>
+                                        </li>                
+                                        </html:foreach>
+                                  </ul>
+                         </div>
+                        <!--置顶-->
+                        <div class="art_artworkToTop"><a href="#totop"><img src="<html:templatePath>/images/icon_05.png" alt="置顶"></a></div>
+          </div>
+        		<html:include file="Right.htm" />
+        </div>
+        <html:include file="Foot.htm" />
+</body>
+</html>
+

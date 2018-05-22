@@ -1,0 +1,87 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>指标列表</h1>
+                </div>
+                <div id="index_list">
+                    <form action="" method="get" autocomplete="off">
+                        <div class="form_group form_center">
+                            <label class="form_txt" for="CompanyID">公司：</label>
+                            <select class="form_select" id="CompanyID" name="CompanyID">
+                            <option value="">请选择公司</option>
+                            <option value="0"<$(CompanyID == CompanyBLL.SystemCompanyId?" selected":"") $>>系统指标</option>
+                            <html:foreach expression="CompanyInfo company in SonCompanyList">
+                            <option value="<$company.CompanyId$>"<$(company.CompanyId == CompanyID?" selected":"") $>><$company.CompanyName$></option>
+                            </html:foreach>
+                            </select>
+                            <label class="form_txt" for="KPICate">指标分类：</label>
+                            <select class="form_select" id="ClassID" name="ClassID">
+                            <option value="">请选择分类</option>
+                            <html:foreach expression="KPIInfo kpiClass in KPIClassList">
+                            <option value="<$kpiClass.ID$>"<$(kpiClass.ID == ClassID?" selected":"") $>><$kpiClass.Name$></option>
+                            </html:foreach>
+                            </select>
+                            <label class="form_txt" for="index">指标名称：</label>
+                            <input class="form_con" ID="Name" name="Name" Width="150px" value="<$Name$>">
+                            <input class="form_zblb_button" id="search" type="submit" value="搜 索">
+                        </div>                        
+                    </form>
+                    <table class="index_list evaluation_sheet">
+                    <$GetSearchTitle()$>
+                        <tr>
+                            <th class="id"><input class="form_checkbox" type="checkbox" name="All" onclick="selectAll(this)" /></th>
+                            <th class="index">指标</th>
+                            <th class="company">公司</th>
+                            <th class="type">时效</th>
+                            <th class="category">分类</th>
+                            <th class="score">分数</th>
+                            <th class="operate">操作</th>
+                        </tr>
+                        <html:foreach expression="KPIInfo kpi in KPIList">
+                        <tr>
+                            <td><input class="form_checkbox" type="checkbox" name="SelectID" title="<$kpi.ID$>" value="<$kpi.ID$>"<$(kpi.CompanyID != CompanyBLL.SystemCompanyId?"":" disabled")$>></td>
+                            <td class="index_name"><$kpi.Name$></td>
+                            <td><$getCompanyName(kpi.CompanyID)$></td>
+                            <td><$ EnumHelper.ReadEnumChineseName<KPIType>((int)kpi.Type) $></td>
+                            <td><$ KPIBLL.ReadKPI(kpi.ParentId).Name $></td>
+                            <td><$kpi.Scorse$></td>
+                            <td>
+                                <$(kpi.CompanyID != CompanyBLL.SystemCompanyId?"<span class=\"handle\"><a class=\"edit\" href=\"KPIAdd.aspx?ID="+kpi.ID+"&ReturnURL="+ServerHelper.UrlEncode(RequestHelper.RawUrl)+"\" title=\"编辑\" alt=\"编辑\"><i class=\"iconfont icon-bianji\"></i></a>":"")$>
+                                <html:if expression="base.CompareUserPower("DeleteKPI",PowerCheckType.Single)">
+                                <$(kpi.CompanyID != CompanyBLL.SystemCompanyId?"<a class=\"delete\" href=\"javascript:if(confirm('确定要删除吗？')){window.location.href='?Action=Delete&SelectID="+ kpi.ID +"'}\" title=\"删除\" alt=\"删除\"><i class=\"iconfont icon-iconfontshanchu\"></i></a></span>":"")$>
+                                </html:if>
+                            </td>
+                        </tr>
+                        </html:foreach>
+                    </table>
+                    <$CommonPager.ShowPage()$>
+                    <html:if expression="base.CompareUserPower("AddKPI,DeleteKPI",PowerCheckType.OR)">
+                    <div class="action">
+                        <html:if expression="base.CompareUserPower("AddKPI",PowerCheckType.Single)">
+                        <input type="button"  value=" 添 加 " class="button" onclick="newPage('KPIAdd.aspx');">&nbsp;
+                        </html:if>
+                        <html:if expression="base.CompareUserPower("DeleteKPI",PowerCheckType.Single)">
+                        <input type="button"  value=" 删 除 " class="button" id="DeleteButton" name="DeleteButton">&nbsp;
+                        </html:if>
+                    </div>
+                    </html:if>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+</body>
+</html>

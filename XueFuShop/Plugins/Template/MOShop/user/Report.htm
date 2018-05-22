@@ -1,0 +1,129 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>月度综合详表</h1>
+                </div>
+                <div id="month_reportdetailed">
+                    <form action="" method="post">
+                        <div class="form_group form_center">
+                            <label class="form_txt" for="CompanyName">选择公司：</label>
+                            <input class="form_con form_long" type="text" name="CompanyName" id="CompanyName">
+                            <input class="form_button" name="SearchButton" id="SearchButton" type="submit" value="搜 索">
+                        </div>
+                    </form>
+                    <table class="content_select">
+                        <tr>
+                            <td class="leftlist">月份选择</td>
+                            <td class="month_select">
+                                <ul class="clearfix">
+                                    <li>8月</li>
+                                    <li>7月</li>
+                                    <li>6月</li>
+                                    <li>5月</li>
+                                    <li>4月</li>
+                                    <li>3月</li>
+                                </ul>
+                                <div class="form_group date_select">
+                                    <label class="form_txt" for="">考试时间：</label>
+                                    <input class="form_con" type="text" name="SearchStartDate" id="SearchStartDate">
+                                    <label class="form_txt date_line" for="">——</label>
+                                    <input class="form_con" type="text" name="SearchEndDate" id="SearchEndDate">
+                                    <input class="form_button" name="Button1" id="Button1" type="submit" value="搜 索">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="leftlist">岗位选择<br><a href="">[全选/取消]</a></td>
+                            <td class="postname">
+                                <ul class="clearfix">
+                                    <li>销售顾问</li>
+                                    <li>销售主管</li>
+                                    <li>销售内训师</li>
+                                    <li>销售经理</li>
+                                    <li>市场部全员</li>
+                                </ul>
+                                <ul class="clearfix">
+                                    <li>售后前台</li>
+                                    <li>行政、后勤间接人员</li>
+                                    <li>美容</li>
+                                    <li>配件部</li>
+                                    <li>总经理</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="leftlist">孟特已考课程<br><a href="">[全选/取消]</a><a href="">[反选]</a></td>
+                            <td class="mtcourse">
+                                <ul class="clearfix">
+                                    <li>SSI 展厅销售流程规范用语 - 必说必做 - 提升满意度</li>
+                                    <li>威驰 VS 锋范</li>
+                                    <li>销售投诉处理与杜绝</li>
+                                    <li>皇冠</li>
+                                    <li>顾问式销售 之 热情接待</li>
+                                    <li>客户关系建设与管理</li>
+                                    <li>售后品牌建设与管理</li>
+                                    <li>三包政策介绍及说明</li>
+                                    <li>顾问式销售 之 服务+价格=价值—谈判技巧培训</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="leftlist">指定已考课程<br><a href="">[全选/取消]</a></td>
+                            <td class="zdcourse">
+                                <ul class="clearfix">
+                                    <li></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="ReportList">
+                        <table class="evaluation_sheet">
+                            <tr>
+                                <th colspan="6">上海孟特管理咨询有限公司 [截止日期2016-8-31]<input class="form_button" name="Button2" id="Button2" type="submit" value="导出报表"></th>
+                            </tr>
+                            <tr>
+                                <th class="number">序号</th>
+                                <th class="name">姓名</th>
+                                <th class="post">岗位</th>
+                                <th class="course">威驰 VS 锋范</th>
+                                <th class="course">顾问式销售 之 热情接待</th>
+                                <th class="average">平均分</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>孟特</td>
+                                <td>总经理</td>
+                                <td>100</td>
+                                <td>100</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>杨勇</td>
+                                <td>总经理</td>
+                                <td>100</td>
+                                <td>100</td>
+                                <td>100</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+</body>
+</html>

@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="5093" QuestionNum="25" SingleNum="17" MultiNum="0" PanDunNum="8">
+  <Single>
+    <QuestionInfo1 id="136558">
+      <Question>观致5 SUV高配车型的驾驶席座椅配备了（     ）电动调节，配合电动腰靠能够满足不同身形驾驶者的需求，让他们找到适合自己的驾驶姿势，从而让驾乘更轻松方便，长途驾驶也不会感到疲劳。</Question>
+      <A>12向</A>
+      <B>6向</B>
+      <C>8向</C>
+      <D>10向</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136558</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="136554">
+      <Question>在整车油耗方面，观致5 SUV的表现十分抢眼，1.6t车型工信部给出的油耗数据最低仅（  ）L/100km，大大降低了车主购车后的支出成本，我方顾问应说明：观致5 SUV拥有2.5L的动力，却只有1.6L的油耗，买到赚到！</Question>
+      <A>7.4</A>
+      <B>7.7</B>
+      <C>7.9</C>
+      <D>7.2</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136554</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="136560">
+      <Question>观致5 SUV配备了（）功能，车主在携带钥匙时无需掏出钥匙就可以直接打开车门进入，并且按下按钮就可以轻松的发动车辆，可谓相当方便高档，广泛应用于奔驰、宝马等高档车上，绝对是高档车的象征。</Question>
+      <A>感应式后备箱</A>
+      <B>无钥匙进入/启动</B>
+      <C>无盖加油</C>
+      <D>遥控开启天窗</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136560</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="136559">
+      <Question>观致5 SUV的制动形式采用（    ），散热性能强，不会出现制动力衰退的情况发生，是目前高档车的主流刹车配备，使用寿命更长，不会影响制动性能。</Question>
+      <A>前后盘式</A>
+      <B>前后鼓式</B>
+      <C>前盘后鼓</C>
+      <D>前鼓后盘</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136559</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="136565">
+      <Question>在安全方面，观致5 SUV配备了（    ），该系统能根据车速传感器、轮速传感器和偏航率角度传感器共同监测车辆行驶情况，防止车辆出现转向不足或者转向过度，让行车更平稳安全。</Question>
+      <A>紧急制动辅助系统</A>
+      <B>牵引力控制系统</B>
+      <C>车身动态稳定控制系统</C>
+      <D>电子制动力分配系统</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136565</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="136548">
+      <Question>观致5 SUV车侧配有（），通过车内的按钮可以电动调节外后视镜的角度，帮助您更快更好的观察后方道路的情况。</Question>
+      <A>盲点监测外后视镜</A>
+      <B>电加热外后视镜</B>
+      <C>电动折叠外后视镜</C>
+      <D>电动调节外后视镜</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136548</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="136552">
+      <Question>观致5 SUV采用（    ）触摸屏，拥有较高的分辨率，且支持娱乐、信息等功能，给予客户极佳的影音娱乐体验，增加驾乘乐趣。</Question>
+      <A>9英寸</A>
+      <B>10.2英寸</B>
+      <C>8英寸</C>
+      <D>7.5英寸</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136552</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="136541">
+      <Question>观致5 SUV在被动安全性上十分完善，最多配备了（   ）气囊，同级车中最高的气囊配备，符合同级车的安全品质。</Question>
+      <A>10个</A>
+      <B>2个</B>
+      <C>4个</C>
+      <D>6个</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136541</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="136563">
+      <Question>观致5 SUV的尾灯采用了（    ）材质，该灯组设计具有以下优势：1.美化外观，远看更好看 2.发光速度快，能够更快更有效提醒后方车辆及时制动，保持良好的安全行车距离 3.使用寿命更长，更节省能耗。</Question>
+      <A>卤素</A>
+      <B>白炽</B>
+      <C>LED</C>
+      <D>氙气</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136563</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="136546">
+      <Question>冬天上车，车主和乘客往往要面对冰凉的座椅，而观致5 SUV配备的（）功能能够帮助驾乘人员在上车后马上就能享受温暖的车上生活，体现了观致5 SUV车内功能的人性化特点。</Question>
+      <A>钱后排电加热</A>
+      <B>后排电加热</B>
+      <C>前排电加热</C>
+      <D>驾驶席电加热</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136546</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="136550">
+      <Question>观致5 SUV的车宽达到了1869mm，我方销售顾问可以强调，一辆车的车宽越大，车内（）越大，客户乘坐更为舒适。</Question>
+      <A>头部空间</A>
+      <B>腿部空间</B>
+      <C>横向空间</C>
+      <D>纵向空间</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136550</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="136540">
+      <Question>观致5 SUV的采用了（   ）空调，控温十分精准，档次高，能够满车内乘员群对温度的需求，非常人性化的舒适性配置。</Question>
+      <A>自动恒温</A>
+      <B>双区独立自动</B>
+      <C>座椅自动扫风</C>
+      <D>高效率手动</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136540</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="136555">
+      <Question>观致5 SUV不但外接音源十分丰富，USB接口和AUX接口可以满足几乎所有外接设备，更可替MP3或手机充电，方便快捷，而且搭载有（）高保真扬声器，带给您和客人美妙的音乐享受。</Question>
+      <A>6个</A>
+      <B>8个</B>
+      <C>9个</C>
+      <D>4个</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136555</QuestionId>
+    </QuestionInfo13>
+    <QuestionInfo14 id="136551">
+      <Question>观致5 SUV座椅采用的是真皮座椅。该类座椅的特点是（），我方销售顾问可以强调，皮质座椅不仅外观非常漂亮，为内饰增添更多豪华色彩，在中高档车上普遍采用。</Question>
+      <A>透气性好、易老化</A>
+      <B>档次高、易清洁</B>
+      <C>透气性好、防滑性好</C>
+      <D>温度影响低、档次高</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136551</QuestionId>
+    </QuestionInfo14>
+    <QuestionInfo15 id="136564">
+      <Question>观致5 SUV全系发动机配备了（    ），利用发动机排出的废气惯性冲力来推动涡轮室内的涡轮，涡轮又带动同轴的叶轮，叶轮压送由空气滤清器管道送来的空气，使之增压进入气缸，让发动机爆发出强劲动力的同时，提升燃油经济性。</Question>
+      <A>DVVT技术</A>
+      <B>VIS可变进气歧管</B>
+      <C>涡轮增压系统</C>
+      <D>CVVT技术</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136564</QuestionId>
+    </QuestionInfo15>
+    <QuestionInfo16 id="136549">
+      <Question>在主动安全方面，观致5 SUV也配备了诸多系统，其中（）系统根据车辆行驶行为，通过防止驱动轮打滑使车辆产生最佳驱动力的主动控制系统，它能够提高车辆加速性能和爬坡能力，使得汽车在附着状况不好的路面上能顺利起步和行驶。</Question>
+      <A>其他选项都是</A>
+      <B>EBA紧急制动辅助系统</B>
+      <C>牵引力控制系统</C>
+      <D>动态车身稳定系统</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136549</QuestionId>
+    </QuestionInfo16>
+    <QuestionInfo17 id="136562">
+      <Question>观致5 SUV的自动挡车型配备的是（），该变速器换挡平顺，动力损失小，同时油耗也来的非常小。销售顾问在介绍变速器时，可以表示，观致5 SUV的变速器技术非常先进。</Question>
+      <A>手自一体变速箱</A>
+      <B>双离合变速器</B>
+      <C>CVT无级变速器</C>
+      <D>自动变速箱</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136562</QuestionId>
+    </QuestionInfo17>
+  </Single>
+  <Multi>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="136579">
+      <Question>观致5 SUV配备有~防抱死~系统，它会根据您踩制动踏板的速率，来判断您是否在进行紧急制动，瞬间提供最大的制动效果，在危急情况下减少制动距离，让您避免追尾或撞击事故。</Question>
+      <A>紧急制动辅助</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136579</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="136572">
+      <Question>观致5 SUV可通过蓝牙连接手机，一旦连接成功可直接通过多媒体智能系统接听、拨打电话
+，还可以以播放手机中的音乐，把操作简化后让驾驶者就能更专注行驶，提高行车安全性。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136572</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="136569">
+      <Question>观致5 SUV的后排座椅具有按比例放倒的功能，对于超市购物其能够放下较大的物件，对于外出郊游，其能够放下帐篷、支架等物品，非常的便利，实用性佳。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136569</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="136575">
+      <Question>观致5 SUV全系车型配备有EBD电子制动力分配系统，~在紧急制动时不会出现转向失控、侧倾、甩尾等情况，不仅提高了避险能力，同时也减小了对轮胎的磨损。~</Question>
+      <A>可以根据各个车轮车速传感器采集的信号，主动、适时、合理地分别对四个车轮进行制动力的“智能”分配，保证车身制动更稳定、距离更短。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136575</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="136574">
+      <Question>观致5 SUV配备有ABS刹车防抱死系统，在紧急刹车时，以~锁住轮胎的方式~，保证制动力的同时还保证了操控性，让车主可以使用转向来避免危险。销售顾问在介绍刹车系统时，可以带入ABS系统，并强调该系统能大幅度提高行车安全。</Question>
+      <A>连续点刹的方式</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136574</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="136568">
+      <Question>观致5 SUV除了拥有阔绰的后排腿部空间外，在细节上的把握也非常出众，如第二排中央独立调节头枕及相对平整的后排地板，为后排乘员提供了更为舒适的乘坐体验。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136568</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="136571">
+      <Question>观致5 SUV的方向盘具有手感舒适，~高级树脂材质，四幅~设计等特点，安全舒适性高，而且极具运动风格，驾驶时更为惬意。</Question>
+      <A>真皮包裹，三幅</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136571</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="136577">
+      <Question>观致5 SUV的外后视镜内安装了一个电热片，使外后视镜拥有了电热除霜功能，确保您在雨雪天行驶时镜面的清晰，增加了行车安全性。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>136577</QuestionId>
+    </QuestionInfo8>
+  </PanDuan>
+</TestPaper>

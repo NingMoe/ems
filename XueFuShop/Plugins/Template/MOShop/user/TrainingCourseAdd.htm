@@ -1,0 +1,86 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>培训课程设置</h1>
+                </div>
+                <div id="revise_project">
+                    <form action="" method="post">
+                        <div class="revise_project">
+                            <div class="form_group">
+                                <select class="form_select form_long {required:true}" name="classid" id="classid">
+                                    <option value="">请选择项目分类</option>
+                                    <html:foreach expression="string key in rootProductClassList.Keys">
+                                    <!-- <optgroup label="<$ProductClassBLL.ReadProductClassByProductClassList(productClassList,int.Parse(key)).ClassName$>"> -->
+                                    <option class="bold" value="<$key$>"><$ProductClassBLL.ReadProductClassByProductClassList(productClassList,int.Parse(key)).ClassName$></option>
+                                        <html:foreach expression="string secondKey in rootProductClassList[key].Keys">
+                                        <option value="<$secondKey$>">&nbsp;&nbsp;&nbsp;&nbsp;<$rootProductClassList[key][secondKey]$></option>
+                                        </html:foreach>
+                                    <!-- </optgroup> -->
+                                    </html:foreach>
+                                </select>
+                                <input class="form_con" name="productname" id="productname" placeholder="输入您需要搜索的项目" value="">
+                                <input class="search" type="button" value="搜索" onclick="searchRelationProduct();">
+                            </div>
+                            <ul class="clearfix">
+                                <li class="project_select">
+                                    <select name="ShowCourseList" id="ShowCourseList" multiple="multiple">
+                                        
+                                    </select>
+                                </li>
+                                <li class="project_btn">
+                                    <input type="button" value=">>" id="AddProductAll">
+                                    <input type="button" value=">" id="AddProductSingle">
+                                    <input type="button" value="<" id="DropProductSingle">
+                                    <input type="button" value="<<" id="DropProductAll">
+                                </li>
+                                <li class="project_result">
+                                    <select name="TrainingCourseList" id="TrainingCourseList" multiple="multiple">
+                                        <html:foreach expression="ProductInfo porduct in trainingProductList">
+                                        <option value="<$porduct.ID$>"><$porduct.Name$></option>
+                                        </html:foreach>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="action">
+                            <input type="submit"  value=" 确 定 " class="button" onclick="">
+                            <input type="hidden" name="Action" value="PostBack" />
+                            <input type="hidden" name="PostID" id="PostID" value="<$postID$>" />
+                            <input type="hidden" id="TrainingCourseID" name="TrainingCourseID" value="<$post.PostPlan$>"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+    <script type="text/javascript">
+        //搜索关联商品
+        function searchRelationProduct() {
+            var productName = $("#productname").val();
+            var classID = $("#classid").val();
+            var url = "/Ajax.aspx?Action=GetDIYProductList";
+            $.post(url, {ProductName: productName, ClassID: classID}, function(data, textStatus, xhr) {
+                $originalCourseList=$("#ShowCourseList");
+                $originalCourseList.find('option').remove();
+                 data=JSON.parse(data);
+                $.each(data,function(index, el) {
+                    $originalCourseList.append('<option value="'+el.id+'">'+el.name+'</option>');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

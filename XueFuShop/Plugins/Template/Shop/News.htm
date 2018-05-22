@@ -1,0 +1,46 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+        
+    <html:include file="Head.htm" />
+</head>
+
+<body>
+<html:include file="Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        		<!--左侧内容-->
+   		  <div class="leftcon">
+                	<html:include file="Menu.htm" />
+                        <!--最新新闻-->
+		    <h3>最新新闻</h3>
+            <html:foreach expression="ArticleInfo article in articleList">
+            <!--新闻块-->
+            <div class="art_newsBox">
+                                     <div class="viewImg">
+                                            <a href="<html:templatePath>/images/new_prod01.jpg" class="lightwindow page-options" rel="Random[S]" title="意大利大师菲利普" caption="意大利大师菲利普为教李小冉设计的袋子" author="菲利普"><img src="<$article.Photo$>"></a>
+                                            <a href="<html:templatePath>/images/new_prod02.jpg" class="lightwindow page-options" rel="Random[S]" title="意大利大师菲利普" caption="意大利大师菲利普为教李小冉设计的袋子" author="菲利普"></a>
+                                            <a href="<html:templatePath>/images/new_prod03.jpg" class="lightwindow page-options" rel="Random[S]" title="意大利大师菲利普" caption="意大利大师菲利普为教李小冉设计的袋子" author="菲利普"></a>
+                                    </div>
+                                      <!--文字-->
+                          <div class="newstext">
+                            <h4><$article.Title$></h4>
+                                              <p><!--<a href="<html:if expression="article.Url==string.Empty">/NewsDetail-I<$article.ID$>.aspx<html:else><$article.Url$></html:if>">--><html:if expression="article.Summary!=string.Empty"><$article.Summary$></html:if><!--</a>--></p>
+                                                    <p>&nbsp;</p>
+                                                    <p>&nbsp;</p>
+                                                    <p><a href="<html:if expression="article.Url==string.Empty">/NewsDetail-I<$article.ID$>.aspx<html:else><$article.Url$></html:if>"><$StringHelper.Substring(StringHelper.KillHTML(StringHelper.UBB(article.Content)), 120)$></a></p>
+                                        </div>
+                        </div>
+            </html:foreach>
+            <$commonPagerClass.ShowPage()$>
+		  </div>
+        		<html:include file="Right.htm" />
+        </div>
+        <html:include file="Foot.htm" />	
+        <script>jQuery.noConflict(); </script>
+</body>
+</html>

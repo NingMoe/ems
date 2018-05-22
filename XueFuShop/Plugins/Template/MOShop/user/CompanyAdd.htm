@@ -1,0 +1,144 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>公司修改</h1>
+                </div>
+                <form action="" method="post" id="modify_info" autocomplete="off">
+                    <div class="form_group form_validate">
+                        <label class="form_txt" for="CompanyName">公司全称：</label>
+                        <input class="form_con form_long" type="text" name="CompanyName" id="CompanyName" value="<$company.CompanyName$>" disabled>
+                        <div class="tip">如公司全称有变动请与我们联系</div>
+                    </div>
+                    <div class="form_group form_validate">
+                        <label class="form_txt" for="CompanySimpleName">公司简称：</label>
+                        <input class="form_con form_long" type="text" name="CompanySimpleName" id="CompanySimpleName" value="<$company.CompanySimpleName$>" disabled>
+                        <div class="tip">如公司简称有变动请与我们联系</div>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="">公司类型：</label>
+                        <div class="companytype">
+                            <input id="Companytype_0" name="CompanyType" type="radio" value="0"<$(company.GroupId == 0?" checked":"")$> disabled>
+                            <label class="lbfortype" for="Companytype_0">独立公司</label>
+                            <input id="Companytype_3" name="CompanyType" type="radio" value="3"<$(company.GroupId == 3?" checked":"")$> disabled>
+                            <label class="lbfortype" for="Companytype_3">集团旗下子公司</label>
+                            <input id="Companytype_2" name="CompanyType" type="radio" value="2"<$(company.GroupId == 2?" checked":"")$> disabled>
+                            <label class="lbfortype" for="Companytype_2">集团旗下总公司</label>
+                            <input id="Companytype_1" name="CompanyType" type="radio" value="1"<$(company.GroupId == 1?" checked":"")$> disabled>
+                            <label class="lbfortype" for="Companytype_1">集团</label>
+                        </div>
+                    </div>
+                    <html:if expression="company.GroupId == (int)CompanyType.SubCompany || company.GroupId == (int)CompanyType.SubGroup">
+                    <div class="form_group form_group_bloc clearfix">
+                        <label class="form_txt" for="">隶属集团：</label>
+                        <div class="bloc">
+                            <ul class="bloclist">
+                                <$parentCompanyPath$>
+                            </ul>
+                            <!-- <div class="addbloc">
+                                <input id="AddGroupName" class="form_button" type="button" value="添加隶属集团">
+                                <div class="selectbloc hide" id="AddGroupId">
+                                    <select class="form_select" name="GroupId" id="GroupId">
+                                        <option value="">请选择隶属集团</option>
+                                    </select>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    </html:if>
+                    <div class="form_group_checkbox form_group clearfix form_brand form_validate">
+                        <label class="form_txt" for="">拥有品牌：</label>
+                        <div class="brand_set">
+                            <!-- <div class="allbrand">
+                                <input id="AllBrandID" name="AllBrandID" type="checkbox" value="0">
+                                <label for="AllBrandID">所有品牌</label>
+                            </div> -->
+                            <ul>
+                                <html:foreach expression="ProductBrandInfo productBrand in productBrandList">
+                                <li>
+                                    <input id="BrandID<$productBrand.ID$>" name="BrandID" type="checkbox" checked disabled>
+                                    <label for="BrandID<$productBrand.ID$>"><$productBrand.Name$></label>
+                                </li>
+                                </html:foreach>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form_group form_group_checkbox clearfix form_validate">
+                        <label class="form_txt" for="">学习岗位：</label>
+                        <div class="post_set">
+                            <html:foreach expression="PostInfo department in departmentList">
+                            <dl class="clearfix">
+                                <dt>
+                                    <input id="Department<$department.PostId$>" name="Department" type="checkbox" value="<$department.PostId$>" checked disabled>
+                                    <label for="Department<$department.PostId$>"><$department.PostName$></label>
+                                </dt>
+                                <div class="clearfix">
+                                    <html:foreach expression="PostInfo post in FilterPostListByParentID(department.PostId)">
+                                    <dd>
+                                        <input id="Post<$post.PostId$>" name="Post" type="checkbox" date-value="<$department.PostId$>" value="<$post.PostId$>" checked disabled>
+                                        <label for="Post<$post.PostId$>"><$post.PostName$></label>
+                                    </dd>
+                                    </html:foreach>
+                                </div>
+                            </dl>
+                            </html:foreach>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="EndDate">使用截止时间：</label>
+                        <input class="form_con" type="text" name="EndDate" id="EndDate" value="<$company.EndDate$>" disabled>
+                    </div>
+                    <div class="form_group form_validate">
+                        <label class="form_txt" for="CompanyTel">公司电话：</label>
+                        <input class="form_con" type="text" name="CompanyTel" id="CompanyTel" value="<$company.CompanyTel$>">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="CompanyPost">公司邮编：</label>
+                        <input class="form_con" type="text" name="CompanyPost" id="CompanyPost" value="<$company.CompanyPost$>">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="">公司地址：</label>
+                        <input class="form_con form_long" type="text" name="CompanyAddress" id="CompanyAddress" value="<$company.CompanyAddress$>">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="UserNum">可用员工帐号数量：</label>
+                        <input class="form_con" type="text" value="50" name="UserNum" id="UserNum" value="<$company.UserNum$>" disabled>
+                        <div class="tip">员工帐号的总数量</div>
+                    </div>
+                    <div class="form_group test_state">
+                        <label class="form_txt" for="">考试状态：</label>
+                        <input id="IsTest" name="IsTest" type="checkbox" value="1"<$(company.IsTest?" checked":"")$>>
+                        <label for="IsTest" class="isTestStart">开启</label>
+                        <div class="tip">开启则可以考试</div>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="">状态：</label>
+                        <input id="State_0" name="State" type="radio" value="0"<$(company.State == 0?" checked":"")$>>
+                        <label for="State_0" class="form_radio_lbl">正常</label>
+                        <input id="State_1" name="State" type="radio" value="1"<$(company.State == 1?" checked":"")$>>
+                        <label for="State_1" class="form_radio_lbl">锁定</label>
+                    </div>
+                    <html:if expression="base.CompareUserPower("UpdateCompany,UpdateSubCompany", PowerCheckType.OR)">
+                    <div class="form_group form_submit action">
+                        <input class="form_xgxx_button" type="submit" value="确定">
+                        <input type="hidden" name="Action" value="PostBack" />
+                    </div>
+                    </html:if>
+                </form>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+</body>
+</html>

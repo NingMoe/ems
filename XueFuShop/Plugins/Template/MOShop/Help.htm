@@ -1,0 +1,71 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/about.css">
+</head>
+<body>
+
+    <div class="container-fluid wrap">
+        <html:include file="Top.htm" />
+        <!-- main -->
+        <div class="about-main">
+            <div class="container">
+                <div class="position">
+                    <p>当前位置：<a href="/">首页</a>>><a>帮助中心</a><span class="returnhome"><a href="/">返回首页</a></span></p>
+                </div>
+                <div class="help-main clearfix">
+                    <div class="help-left">
+                        <ul>
+                        <html:foreach expression="ArticleClassInfo articleClass in helpClassList">
+                            <html:if expression="articleClass.ID != 28 || (articleClass.ID == 28 && XueFuShop.Common.Cookies.Admin.GetAdminID(true)>0)">
+                            <a href="/Help-I<$articleClass.ID$>.aspx"><li<$(id==articleClass.ID?" class=\"active\"":"")$>><$articleClass.ClassName$></li></a>
+                            </html:if>
+                        </html:foreach>
+                        </ul>
+                    </div>
+                    <div class="help-right">
+                        <div class="help-search">
+                            <label for="">问题搜索：</label>
+                            <input type="text" id="help-search" name="help-search" value="<$searchKey$>" placeholder="请输入您要搜索的问题">
+                            <a href="javascript:void(0);" class="btn-search">
+                                <i class="icon icon-search"></i>
+                            </a>
+                        </div>
+                        <div class="help-content">
+                            <div class="Q-A">
+                                <ul class="clearfix">
+                                <html:foreach expression="ArticleInfo article in articleList">
+                                    <li>
+                                        <div class="question"><span>Q:</span> <a href="HelpDetail.aspx?ID=<$article.ID$>" target="_blank"><$article.Title$></a></div>
+                                        <!-- <div class="answer hide"><span>A:</span> <$article.Content$></div> -->
+                                    </li>
+                                </html:foreach>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+            
+        </div>
+
+        <html:include file="Foot.htm" />
+        <script type="text/javascript">
+            $(function(){
+                $(".btn-search").click(function(event) {
+                    var searchKey = $("#help-search").val();
+                    if (searchKey != '') {
+                        window.location.href = '/Help.aspx?SearchKey=' + searchKey;
+                    }
+                    else {
+                        layer.alert("请输入您要搜索的问题");
+                    }
+                });
+            })
+        </script>
+</body>
+</html>

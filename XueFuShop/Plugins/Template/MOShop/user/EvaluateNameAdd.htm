@@ -1,0 +1,47 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />    
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1><$GetAddUpdate()$>评估名称</h1>
+                </div>
+                <div id="add_evaluation">
+                    <form action="" method="post" autocomplete="off">
+                        <div class="form_group">
+                            <label class="form_txt" for="EvaluationName">评估名称：</label>
+                            <input class="form_con" type="text" name="EvaluationName" id="EvaluationName" value="<$EvaluateName.EvaluateName$>">
+                        </div>
+                        <div class="form_group" style="display:none;">
+                            <label class="form_txt" for="EvaluationTime">评估时间：</label>
+                            <input class="form_con Wdate" type="text" name="EvaluationTime" id="EvaluationTime" value="<$EvaluateName.Date$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true})">
+                        </div>
+                        <div class="form_group">
+                            <label class="form_txt" for="">评估时间段：</label>
+                            <input class="form_con Wdate" type="text" name="EvaluationStartTime" id="EvaluationStartTime" value="<$EvaluateName.StartDate$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'#F{$dp.$D(\\'EvaluationEndTime\\',{d:-1})}'})">
+                            <label class="form_txt to" for="">到</label>
+                            <input class="form_con Wdate" type="text" name="EvaluationEndTime" id="EvaluationEndTime" value="<$EvaluateName.EndDate$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'#F{$dp.$D(\\'EvaluationStartTime\\',{d:1})}'})">
+                        </div>
+                        <div class="form_group form_submit">
+                            <input class="form_button" type="submit" id="SubmitButton" name="SubmitButton" value="<$GetAddUpdate()$>">
+                            <input type="hidden" name="Action" value="PostBack">
+                            <input type="hidden" id="EvaluationNameId" name="EvaluationNameId" value="<$EvaluateName.ID$>" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+    <script type="text/javascript" src="<html:templatePath>/My97DatePicker/WdatePicker.js"></script>
+</body>
+</html>

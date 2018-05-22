@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <html:include file="user/ManageHead.htm" />
+    <link rel="stylesheet" type="text/css" href="<html:templatePath>/layui/css/layui.css">
+</head>
+<body>
+    <html:if expression="action=="ChangeUserPassword"">
+    <div id="changeuserpassword">
+        <form action="" method="post" id="modify_password" autocomplete="off">
+            <div class="form_group">
+                <label class="form_txt" for="Name">用户名：</label>
+                <input class="form_con" type="text" name="Name" id="Name" readonly="true" value="<$userModel.UserName$>" disabled>
+            </div>
+            <div class="form_group">
+                <label class="form_txt" for="UserPassword1">新密码：</label>
+                <input class="form_con" type="password"  name="UserPassword1" id="UserPassword1">
+            </div>
+            <div class="form_group">
+                <label class="form_txt" for="UserPassword2">重复密码：</label>
+                <input class="form_con" type="password" name="UserPassword2" id="UserPassword2">
+            </div>
+            <div class="form_group form_submit">
+                <input class="form_xgmm_button" type="submit" value="确定">
+                <input type="hidden" name="Action" value="PostBack" />
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="<html:templatePath>/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="<html:templatePath>/layui/layui.js"></script>
+    <script type="text/javascript" src="<html:templatePath>/js/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+        layui.use(['layer', 'form'], function(){
+            var layer = layui.layer
+            ,form = layui.form();
+        });
+        $(function(){       
+            $(".form_xgmm_button").click(function() {
+                $.validator.addMethod("strongPsw",function(value,element){
+                    var spsw = /(?=^[0-9a-zA-Z._@#]{6,16}$)((?=.*[0-9])(?=.*[^0-9])|(?=.*[a-zA-Z])(?=.*[^a-zA-Z]))/;
+                    return this.optional(element) || (spsw.test(value));
+                },"必须是字母和数字的组合");
+    			$("#modify_password").validate({
+                    rules: {
+    			      	UserPassword1: {
+                            required:true,
+    			      		rangelength:[6,16],
+    			      		strongPsw:true,
+    			      	},
+    			      	UserPassword2: {
+    			      		required:true,
+    			      		equalTo: "#UserPassword1"
+    			      	},
+    			    },
+    			    messages: {
+    			      	UserPassword1: {
+    			      		required:"请输入新密码",
+    			      		rangelength:"密码长度大于6位少于16位",
+    			      	},
+    			      	UserPassword2: {
+    			      		required:"请再次输入新密码",
+    			      		equalTo: "两次输入必须一致"
+    			      	},
+                    },
+                });
+            });
+        })
+    </script>
+    </html:if>
+</body>
+</html>

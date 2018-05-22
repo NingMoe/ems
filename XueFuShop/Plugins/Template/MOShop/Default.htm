@@ -1,0 +1,715 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" href="<html:templatePath>/lightgallery/lightgallery.css">
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" type="text/css" href="<html:templatePath>/css/index2016.css">
+    <link rel="stylesheet" type="text/css" href="<html:templatePath>/css/head_short_video.css">
+    <link rel="stylesheet" type="text/css" href="<html:templatePath>/css/slide_plugin.css">
+    <link rel="stylesheet" href="<html:templatePath>/css/community.css">
+    <link href='<$ShopConfig.ReadConfigInfo().IconFontPath$>' rel='stylesheet' type='text/css' />
+    <style>
+        #lightGallery_counter{
+            top:22px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 16px;
+        }
+        #lightGallery-close::after {
+            font-size: 32px;
+        }
+        #lightGallery-action{
+            position: static;
+        }
+        #lightGallery-action #lightGallery-prev{
+            position: absolute;
+            left:60px;
+            top:40%;
+            width:128px;
+            height:128px;
+        }
+        #lightGallery-action #lightGallery-next{
+            position: absolute;
+            right: 60px;
+            top:40%;
+            width:128px;
+            height:128px;
+        }
+        #lightGallery-action a#lightGallery-prev::before,
+        #lightGallery-action a#lightGallery-next::after{
+            font-size: 96px;
+        }
+        .main-block{
+            margin-top:20px;
+        }
+        .main-block .ad-block{
+            position: relative;
+            float: left;
+            width: 400px;
+            height: 400px;
+        }
+        .main-block .dkj-block{
+            width: 800px;
+            height: 400px;
+        }
+        .main-block .b-block .square:hover{
+            color: #fff;
+        }
+        .slider .hd{
+            right: 45%;
+            width: auto;
+        }
+        .slider .hd li{
+            border-radius: 12px;
+        }
+        .slider .hd ul li.on{
+            background: #fff;
+            margin-left: 0px;
+        }
+        .slider .bd li{
+            /*min-height: 340px;*/
+        }
+        .basic-module{
+            margin-top: 60px;
+        }
+        .basic-module h1{
+            padding-bottom: 30px;
+            text-align: center;
+            font-size: 24px;
+            color: #4e4e4e;
+        }
+        .basic-item{
+            width: 320px;
+            height: 28  0px;
+            display: inline-block;
+            border-radius: 4px;
+            vertical-align: middle;
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 40px 38px 0;
+            border: 1px solid #d4dae1;
+            position: relative;
+            overflow: hidden;
+        }
+        .basic-item h4{
+            font-size: 20px;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .basic-item-slide{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            -webkit-transition: opacity .3s,-webkit-transform .4s;
+            transition: opacity .3s,-webkit-transform .4s;
+            transition: transform .4s,opacity .3s;
+            transition: transform .4s,opacity .3s,-webkit-transform .4s;
+            -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+            background-color: #fff;
+            opacity: 0;
+        }
+        .basic-item-slide p{
+            font-size: 14px;
+            color: #657493;
+            text-align: left;
+        }
+        .basic-item:hover .basic-item-slide {
+            -webkit-transform: translate(0);
+            transform: translate(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid wrap">
+        <div class="wrapmask"></div>
+        <html:include file="Top.htm" />
+
+        <!-- banner-->
+        <div id="slideBox" class="slider">
+            <div class="hd">
+                <ul><li class="on"></li><li class=""></li><!-- <li class=""></li> --></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li onclick="window.open('http://www.mentoronsite.com');" style="background:#20c7f4 url(<html:templatePath>/images/banner1.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover; cursor: pointer;"></li>
+                    <li onclick="window.open('http://www.capech.cn/intro.asp');" style="background:#e6f9ff url(<html:templatePath>/images/banner5.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover; cursor: pointer;"></li>
+                    <!-- <li style="background: url(<html:templatePath>/images/banner2.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover;"></li>
+                    <li style="background: url(<html:templatePath>/images/banner3.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover;"></li> -->
+                </ul>
+            </div>
+        </div>
+        <!-- banner end-->
+
+        <!--main-block-->   
+        <div class="main">
+            <div class="container">
+                <div class="main-block cf">
+                    <div class="b-block bk-2 bk-hori bk-num2 dkj-block">
+                        <div class="b-cube">
+                            <div class="b-cont b-cont1">
+                                <div class="b-cube2">
+                                    <p class="b-title">孟特大课件</p>
+                                    <p class="b-desc">来帮您赚钱</p>
+                                </div>
+                            </div>
+                            <div class="b-cont b-cont2">
+                                <div class="b-cube2 cf">
+                                    <p class="b-title">做好坦克加步兵，客流订单双丰收</p>
+                                    <p class="b-desc">
+                                        外展外拓对于提升品牌形象、客流和订单有非常大的促进，但扫街起效慢，且通常卖不到车，而小区联合车展、商超定展则要花费较高成本！如何两者兼得？本期大课件为大家带来坦克加步兵战法，帮您客流订单双丰收!
+                                    </p> 
+                                    <p><a href="javascript:OpenVideo(6065,'做好坦克加步兵，客流订单双丰收');" class="square">立即观看</a></p>
+                                </div>
+                                <!-- <div class="pic_bg">
+                                    <img src="../images/201606153324869753.png" alt="">
+                                </div> -->
+                            </div>
+                            <div class="b-hover b-green"></div>
+                            <div class="b-cover">
+                                <img src="<html:templatePath>/images/dkj/6065.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="b-block bk-2 bk-hori bk-num3" style="width:400px; height: 400px;">
+                        <div class="b-cube">
+                            <div class="title">
+                                <p><i></i><span class="title-cn">最新课程/</span><span class="title-en">Notice</span></p> 
+                            </div>
+                            <div class="board clearfix">
+                                <ul class="content clearfix">
+                                    <html:foreach expression="ProductInfo product in newProductList">
+                                    <li><em><$product.Name$></em><span>[<$AttributeRecordBLL.ReadAttributeRecord(attributeRecordList, 3, product.ID).Value$>]</span></li>
+                                    </html:foreach>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <html:csharp>/*</html:csharp>
+                    <!-- <div class="b-block ad-block">
+                        <div id="slideBox" class="slider">
+                            <div class="hd">
+                                <ul class="clearfix"><li class="on"></li><li class=""></li><li class=""></li></ul>
+                            </div>
+                            <div class="bd">
+                                <ul>
+                                    <li style="background: url(../images/banner1.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover;"></li>
+                                    <li style="background: url(../images/banner2.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover;"></li>
+                                    <li style="background: url(../images/banner3.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover;"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+                    <html:csharp>*/</html:csharp>
+                </div>
+            </div>
+
+            <html:csharp>/*</html:csharp>
+            <!--<div class="container">
+                <div class="main-block cf">
+                    <div class="b-block bk-3 bk-hori bk-num1">
+                        <div class="b-cube">
+                            <div class="b-cont b-cont1">
+                                <div class="b-cube2">
+                                    <p class="b-title">4S店经销商</p>
+                                    <p class="b-desc">掌握小知识玩转大客户</p>
+                                    <p><a href="javascripts:;" class="square">了解更多</a></p>
+                                </div>
+                            </div>
+                            <div class="b-cont b-cont2">
+                                <div class="b-cube2">
+                                    <p class="b-title">4S店经销商</p>
+                                    <p class="b-desc">赤日炎炎似火烧，还再为补课舟车劳顿么？<br>快来孟特网校，宅家清凉学习，无需奔波万里取经！<br>更多福利就等你来，让你轻松爽学整个夏天~ 
+                                    </p>
+                                    <p><a href="javascript:;" class="square">了解更多</a></p>
+                                </div>
+                                <div class="pic_bg">
+                                    <img src="images/201606184062536666.png" alt="">
+                                </div>
+                            </div>
+                            <div class="b-hover b-green"></div>
+                            <div class="b-cover">
+                                <img src="<html:templatePath>/images/i21.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-block bk-2 bk-hori bk-num3">
+                        <div class="b-cube">
+                            <div class="title">
+                                <p><i></i><span class="title-cn">孟特快讯/</span><span class="title-en">MENTOR NEWS</span></p>
+                                <ul class="clearfix">
+                                    <li><a href="javascript:;">汽修专业升级，名企定向班招生啦！<span>[2016-06-21]</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="b-block bk-2 bk-hori bk-num2">
+                        <div class="b-cube">
+                            <div class="b-cont b-cont1">
+                                <div class="b-cube2">
+                                    <p class="b-title">汽车厂家</p>
+                                    <p class="b-desc"> 年中大促最终弹</p>
+                                </div>
+                            </div>
+                            <div class="b-cont b-cont2">
+                                <div class="b-cube2 cf">
+                                    <p class="b-title">汽车厂家</p>
+                                    <p class="b-desc"> 汽车厂家汽车厂家<br>汽车厂家汽车厂家~<br>更多活动同期进行，折上立减课程任你选！ </p> <p><a href="javascript:;" class="square">立即参加</a>
+                                    </p>
+                                </div>
+                                <div class="pic_bg">
+                                    <img src="<html:templatePath>/images/201606153324869753.png" alt="">
+                                </div>
+                            </div>
+                            <div class="b-hover b-yellow"></div>
+                            <div class="b-cover">
+                                <img src="<html:templatePath>/images/i22.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="b-block bk-1 bk-hori bk-num4">
+                        <div class="b-cube">
+                            <div class="b-cont b-cont1">
+                                <div class="b-cube2">
+                                    <p class="b-title">综合保养厂</p>
+                                    <p class="b-desc">掌握小知识玩转大客户</p>
+                                </div>
+                            </div>
+                            <div class="b-cont b-cont2">
+                                <div class="b-cube2">
+                                    <p class="b-title">综合保养厂</p>
+                                    <p class="b-desc">掌握小知识玩转大客户<br>
+                                    巧学活用，乐趣十足！ </p>
+                                    <p><a href="javascript:;" class="square">立即下载</a></p>
+                                </div>
+                            </div>
+                            <div class="b-hover b-green"></div>
+                            <div class="b-cover">
+                                <img src="<html:templatePath>/images/i23.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="b-block bk-1 bk-hori bk-num5">
+                        <div class="b-cube">
+                            <div class="b-cont b-cont1">
+                                <div class="b-cube2">
+                                    <p class="b-title">个人</p>
+                                    <p class="b-desc">掌握小知识玩转大客户</p>
+                                </div>
+                            </div>
+                            <div class="b-cont b-cont2">
+                                <div class="b-cube2">
+                                    <p class="b-title">个人</p>
+                                    <p class="b-desc">掌握小知识玩转大客户<br>掌握小知识玩转大客户<br>掌握小知识玩转大客户<br>掌握小知识玩转大客户<br></p>
+                                    <p><a href="javascript:;" class="square">立即下载</a></p>
+                                </div>
+                            </div>
+                            <div class="b-hover b-blue"></div>
+                            <div class="b-cover">
+                                <img src="<html:templatePath>/images/i24.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>                
+            </div>-->
+            <html:csharp>*/</html:csharp>
+
+            <div class="container">
+                <!-- 特价课程模块-->
+                <div class="basic-module">
+                    <h1>基础课程模块</h1>
+                    <div class="basic-wrapper">
+                        <div class="basic-item" onclick="window.location.href='/product.aspx?ClassID=8'">
+                            <img src="<html:templatePath>/images/jichu.jpg" alt="基础知识">
+                            <h4>基础知识</h4>
+                            <div class="basic-item-slide">
+                                <h4>基础知识</h4>
+                                <p>马拉松式训练，让您15天成为汽车专家！</p>
+                            </div>
+                        </div>
+                        <div class="basic-item" onclick="window.location.href='/product.aspx?ClassID=5'">
+                            <img src="<html:templatePath>/images/chanpin.jpg" alt="产品知识">
+                            <h4>产品知识</h4>
+                            <div class="basic-item-slide">
+                                <h4>产品知识</h4>
+                                <p>新车销售要赚钱，打好专业基础功！买一辆车，先让你爱上它！</p>
+                            </div>
+                        </div>
+                        <div class="basic-item" onclick="window.location.href='/product.aspx?ClassID=6'">
+                            <img src="<html:templatePath>/images/jingche.jpg" alt="竞车对比">
+                            <h4>竞车对比</h4>
+                            <div class="basic-item-slide">
+                                <h4>竞车对比</h4>
+                                <p>超过400门竞品课程，成为您竞车对比的资料库。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <html:csharp>/*</html:csharp>
+                <!-- <div class="slideTxtBox clearfix" id="freecourse">
+                    <div class="hd">
+                        <h3 class="slide-title">基础课程</h3>
+                        <ul>
+                            <li data-cid="8">基础知识</li>
+                            <li data-cid="5">产品知识</li>
+                            <li data-cid="6">竞车对比</li>
+                        </ul>
+                        <a href="javascript:;" class="slider-more">MORE+</a>
+                    </div>
+                    <div class="bd">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="javascript:;"><img src="<html:templatePath>/images/i31.jpg" width="285" height="360" alt="综合保养厂"></a>
+                                <div class="bd-text">
+                                    <a href="javascript:;"><p class="text-title">基础知识</p>
+                                    <p class="text-desc">掌握小知识玩转大客户</p></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bd-text-othert"><a href="/product.aspx?ClassID=8">基础知识</a></div>
+                                <a href="/product.aspx?ClassID=8"><i class="iconfont icon-jichuzhishi"></i></a>
+                                <p class="text-desc">马拉松式训练，让您15天成为汽车专家！</p>
+                            </li>
+                            <li>
+                                <div class="bd-text-othert"><a href="/product.aspx?ClassID=5">产品知识</a></div>
+                                <a href="/product.aspx?ClassID=5"><i class="iconfont icon-chanpinzhishi"></i></a>
+                                <p class="text-desc">新车销售要赚钱，打好专业基础功！买一辆车，先让你爱上它！</p>
+                            </li>
+                            <li>
+                                <div class="bd-text-othert"><a href="/product.aspx?ClassID=6">竞车对比</a></div>
+                                <a href="/product.aspx?ClassID=6"><i class="iconfont icon-foot100"></i></a>
+                                <p class="text-desc">超过400门竞品课程，成为您竞车对比的资料库。</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+                <html:csharp>*/</html:csharp>
+                <!-- 特价课程模块 end-->
+
+                <div class="clearfix"></div>
+                <div class="container" style="margin-top: 60px; margin-bottom: -30px;">
+                    <ul>
+                        <li style="float: left;"><a href="http://www.u2-solar.com/main.asp" target="_blank"><img src="<html:templatePath>/images/adv/1.jpg" width="396px"></a></li>
+                        <li style="float: left; margin:0 6px;"><a href="/Plugins/Adv/JingPai/index.html" target="_blank"><img src="<html:templatePath>/images/adv/2.jpg" width="396px"></a></li>
+                        <li style="float: left;"><a href="http://www.pen-links.com/" target="_blank" rel="nofollow"><img src="<html:templatePath>/images/adv/3.jpg" width="396px"></a></li>
+                    </ul>
+                </div>
+            
+                <!-- 特价课程 -->
+                <div class="clearfix slideTxtBox recommendcourse" id="recommendcourse">
+                    <div class="hd">
+                        <h3 class="slide-title">进阶课程</h3>
+                        <ul class="clearfix">
+                            <li data-cid="9" data-istop="1">销售流程与技巧</li>
+                            <li data-cid="10" data-istop="1">销售运营管理</li>
+                            <li data-cid="3550" data-istop="0">综合管理培训</li>
+                        </ul>
+                        <a href="javascript:;" class="slider-more">MORE+</a>
+                    </div>
+                    <div class="bd course-list">                        
+                    </div>
+                </div>
+                <!-- 特价课程 end-->
+
+                <html:csharp>/*</html:csharp>
+                <!-- 免费课程 -->
+                <!-- <div class="slideTxtBox clearfix" id="freecourse">
+                    <div class="hd">
+                        <h3 class="slide-title">免费课程</h3>
+                        <ul>
+                        <html:csharp>productListGroupByProductRootClass=ProductBLL.SplitProductListByProductRootClass(freeProductList,3);</html:csharp>
+                        <html:foreach expression="string key in productListGroupByProductRootClass.Keys">
+                            <li><$ProductClassBLL.ReadProductClassByProductClassList(productClassList,int.Parse(key)).ClassName$></li>
+                        </html:foreach>
+                        </ul>
+                        <a href="javascript:;" class="slider-more">MORE+</a>
+                    </div>
+                    <div class="bd">
+                        <html:foreach expression="string key in productListGroupByProductRootClass.Keys">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="javascript:;"><img src="<html:templatePath>/images/i31.jpg" width="285" height="360" alt="综合保养厂"></a>
+                                <div class="bd-text">
+                                    <a href="javascript:;"><p class="text-title">综合保养厂</p>
+                                    <p class="text-desc">掌握小知识玩转大客户</p></a>
+                                </div>
+                            </li>
+                            <html:foreach expression="ProductInfo product in productListGroupByProductRootClass[key]">
+                            <li>
+                                <div class="bd-text-othert"><a href="javascript:;"><$product.Name$></a></div>
+                                <a href="javascript:;"><img class="bd-text-pic" src="<html:templatePath>/images/i32.jpg" alt="<$product.Name$>"></a>
+                                <p class="text-desc">新版标日初级上下册精讲连读，新版教材倾情演绎，注重口语会话能力培养......</p>                                
+                            </li>
+                            </html:foreach>
+                        </ul>
+                        </html:foreach>
+                    </div>
+                </div> -->
+                <!-- 免费课程 end-->
+            
+                <!-- 汽车快报 -->
+                <!-- <div class="clearfix slideTxtBox recommendcourse" id="recommendcourse">
+                    <div class="hd">
+                        <h3 class="slide-title">推荐课程</h3>
+                        <ul class="clearfix">
+                        <html:csharp>productListGroupByProductRootClass=ProductBLL.SplitProductListByProductRootClass(hotProductList,6);</html:csharp>
+                        <html:foreach expression="string key in productListGroupByProductRootClass.Keys">
+                            <li><$ProductClassBLL.ReadProductClassByProductClassList(productClassList,int.Parse(key)).ClassName$></li>
+                        </html:foreach>
+                        </ul>
+                        <a href="javascript:;" class="slider-more">MORE+</a>
+                    </div>
+                    <div class="bd">
+                        <html:foreach expression="string key in productListGroupByProductRootClass.Keys">
+                        <ul class="clearfix">
+                            <li class="recommend-o">
+                                <a href="javascript:;"><img src="<html:templatePath>/images/i41.jpg" width="285" height="400" alt="菜鸟变身达人"></a>
+                                <div class="bd-text">
+                                    <a href="javascript:;"><p class="text-title">菜鸟变身达人</p>
+                                    <p class="text-desc">无门槛 从零学起</p></a>
+                                </div>
+                            </li>
+                            <html:foreach expression="ProductInfo product in productListGroupByProductRootClass[key]">
+                            <li>
+                                <a href="javascript:;"><img src="<html:templatePath>/images/i42.png" alt="<$product.Name$>"></a>
+                                <div class="bd-text-sub">
+                                    <p class="text-title"><$ProductClassBLL.ReadProductClassName(product.ClassID,2)$></p>
+                                    <p class="text-desc"><$product.Name$></p>
+                                    <a href="javascript:;">查看课程>></a>
+                                </div>
+                            </li>
+                            </html:foreach>
+                        </ul>
+                        </html:foreach>
+                    </div>
+                </div> -->
+                <!-- 汽车快报 end-->
+                <html:csharp>*/</html:csharp>
+            </div>
+
+            <!-- 每日快报 -->
+            <div class="newsflash">
+                <div class="title">
+                    <h3 class="slide-title">每日快报</h3>
+                    <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=29">查看更多</a>
+                    <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=29&ID=35">车市要闻</a>
+                    <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=29&ID=32">后市场新闻</a>
+                    <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=29&ID=31">新车上市</a>
+                    <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=29&ID=30">市场调研</a>
+                    <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=36&ID=33">爱车讲堂</a>
+                </div>
+                <div class="title_table">
+                    <ul class="title_th clearfix">
+                        <li class="news_title">
+                            <a>标题</a><span>时间</span>
+                        </li>
+                        <li class="news_title">
+                            <a>标题</a><span>时间</span>
+                        </li>
+                    </ul>
+                    <ul class="title_td clearfix">
+                    <html:foreach expression="ArticleInfo article in newsList">
+                        <li class="news_title">
+                            <a href="javascript:;" data-newsid="<$article.ID$>"><$article.Title$></a><span><$article.Date.ToString("yyyy-MM-dd")$></span>
+                        </li>
+                    </html:foreach>
+                    </ul>
+                </div>
+            </div>
+            <!-- 每日快报 end-->
+
+            <!-- 荣誉墙 -->
+            <div class="honor">
+                <h3 class="title">荣誉墙</h3>
+                <div class="picScroll-left">
+                    <div class="hd">
+                        <span class="arrow"><a class="next"></a><a class="prev"></a></span>
+                    </div>
+                    <div class="bd">
+                        <ul class="picList" id="lightGallery">
+                            <html:foreach expression="string certPath in certList">
+                            <li data-src="<$certPath$>">
+                                <div class="pic"><a href="javascript:;" target="_blank"><img src="<$certPath$>" /></a></div>
+                            </li>
+                            </html:foreach>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 荣誉墙 end -->
+
+            <!-- 立即注册 -->
+            <div class="contact">
+                <div class="contact-t">
+                    <span class="regist"><!-- <a href="./user/register.html">立即注册</a> --></span>
+                    <span class="ask">有疑问或想了解更多，请咨询：021-50620208</span>
+                </div>
+            </div>
+            <!-- 立即注册 end -->
+        </div>
+        <!--main-block end-->   
+    </div>
+
+    <html:include file="Foot.htm" />
+    <script id="CourseTpl" type="text/html">
+    <ul class="clearfix" data-cid="{{ d.cid }}">
+        <li class="recommend-o">
+            <a href="javascript:;"><img src="<html:templatePath>/images/i41.jpg" width="285" height="400" alt="菜鸟变身达人"></a>
+            <div class="bd-text">
+                <a href="javascript:;"><p class="text-title">{{ d.cname }}</p>
+                <p class="text-desc">无门槛 从零学起</p></a>
+            </div>
+        </li>
+        {{#  layui.each(d.list, function(index, item){ }}
+        <li class="course">
+            <div class="course-top">
+                <a href="javascript:;"><img  alt="{{ item.Name }}" src="{{# if(item.Image == '' || item.Image == '/') { }} <html:templatePath>images/nopic.jpg {{# }else{ }} {{ item.Image }} {{# } }}"></a>
+                <!-- <div class="bd-text-sub">
+                    <p class="text-title">{{ item.Name }}</p>
+                    <p class="text-desc">趣味教学让你受用一生</p>
+                    <a href="javascript:;">查看课程>></a>
+                </div> -->
+            </div>
+            <div class="course-bottom">
+                <div class="iconcc">
+                    <a href="javascript:OpenVideo({{ item.ID }},'{{ item.Name }}');" target="_blank"  title="播放视频">
+                        <i class="iconfont icon-bofang"></i>
+                        播放视频
+                    </a>
+                </div>
+            </div>
+        </li>
+        {{#  }); }}
+    </ul>
+    </script>
+
+    <!-- SuperSlide -->
+    <script src="<html:templatePath>/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="<html:templatePath>/lightgallery/lightgallery.min.js"></script>
+    <script type="text/javascript">
+        jQuery(".slider").slide({mainCell:".bd ul",autoPlay:true,effect:"fade",pnLoop:true,mouseOverStop:false,interTime:3000,delayTime:1000});
+         var ary = location.href.split("&");
+        jQuery("#freecourse").slide( { effect:ary[1],autoPlay:ary[2],trigger:ary[2],easing:ary[4],delayTime:ary[5],pnLoop:ary[6] });
+        jQuery("#recommendcourse").slide( { effect:ary[1],autoPlay:ary[2],trigger:ary[2],easing:ary[4],delayTime:ary[5],pnLoop:ary[6] });
+        jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",easing:"swing",pnLoop:true,mouseOverStop:false,autoPlay:true,vis:4,delayTime:1000});
+
+        layui.use(['layer','laytpl'], function(){
+            var layer = layui.layer,
+            laytpl = layui.laytpl;
+            layer.ready(function(){
+                var newsArray = [];
+                $(".newsflash .title_td a").click(function(event) {
+                    var newsid = parseInt($(this).data('newsid'));
+                    var grepResult=$.grep(newsArray,function(value){
+                        return value.id == newsid;
+                    });
+                    if(grepResult.length<=0){
+                        $.ajax({
+                            url: '/Ajax.aspx?Action=ReadArticle&ID='+newsid,
+                            async: false
+                        })
+                        .done(function(data) {
+                            grepResult = JSON.parse(data);
+                            newsArray.push(grepResult); 
+                        })
+                    }
+                    else{
+                        grepResult=grepResult[0];
+                    }
+                    var index = layer.open({
+                        type: 1,
+                        title: grepResult.title,
+                        content: '<div class="news"><h2 class="title">'+ grepResult.title +'</h2><div class="article">'+ grepResult.content +'</div></div>'
+                    });
+                    layer.full(index);                    
+                });
+                $("#recommendcourse .hd li").click(function(event) {
+                    var cid=$(this).data("cid");
+                    var isTop=$(this).data("istop");
+                    var cname=$(this).text();
+                    if($("#recommendcourse .bd ul[data-cid='"+cid+"']").length==0)
+                    {
+                        $.post('/Ajax.aspx?Action=GetProductListByClassID', {ClassID: cid,IsSpecial: 1,IsTop: isTop,PageSize:6}, function(data, textStatus, xhr) {
+                            data = JSON.parse(data);
+                            data["cname"] = cname;
+                            //loadingobj.hide();
+                            laytpl($("#CourseTpl").html()).render(data, function(html){
+                                $("#recommendcourse .bd").append(html);
+                            });
+                            $("#recommendcourse .bd ul[data-cid='"+cid+"']").show().siblings().hide();
+                        });
+                    }
+                    $("#recommendcourse .bd ul[data-cid='"+cid+"']").show().siblings().hide();;
+                    $(this).parent().siblings('a').attr("href","/product.aspx?ClassID="+cid);
+                });                
+                $("#recommendcourse .hd li").eq(0).click();
+            }); 
+        });
+
+        $(document).ready(function() {
+            $("#lightGallery").lightGallery({
+                speed: 500,
+                thumbnail: false,
+                closable: false,
+                counter:true,
+            }); 
+
+            $(".origin .module").hover(function() {
+                $(this).addClass('active');
+                $(this).find('.item-bottom').animate({opacity:'1'},500,"swing");
+                $(this).siblings('.module').removeClass('active');
+                $(this).siblings('.module').find('.item-bottom').animate({opacity:'0'},"fast");
+            }, function() {
+                
+            });
+
+            $(".collect li.item").hover(function(){
+                $(this).children('.item-bottom').addClass('active');
+            },function(){
+                $(this).children('.item-bottom').removeClass('active');
+            }); 
+
+            $(".board").Scroll({
+                line: 1,
+                speed: 800,
+                timer: 3000
+            });
+        });
+
+        var OpenVideo = function(productID, name) {
+            <html:if expression="base.UserID==0">
+            window.location.href="/User/Login.aspx?RedirectUrl="+window.location.pathname+window.location.search;
+            <html:else>
+            layer.open({
+                type: 2,
+                title: name,
+                skin: 'layui-layer-rim', //加上边框
+                area: ['1020px', '518px'],
+                resize: false,
+                scrollbar: false,
+                content: '/Verify.aspx?ID='+ productID //iframe的url
+            }); 
+            </html:if>
+        }     
+    </script>
+    <!-- SuperSlide end-->
+</body>
+</html>

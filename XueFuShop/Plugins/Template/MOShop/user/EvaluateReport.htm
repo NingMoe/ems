@@ -1,0 +1,128 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>评估报表</h1>
+                </div>
+                <div id="qualified_rate" class="choose_company">
+                    <html:if expression="base.ExistsSonCompany">
+                    <form action="" method="post" id="completion_rate" autocomplete="off">
+                        <div class="form_group form_center form_width">
+                            <label class="form_txt" for="CompanyID">公司名称：</label>
+                            <select class="form_select" name="CompanyID" id="CompanyID">
+                                <option value="">请选择公司</option>
+                                <option value="0"<$(companyID == 0 ? " selected" : "")$>>集团所有公司</option>
+                                <html:foreach expression="CompanyInfo company in base.SonCompanyList">
+                                <option value="<$company.CompanyId$>"<$(company.CompanyId==companyID?" selected":"")$>><$company.CompanyName$></option>
+                                </html:foreach>
+                            </select>
+                            <label class="form_txt" for="EvaluationName">评估名称：</label>
+                            <select class="form_select" type="text" name="EvaluationName" id="EvaluationName">
+                                <$EvaluateNameBLL.GetEvaluateNameListHtml(base.GetCompanyIDString(companyID),evaluateNameId)$>
+                            </select>
+                            <label class="form_txt form_txt_short" for="Name">姓名：</label>
+                            <input class="form_con" type="text" name="Name" id="Name" value="<%=name %>">
+                        </div>
+                        <div class="form_group form_center form_br form_width">
+                            <label class="form_txt form_txt_short" for="PostId">评估岗位：</label>
+                            <select class="form_select<$(companyID == 0?" form_hide":"")$>" name="PostId" id="PostId">
+                                <$GetDropDownListContent()$>
+                            </select>
+                            <input class="form_con<$(companyID != 0?" form_hide":"")$>" type="text" name="PostName" id="PostName" value="<%=postName %>">
+                            <label class="form_txt" for="QualifiedRate">完成率：</label>
+                            <input class="form_con" type="text" name="QualifiedRate" id="QualifiedRate" value="<%=qualifiedRate %>"><label class="form_txtend">%以上</label>
+                            <input class="form_tgl_button" name="query" id="query" type="submit" value="查 询">
+                            <input id="action" name="action" type="hidden" value="Search">
+                        </div>
+                    </form>
+                    <html:else>
+                    <form action="" method="post" id="completion_rate" autocomplete="off">
+                        <div class="form_group form_center"><label class="form_txt" for="EvaluationName">评估名称：</label>
+                            <select class="form_select" type="text" name="EvaluationName" id="EvaluationName">
+                                <$EvaluateNameBLL.GetEvaluateNameListHtml(base.GetCompanyIDString(companyID),evaluateNameId)$>
+                            </select>
+                            <label class="form_txt form_txt_short" for="Name">姓名：</label>
+                            <input class="form_con" type="text" name="Name" id="Name" value="<%=name %>">
+                            <label class="form_txt form_txt_short" for="PostId">岗位：</label>
+                            <select class="form_select" name="PostId" id="PostId">
+                                <$GetDropDownListContent()$>
+                            </select>
+                            <label class="form_txt" for="QualifiedRate">完成率：</label>
+                            <input class="form_con" type="text" name="QualifiedRate" id="QualifiedRate" value="<%=qualifiedRate %>"><label class="form_txtend">%以上</label>
+                            <input class="form_tgl_button" name="query" id="query" type="submit" value="查 询">
+                            <input id="action" name="action" type="hidden" value="Search">
+                        </div>
+                    </form>
+                    </html:if>
+                    <html:if expression="action!=""">
+                    <table class="qualified_rate evaluation_sheet" id="assessment_report">
+                        <thead>
+                        <tr>
+                            <th class="number">序号</th>
+                            <th class="company" data-sort="string">公司名称<i class="icon_arrow"></i></th>
+                            <th class="evaluate">评估名称</th>
+                            <th class="name">姓名</th>
+                            <th class="post">岗位</th>
+                            <th class="rate" data-sort="int">完成率<i class="icon_arrow"></i></th>
+                            <th class="score" data-sort="int">积分<i class="icon_arrow"></i></th>
+                            <th class="operate">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <html:csharp>int i=0;</html:csharp>
+                        <html:foreach expression="KPIEvaluateReportInfo report in reportList">
+                        <html:csharp>i++;</html:csharp>
+                        <tr>
+                            <td><$i$></td>
+                            <td><$report.CompanyName$></td>
+                            <td><$report.EvaluateName$></td>
+                            <td><$report.UserName$></td>
+                            <td><$report.PostName$></td>
+                            <td><$report.Rate$>%</td>
+                            <td><$report.TotalScore$>分</td>
+                            <td><a class="check" href="javascript:OpenPage('EvaluateShow.aspx?EvaluateName=<$report.EvaluateName$>&UserName=<$report.UserName$>&PostName=<$report.PostName$>&UserId=<$report.UserId$>&PostId=<$report.PostId$>&EvaluateNameId=<$report.EvaluateNameId$>')">查看</a></td>
+                        </tr>
+                        </html:foreach>
+                        </tbody>
+                    </table>
+                    </html:if>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+    <script type="text/javascript" src="<html:templatePath>/js/stupidtable.min.js"></script>
+<script type="text/javascript">
+var OpenPage = function(url) {
+    layer.open({
+        type: 2,
+        title: '评估结果',
+        skin: 'layui-layer-rim', //加上边框
+        area: ['1000px', '518px'],
+        scrollbar: false,
+        content: url //iframe的url
+    }); 
+}
+
+$(function() {
+    $("[data-sort]").closest("table").stupidtable();
+    $("#query").click(function(event) {
+        layer.load(1, {
+            shade: [0.8,'#000'] //0.1透明度的白色背景
+        });
+    });
+})
+</script>
+</body>
+</html>

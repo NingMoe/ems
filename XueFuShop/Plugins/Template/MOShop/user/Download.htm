@@ -1,0 +1,233 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.Common" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>    
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/about.css">
+    <link rel="stylesheet" href="<$ShopConfig.ReadConfigInfo().IconFontPath$>">
+    <style type="text/css">
+    .QRCode { width: 221px; height: 261px; text-align: center; background: #fff; }
+    .QRCode .codename { font-size: 14px; line-height: 180%; padding: 10px; white-space:nowrap; overflow: hidden; }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid wrap">
+        <html:include file="Top.htm" />
+        
+        <!-- main -->
+        <div class="about-main">
+            <div class="container">
+                <div class="position">
+                    <p>当前位置：<a href="/">首页</a>>><a class="active" href="/User/Download.aspx">下载中心</a><span class="returnhome"><a href="/">返回首页</a></span></p>
+                </div>
+                <div class="download-main clearfix">
+                    <div class="download-left">
+                        <h3>课件下载目录</h3>  
+                        <ul id="download-nav">
+                            <div class="layui-layer-loading" style="width: 50px; margin:0 auto;">
+                                <div id="" class="layui-layer-content layui-layer-loading1"></div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="download-right">
+                        <div class="download-search">
+                            <label for="">下载搜索：</label>
+                            <input type="text" id="download-search" name="download-search" placeholder="请输入您要下载的课件名称">
+                            <a href="javascript:;" class="btn-search">
+                                <i class="icon icon-search"></i>
+                            </a>
+                        </div>
+                        <div class="download-title" style="margin:-2px 35px 10px; background:#fff;"><!-- 类目：竞车>>长安福特>>福克斯VS卡罗拉 --></div>
+                        <div class="download-content">
+                            <ul>
+                                <div class="download-tip">请通过左侧目录或上方搜索框选择您要下载的课件(限公共课和您学习岗位内的课件)！</div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+            
+        </div>
+    </div>
+      
+
+<html:include file="Foot.htm" />
+<script id="DownloadProductListTpl" type="text/html">
+{{#  layui.each(d, function(index, item){ }}
+<li>
+    <dl class="clearfix">
+        <dt>{{ item.name }}</dt>
+        {{# if(item.url != ''){ }}
+        <dd>
+            <a class="CourseURL" href="javascript:void(0);" data-src="{{ item.url }}">
+                <i class="iconfont icon-xiazai"></i>课件下载
+            </a>
+        </dd>
+        {{# } }}
+        {{# if(item.surl != ''){ }}
+        <dd>
+            <a class="saletool" href="javascript:void(0);" data-src="{{ item.surl }}" data-name="{{ item.name }}">
+                <i class="iconfont icon-tool"></i>助销工具
+            </a>
+        </dd>
+        {{# } }}
+    </dl>
+</li>
+{{#  }); }}
+</script>
+
+<script>
+$(function(){
+    layui.use('tree', function(){
+        var $ = layui.jquery;
+        $.post('/Ajax.aspx?Action=GetDownloadMenu', {ID: 0,SpreadPath:'<$RequestHelper.GetQueryString<string>("SpreadPath")$>'}, function(data) {
+            $("#download-nav").html('');
+            data = JSON.parse(data);
+            layui.tree({
+                "elem": "#download-nav",
+                "nodes": data,
+                click: function(node){
+                    if (!node.children) {
+                        $.post('/Ajax.aspx?Action=GetDownloadProductList', {ID: node.id}, function(data, textStatus, xhr) {
+                            data = JSON.parse(data);
+                            if(data.length > 0){
+                                layui.use('laytpl', function(){
+                                    var laytpl = layui.laytpl;
+                                    laytpl($("#DownloadProductListTpl").html()).render(data, function(html){
+                                        $(".download-content ul").html(html);
+                                    });
+                                }); 
+                            }
+                            else{
+                                $(".download-content ul").html("<div class='download-tip'>暂无内容或权限不足！</div>");
+                            }
+                        });
+                    }
+                }
+            });
+
+            $(".layui-tree-spread").bind('click', function(event) {
+                $(this).parent().siblings().children("ul.layui-show").siblings("a").children(".layui-icon").html("&#xe622;");
+                $(this).parent().siblings().data("spread",null).children("ul.layui-show").removeClass("layui-show").siblings(".layui-icon").html("&#xe623;");
+            });
+
+            $(".layui-tree-spread").siblings("a").bind('dblclick', function(event) {
+                $(this).parent().siblings().children("ul.layui-show").siblings("a").children(".layui-icon").html("&#xe622;");
+                $(this).parent().siblings().data("spread",null).children("ul.layui-show").removeClass("layui-show").siblings(".layui-icon").html("&#xe623;");
+            });
+
+            $("#download-nav cite").bind('click', function(event) {
+                if ($(this).parent("a").siblings("ul").length == 0) {
+                    c3 = $(this).text();
+                    $("cite").css("color","#333");
+                    $(this).css("color", "#18bd9c");
+                    cite = $(this).parents("ul").siblings("a").find("cite");
+                    if (cite.length == 1) {
+                        c2 = cite.text();
+                        $(".download-title").text("类目：" + c2 + " >> " + c3);
+                    }
+                    else if (cite.length == 2) {
+                        c1 = cite[0].innerHTML;
+                        c2 = cite[1].innerHTML;
+                        $(".download-title").text("类目：" + c1 + " >> " + c2 + " >> " + c3);
+                    }
+                }
+            });
+            $("#download-nav [data-spread='true']:last li:eq(0) cite").click();
+        });
+    });
+    $(".download-content").on('click', '.saletool', function(event) {
+        layer.open({            
+            type: 1,
+            title: false,
+            area: ['221px','261px'],
+            skin: 'layui-layer-nobg', //没有背景色
+            shadeClose: true,
+            resize: false,
+            //scrollbar: false,
+            content: '<div class="QRCode"><div class="codename">'+$(this).data("name")+' <br>助销工具二维码</div><div id="code"><img src="QRCode.ashx?s='+ $(this).data('src')+'"></div></div>'
+        }); 
+    });
+    $(".download-content").on('click', '.CourseURL', function(event) {
+        layer.open({            
+            type: 2,
+            title: false,
+            area: ['1020px', '518px'],
+            skin: 'layui-layer-rim', //加上边框
+            shadeClose: true,
+            resize: false,
+            scrollbar: false,
+            content: 'CourseURL.aspx?Url='+ $(this).data('src') //iframe的url
+        }); 
+    });
+    $(".download-search .btn-search").click(function(event) {
+        var searchKey = $("#download-search").val();
+        if (searchKey != '') {
+            $.post('/Ajax.aspx?Action=GetDownloadProductList', {SearchKey: searchKey}, function(data, textStatus, xhr) {
+                data = JSON.parse(data);
+                if(data.length > 0){
+                    $(".download-title").text("关键字：" + searchKey);
+                    layui.use('laytpl', function(){
+                        var laytpl = layui.laytpl;
+                        laytpl($("#DownloadProductListTpl").html()).render(data, function(html){
+                            $(".download-content ul").html(html);
+                        });
+                    });
+                }
+                else{
+                    $(".download-content ul").html("<div class='download-tip'>没有搜索到您想下载的课件，请更换关键字后重新搜索！</div>");
+                }
+            });
+        }
+        else {
+            layer.alert("请输入您要下载的课件名称");
+        }
+    });
+
+    //鼠标在树区域，页面禁止滚动
+    $("#download-nav").get(0).addEventListener('mousewheel', enAbleScroll, false);
+    $("#download-nav").get(0).addEventListener('DOMMouseScroll', enAbleScroll, false);
+    function enAbleScroll(e) {
+        e.stopPropagation();
+        e.cancelBubble = false;
+        var obj = $("#download-nav").get(0);
+        var delta = 0;
+            
+            if (e.wheelDelta) { /* IE/Opera. */
+                    delta = e.wheelDelta/120;
+            } else if (e.detail) { /** Mozilla case. */
+                    /** In Mozilla, sign of delta is different than in IE.
+                     * Also, delta is multiple of 3.
+                     */
+                    delta = -e.detail/3;
+            }
+         if($(obj).innerHeight() + $(obj).scrollTop() >= obj.scrollHeight) {
+            if(delta < 0) {
+               e.preventDefault();
+               return false;
+            }
+        }
+        if($(obj).scrollTop() === 0) {
+            
+            if(delta > 0) {
+               e.preventDefault();
+               return false;
+            }
+        }
+        return false;
+    }
+    function removeWheelEvent (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        e.cancelBubble = false;
+        return false;
+    }
+});
+</script>
+
+
+</body>
+
+</html>

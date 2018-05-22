@@ -1,0 +1,33 @@
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <html:include file="user/UserHead.htm" />
+</head>
+<body>
+    <html:include file="user/UserTop.htm" />
+    <div class="ordermain">
+        <div class="clearfix ordermana">
+            <html:include file="user/UserLeft.htm" />
+            <div class="right">
+                <div class="title"><h3 class="slide-title">我的证书</h3><!-- <a class="more" href="javasrcipt:;" target="_blank">更多>></a> --></div>
+                <div class="right-content">
+                    <$HtmlOutPut.ToString()$>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<html:include file="Foot.htm" />
+
+<script type="text/javascript">
+$(function(){
+    $(".hd li").click(function(event) {
+        /* Act on the event */
+    });
+})
+</script>
+
+</body>
+</html>

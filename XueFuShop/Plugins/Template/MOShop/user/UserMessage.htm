@@ -1,0 +1,182 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/about.css">
+</head>
+<body>
+
+    <div class="container-fluid wrap">
+        <html:include file="Top.htm" />        
+        <!-- main -->
+        <div class="about-main">
+            <div class="container">
+                <div class="position">
+                    <p>当前位置：<a href="/">首页</a>>><a href="/Help-I5.aspx">帮助中心</a>>><a class="active">建议反馈</a><span class="returnhome"><a href="/">返回首页</a></span></p>
+                </div>
+                <div class="feedback-main">
+                    <form action="" class="feedform" autocomplete="off">
+                        <div class="form-group">
+                            <label for="" class="form-txt">反馈类型：</label>
+                            <select name="MessageClass" id="MessageClass" class="form_select">
+                                <option value="1">留言</option>
+                                <option value="2">投诉</option>
+                                <option value="3">询问</option>
+                                <option value="4">报错</option>
+                                <option value="5">建议</option>
+                                <option value="6">用户体验</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-txt">您的姓名：</label>
+                            <input type="text" placeholder="您的姓名" name="Name" id="Name" value="<$Cookies.User.GetRealName(false)$>">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-txt">手机号码：</label>
+                            <input type="text" placeholder="请输入有效手机号码" name="Mobile" id="Mobile">
+                        </div>
+                        <div class="form-group form-textarea">
+                            <label for="" class="form-txt">问题或建议：</label>
+                            <textarea name="Suggestion" id="Suggestion"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input class="feedbtn" type="button" value="提交" name="Feedbtn" id="Feedbtn">
+                        </div>
+                    </form>
+                    <div class="reply-list"></div>
+                </div>
+            </div>           
+            
+        </div>
+    </div>
+
+    <html:include file="Foot.htm" />
+    <script type="text/javascript" src="<html:templatePath>/js/jquery.validate.min.js"></script>
+<script>
+//加载数据
+function loading(id, title) {
+    $("."+id).html("<div style='margin:10px auto;text-align:center;'><div style='border:#d78e42 1px solid; padding:8px; width:260px;display:inline-block; background:#ffffcc;color:#FF0000;font-weight:bold'><img src='/admin/style/images/loading.gif' align='absmiddle'/> 正在加载" + title + ",请稍候．．．</div></div>");
+}
+function readUserMessage(page) {
+    loading("reply-list", "留言");
+    var url = "UserMessageAjax.aspx?Action=Read&Page=" + page;
+    $.get(url, function(data) {
+        $(".reply-list").html(data);
+    });
+}
+$(function(){
+    //读取第一页留言
+    readUserMessage(1);
+
+    //添加留言
+    function addUserMessage() {
+        var messageClass = $("#MessageClass").val();
+        var userName = $("#Name").val();
+        var mobile = $("#Mobile").val();
+        var content = $("#Suggestion").val();
+        if (mobile != "" && content!= "") {
+            var url = "UserMessageAjax.aspx?Action=AddUserMessage&MessageClass=" + messageClass + "&Name=" + encodeURI(userName) + "&Mobile=" + mobile + "&Content=" + encodeURI(content);
+            $.get(url, function(data) {
+                data = JSON.parse(data);
+                if (data.result == "true") {
+                    layer.alert('您的信息我们已经收到，管理员会及时反馈，谢谢！', {
+                      skin: 'layui-layer-molv' //样式类名
+                      ,closeBtn: 0
+                    }, function(){
+                        window.location.href = "/";
+                        layer.closeAll();
+                    });
+                }
+                else {
+                    layer.msg(data.error);
+                }
+            });
+        }
+    }
+
+    $(".feedbtn").click(function() {
+        validateForm();
+        addUserMessage();
+    });
+
+    function validateForm() {  
+        $.validator.addMethod("isMobile", function(value, element) {
+            var length = value.length;
+            var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
+            return this.optional(element) || (length == 11 && mobile.test(value));
+        }, "请正确填写您的手机号码"); 
+        return $(".feedform").validate({  
+            errorPlacement: function(error, element) {  
+                error.appendTo(element.parent());  
+            },
+            rules: {
+                Name:{
+                    required:true,
+                },
+                Mobile:{
+                    required:true,
+                    isMobile:true,
+                },
+                Suggestion:{
+                    required:true,
+                },
+            },
+            messages: {
+                Name: {
+                    required:"姓名不能为空"
+                },
+                Mobile: {
+                    required:"手机号码不能为空"
+                },
+                Suggestion:{
+                    required:"问题或建议不能为空",
+                },
+            },
+        }).form();  
+    } 
+
+    // $(".feedbtn").click(function() {
+    //     $.validator.addMethod("isMobile", function(value, element) {
+    //         var length = value.length;
+    //         var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
+    //         return this.optional(element) || (length == 11 && mobile.test(value));
+    //     }, "请正确填写您的手机号码");
+    //     $(".feedform").validate({
+    //         errorPlacement: function(error, element) {  
+    //             error.appendTo(element.parent());  
+    //         },
+    //         rules: {
+    //             Name:{
+    //                 required:true,
+    //             },
+    //             Mobile:{
+    //                 required:true,
+    //                 isMobile:true,
+    //             },
+    //             Suggestion:{
+    //                 required:true,
+    //             },
+    //         },
+    //         messages: {
+    //             Name: {
+    //                 required:"姓名不能为空"
+    //             },
+    //             Mobile: {
+    //                 required:"手机号码不能为空"
+    //             },
+    //             Suggestion:{
+    //                 required:"问题或建议不能为空",
+    //             },
+    //         },
+    //     });
+    // });
+});
+</script>
+
+</body>
+
+</html>

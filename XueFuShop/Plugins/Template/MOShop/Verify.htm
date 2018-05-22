@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>短信验证</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+* { margin: 0px; padding: 0px; outline:none;}
+body { font-family: 微软雅黑; font-size: 14px; line-height: 1.5; background: #fbfbfb;}
+h1,h2,h3,h4,h5,h6,b{ font-weight: normal;}
+ul,ol,li { list-style: none;}
+a { color: #333; text-decoration: none; outline: none; cursor: pointer;}
+img { border: none; vertical-align: middle;}
+input { vertical-align: middle;}
+.hr { height:1px; border:none; border-top:1px #c7c7c7 solid;}
+.clear { clear: both;}
+
+input[type='text'],input[type='password'] {
+    border: 1px solid #ccc;
+    height: 44px;
+    line-height: 22px;
+    line-height: 44px\0;
+    padding-left: 10px;
+    width: 353px;
+    color: #aaa;
+    font-family:微软雅黑;
+}
+input[type='text']:focus,input[type='password']:focus {
+    color:#333;
+    border: 1px solid #18bd9c;
+}
+
+.display_box { width: 940px; border: 1px #eeeeee solid; background: #fff; overflow: hidden; margin: 10px auto;}
+
+.online_exp { color: #585858; padding-bottom: 10px; margin-bottom: 10px;}
+.online_exp .display_ctn { padding: 40px 30px;}
+.online_exp p em { padding: 0px 5px; font-style: normal; }
+.online_exp p.verify,.online_exp p.msg_code_txt, .online_exp p.btn { margin-left: 88px;}
+.online_exp form {
+    width: 580px;
+    float: left;
+    display: inline;
+}
+.online_exp form p {
+    position: relative;
+    margin-bottom: 26px;
+    float: left;
+    display: inline;
+    width: 620px;
+}
+.online_exp form span.error {
+    background: url("images/error.png") left center no-repeat;
+    color: #e76200;
+    padding-left: 25px;
+    display: inline-block;
+    height: 16px;
+    font-size: 12px;
+    left: 92px;
+    position: absolute;
+    top: 50px;
+    line-height: 15px;
+}
+
+.online_exp form label {
+    float: left;
+    width: 70px;
+    text-align: right; 
+    margin-right: 20px;
+    line-height: 45px;
+    color: #595959;
+    display: inline;
+}
+.online_exp form .code input[type='text'] {  width: 103px; height: 42px;}
+.online_exp form .code img { margin-left: 30px;}
+.online_exp form .code a {
+    width: 36px;
+    color: #7696b7;
+    margin-top: 5px;
+    margin-right: 45px;
+    margin-left: 25px;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.online_exp input[type='button'] {
+    width: 163px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 微软雅黑; 
+    cursor: pointer;
+}
+ /*.online_exp input.msg_code {background:url("images/msg.png") 0 0 no-repeat; background:#e67e22;}
+.online_exp input.caller_code { /*background:url("images/caller.png") 0 0 no-repeat; background:#2ecc71;}*/
+.online_exp .exp_desc p { line-height:25px;}
+.online_exp .exp_desc b { color: #18bd9c; font-weight: bold; font-size: 14px; }
+
+.discbutton {
+    color: #fff;
+    background: #18bd9c;
+    border: 1px solid #18bd9c;
+}
+.emptybutton {
+    color: #18bd9c;
+    background: none;
+    border: 1px solid #18bd9c;
+}
+#autocopyright { display: none; }
+
+#willesPlay{
+    width: 1020px;
+    height: 475px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+#willesPlay .playContent{
+    float: left;
+    width: 800px;
+    height: auto;
+    overflow: hidden;
+    background:#000;
+    cursor: pointer;
+}
+#willesPlay .menu {
+    float: right;
+    width: 220px;
+    height: 100%;
+    background-color: #fff;
+}
+
+#willesPlay .menu .title {
+    position: relative;
+    color: #4e4e4e;
+    font-size: 16px;
+    padding-left: 35px;
+    border-bottom: 1px solid #ccc;
+    line-height: 40px;
+}
+#willesPlay .menu .menu-bar {
+    position: absolute;
+    left: 10px;
+}
+#willesPlay .menu ul li {
+    line-height: 40px;
+    margin: 0 20px;
+    border-bottom: 1px dashed #ccc;
+    font-size: 14px;
+}
+#willesPlay .menu ul li a { color: #6e6e6e; }
+#willesPlay .menu ul li a:hover { color: #18bd9c; }
+#willesPlay .menu ul li.current a { color: #18bd9c; }
+</style>
+</head>
+<body>
+<html:if expression="string.IsNullOrEmpty(checkCode)">
+<div class="display_box online_exp">
+    <div class="display_ctn">
+        <form method="post" name="phoneForm" id="phone_form" runat="server">
+            <p class="p_phone">
+                <label for="phone">手机号码</label>
+                <input type="text" id="phone" name="user.mobile" placeholder="请输入您的手机号" maxlength="11" value="<$mobile$>" />
+                <span class="error" id="phone_error" style="display:none"></span>
+            </p>
+            <p class="code">
+                <label for="verification_code">图形验证码</label>
+                <input type="text" id="expvoicecode" maxlength="4" placeholder="请输入验证码" />
+                <img src="CheckCode.ashx" id="phonecheckcodepic" onclick="this.src='CheckCode.ashx?t=' + new Date();" style="cursor:pointer" alt="点击刷新验证码" align="absmiddle" />
+                <a href="javascript:void(0)" onclick="$('#phonecheckcodepic').click();" >看不清换一张</a>
+                <span class="error" id="phone_code_error" style="display:none"></span>
+            </p>
+            <p class="verify">
+                <input type="button" value="获取验证码" onclick="smsCode()" id="smscodeinput" class="msg_code emptybutton" />
+                <!--<em>或</em>
+                <input type="button" onclick="voiceCode()" id="voicecodeinput" value="语音获取验证码" class="caller_code" />-->
+            </p> 
+            <p class="msg_code_txt">
+                <input type="text" id="inputmovecode" placeholder="请输入您获取到的验证码" maxlength="6"/>
+                <span class="error" id="move_phone_code_error" style="display:none"></span>
+            </p>
+            <p class="btn">
+                <input type="button" id="btn" value="提交" class="discbutton"/>
+            </p>
+            <input type="hidden" name="user.sid" value="" />
+            <input type="hidden" id="vphonecheckcode"  />
+            <input type="hidden" id="vmovecode"  />
+            <input type="hidden" id="movecode" value="<$productID$>"  />
+            <input type="hidden" id="vp" />
+            <input type="hidden" id="srccode" value="<$checkCode$>">
+            <input type="hidden" id="userID" value="<$userID$>">
+        </form>
+        <div class="exp_desc">
+            <p><b>注意事项：</b></p>
+            <p>1、同一手机号码每天只可发送十次验证码，请勿随意操作。</p>
+            <p>2、验证码两分钟内有效，有效时间内任何视频或多次打开同一视频都无需重发验证码。</p>
+            <p>&nbsp;</p>
+            <p><b>使用流程：</b></p>
+            <p>1、输入您的手机号</p>
+            <p>2、点击短信获取验证码</p>
+            <p>3、当手机接收到短信，您将获得验证码</p>
+            <p>4、将获得的验证码输入，并点击提交按钮，系统将会自动判断所输入的验证码是否正确</p>
+        </div>
+    </div>
+</div>
+</html:if>
+<div id="willesPlay" style="<$(string.IsNullOrEmpty(checkCode)?"display: none;":"")$>">
+<script src='//player.polyv.net/script/polyvplayer.min.js'></script>
+    <div class="playContent" data-code="<$userID$>_<$checkCode$>">
+        <!-- <iframe id="loadvideo" src="<$(!string.IsNullOrEmpty(checkCode)?"http://player.polyv.net/videos/player.swf?vid="+vu.Split('|')[0]+"&code="+userID+"_"+checkCode:"")$>" frameborder="0" scrolling="no" style=" width: 800px; height: 475px;"></iframe> -->
+    </div>
+    <div class="menu">
+        <div class="title"><span>视频列表</span><a href="javascript:;" class="menu-bar"><img src="<html:templatePath>/images/video.png" alt="目录"></a></div>
+        <ul id="VideoList" class="content mCustomScrollbar">
+        <html:csharp>int i=0;</html:csharp>
+        <html:foreach expression="string vid in vu.Split('|')">
+            <li data-vid="<$vid$>" <$(i==0?"class='current'":"")$>><a href="javascript:void(0);">第 <$(i + 1).ToString()$> 集</a></li>
+            <html:csharp>i++;</html:csharp>
+        </html:foreach>
+        </ul>
+    </div>
+</div>
+    <script type="text/javascript" src="<html:templatePath>/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        var player = polyvObject('.playContent').videoPlayer({
+            'width':'800',
+            'height':'475',
+            'vid' : '<$vu.Split('|')[0]$>',
+            'code': $('.playContent').data("code"),
+            'ts': '<$videoDic["ts"]$>',
+            'sign': '<$videoDic["sign"]$>'
+        });
+        $(function(){            
+            $("#VideoList li").click(function (event) {
+                var $this = $(this);
+                $.get("/Ajax.aspx?Action=ChangeVideo&vid=" + $(this).data("vid"), function (data) {
+                    data = JSON.parse(data);
+                    try {player.changeVid(data.vid, 0, "on", data.ts, data.sign);}
+                    catch(err) { player.changeVid(data.vid); }
+                    $this.addClass('current').siblings().removeClass('current');
+                })
+            });
+        })
+    </script>
+    <script type="text/javascript" src="<html:templatePath>/js/sms.js?v=20171010"></script>
+</body>
+</html>

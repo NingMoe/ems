@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C006D3A0-8915-4368-88A6-6E7E6F9D9CAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XueFuShop.DAL</RootNamespace>
+    <AssemblyName>XueFuShop.DAL</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdDAL.cs" />
+    <Compile Include="AdRecordDAL.cs" />
+    <Compile Include="CompanyPostPlanDAL.cs" />
+    <Compile Include="CompanyRuleDAL.cs" />
+    <Compile Include="CouponDAL.cs" />
+    <Compile Include="CourseDAL.cs" />
+    <Compile Include="CustomerChangeDAL.cs" />
+    <Compile Include="DALAdmin\AdminDAL.cs" />
+    <Compile Include="DALAdmin\AdminGroupDAL.cs" />
+    <Compile Include="DALAdmin\AdminLogDAL.cs" />
+    <Compile Include="DALArticle\ArticleClassDAL.cs" />
+    <Compile Include="DALArticle\ArticleDAL.cs" />
+    <Compile Include="DALCommon\EmailSendRecordDAL.cs" />
+    <Compile Include="DALCommon\MenuDAL.cs" />
+    <Compile Include="DALCommon\Pager.cs">
+    </Compile>
+    <Compile Include="DALCommon\RegionDAL.cs" />
+    <Compile Include="DALCommon\ShippingDAL.cs" />
+    <Compile Include="DALCommon\ShippingRegionDAL.cs" />
+    <Compile Include="DALCommon\UploadDAL.cs" />
+    <Compile Include="CompanyDAL.cs" />
+    <Compile Include="CourseCateDAL.cs" />
+    <Compile Include="DALProducts\AttributeRecordDAL.cs" />
+    <Compile Include="BaseDAL.cs" />
+    <Compile Include="PostSearchInfo.cs" />
+    <Compile Include="RenZhengCateDAL.cs" />
+    <Compile Include="DALUser\UserAccountRecordDAL.cs" />
+    <Compile Include="SMSRecordDAL.cs" />
+    <Compile Include="DALOrder\OrderDAL.cs" />
+    <Compile Include="DALOrder\OrderDetailDAL.cs" />
+    <Compile Include="PostPassDAL.cs" />
+    <Compile Include="QuestionDAL.cs" />
+    <Compile Include="TeacherDAL.cs" />
+    <Compile Include="TestPaperDAL.cs" />
+    <Compile Include="TestSettingDAL.cs" />
+    <Compile Include="PostDAL.cs" />
+    <Compile Include="DALProducts\AttributeClassDAL.cs" />
+    <Compile Include="DALProducts\AttributeDAL.cs" />
+    <Compile Include="DALProducts\BookingProductDAL.cs" />
+    <Compile Include="DALProducts\MemberPriceDAL.cs" />
+    <Compile Include="DALProducts\ProductBrandDAL.cs" />
+    <Compile Include="DALProducts\ProductClassDAL.cs" />
+    <Compile Include="DALProducts\ProductCollectDAL.cs" />
+    <Compile Include="DALProducts\ProductCommentDAL.cs" />
+    <Compile Include="DALProducts\ProductDAL.cs" />
+    <Compile Include="DALProducts\ProductPhotoDAL.cs" />
+    <Compile Include="DALProducts\ProductReplyDAL.cs" />
+    <Compile Include="DALProducts\StandardDAL.cs" />
+    <Compile Include="DALProducts\TagsDAL.cs" />
+    <Compile Include="DALProducts\ThemeActivityDAL.cs" />
+    <Compile Include="DALUser\CartDAL.cs" />
+    <Compile Include="DALUser\ReceiveMessageDAL.cs" />
+    <Compile Include="DALUser\SendMessageDAL.cs" />
+    <Compile Include="DALUser\UserAddressDAL.cs" />
+    <Compile Include="DALUser\UserApplyDAL.cs" />
+    <Compile Include="DALUser\UserCouponDAL.cs" />
+    <Compile Include="DALUser\UserDAL.cs" />
+    <Compile Include="DALUser\UserFriendDAL.cs" />
+    <Compile Include="DALUser\UserGradeDAL.cs" />
+    <Compile Include="DALUser\UserMessageDAL.cs" />
+    <Compile Include="DALUser\UserRechargeDAL.cs" />
+    <Compile Include="FavorableActivityDAL.cs" />
+    <Compile Include="FlashDAL.cs" />
+    <Compile Include="FlashPhotoDAL.cs" />
+    <Compile Include="GiftDAL.cs" />
+    <Compile Include="GiftPackDAL.cs" />
+    <Compile Include="LinkDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StandardRecordDAL.cs" />
+    <Compile Include="TPR\EvaluateNameDAL.cs" />
+    <Compile Include="TPR\KPIDAL.cs" />
+    <Compile Include="TPR\KPIEvaluateDAL.cs" />
+    <Compile Include="TPR\KPITempletDAL.cs" />
+    <Compile Include="TPR\PostKPISettingDAL.cs" />
+    <Compile Include="TPR\WorkingPostDAL.cs" />
+    <Compile Include="VoteDAL.cs" />
+    <Compile Include="VoteItemDAL.cs" />
+    <Compile Include="VoteRecordDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XueFu.EntLib\XueFu.EntLib.csproj">
+      <Project>{DBDD8CA0-1F46-4061-B0A5-20B189568925}</Project>
+      <Name>XueFu.EntLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Common\XueFuShop.Common.csproj">
+      <Project>{E150603E-2A27-47DB-9A27-8C98F4936761}</Project>
+      <Name>XueFuShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.IDAL\XueFuShop.IDAL.csproj">
+      <Project>{3A21D800-08AC-4179-B25A-102BA714D8AA}</Project>
+      <Name>XueFuShop.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Models\XueFuShop.Models.csproj">
+      <Project>{83AE4726-C1C6-4601-930E-B5F5CF62F1FC}</Project>
+      <Name>XueFuShop.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

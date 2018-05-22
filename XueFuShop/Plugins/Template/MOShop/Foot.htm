@@ -1,0 +1,105 @@
+﻿    <!-- footer -->
+    <div class=" footer">
+        <div class="clearfix container">
+            <ul class="clearfix foot-o">
+                <h5><a href="/Help-I5.aspx" target="_blank">帮助中心<span class="xianf"></span></a></h5>
+                <li><a href="/Help-I5.aspx">新手指南</a></li>
+                <li><div class="text"><a href="/HelpDetail.aspx?ID=10">如何观看视频？</a></div></li>
+                <li class="plan"><a href="/Help-I9.aspx" target="_blank">岗位计划</a></li>
+                <li><div class="text"><a href="/HelpDetail.aspx?ID=15" target="_blank">如何查看岗位课程和岗位学习对照表？</a></div></li>
+                <li><div class="text"><a href="/HelpDetail.aspx?ID=24" target="_blank">如何查看自己的综合认证考试？</a></div></li>
+            </ul>
+            <ul class="clearfix foot-o foot-t">
+                <h5><a href="/AboutUs.aspx">关于我们<span class="xianf"></span></a></h5>
+                <li><a href="/AboutUs.aspx?ID=6">公司介绍</a></li>
+                <li><div class="text">上海孟特管理咨询有限公司是一家以提供咨询服务，及解决方案的综合性咨询公司...</div></li>
+                <li class="plan"><a href="/AboutUs.aspx?ID=7">联系我们</a></li>
+                <li>
+                    <div class="text text02">
+                        <p>地址：上海市浦东新区商城路800号斯米克大厦619室</p>
+                        <p>电话：021-50620208<span class="qq">QQ：800052251</span></p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="clearfix foot-o foot-weixin">
+                <h6>营销QQ：800052251</h6>
+                <li>
+                    <img src="<html:templatePath>/images/weixin01.jpg" alt="微信">
+                    <p>微信订阅号</p>
+                </li>                    
+                <li>
+                    <img src="<html:templatePath>/images/weixin02.jpg" alt="微信">
+                    <p>微信服务号</p>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-sub">
+            <p class="copyright">Copyright © 2016-2018  |  上海孟特  版权所有</p> <div class="processTime" style="display: none;"></div>
+            <p>ISP备案号：沪ICP备11015523号  |  页面执行时间：<$processTime$>S</p>
+            <div class="footer-web-safe">
+                <dl>
+                    <dt class="wj"></dt>
+                    <dd>上海网警网络110</dd>
+                </dl>
+                <dl>
+                    <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20120516113658521" target="_blank">
+                        <dt class="gs"></dt>
+                        <dd>上海工商</dd>
+                    </a>
+                </dl>
+                <dl>
+                    <a href="">
+                        <dt class="hgwb"></dt>
+                        <dd>沪公网安备 31011302000653号</dd>
+                    </a>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!-- footer end-->
+    <input type="hidden" id="sildeNewestUrl" value="">
+    <input type="hidden" id="shortVideoInput" value="">
+
+    <script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+    <div class="right-nav">
+        <ul>
+            <li>
+                <a id="BizQQWPA" href="javascript:void(0);"><div class="sidebox qq" style="width: 54px; background: rgb(211, 8, 48);"><span class="qq"></span>在线咨询</div></a>
+            </li>
+            <li id="tel">
+                <a href="tel:02150620208"><div class="sidebox" style="width: 54px; background: rgb(0, 0, 0);"><span class="tel"></span><strong>021-5062 0208</strong></div></a>
+            </li>
+            <li>
+                <a href="/Help-I5.aspx" target="_blank"><div class="sidebox" style="width: 54px; background: rgb(0, 0, 0);"><span class="help"></span>帮助中心</div></a>
+            </li>
+            <li>
+                <a href="/User/UserMessage.aspx"><div class="sidebox"><span class="feedback"></span>意见反馈</div></a>
+            </li>
+            <li class="gotop-nav" style="display: none;">
+                <a href="javascript:goPageTop();" class="sidetop"><div class="sidebox"><span class="gotop"></span>返回顶部</div></a>
+            </li>
+        </ul>
+    </div>
+    <div id="tips_nav_vertoolow" class="mask_tips">
+        <div class="mask_tips_bg">
+            <div class="mask_tips_button_pos"> 
+                <a href="http://se.360.cn/" target="_blank" class="mask_tips_button">360</a>
+                <a href="http://www.googlechromer.cn/" target="_blank" class="mask_tips_button">Chrome</a> 
+                <a href="http://www.firefox.com.cn/" target="_blank" class="mask_tips_button">Firefox</a> 
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="<html:templatePath>/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="<html:templatePath>/js/mt-index2016.js"></script>
+    <script type="text/javascript" src="<html:templatePath>/js/navigatorversion.js"></script>
+    <script type="text/javascript" src="<html:templatePath>/layui/layui.js"></script>
+    <script type="text/javascript">
+        layui.use(['layer', 'form'], function(){
+            var layer = layui.layer
+            ,form = layui.form();
+        });
+        $(function(){
+            BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 800052251, selector: 'BizQQWPA'});
+            $(".side-nav li a[href*='"+window.location.pathname+"']").eq(0).addClass('active');
+        })
+    </script>

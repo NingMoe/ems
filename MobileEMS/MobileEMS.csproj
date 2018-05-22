@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E5B7D251-2B7B-4C71-8B5B-C82630A665A9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MobileEMS</RootNamespace>
+    <AssemblyName>MobileEMS</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJson, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RCDetail.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax.aspx.designer.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BLLCommon.cs" />
+    <Compile Include="BLL\BLLMPost.cs" />
+    <Compile Include="BLL\BLLMTestCate.cs" />
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CartAjax.aspx.cs">
+      <DependentUpon>CartAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CartAjax.aspx.designer.cs">
+      <DependentUpon>CartAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CheckOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.aspx.designer.cs">
+      <DependentUpon>CheckOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code.aspx.cs">
+      <DependentUpon>Code.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Code.aspx.designer.cs">
+      <DependentUpon>Code.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseAjax.aspx.cs">
+      <DependentUpon>CourseAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseAjax.aspx.designer.cs">
+      <DependentUpon>CourseAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course.Master.cs">
+      <DependentUpon>Course.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course.Master.designer.cs">
+      <DependentUpon>Course.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CourseCenter.aspx.cs">
+      <DependentUpon>CourseCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseCenter.aspx.designer.cs">
+      <DependentUpon>CourseCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseDetail.aspx.cs">
+      <DependentUpon>CourseDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseDetail.aspx.designer.cs">
+      <DependentUpon>CourseDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseVideo.aspx.cs">
+      <DependentUpon>CourseVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseVideo.aspx.designer.cs">
+      <DependentUpon>CourseVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\UserHandler.ashx.cs">
+      <DependentUpon>UserHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MCourseInfo.cs" />
+    <Compile Include="Models\PostCateInfo.cs" />
+    <Compile Include="Models\QuestionJsonInfo.cs" />
+    <Compile Include="Models\UserLoginInfo.cs" />
+    <Compile Include="MyCert.aspx.cs">
+      <DependentUpon>MyCert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyCert.aspx.designer.cs">
+      <DependentUpon>MyCert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyOrder.aspx.cs">
+      <DependentUpon>MyOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyOrder.aspx.designer.cs">
+      <DependentUpon>MyOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyRecord.aspx.cs">
+      <DependentUpon>MyRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyRecord.aspx.designer.cs">
+      <DependentUpon>MyRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.aspx.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.aspx.designer.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrePaidCourse.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>PrePaidCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrePaidCourse.aspx.designer.cs">
+      <DependentUpon>PrePaidCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RCDetail.aspx.cs">
+      <DependentUpon>RCDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RCDetail.aspx.designer.cs">
+      <DependentUpon>RCDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reg.aspx.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reg.aspx.designer.cs">
+      <DependentUpon>Reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMSAjax.aspx.cs">
+      <DependentUpon>SMSAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMSAjax.aspx.designer.cs">
+      <DependentUpon>SMSAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMSCheck.aspx.cs">
+      <DependentUpon>SMSCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SMSCheck.aspx.designer.cs">
+      <DependentUpon>SMSCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMSLogin.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>SMSLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SMSLogin.aspx.designer.cs">
+      <DependentUpon>SMSLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestCenter.aspx.cs">
+      <DependentUpon>TestCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestCenter.aspx.designer.cs">
+      <DependentUpon>TestCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestPaperShow.aspx.cs">
+      <DependentUpon>TestPaperShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPaperShow.aspx.designer.cs">
+      <DependentUpon>TestPaperShow.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Course.Master" />
+    <Content Include="css\ba396c645c55acd9c30c80db0a374716.css" />
+    <Content Include="css\common.css" />
+    <Content Include="css\course.css" />
+    <Content Include="css\css.css" />
+    <Content Include="css\login.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="images\31959858.jpg" />
+    <Content Include="images\app_download.png" />
+    <Content Include="images\app_play.png" />
+    <Content Include="images\bg_skill.png" />
+    <Content Include="images\icon-s1d3f042028.png" />
+    <Content Include="images\icon-s91fdfb8486.png" />
+    <Content Include="images\icons_register.png" />
+    <Content Include="images\icons_statu.png" />
+    <Content Include="images\icon_arrow.png" />
+    <Content Include="images\icon_arrow_down.png" />
+    <Content Include="images\icon_arrow_up.png" />
+    <Content Include="images\icon_back.png" />
+    <Content Include="images\icon_buy.png" />
+    <Content Include="images\icon_checked.png" />
+    <Content Include="images\icon_close.png" />
+    <Content Include="images\icon_close_white.png" />
+    <Content Include="images\icon_cvalid.png" />
+    <Content Include="images\icon_error.png" />
+    <Content Include="images\icon_loading.gif" />
+    <Content Include="images\icon_lock.png" />
+    <Content Include="images\icon_play.png" />
+    <Content Include="images\icon_psw_visible.gif" />
+    <Content Include="images\icon_search.png" />
+    <Content Include="images\icon_tips.png" />
+    <Content Include="images\icon_valid.png" />
+    <Content Include="images\icon_valid_green.png" />
+    <Content Include="images\icon_xb.png" />
+    <Content Include="images\loading_big.gif" />
+    <Content Include="images\m_icons.png" />
+    <Content Include="images\no_class.png" />
+    <Content Include="images\wx_pay_bg.png" />
+    <Content Include="images\xb_check.gif" />
+    <Content Include="images\xb_checked.gif" />
+    <Content Include="js\class_mc.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\course.js" />
+    <Content Include="js\doT.min.js" />
+    <Content Include="js\fastlogin_v2.js" />
+    <Content Include="js\hjlogin.js" />
+    <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="js\myclass.js" />
+    <Content Include="js\other_pass_2012.js" />
+    <Content Include="js\pass_mobile.js" />
+    <Content Include="js\touch.js" />
+    <Content Include="js\TrackEvent.js" />
+    <Content Include="js\userCenter.js" />
+    <Content Include="js\zepto.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CourseAjax.aspx" />
+    <Content Include="handler\UserHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Code.aspx" />
+    <Content Include="Config\CacheKey.config" />
+    <Content Include="css\style.css" />
+    <Content Include="SMSAjax.aspx" />
+    <Content Include="SMSLogin.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\ShopConfig.config" />
+    <Content Include="CourseVideo.aspx" />
+    <Content Include="css\test.css" />
+    <Content Include="js\intro.js" />
+    <Content Include="js\test.js" />
+    <Content Include="SMSCheck.aspx" />
+    <Content Include="TestCenter.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\ShopLanguage.config" />
+    <Content Include="CourseDetail.aspx" />
+    <Content Include="images\landscapeTips.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="MyCert.aspx" />
+    <Content Include="MyRecord.aspx" />
+    <Content Include="Reg.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="TestPaperShow.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="CartAjax.aspx" />
+    <Content Include="CheckOut.aspx" />
+    <Content Include="css\intro.css" />
+    <Content Include="images\cart.png" />
+    <Content Include="images\cart1.png" />
+    <Content Include="images\delete.gif" />
+    <Content Include="images\icon-sc1d7806db2.png" />
+    <Content Include="js\Cart.js" />
+    <Content Include="js\Order.js" />
+    <Content Include="MyOrder.aspx" />
+    <Content Include="OrderDetail.aspx" />
+    <Content Include="PrePaidCourse.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MXLMS\YXTSMS\YXTSMS.csproj">
+      <Project>{BACED633-9410-4F6D-AC1D-A7865ACA9C73}</Project>
+      <Name>YXTSMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFu.EntLib\XueFu.EntLib.csproj">
+      <Project>{DBDD8CA0-1F46-4061-B0A5-20B189568925}</Project>
+      <Name>XueFu.EntLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.BLL\XueFuShop.BLL.csproj">
+      <Project>{B1AC3BBE-3477-4EC4-ACF3-7A7164FAEA8C}</Project>
+      <Name>XueFuShop.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Common\XueFuShop.Common.csproj">
+      <Project>{E150603E-2A27-47DB-9A27-8C98F4936761}</Project>
+      <Name>XueFuShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.DAL\XueFuShop.DAL.csproj">
+      <Project>{C006D3A0-8915-4368-88A6-6E7E6F9D9CAA}</Project>
+      <Name>XueFuShop.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Models\XueFuShop.Models.csproj">
+      <Project>{83AE4726-C1C6-4601-930E-B5F5CF62F1FC}</Project>
+      <Name>XueFuShop.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Pages\XueFuShop.Pages.csproj">
+      <Project>{D0954DAB-DDD9-4D70-BC7F-73375DF21D31}</Project>
+      <Name>XueFuShop.Pages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\UploadTable.config" />
+    <Content Include="CourseCenter.aspx" />
+    <Content Include="images\all.png" />
+    <Content Include="images\videotemple.png" />
+    <Content Include="layer_mobile\layer.js" />
+    <Content Include="layer_mobile\need\layer.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="Plugins\" />
+    <Folder Include="xml\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\mEMS.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4290</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,851 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>综合能力评估</h1>
+                </div>
+                <div id="general_evaluation" class="choose_company">
+                    <ul class="step clearfix">
+                        <li class="step1 current">
+                            <span class="step_num">1</span>填写信息
+                            <span class="triangle"></span>
+                        </li>
+                        <li class="step2">
+                            <span class="step_num">2</span>进行评估
+                        </li>
+                    </ul>
+                    <form action="" method="post" class="general_evaluation" autocomplete="off">
+                        <div class="general_evaluation_info">
+                            <html:if expression="base.ExistsSonCompany">
+                            <div class="form_group">
+                                <label class="form_txt" for="CompanyID">公司名称：</label>
+                                <select class="form_select" name="CompanyID" id="CompanyID">
+                                    <option value="">请选择公司</option>
+                                    <html:foreach expression="CompanyInfo company in base.SonCompanyList">
+                                    <option value="<$company.CompanyId$>"<$(company.CompanyId==companyID?" selected":"")$>><$company.CompanyName$></option>
+                                    </html:foreach>
+                                </select>
+                            </div>
+                            </html:if>
+                            <div class="form_group">
+                                <label class="form_txt" for="UserName">姓名：</label>
+                                <input class="form_con" type="text" name="UserName" id="UserName" value="<$userName$>">
+                            </div>
+                            <div class="form_group">
+                                <label class="form_txt" for="EvaluationType">评估类型：</label>
+                                <select class="form_select" name="EvaluationType" id="EvaluationType" required>
+                                    <option value="" selected>请选择评估类型</option>
+                                    <option value="530">员工综合能力评估</option>
+                                    <option value="541">主管综合能力评估</option>
+                                    <option value="564">经理综合能力评估</option>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <label class="form_txt" for="EvaluationName">评估名称：</label>
+                                <select class="form_select" name="EvaluationName" id="EvaluationName" required>
+                                    <$EvaluateNameBLL.GetEvaluateNameListHtml(base.GetCompanyIDString(companyID),evaluateNameId)$>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <label class="form_txt" for="EvaluationUserId">评估人：</label>
+                                <select class="form_select" name="EvaluationUserId" id="EvaluationUserId" required>
+                                    <option value="" selected>请选择评估人</option>
+                                    <option value="1">评估人1</option>
+                                    <option value="2">评估人2</option>
+                                    <option value="3">评估人3</option>
+                                    <option value="4">评估人4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <table class="sheet staff_estimate hide">
+                            <tr>
+                                <td colspan="2">评估名称</td>
+                                <td colspan="8" class="EvaluateName"></td>
+                                <td colspan="4">评估时间段</td>
+                                <td colspan="8" class="EvaluateTime"></td>
+                            </tr>
+                            <tr>
+                                <td>姓名</td>
+                                <td class="RealName"></td>
+                                <td colspan="4">部门</td>
+                                <td colspan="4" class="Department"></td>
+                                <td colspan="4">职位</td>
+                                <td colspan="8" class="PostName"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="project">评估项目</td>
+                                <td colspan="4" class="worst">不满意</td>
+                                <td colspan="4" class="worse">勉强</td>
+                                <td colspan="4" class="good">好</td>
+                                <td colspan="4" class="better">很好</td>
+                                <td colspan="4" class="best">优秀</td>
+                            </tr>
+                            <tbody class="evaluation_project">
+                                <tr class="score">
+                                    <td colspan="2" rowspan="2" class="project_content" data-id="531">
+                                        1、工作品质<br><span>不考虑工作量、仅看工作是否正确、清楚、完全</span>
+                                    </td>
+                                    <td data-value="1">1</td>
+                                    <td data-value="2">2</td>
+                                    <td data-value="3">3</td>
+                                    <td data-value="4">4</td>
+                                    <td data-value="5">5</td>
+                                    <td data-value="6">6</td>
+                                    <td data-value="7">7</td>
+                                    <td data-value="8">8</td>
+                                    <td data-value="9">9</td>
+                                    <td data-value="10">10</td>
+                                    <td data-value="11">11</td>
+                                    <td data-value="12">12</td>
+                                    <td data-value="13">13</td>
+                                    <td data-value="14">14</td>
+                                    <td data-value="15">15</td>
+                                    <td data-value="16">16</td>
+                                    <td data-value="17">17</td>
+                                    <td data-value="18">18</td>
+                                    <td data-value="19">19</td>
+                                    <td data-value="20">20</td>
+                                </tr>
+                                <tr class="comment">
+                                    <td colspan="4">工作懒散，可避免的错误频繁</td>
+                                    <td colspan="4">经常犯错，工作不细心</td>
+                                    <td colspan="4">答题满意，偶尔犯小错</td>
+                                    <td colspan="4">工作几乎永远保持正确、清楚</td>
+                                    <td colspan="4">工作一直保持超高水准</td>
+                                </tr>
+                            </tbody>
+                            <tbody class="evaluation_project">
+                                <tr class="score">
+                                    <td colspan="2" rowspan="2" class="project_content" data-id="532">
+                                        2、合作<br><span>考虑对其工作、同事、公司的态度</span>
+                                    </td>
+                                    <td data-value="1">1</td>
+                                    <td data-value="2">2</td>
+                                    <td data-value="3">3</td>
+                                    <td data-value="4">4</td>
+                                    <td data-value="5">5</td>
+                                    <td data-value="6">6</td>
+                                    <td data-value="7">7</td>
+                                    <td data-value="8">8</td>
+                                    <td data-value="9">9</td>
+                                    <td data-value="10">10</td>
+                                    <td data-value="11">11</td>
+                                    <td data-value="12">12</td>
+                                    <td data-value="13">13</td>
+                                    <td data-value="14">14</td>
+                                    <td data-value="15">15</td>
+                                    <td data-value="16">16</td>
+                                    <td data-value="17">17</td>
+                                    <td data-value="18">18</td>
+                                    <td data-value="19">19</td>
+                                    <td data-value="20">20</td>
+                                </tr>
+                                <tr class="comment">
+                                    <td colspan="4">几乎无法与人和作，不愿意接受新鲜事物</td>
+                                    <td colspan="4">时常不能合作，协助办理的能力差</td>
+                                    <td colspan="4">大致上与人相处愉快，能及时处理协助工作</td>
+                                    <td colspan="4">一向合作良好，愿意接受新事物</td>
+                                    <td colspan="4">与同事合作有效，接受新事物能力强</td>
+                                </tr>
+                            </tbody>
+                            <tbody class="evaluation_project">
+                                <tr class="score">
+                                    <td colspan="2" rowspan="2" class="project_content" data-id="533">
+                                        3、工作知识<br><span>是否了解其工作的要求、方法、系统</span>
+                                    </td>
+                                    <td data-value="1">1</td>
+                                    <td data-value="2">2</td>
+                                    <td data-value="3">3</td>
+                                    <td data-value="4">4</td>
+                                    <td data-value="5">5</td>
+                                    <td data-value="6">6</td>
+                                    <td data-value="7">7</td>
+                                    <td data-value="8">8</td>
+                                    <td data-value="9">9</td>
+                                    <td data-value="10">10</td>
+                                    <td data-value="11">11</td>
+                                    <td data-value="12">12</td>
+                                    <td data-value="13">13</td>
+                                    <td data-value="14">14</td>
+                                    <td data-value="15">15</td>
+                                    <td data-value="16">16</td>
+                                    <td data-value="17">17</td>
+                                    <td data-value="18">18</td>
+                                    <td data-value="19">19</td>
+                                    <td data-value="20">20</td>
+                                </tr>
+                                <tr class="comment">
+                                    <td colspan="4">对工作大部分了解不够</td>
+                                    <td colspan="4">对工作一知半解，需增进</td>
+                                    <td colspan="4">对工作相当了解</td>
+                                    <td colspan="4">对工作了解全面充分</td>
+                                    <td colspan="4">工作各方面掌握极为优秀</td>
+                                </tr>
+                            </tbody>
+                            <tbody class="evaluation_project">
+                                <tr class="score">
+                                    <td colspan="2" rowspan="2" class="project_content" data-id="534">
+                                        4、主动性<br><span>无指导和监督下的工作态度</span>
+                                    </td>
+                                    <td data-value="1">1</td>
+                                    <td data-value="2">2</td>
+                                    <td data-value="3">3</td>
+                                    <td data-value="4">4</td>
+                                    <td data-value="5">5</td>
+                                    <td data-value="6">6</td>
+                                    <td data-value="7">7</td>
+                                    <td data-value="8">8</td>
+                                    <td data-value="9">9</td>
+                                    <td data-value="10">10</td>
+                                    <td data-value="11">11</td>
+                                    <td data-value="12">12</td>
+                                    <td data-value="13">13</td>
+                                    <td data-value="14">14</td>
+                                    <td data-value="15">15</td>
+                                    <td data-value="16">16</td>
+                                    <td data-value="17">17</td>
+                                    <td data-value="18">18</td>
+                                    <td data-value="19">19</td>
+                                    <td data-value="20">20</td>
+                                </tr>
+                                <tr class="comment">
+                                    <td colspan="4">只能照章办事，需不断监督</td>
+                                    <td colspan="4">自主处理事物能力差；经常需监督</td>
+                                    <td colspan="4">经常性工作无需指导和监督</td>
+                                    <td colspan="4">工作主动并能改进，极少需监督</td>
+                                    <td colspan="4">自动增加额外工作；充满才智</td>
+                                </tr>
+                            </tbody>
+                            <tbody class="evaluation_project">
+                                <tr class="score">
+                                    <td colspan="2" rowspan="2" class="project_content" data-id="535">
+                                        5、勤勉<br><span>考虑其贡献于工作的程度</span>
+                                    </td>
+                                    <td data-value="1">1</td>
+                                    <td data-value="2">2</td>
+                                    <td data-value="3">3</td>
+                                    <td data-value="4">4</td>
+                                    <td data-value="5">5</td>
+                                    <td data-value="6">6</td>
+                                    <td data-value="7">7</td>
+                                    <td data-value="8">8</td>
+                                    <td data-value="9">9</td>
+                                    <td data-value="10">10</td>
+                                    <td data-value="11">11</td>
+                                    <td data-value="12">12</td>
+                                    <td data-value="13">13</td>
+                                    <td data-value="14">14</td>
+                                    <td data-value="15">15</td>
+                                    <td data-value="16">16</td>
+                                    <td data-value="17">17</td>
+                                    <td data-value="18">18</td>
+                                    <td data-value="19">19</td>
+                                    <td data-value="20">20</td>
+                                </tr>
+                                <tr class="comment">
+                                    <td colspan="4">有机会就偷懒，时常喜欢闲聊</td>
+                                    <td colspan="4">时常忽视工作</td>
+                                    <td colspan="4">通常能坚守岗位，偶尔会闲逛</td>
+                                    <td colspan="4">做事投入，偶尔需提醒</td>
+                                    <td colspan="4">工作踏实勤恳，总能超前完成任务</td>
+                                </tr>
+                            </tbody>
+                            <tbody class="evaluation_project">
+                                <tr class="score">
+                                    <td colspan="2" rowspan="2" class="project_content" data-id="536">
+                                        6、工作量<br><span>本项不考虑工作质量，只考虑工作量</span>
+                                    </td>
+                                    <td data-value="1">1</td>
+                                    <td data-value="2">2</td>
+                                    <td data-value="3">3</td>
+                                    <td data-value="4">4</td>
+                                    <td data-value="5">5</td>
+                                    <td data-value="6">6</td>
+                                    <td data-value="7">7</td>
+                                    <td data-value="8">8</td>
+                                    <td data-value="9">9</td>
+                                    <td data-value="10">10</td>
+                                    <td data-value="11">11</td>
+                                    <td data-value="12">12</td>
+                                    <td data-value="13">13</td>
+                                    <td data-value="14">14</td>
+                                    <td data-value="15">15</td>
+                                    <td data-value="16">16</td>
+                                    <td data-value="17">17</td>
+                                    <td data-value="18">18</td>
+                                    <td data-value="19">19</td>
+                                    <td data-value="20">20</td>
+                                </tr>
+                                <tr class="comment">
+                                    <td colspan="4">工作慢，从未按时完成</td>
+                                    <td colspan="4">交待的工作不能准时完成</td>
+                                    <td colspan="4">符合要求，偶尔完成</td>
+                                    <td colspan="4">工作及时完成</td>
+                                    <td colspan="4">工作高效高质完成</td>
+                                </tr>
+                            </tbody>
+                            <tbody class="evaluation_project">
+                                <tr class="score">
+                                    <td colspan="2" rowspan="2" class="project_content" data-id="537">
+                                        7、学习能力<br><span>接受新知识的能力、速度、遵循和应用</span>
+                                    </td>
+                                    <td data-value="1">1</td>
+                                    <td data-value="2">2</td>
+                                    <td data-value="3">3</td>
+                                    <td data-value="4">4</td>
+                                    <td data-value="5">5</td>
+                                    <td data-value="6">6</td>
+                                    <td data-value="7">7</td>
+                                    <td data-value="8">8</td>
+                                    <td data-value="9">9</td>
+                                    <td data-value="10">10</td>
+                                    <td data-value="11">11</td>
+                                    <td data-value="12">12</td>
+                                    <td data-value="13">13</td>
+                                    <td data-value="14">14</td>
+                                    <td data-value="15">15</td>
+                                    <td data-value="16">16</td>
+                                    <td data-value="17">17</td>
+                                    <td data-value="18">18</td>
+                                    <td data-value="19">19</td>
+                                    <td data-value="20">20</td>
+                                </tr>
+                                <tr class="comment">
+                                    <td colspan="4">若非一再教导，没法吸收</td>
+                                    <td colspan="4">学习缓慢，但能记住，不能真正吸收</td>
+                                    <td colspan="4">学习速度尚可，也能记牢</td>
+                                    <td colspan="4">学习速度快，记忆力良好</td>
+                                    <td colspan="4">超乎寻常的学习速度且完全吸收</td>
+                                </tr>
+                            </tbody>
+                            <tbody class="evaluation_project">
+                                <tr class="score">
+                                    <td colspan="2" rowspan="2" class="project_content" data-id="538">
+                                        8、出勤<br><span>考虑工作的规律性及准时性</span>
+                                    </td>
+                                    <td data-value="1">1</td>
+                                    <td data-value="2">2</td>
+                                    <td data-value="3">3</td>
+                                    <td data-value="4">4</td>
+                                    <td data-value="5">5</td>
+                                    <td data-value="6">6</td>
+                                    <td data-value="7">7</td>
+                                    <td data-value="8">8</td>
+                                    <td data-value="9">9</td>
+                                    <td data-value="10">10</td>
+                                    <td data-value="11">11</td>
+                                    <td data-value="12">12</td>
+                                    <td data-value="13">13</td>
+                                    <td data-value="14">14</td>
+                                    <td data-value="15">15</td>
+                                    <td data-value="16">16</td>
+                                    <td data-value="17">17</td>
+                                    <td data-value="18">18</td>
+                                    <td data-value="19">19</td>
+                                    <td data-value="20">20</td>
+                                </tr>
+                                <tr class="comment">
+                                    <td colspan="4">请假或迟到早退过多</td>
+                                    <td colspan="4">经常请假或迟到早退</td>
+                                    <td colspan="4">很少请假或迟到早退</td>
+                                    <td colspan="4">极少请假或迟到早退</td>
+                                    <td colspan="4">从不请假或迟到早退</td>
+                                </tr>
+                            </tbody>
+                            <tbody class="evaluation_project">
+                                <tr class="score">
+                                    <td colspan="2" rowspan="2" class="project_content" data-id="539">
+                                        9、年资（从事本岗位工作）<br><span>对公司的忠诚度</span>
+                                    </td>
+                                    <td colspan="4" data-value="0">0</td>
+                                    <td colspan="4" data-value="5">5</td>
+                                    <td colspan="4" data-value="10">10</td>
+                                    <td colspan="4" data-value="15">15</td>
+                                    <td colspan="4" data-value="20">20</td>
+                                </tr>
+                                <tr class="comment">
+                                    <td colspan="4">不满半年，0分</td>
+                                    <td colspan="4">满半年不足1年5分</td>
+                                    <td colspan="4">满1年，不足1.5年，10分</td>
+                                    <td colspan="4">1.5年，15分</td>
+                                    <td colspan="4">2年以上，20分</td>
+                                </tr>
+                            </tbody>
+                            <tbody class="evaluation_project">
+                                <tr class="score">
+                                    <td colspan="2" rowspan="2" class="project_content" data-id="540">
+                                        10、责任感<br><span>对待工作的态度</span>
+                                    </td>
+                                    <td data-value="1">1</td>
+                                    <td data-value="2">2</td>
+                                    <td data-value="3">3</td>
+                                    <td data-value="4">4</td>
+                                    <td data-value="5">5</td>
+                                    <td data-value="6">6</td>
+                                    <td data-value="7">7</td>
+                                    <td data-value="8">8</td>
+                                    <td data-value="9">9</td>
+                                    <td data-value="10">10</td>
+                                    <td data-value="11">11</td>
+                                    <td data-value="12">12</td>
+                                    <td data-value="13">13</td>
+                                    <td data-value="14">14</td>
+                                    <td data-value="15">15</td>
+                                    <td data-value="16">16</td>
+                                    <td data-value="17">17</td>
+                                    <td data-value="18">18</td>
+                                    <td data-value="19">19</td>
+                                    <td data-value="20">20</td>
+                                </tr>
+                                <tr class="comment">
+                                    <td colspan="4">对待工作，认为可做可不做</td>
+                                    <td colspan="4">为了完成工作，草草了事</td>
+                                    <td colspan="4">责任感强，确实完成交付工作</td>
+                                    <td colspan="4">努力用心的处理事情，避免过错的发生</td>
+                                    <td colspan="4">预测过错的可能性，并想出预防的对策</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="sheet director_estimate hide">
+                            <tr>
+                                <td colspan="2">姓名</td>
+                                <td colspan="4" class="RealName"></td>
+                                <td>评估名称</td>
+                                <td colspan="5" class="EvaluateName"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">部门</td>
+                                <td class="Department">销售部</td>
+                                <td>职务</td>
+                                <td colspan="2" class="PostName">销售主管</td>
+                                <td>评估时间段</td>
+                                <td colspan="5" class="EvaluateTime"></td>
+                            </tr>
+                            <tr>
+                                <td class="item" style="min-width:80px;">项目</td>
+                                <td class="point">评定要点</td>
+                                <td colspan="5">评定内容（每项满分为5分）</td>
+                                <td colspan="5">项目评分</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td rowspan="4">思想品德<br>20分</td>
+                                <td>品行道德</td>
+                                <td colspan="5" class="project_content" data-id="544">品行道德是否为社会人士、公司员工所敬重</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>团队精神</td>
+                                <td colspan="5" class="project_content" data-id="545">是否具有团队精神，能帮助别人也能赢得人们的合作</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>遵纪守法</td>
+                                <td colspan="5" class="project_content" data-id="546">对法律、纪律、规范等认识精准无差，用心执行并成为团队的典范</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>人际关系</td>
+                                <td colspan="5" class="project_content" data-id="547">能换位思考真心待人，正能量强大让你乐于和他相处并引荐好友认识</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td rowspan="4">工作能力<br>20分</td>
+                                <td>管理能力</td>
+                                <td colspan="5" class="project_content" data-id="548">能否挖掘部属才能，善于组织人力、物力、财力搞好工作</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>专业能力</td>
+                                <td colspan="5" class="project_content" data-id="549">专业方面的知识和掌握的熟练程度是否强大</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>应变能力</td>
+                                <td colspan="5" class="project_content" data-id="550">能否做到机动进取，不墨守成规，遇事不乱、处事有方</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>创新能力</td>
+                                <td colspan="5" class="project_content" data-id="551">对新事物、新环境、新观念是否有敏锐的接受能力和创新能力</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td rowspan="4">勤奋敬业<br>20分</td>
+                                <td>敬业精神</td>
+                                <td colspan="5" class="project_content" data-id="552">处处与公司利益为重不谋私损公，工作刻苦不计较得失</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>敢于负责</td>
+                                <td colspan="5" class="project_content" data-id="553">对工作有高度的责任心并敢于承担风险和责任</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>积极进取</td>
+                                <td colspan="5" class="project_content" data-id="554">是否严格要求自己有进取心，不断学习向高目标奋斗</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>出勤情况</td>
+                                <td colspan="5" class="project_content" data-id="555">工作从不迟到早退且没有随意请假，参加会议或活动总能提前到达</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td rowspan="8">工作业绩<br>40分</td>
+                                <td>完成任务</td>
+                                <td colspan="5" class="project_content" data-id="556">对交办的任务总能超越你的期望与想象，总能更快速并令人惊叹的完成</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>任务数量</td>
+                                <td colspan="5" class="project_content" data-id="557">能够完成本职工作，并总是主动争取额外新任务，日常任务量是他人1.5倍</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>工作质量</td>
+                                <td colspan="5" class="project_content" data-id="558">对工作开展自我要求高，做到零错误无返工，并且能够一直保持超高水准</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>工作方法</td>
+                                <td colspan="5" class="project_content" data-id="559">对完成工作的方法/步骤等有正确认识且合理有序，并能带领下属高效完成</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>执行任务</td>
+                                <td colspan="5" class="project_content" data-id="560">凡是被评估人担当的任务，由他负责执行是否都能让你100%安心放心不担心</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>有计划性</td>
+                                <td colspan="5" class="project_content" data-id="561">工作是否清晰表现出有计划、有条理性，并实际能够做到程序不乱、井井有条</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>工作效率</td>
+                                <td colspan="5" class="project_content" data-id="562">是否能：更加快速、更少费用、更多效益、较高满意的完成工作任务</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>处理问题</td>
+                                <td colspan="5" class="project_content" data-id="563">勇于面对不推托，逻辑清晰方向正确从根本入手不留后患并达致效果</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                        </table>
+
+                        <table class="sheet manager_estimate hide">
+                            <tr>
+                                <td colspan="2">姓名</td>
+                                <td colspan="4" class="RealName"></td>
+                                <td>评估名称</td>
+                                <td colspan="5" class="EvaluateName"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">部门</td>
+                                <td class="Department">销售部</td>
+                                <td>职务</td>
+                                <td colspan="2" class="PostName">销售经理</td>
+                                <td>评估时间段</td>
+                                <td colspan="5" class="EvaluateTime"></td>
+                            </tr>
+                            <tr>
+                                <td class="item" style="min-width:80px;">项目</td>
+                                <td class="point">评定要点</td>
+                                <td colspan="5">评定内容（每项满分为5分）</td>
+                                <td colspan="5">项目评分</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td rowspan="5">思想品德</td>
+                                <td>品德行为</td>
+                                <td colspan="5" class="project_content" data-id="565">品行道德是否为社会人士公司员工所敬重</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>敬重他人</td>
+                                <td colspan="5" class="project_content" data-id="566">是否重视和采纳别人的合理化建议，不武断狂妄</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>团队精神</td>
+                                <td colspan="5" class="project_content" data-id="569">是否具有团队精神，能帮助别人也能赢得人们的合作</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>工作作风</td>
+                                <td colspan="5" class="project_content" data-id="568">能否深入基层调查研究做到实事求是，不弄虚作假</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>个人形象</td>
+                                <td colspan="5" class="project_content" data-id="571">是否仪表整洁，举止不失风度，言行气质是否得体</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td rowspan="4">勤奋敬业</td>
+                                <td>敬业精神</td>
+                                <td colspan="5" class="project_content" data-id="567">处处与公司利益为重不谋私损公，工作刻苦不计较得失</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>勤奋上进</td>
+                                <td colspan="5" class="project_content" data-id="570">是否严格要求自己有进取心，不断学习向高目标奋斗</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>勇于负责</td>
+                                <td colspan="5" class="project_content" data-id="575">对工作有高度的责任心并敢于承担风险和责任</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>敢于求新</td>
+                                <td colspan="5" class="project_content" data-id="576">对新事物、新环境、新观念是否有敏锐的接受能力和创新能力</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td rowspan="11">工作能力</td>
+                                <td>组织能力</td>
+                                <td colspan="5" class="project_content" data-id="572">能否挖掘部属才能，善于组织人力、物力、财力搞好工作</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>精于授权</td>
+                                <td colspan="5" class="project_content" data-id="573">能否做到抓大放小、小权分散，抓住大事，把小事分给下属，调动下属工作积极性</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>善于应变</td>
+                                <td colspan="5" class="project_content" data-id="574">能否做到机动进取，不墨守成规，遇事不乱、处事有方</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            
+                            <tr class="evaluation_project">
+                                <td>业务能力</td>
+                                <td colspan="5" class="project_content" data-id="577">业务方面的知识和掌握的熟练程度是否强大</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>督导能力</td>
+                                <td colspan="5" class="project_content" data-id="578">对下属工作能否及时检查、耐心指导</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>策划能力</td>
+                                <td colspan="5" class="project_content" data-id="579">遇到问题能否从大处着眼，认清形势统筹规划、果断作出正确决策的能力</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>工作能力</td>
+                                <td colspan="5" class="project_content" data-id="580">能否独立完成任务和判断事物及解决问题</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>工作效率</td>
+                                <td colspan="5" class="project_content" data-id="581">对本职工作和上司布置的任务是否能及时、快而好的完成</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>全局观念</td>
+                                <td colspan="5" class="project_content" data-id="582">对公司的目标、方针、旨意、发展计划能否充分理解和接受并努力实施</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>计划能力</td>
+                                <td colspan="5" class="project_content" data-id="583">工作是否有计划、有条理性，做到程序不乱井井有条</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                            <tr class="evaluation_project">
+                                <td>协调水平</td>
+                                <td colspan="5" class="project_content" data-id="584">能否处理好上下级间、同级之间及部门相互间的业务员协调和人事协调</td>
+                                <td data-value="1">1</td>
+                                <td data-value="2">2</td>
+                                <td data-value="3">3</td>
+                                <td data-value="4">4</td>
+                                <td data-value="5">5</td>
+                            </tr>
+                        </table>
+                        <div class="form_group form_submit">
+                            <input class="form_zhpg_button hide" name="zhprev" id="zhprev" type="button" value="上一步">
+                            <input class="form_zhpg_button next" name="zhsubmit" id="zhsubmit" type="submit" value="下一步">
+                            <input id="scorestr" name="scorestr" type="hidden" value="<$scoreStr$>">
+                            <input id="UserId" name="UserId" type="hidden" value="">
+                            <input id="EvaluateDate" name="EvaluateDate" type="hidden" value="">
+                            <input id="EvaluateType" name="EvaluateType" type="hidden" value="<$evaluateType$>">
+                            <input id="EvaluateUserId" name="EvaluateUserId" type="hidden" value="<$evaluateUserId$>">
+                            <input id="CompanyId" name="CompanyId" type="hidden" value="<$base.UserCompanyID.ToString()$>">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+</body>
+</html>

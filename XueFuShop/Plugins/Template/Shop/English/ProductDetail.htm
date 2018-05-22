@@ -1,0 +1,124 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="English/Head.htm" />
+</head>
+
+<body>
+	<html:include file="English/Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        		<!--左侧内容-->
+        		<div class="leftcon">
+                	<!--分类导航-->
+                		<html:include file="English/Menu.htm" />
+                        <!--产品信息-->
+                        <div class="art_prodInsideBox">
+                        		<!--产品信息-->
+                          <div class="prodInfoBox">
+                                		<div class="titleInfo">
+                               					<h1><$product.Name$></h1>
+                                                <p>设计师：<$ProductBrandBLL.ReadProductBrandCache(product.BrandID).Name$></p>
+                                                
+                                        </div>
+                            <div class="intro">
+                                                 <$product.Introduction$>
+                                        </div>
+                            <div class="intro">
+                                                <p>商品尺寸: 29 x 27 x 6.5 cm</p>
+                                                <p>商品重量: <$product.Weight$> g</p>
+                                                <p>发货重量: 599 g</p>
+                                        </div>
+                            <div class="intro">
+                                          <p>价格:	<del>￥<$product.MarketPrice$></del></p>
+                                                <p>特价:	<span class="redprice">￥<$currentMemberPrice$></span><input id="CurrentMemberPrice" value="<$currentMemberPrice$>" type="hidden" />
+                                                      <select name="BuyCount" id="BuyCount" class="selectNum">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                      </select>
+                                                </p>
+                                                <p>选择购买件数，或者加入购物车中</p>
+                                        </div>
+                                        <div class="intro"><input id="currentTotalMemberPrice" value="<$currentMemberPrice$>" type="hidden" />
+                                        		<input type="button" class="insertBt"  onClick="addToCart(<$product.ID$>,'<$product.Name$>',<$product.StandardType$>)" value="加入购物车">
+                                                <a class="lightwindow page-options buybus" params="lightwindow_width=900,lightwindow_height=600,lightwindow_type=external"  href="Cart.aspx?v=pop"><img src="<html:templatePath>images/icon_01.png" alt="购物车"></a>
+                                  		</div>
+                                         <div class="intro">
+                                         		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                      <tr>
+                                                        <td width="22%" height="25" align="left" valign="middle">一键分享：</td>
+                                                        <td width="78%" id="ckepop" align="left" valign="middle" class="gamico">
+                                                        		<a class="jiathis_button_tsina"></a>
+                                                                <a class="jiathis_button_tqq"></a>
+                                                                <a class="jiathis_button_tianya"></a>
+                                                                <a href="#"><img src="<html:templatePath>images/gam_ico02.png"></a>
+                                                                <a href="#"><img src="<html:templatePath>images/gam_ico03.png"></a>
+                                                                <a href="#"><img src="<html:templatePath>images/gam_ico04.png"></a>
+                                                                <a href="#"><img src="<html:templatePath>images/gam_ico05.png"></a>
+                                                        </td>
+                                                      </tr>
+                                                </table>
+                                         </div>
+                                </div>
+                                
+                        		<!--产品图片-->
+                        		<div class="BigProdImg">
+                                <html:csharp>int j=0;</html:csharp>
+                                <html:foreach expression="ProductPhotoInfo productPhoto in productPhotoList">                                    
+                                    <html:csharp>j++;if(j==1) continue;</html:csharp>
+                                    <html:if expression="j==2">
+                                    <a href="<$productPhoto.Photo.Replace("340-340","Original")$>" class="lightwindow page-options" rel="Random[S]" title="<$product.Name$>" caption="<$productPhoto.Name$>" author="" ><img src="<$product.Photo.Replace("Original","340-340")$>"><br>点击打开扩展图</a>
+                                    <html:else>
+                                    <a href="<$productPhoto.Photo.Replace("340-340","Original")$>" class="lightwindow page-options" rel="Random[S]" title="<$product.Name$>" caption="<$productPhoto.Name$>" author="" ></a>
+                                    </html:if>
+                                 </html:foreach>
+                                </div>
+    
+    
+    
+    
+</div>
+                        <!--相似艺术品-->
+                        <!--标题-->
+                        <div class="art_titlebox">
+                        		<a class="more" href="artwork.html">更多</a>
+                                <div class="title">相似艺术品</div>
+                        </div>
+                        <!--艺术品列表-->
+                        <div class="art_artworkList">
+                        		<ul>
+                                		<li>
+                                                <a href="productInside.html"><img src="<html:templatePath>images/blueart_artwork01.jpg"></a>
+                                                <p><a href="productInside.html">龙泉青瓷</a></p>
+                                        </li>
+                                		<li>
+                                                <a href="productInside.html"><img src="<html:templatePath>images/blueart_artwork02.jpg"></a>
+                                                <p><a href="productInside.html">龙泉青瓷</a></p>
+                                        </li>
+                                		<li>
+                                                <a href="productInside.html"><img src="<html:templatePath>images/blueart_artwork03.jpg"></a>
+                                                <p><a href="productInside.html">龙泉青瓷</a></p>
+                                        </li>
+                                		<li>
+                                                <a href="productInside.html"><img src="<html:templatePath>images/blueart_artwork04.jpg"></a>
+                                                <p><a href="productInside.html">龙泉青瓷</a></p>
+                                        </li>
+                                  </ul>
+                         </div>
+                </div>
+        		<html:include file="English/Right.htm" />
+        </div>
+        <html:include file="Foot.htm" />
+        <script language="javascript" type="text/javascript" src="<html:templatePath>/Js/Scroll.js" ></script>
+		<script language="javascript" type="text/javascript" src="<html:templatePath>/Js/ProductDetail.js" ></script>
+        <script language="javascript">
+            var productID=<$product.ID$>;
+            pageInit(<$product.AllowComment$>);
+        </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>岗位列表</h1>
+                </div>
+                <div id="post_list">
+                    <html:if expression="base.ExistsSonCompany">
+                    <form action="" method="get">
+                        <div class="form_group form_center">
+                            <label class="form_txt" for="CompanyID">公司：</label>
+                            <select class="form_select form_long" id="CompanyID" name="CompanyID">
+                            <!-- <option value="">请选择公司</option> -->
+                            <html:foreach expression="CompanyInfo company in SonCompanyList">
+                            <option value="<$company.CompanyId$>"<$(company.CompanyId == CompanyID?" selected":"") $>><$company.CompanyName$></option>
+                            </html:foreach>
+                            </select>
+                            <input class="form_gwlb_button" id="search" type="submit" value="搜 索">
+                            <input type="hidden" name="Action" id="Action" value="Search" >
+                        </div>                        
+                    </form>
+                    </html:if>
+                    <html:if expression="!base.ExistsSonCompany || Action=="Search"">
+                    <table class="post_list evaluation_sheet">
+                        <tr>
+                            <th class="id"><input class="form_checkbox" type="checkbox" name="All" onclick="selectAll(this)" /></th>
+                            <th class="postname">岗位名称</th>
+                            <th class="department">隶属部门</th>
+                            <th class="operate">操作</th>
+                        </tr>
+                        <html:foreach expression="WorkingPostInfo workingPost in WorkingPostList">
+                        <tr>
+                            <td><input class="form_checkbox" type="checkbox" name="SelectID" title="<$workingPost.ID$>" value="<$workingPost.ID$>"></td>
+                            <td><$workingPost.PostName$></td>
+                            <td><$WorkingPostBLL.ReadWorkingPost(workingPost.ParentId).PostName$></td>
+                            <td>
+                                <span class="handle">
+                                    <html:if expression="base.CompareUserPower("ReadWorkingPost,UpdateWorkingPost",PowerCheckType.OR)">
+                                    <a class="edit" href="WorkingPostAdd.aspx?ID=<$workingPost.ID$>&ReturnURL=<$ServerHelper.UrlEncode(RequestHelper.RawUrl)$>" title="编辑" alt="编辑"><i class="iconfont icon-bianji"></i></a>
+                                    </html:if>
+                                    <html:if expression="base.CompareUserPower("DeleteWorkingPost",PowerCheckType.Single)">
+                                    <a class="delete" href="javascript:deleteItems(<$workingPost.ID$>);" title="删除" alt="删除"><i class="iconfont icon-iconfontshanchu"></i></a>
+                                    </html:if>
+                                </span>
+                            </td>
+                        </tr>
+                        </html:foreach>
+                    </table>
+                    <html:if expression="base.CompareUserPower("AddWorkingPost,DeleteWorkingPost",PowerCheckType.OR)">
+                    <div class="action">
+                        <html:if expression="base.CompareUserPower("AddWorkingPost",PowerCheckType.Single)">
+                        <input type="button" value=" 添 加 " class="button" onclick="newPage('WorkingPostAdd.aspx');"/>&nbsp;
+                        </html:if>
+                        <html:if expression="base.CompareUserPower("DeleteWorkingPost",PowerCheckType.Single)">
+                        <input type="button" value=" 删 除 " class="button" id="DeleteButton" name="DeleteButton">&nbsp;
+                        </html:if>
+                    </div>
+                    </html:if>
+                    </html:if>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+</body>
+</html>

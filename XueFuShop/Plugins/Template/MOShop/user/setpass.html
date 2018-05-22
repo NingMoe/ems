@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>找回密码 - 孟特</title>
+    <link rel="shortcut icon" type="image/ico" href="../images/favicon.ico">
+    <link rel="bookmark" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/total.css">
+    <link rel="stylesheet" href="../css/other2016.css">
+</head>
+<body>
+
+    <div class="container-fluid wrap">
+        <!-- header -->
+        <div class="top-bar cf" id="topBar">
+            <div class="container">
+                <div class="logo fl">
+                    <a href="../website/index.html">
+                        <img src="../images/logo.png" alt="孟特">
+                    </a>
+                </div>
+                <div class="search" id="searchDiv">
+                    <div class="search-cont">
+                        <input type="text" id="textSearch">
+                        <div class="search-layer"></div>
+                        <a href="javascript:;" id="btnSearch" class="btn-search">
+                            <i class="icon icon-search"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="user">
+                    
+                    <div class="login cf">
+                        <a href="login.html" class="fastLogin" title="登录" rel="nofollow" ><span>登录</span></a><span class="xian"></span>
+                        <a href="register.html" class="fastRegister" title="注册" rel="nofollow"><span>注册</span></a>
+                    </div>
+                    
+                </div>
+                <div class="side-nav">
+                    <ul class="cf">
+                        <li>
+                            <a href="../website/index.html"><span>首页</span></a>
+                        </li>
+                        <li>
+                            <a href="../website/course.html"><span>选课中心</span></a>
+                        </li>
+                        <li id="nav_zx">
+                            <a href="../website/public.html">
+                                <span>学习大厅</span>
+                                <i class="icon icon-arrow-down"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../website/datavisual.html"><span>数据可视化</span></a>
+                        </li>
+                        <li>
+                            <a href="../website/intro.html" class="active"><span>关于我们</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec-nav">
+                    <ul class="pic-list cf">
+                        <li>
+                            <a href="../public.html">
+                                沪江英语
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../public.html">
+                                沪江日语
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../public.html">
+                                沪江韩语
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="headShortVideoOpen"></div>
+        </div>
+        <!-- headerend -->
+        
+        <!-- main -->
+        <div class="othermain bggred">
+            <div class="container">
+                <div class="position">
+                    <p>当前位置：<a href="../website/index.html">首页</a>>><a href="setpass.html" class="active">找回密码</a><span class="returnhome"><a href="../website/index.html">返回首页</a></span></p>
+                </div>
+                <div class="register">
+                    <div class="register-content">
+                    <!--from_begin-->
+                        <form id="contactform" action="javascript:;" enctype="multipart/form-data" method="post">
+                            <div class="title">找回密码</div>
+                            <fieldset class="fieldset setpass">
+                                <div class="fieldset-left">
+                                    <div class="even login-even">
+                                        <label>邮箱/手机：</label>
+                                        <input type="text" name='mname' id='mname' placeholder='电子邮箱/手机号' class="txt">
+                                    </div>
+                                    <div class="even login-even">
+                                        <label>验证码：</label>
+                                        <input type="text" name='myzm' id='myzm' value='' class="w175" datatype="n4-4" errormsg="验证码格式不正确" nullmsg="请填写验证码！">
+                                       <!--  <input href="javascript:;" value="获取动态码" class="getyzm" id="btnSendCode" onClick="sendMessage()"></input> -->
+                                    </div>
+                                    <div class="even loginp1">
+                                        <label for=""><input href="javascript:;" value="获取动态码" class="getyzm" id="btnSendCode" onClick="sendMessage()"></input></label>
+                                    </div>
+                                    <div class="login-even">
+                                        <label>重置密码：</label>
+                                        <input type="password" name='mpassword' id='mpassword' value="" class="w175" datatype="*6-18" nullmsg="密码为6-18个字符" errormsg="密码至少6个字符,最多18个字符！">
+                                    </div> 
+                                    <div class="login-even">
+                                        <label>确认密码：</label>
+                                        <input type="password" name='mpassword' id='mpassword' value="" class="w175" datatype="*" recheck="mpassword" errormsg="您两次输入的账号密码不一致">
+                                    </div>                            
+
+                                    <div><input type="submit" value="确定" class="regisubmit"></div>
+                                   
+                                </div>
+                            </fieldset>
+                        </form>
+                    <!--form_end-->
+                    </div>
+                </div>
+                
+            </div>           
+            
+        </div>
+
+        <!-- footer -->
+        <div class=" footer">
+            <div class="clearfix container">
+                <ul class="clearfix foot-o">
+                    <h5><a href="../help.html">帮助中心<span class="xianf"></span></a></h5>
+                    <li><a href="../website/guide.html">新手指南</a></li>
+                    <li><div class="text">最近经常有客户询问网站备案（ICP备案）和ICP经营性备案，我们发现很多客户经常将...</div></li>
+                    <li class="plan"><a href="../about/jobplan.html">岗位计划</a></li>
+                    <li><div class="text">最近经常有客户询问网站备案（ICP备案）和ICP经营性备案，我们发现很多客户经常将...</div></li>
+                </ul>
+                <ul class="clearfix foot-o foot-t">
+                    <h5><a href="../website/intro.html">关于我们<span class="xianf"></span></a></h5>
+                    <li><a href="../website/intro.html">公司介绍</a></li>
+                    <li><div class="text">最近经常有客户询问网站备案（ICP备案）和ICP经营性备案，我们发现很多客户经常将...</div></li>
+                    <li class="plan"><a href="../website/contact.html">联系我们</a></li>
+                    <li>
+                        <div class="text text02">
+                            <p>地址：上海徐汇区斜土路2601号嘉汇广场T1栋13楼</p>
+                            <p>电话：021-5062020<span class="qq">QQ：80052251</span></p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="clearfix foot-o foot-weixin">
+                    <h6>营销QQ：80052251</h6>
+                    <li>
+                        <img src="../images/weixin01.jpg" alt="微信">
+                        <p>微信订阅号</p>
+                    </li>                    
+                    <li>
+                        <img src="../images/weixin02.jpg" alt="微信">
+                        <p>微信服务号</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-sub">
+                <p class="copyright">Copyright ? 2007-2016  |  上海孟特  版权所有</p>
+                <p>ISP备案号　沪ICP备11015523号-1  |  业务许可证：B1.B2-20140071</p>
+                <p><img src="../images/copyright.png" alt="">上海网警网络110            <img src="../images/copyright.png" alt="">上海工商             <img src="../images/copyright.png" alt="">沪公网安备 31011302000653号</p>
+            </div>
+        </div>
+    </div>
+
+
+<div class="right-nav">
+    <ul>
+        <li><a id="xujnxmpb" onclick="pyRegisterCvt()" class="qqonlineconsult" href="javascript:;" target="_blank"><div class="sidebox qq" style="width: 54px; background: rgb(211, 8, 48);"><span class="qq"></span>在线咨询</div></a></li>
+        <li id="tel"><a href="javascript:;"><div class="sidebox" style="width: 54px; background: rgb(0, 0, 0);"><span class="tel"></span><strong>400 720 7200</strong></div></a></li>
+        <li><a href="help.html"><div class="sidebox" style="width: 54px; background: rgb(0, 0, 0);"><span class="help"></span>帮助中心</div></a></li>
+        <li><a href="javascript:;"><div class="sidebox"><span class="feedback"></span>意见反馈</div></a></li>
+        <li class="gotop-nav" style="display: none;"><a href="javascript:goPageTop();" class="sidetop"><div class="sidebox"><span class="gotop"></span>返回顶部</div></a></li>
+    </ul>
+</div>
+
+  
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/mt-index2016.js"></script>
+
+ <script src="../js/Validform_v5.3.2_min.js"></script>
+
+<script>
+    $(function(){
+        $("#contactform").Validform({
+        tiptype:3,  //输入信息提示显示在输入框后面
+        showAllError:true,  //提交时显示所有错误信息
+        usePlugin:{
+            passwordstrength:{
+                minLen:6,
+                maxLen:18
+            }
+        }
+
+    });
+        $(".regisubmit").click(function(){
+            var c_mname = $('#mname').val();
+            if(c_mname==''){
+                $(".out_text").remove();
+                 var out_text = "<p class='out_text'>请输入手机号</p>";
+                $("#mname").after(out_text);
+                return;
+            }
+        })
+        
+    });
+</script>
+
+<script>
+    var input_flag = 0;
+    $(function(){
+        $("#mname").blur(function(){
+
+            var tel = $('#mname').val();
+            var tel2 = /^(1[0-9][0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/;
+            var isok= tel2.test($("#mname").val());
+            // alert(isok)
+            if(tel==""){
+                $(".out_text").remove();
+                var out_text = "<p class='out_text'>请输入手机号</p>";
+                $("#mname").after(out_text);
+                return;
+            }else if (!isok) {
+                $(".out_text").remove();
+                input_flag = 0;
+                var out_text = "<p class='out_text'>手机号格式不正确，请重新输入</p>";
+                $("#mname").after(out_text);
+            }else{
+                 $(".out_text").remove();
+                var out_text = "<p class='out_text out_textright'>通过信息验证！</p>";
+                $("#mname").after(out_text);
+                input_flag = 1;
+                // $("#btnSendCode").attr("disabled", "true");
+                // $("#btnSendCode").val( + curCount + "秒再获取");
+                // InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+                }  
+        }) 
+
+    })
+</script>
+
+
+<script type="text/javascript">
+    var InterValObj; //timer变量，控制时间
+    var count = 60; //间隔函数，1秒执行
+    var curCount;//当前剩余秒数
+    var code = ""; //验证码
+    var codeLength = 6;//验证码长度
+    function sendMessage() {
+        curCount = count;
+        // var dealType; //验证方式
+        // var uid=$("#uid").val();//用户uid
+    // if ($("#phone").attr("checked") == true) {
+    //     dealType = "phone";
+    // }
+    // else {
+    //     dealType = "email";
+    // }
+    //产生验证码
+    // for (var i = 0; i < codeLength; i++) {
+    //     code += parseInt(Math.random() * 9).toString();
+    // }
+    // console.log(code)
+    //设置button效果，开始计时
+    // var tel = $('#login_name1').val();
+    // var tel2 = /^(1[0-9][0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/;
+    // isok= tel2.test(document.myform.login_name.value);
+    // if(tel==''){
+    //     alert('请输入手机号！');
+    //     return;
+    // }else if (tel != tel2.test(tel)) {
+    //     return;
+    // }else{
+        var b_mname = $('#mname').val();
+        if(b_mname==''){
+                $(".out_text").remove();
+             var out_text = "<p class='out_text'>请输入手机号</p>";
+                $("#mname").after(out_text);
+            return;
+        }
+        if (!!(input_flag==1)) {
+            $("#btnSendCode").attr("disabled", "true");
+            $("#btnSendCode").val( + curCount + "秒再获取");
+            InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+        }
+        
+    // }
+
+    //向后台发送处理数据
+        // $.ajax({
+        //     type: "POST", //用POST方式传输
+        //     dataType: "text", //数据格式:JSON
+        //     url: 'Login.ashx', //目标地址
+        //     data: "dealType=" + dealType +"&uid=" + uid + "&code=" + code,
+        //     error: function (XMLHttpRequest, textStatus, errorThrown) { },
+        //     success: function (msg){ }
+        // });
+    // }
+    //timer处理函数
+    function SetRemainTime() {
+        if (curCount == 0) {                
+            window.clearInterval(InterValObj);//停止计时器
+            $("#btnSendCode").removeAttr("disabled");//启用按钮
+            $("#btnSendCode").val("重新发送");
+            code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效    
+        }
+        else {
+            curCount--;
+            $("#btnSendCode").val( + curCount + "秒再获取");
+        }
+    }
+}
+</script>
+</body>
+
+</html>

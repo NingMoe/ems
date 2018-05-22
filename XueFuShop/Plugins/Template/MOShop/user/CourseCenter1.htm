@@ -1,0 +1,324 @@
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<!DOCTYPE html>
+<html>
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/public2.css" type="text/css" />
+    <style type="text/css">
+    .QRCode { width: 221px; height: 261px; text-align: center; background: #fff; }
+    .QRCode .codename { font-size: 14px; line-height: 180%; padding: 10px; }
+    </style>
+</head>
+<body  id="List_courseId">
+<html:include file="Top.htm" />
+<div id="main">
+    <div class="g-layer g-layer-left clearfix">
+        <div class="position">
+            <p>当前位置：<a href="/">首页</a>>><a href="javascript:void(0);" class="active">学习大厅</a><span class="returnhome"><a href="/">返回首页</a></span></p>
+        </div>
+        <div class="left">
+            <div class="head">
+                <img src="<html:templatePath>/images/p01.jpg">
+            </div>
+            <!-- <a class="joincourse" href="javascript:;">参加该课程</a> -->
+            <div class="info">
+                <div class="title">岗位课程介绍</div>
+                <div class="text">零基础学起，让你快速成为汽车销售达人!<br>从汽车基础知识到绕车销售话术，掌握基本的汽车产品知识，面对客户，专业知识信手拈来；销售流程与运管管理课程，轻松提升自我专业能力与管理能力，汽车职业生涯上升通道自然为你敞开！</div>
+            </div>
+        </div>
+        <div class="layer-container">
+            <div class="plan-main">
+                <div class="plan-top">
+                    <h2><$studyPost.PostName$></h2>
+                    <div class="plan-meta">
+                        <!-- <span class="meta meta-tags">
+                            <span class="g-tag">前端</span>
+                            <span class="g-tag">求职</span>
+                            <span class="g-tag">实战</span>
+                        </span> -->
+                        <span class="meta meta-course">岗位共计<$productList.Count$>门课程</span>
+                        <!-- <span class="meta meta-member">120212人在学</span> -->
+
+                        <span class="model_switch">
+                            <a href="javascript:;">
+                                <i class="model_grid"></i>
+                            </a>
+                            <a href="javascript:;">
+                                <i class="model_list"></i>
+                            </a>
+                        </span>
+                        <span class="course_switch">
+                            <a class="course_btn" href="javascript:;">综合认证</a>
+                            <a class="course_btn" href="javascript:;">未通过</a>
+                            <a class="course_btn" href="javascript:;">已通过</a>
+                            <a class="course_btn active" href="javascript:;">全部</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                                
+            <div class="plan-step-wrap js-route-panel" id="js-route-panel">
+                <ul class="plan-step clearfix">
+                    <html:csharp>int i=0;</html:csharp>
+                    <html:foreach expression="string key in postProductClassList.Keys">
+                    <html:csharp>i++;</html:csharp>
+                    <li class="step-item clearfix <$(i==1?"step-first":"")$><$(i==postProductClassList.Keys.Count?"step-last":"")$>">
+                        <i class="line"></i>
+                        <i class="dot"></i>
+                        <span class="hd l"><$ProductClassBLL.ReadProductClassByProductClassList(productClassList,int.Parse(key)).ClassName$></span>
+                        <i class="v-line l"></i>
+                        <div class="bd l clearfix">
+                            <html:csharp>tempProductClassList=postProductClassList[key];int j=0;</html:csharp>
+                            <html:foreach expression="string secondKey in tempProductClassList.Keys">
+                            <html:csharp>j++;</html:csharp>
+                            <!-- 选中open -->
+                            <a href="javascript:;" class="step-anchor"><b><$tempProductClassList[secondKey]$></b><$(j < tempProductClassList.Keys.Count?"<i class=\"step-arr\">|</i>":"")$></a>
+                            </html:foreach>
+                        </div>
+
+                        <div class="step-medias-wrap">
+                        </div>
+                    </li>
+                    </html:foreach>
+                </ul>
+
+
+                <ul class="plan-step clearfix">
+                    <html:csharp>i=0;</html:csharp>
+                    <html:foreach expression="string key in productListGroupByProductRootClass.Keys">
+                    <html:csharp>i++;</html:csharp>
+                    <li class="step-item clearfix <$(i==1?"step-first":"")$><$(i==productListGroupByProductRootClass.Keys.Count?"step-last":"")$>">
+                        <i class="line"></i>
+                        <i class="dot"></i>
+                        <span class="hd l"><$ProductClassBLL.ReadProductClassByProductClassList(productClassList,int.Parse(key)).ClassName$></span>
+                        <i class="v-line l"></i>
+                        <div class="bd l clearfix">
+                            <html:csharp>tempProductListGroup=ProductBLL.SplitProductListByProductClass(productListGroupByProductRootClass[key],2,0);int j=0;</html:csharp>
+                            <html:foreach expression="string secondKey in tempProductListGroup.Keys">
+                            <html:csharp>j++;</html:csharp>
+                            <!-- 选中open -->
+                            <a href="javascript:;" class="step-anchor"><b><$ProductClassBLL.ReadProductClassCache(int.Parse(secondKey)).ClassName$></b><$(j < tempProductListGroup.Keys.Count?"<i class=\"step-arr\">|</i>":"")$></a>
+                            </html:foreach>
+                        </div>
+                        <div class="step-medias-wrap">
+                            <div class="step-medias course-list">
+                                <html:foreach expression="string secondKey in tempProductListGroup.Keys">
+                                <ul class="clearfix">
+                                    <html:foreach expression="ProductInfo product in tempProductListGroup[secondKey]">
+                                    <li class="course-one">
+                                        <a>                  
+                                            <div class="course-list-img">
+                                                <img width="220" height="149" alt="<$product.Name$>" src="<$((string.IsNullOrEmpty(product.Photo) || product.Photo=="/")?"<html:templatePath>images/nopic.jpg":"<html:templatePath>"+product.Photo)$>">
+                                            </div>
+                                            <h5>
+                                                <span><$product.Name$></span>
+                                            </h5>
+                                        </a>
+                                        <div class="iconcc">
+                                            <html:if expression="product.ProductNumber!=""">
+                                            <a href="javascript:OpenVideo(<$product.ID$>);">
+                                                <i class="icon-study icon-video"></i>
+                                                播放视频
+                                            </a>
+                                            </html:if>
+                                            <html:if expression="IsHasTest(product.ID)">
+                                            <a><i class="icon-study icon-tool"></i>已完成</a>
+                                            <html:else>
+                                            <a href="javascript:OpenTestPage(<$product.ID$>);">
+                                                <i class="icon-study icon-test"></i>
+                                                开始考试
+                                            </a>
+                                            </html:if>
+                                            <html:csharp>AttributeRecordInfo attributeRecord = ReadAttribute(1, product.ID); </html:csharp>
+                                            <html:if expression="attributeRecord != null">
+                                            <a class="CourseURL" href="javascript:void(0);" data-src="<$attributeRecord.Value$>">
+                                                <i class="icon-study icon-download"></i>
+                                                课件下载
+                                            </a>
+                                            </html:if>
+                                            <html:csharp>attributeRecord = ReadAttribute(2, product.ID); </html:csharp>
+                                            <html:if expression="attributeRecord != null">
+                                            <a class="saletool" href="javascript:void(0);" data-src="<$attributeRecord.Value$>" data-name="<$product.Name$>">
+                                                <i class="icon-study icon-tool"></i>
+                                                助销工具
+                                            </a>
+                                            </html:if>
+                                        </div>
+                                    </li>
+                                    </html:foreach>
+                                </ul>
+                                </html:foreach>
+                            </div>
+                        </div>
+                    </li>
+                    </html:foreach>
+                </ul>
+            </div>
+
+            <div id="list_model" class="hide">
+                <div class="list_model">
+                    <ul>
+                        <html:foreach expression="ProductInfo product in productList">
+                        <li class="clearfix">
+                            <a class="list_img">               
+                                <img alt="<$product.Name$>" src="<$((string.IsNullOrEmpty(product.Photo) || product.Photo=="/")?"<html:templatePath>images/nopic.jpg":"<html:templatePath>"+product.Photo)$>">
+                            </a>
+                            <div class="list_info">
+                                <h4><$product.Name$></h4>
+                                <span>讲师：<$product.Name$></span>
+                                <span class="test_time">考试时间：全天</span>
+                                <p><$product.Summary$></p>
+                            </div>
+                            <div class="list_icon">
+                                <html:if expression="product.ProductNumber!=""">
+                                <a href="javascript:OpenVideo(<$product.ID$>);">
+                                    <i class="icon-study icon-video"></i>
+                                    播放视频
+                                </a>
+                                </html:if>
+                                <html:if expression="IsHasTest(product.ID)">
+                                <a><i class="icon-study icon-tool"></i>已完成</a>
+                                <html:else>
+                                <a href="javascript:OpenTestPage(<$product.ID$>);">
+                                    <i class="icon-study icon-test"></i>
+                                    开始考试
+                                </a>
+                                </html:if>
+                                <html:csharp>AttributeRecordInfo attributeRecord = ReadAttribute(1, product.ID); </html:csharp>
+                                <html:if expression="attributeRecord != null">
+                                <a class="CourseURL" href="javascript:void(0);" data-src="<$attributeRecord.Value$>">
+                                    <i class="icon-study icon-download"></i>
+                                    课件下载
+                                </a>
+                                </html:if>
+                                <html:csharp>attributeRecord = ReadAttribute(2, product.ID); </html:csharp>
+                                <html:if expression="attributeRecord != null">
+                                <a class="saletool" href="javascript:void(0);" data-src="<$attributeRecord.Value$>" data-name="<$product.Name$>">
+                                    <i class="icon-study icon-tool"></i>
+                                    助销工具
+                                </a>
+                                </html:if>
+                            </div>
+                        </li>
+                        </html:foreach>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<html:include file="Foot.htm" />
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.js-route-panel').on('click', '.step-anchor', function(e){
+        var _this = $(this),
+            index = _this.index(),
+            mediaWrap = _this.parents('.step-item').find('.step-medias-wrap:first');
+
+        mediaWrap.stop(true, true);
+        if(_this.hasClass('active')){
+            _this.removeClass('active');
+            mediaWrap.slideUp('fast');
+            return;
+        }
+
+        $('.js-route-panel').find('.active').removeClass('active');
+        _this.addClass('active');
+
+        mediaWrap.find('ul').hide().eq(index).show();
+
+        if(!mediaWrap.is(':visible')){
+            $('.js-route-panel').find('.step-medias-wrap').hide();
+
+            mediaWrap.slideDown();
+        }    
+    });
+
+    $(".step-anchor:first").click();
+
+    $(".model_switch i").click(function(event) {
+        if ($(this).hasClass("model_grid")) {
+            $("#js-route-panel").show();
+            $("#list_model").hide();
+            $(this).css("background-position", "-20px 0px");
+            $(".model_list").css("background-position", "0px -20px");
+        }
+        else{
+            $("#js-route-panel").hide();
+            $("#list_model").show();
+            $(this).css("background-position", "-20px -20px");
+            $(".model_grid").css("background-position", "0px 0px");
+        }
+    });
+
+    $(".saletool").click(function(event) {
+        layer.open({            
+            type: 1,
+            title: false,
+            area: ['221px','261px'],
+            skin: 'layui-layer-nobg', //没有背景色
+            shadeClose: true,
+            //scrollbar: false,
+            content: '<div class="QRCode"><div class="codename">'+$(this).data("name")+' <br>助销工具二维码</div><div id="code"><img src="QRCode.ashx?s='+ $(this).data('src')+'"></div></div>'
+        }); 
+    });
+
+    $(".CourseURL").click(function(event) {
+        layer.open({            
+            type: 2,
+            title: false,
+            area: ['1020px', '518px'],
+            skin: 'layui-layer-rim', //加上边框
+            shadeClose: true,
+            scrollbar: false,
+            content: 'CourseURL.aspx?Url='+ $(this).data('src') //iframe的url
+        }); 
+    });
+
+    // layer.ready(function(){
+    //     //layer.msg('很高兴一开场就见到你');
+    // });
+    // 
+    layui.use('flow', function(){
+        var flow = layui.flow;
+        //信息流
+        flow.load({
+            elem: '#demo', //指定列表容器
+            end: '',
+            isLazyimg:true,
+            done: function(page, next){ //到达临界点（默认滚动触发），触发下一页
+                var lis = [];
+                //以jQuery的Ajax请求为例，请求下一页数据（注意：page是从2开始返回）
+                $.get('/api/list?page='+page, function(res){
+                    //假设你的列表返回在data集合中
+                    layui.each(res.data, function(index, item){
+                        lis.push('<li>'+ item.title +'</li>');
+                    });
+                    //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
+                    ////pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
+                    next(lis.join(''), page < res.pages);
+                });
+            }
+        });
+    });
+});
+
+var OpenTestPage = function(productID) {
+    window.open ('/TestCenter.aspx?ProductID=' + productID,'newwindow','width='+(window.screen.availWidth-10)+',height='+(window.screen.availHeight-30)+ ',top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');
+}
+var OpenVideo = function(productID) {
+    layer.open({
+        type: 2,
+        title: '观看视频',
+        skin: 'layui-layer-rim', //加上边框
+        area: ['1020px', '518px'],
+        scrollbar: false,
+        content: '/Verify.aspx?ID='+ productID //iframe的url
+    }); 
+}
+</script>
+</body>
+</html>

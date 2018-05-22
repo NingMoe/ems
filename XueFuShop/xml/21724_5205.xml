@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="5205" QuestionNum="25" SingleNum="10" MultiNum="2" PanDunNum="13">
+  <Single>
+    <QuestionInfo1 id="140214">
+      <Question>在操控性能部分，我方顾问要和客户强调（）系统，该系统能够通过模拟四驱系统的动力分配模式，来控制内外侧车轮的驱动力和转速，避免转向不足的情况，继而提高车辆过弯能力！</Question>
+      <A>ESC 车身控制</A>
+      <B>AWD 全时四驱</B>
+      <C>HSA 上坡辅助</C>
+      <D>TVC弯道智能扭矩分配</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140214</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="140213">
+      <Question>翼虎全系车型都配备了（）技术，该技术能够让翼虎在等待红绿灯车辆停稳时自动关闭发动机，并能让车辆进入下一行驶状态前通过驾驶员操作判断自动启动发动机，从而达到节省油耗的目的，技术可靠，体验平顺。</Question>
+      <A>自动启停</A>
+      <B>电动助力</B>
+      <C>油电混合</C>
+      <D>机械增压</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140213</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="140204">
+      <Question>在与客户介绍翼虎的安全车身架构时，我方顾问可以从翼虎高强度钢材的应用比例来加以说明——翼虎全车身高强度硼钢占比达到了（   ），为整车提供了坚固的安全防护，这是同级竞争对手所无法企及的高度！</Question>
+      <A>0.08</A>
+      <B>0.13</B>
+      <C>0.05</C>
+      <D>0.1</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140204</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="140201">
+      <Question>翼虎的前大灯具备有（）功能，这项宝马X6才配备的高科技配置能根据车载摄像头采集的光线信息，判断情况并自动打开或者关闭远光灯，不需要车主再去手动操作远光灯的开闭，大大提升了夜间行车的安全性和便利性。</Question>
+      <A>智能感应式头灯</A>
+      <B>弯道辅助照明</B>
+      <C>车位行车灯</C>
+      <D>自动远光灯</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140201</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="140212">
+      <Question>现款翼虎采用了（  ），堪称同级最高的配置，我方顾问除了可以强调它的尺寸，还可以介绍其分辨率也是同级最高的，显示效果更为出众。</Question>
+      <A>8寸触摸屏</A>
+      <B>9寸触摸屏</B>
+      <C>7寸触摸屏</C>
+      <D>6.5寸触摸屏</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140212</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="140208">
+      <Question>翼虎的主副驾驶席座椅均配备了（）电动可调功能，堪称同级唯一，不仅调节便利，且调节范围宽泛，使前排乘员能够轻松地调节到最理想的坐姿。</Question>
+      <A>10向</A>
+      <B>12向</B>
+      <C>8向</C>
+      <D>6向</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140208</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="140210">
+      <Question>翼虎前风挡具有电加热功能，可以迅速除霜、除雾，相对于传统采用空调除霜除雾的模式来说，翼虎的这套设备最大的优势是（）——空调是要耗电的。</Question>
+      <A>除霜除雾速度快</A>
+      <B>不伤害空调电机</B>
+      <C>前挡除霜效果均匀</C>
+      <D>降低能耗，减少油耗</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140210</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="140205">
+      <Question>对于一款SUV车型来说，充足的后备箱容积也显得尤为重要，家庭外出郊游，能够装载更多的物件，翼虎除了拥有较大的后备箱容积外，其后排座椅还支持（   ），超大的储物空间完全能够满足家庭用车的需求。</Question>
+      <A>整体翻折</A>
+      <B>4/6翻折</B>
+      <C>滑移</C>
+      <D>5/5翻折</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140205</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="140206">
+      <Question>现款翼虎配备了（）尾灯组，外观上更时尚美观，同时该灯组拥有：响应速度快、亮度高、能耗低等优势，是当前最先进可靠的尾灯形式。</Question>
+      <A>全LED</A>
+      <B>卤素</B>
+      <C>氙气</C>
+      <D>氦气</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140206</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="140209">
+      <Question>在主动安全性部分，翼虎的科技配置堪称同级最高，如其中的（  ），它能使车辆在各种状况下保持最佳的稳定性，保证车辆不会发生转向过度或转向不足的情况！</Question>
+      <A>ESC 车身稳定控制系统</A>
+      <B>TVC弯道智能扭矩分配</B>
+      <C>AWD 全时四驱</C>
+      <D>RSC 防测翻稳定控制系统</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140209</QuestionId>
+    </QuestionInfo10>
+  </Single>
+  <Multi>
+    <QuestionInfo1 id="140216">
+      <Question>现款翼虎采用了第三代SYNC系统，其在硬件上进行了全面升级，包括：（   ），这些提升使得系统运行速度更快、更流畅，操作也更得心应手，人机交互体验提升明显。</Question>
+      <A>电阻屏升级为电容屏</A>
+      <B>512M内存升级为2GB</B>
+      <C>500G硬盘容量升级为1TB</C>
+      <D>7寸屏幕升级为8寸</D>
+      <Answer>AB</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>2</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140216</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="140217">
+      <Question>翼虎的方向盘功能堪称同级最高！除了常见的多功能按键外，其还配备有（    ），不仅提升了操控乐趣，还大大提升了冬天行车时的舒适性，这是我方销售顾问应着重予以介绍的功能。</Question>
+      <A>电动调节</A>
+      <B>换挡拨片</B>
+      <C>通风功能</C>
+      <D>电加热功能</D>
+      <Answer>BD</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>2</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140217</QuestionId>
+    </QuestionInfo2>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="140221">
+      <Question>胎压过低或过高，都会对行车安全造成很大的影响，翼虎配备有~间接式~的胎压监测系统，通过车胎内的传感器对四个车轮进行实时监测，并在行车电脑上进行直观的胎压显示，一旦出现问题，能做到及时预警，防患于未然，确保行车安全。</Question>
+      <A>直接式</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140221</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="140219">
+      <Question>翼虎配备了全景天窗，整个天窗~由整块玻璃构成~，大大提升车内采光效果，且该天窗还能正常开启，保证天窗功能，既体现了尊贵感，又保证了实用性！</Question>
+      <A>由两块玻璃构成</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140219</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="140233">
+      <Question>翼虎所配备的EcoBoost发动机采用了直喷技术，它是~在进气门口进行喷射燃油~，以此提高燃油的燃烧效率，在降低油耗的同时增大了扭矩，保证了翼虎良好的节能和超强动力表现。</Question>
+      <A>直接往气缸内喷射汽油</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140233</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="140231">
+      <Question>翼虎所配备的盲区监测系统能够通过车尾的传感器检测后方车辆的行驶情况，当后方车辆进入盲区范围内时，~仪表盘~上的LED灯就会闪烁警示，提醒驾驶员需要注意，大大降低车辆并线时的风险。</Question>
+      <A>后视镜</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140231</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="140224">
+      <Question>现款翼虎在空调配置部分标配了双区恒温空调，使得前排乘员可以根据自身需求来调节温度，同时在空调区域还进行了优化，出风口方向调节增加了人形图标，不仅减小了屏幕面积，操作也更直观明了。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140224</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="140230">
+      <Question>在导航部分，现款翼虎也进行了全面的升级，如，改进天线设计，使得信号更强；地图支持WIFI升级，避免繁琐的操作；支持手写与语音指令输入，操作更轻松；这是竞品车型所不具备的优势功能！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140230</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="140235">
+      <Question>翼虎配有坡道起步辅助系统，当车辆位于坡道上，驾驶员松开制动，可自动保持制动力1.5秒，保证车辆起步顺利，以避免溜车的情况发生。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140235</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="140238">
+      <Question>在后排乘坐舒适性部分，翼虎除了拥有充裕的腿部空间及头部空间外，在一些细节处理上也比较人性化，其后排中央地板凸起高度非常低，且后排中间座椅靠背也较软，最大化照顾到了后排中间乘员的乘坐体验，而这往往是同级车型所忽略的部分！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140238</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="140236">
+      <Question>与国内大部分厂商在音响主机上采用国产品牌的做法不同，翼虎的音响主机采用~天龙主机~，是外面改装店买也买不到的好产品！针对该配置我方顾问要强调：音响好不好不但看喇叭，还要看主机！</Question>
+      <A>SONY主机</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140236</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="140234">
+      <Question>翼虎的高配车型配有主动辅助泊车装置，该配置能大大提升倒车入库的便利性：在系统开启后，驾驶员无需再控制方向盘~、油门/刹车踏板~，车辆会自动停车入库！是一项非常便利好用的科技配置！</Question>
+      <A>只需控制油门踏板和刹车踏板</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140234</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="140222">
+      <Question>翼虎的外后视镜具备自动折叠功能，该配置能够在车辆驻车后自动进行折叠，防止外后视镜受到不必要的刮擦，更大大提高了使用的便利性，相比传统的手动或电动折叠，更智能化！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140222</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="140220">
+      <Question>现款翼虎在大灯部分加入了自适应大灯功能，这是很多同级竞品所不具备的优势，在~高速~行驶时，大灯光形会拓宽，提高照射范围；而在~低速~行驶时，光形会收窄，提高光线深度，使照射距离更远，该功能满足了车辆在不同时速情况下的照射需求，大大提高了夜间行车的安全性。</Question>
+      <A>低速~高速</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140220</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="140232">
+      <Question>低速行车安全系统能大大提高城市行车的安全性，减少追尾事故的发生！在检测到与前车距离过近时，系统会自动启动刹车，避免较大的碰撞事故或追尾事故，提高城市行车的安全性！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>140232</QuestionId>
+    </QuestionInfo13>
+  </PanDuan>
+</TestPaper>

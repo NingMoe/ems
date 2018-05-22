@@ -1,0 +1,65 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>评估列表</h1>
+                </div>
+                <div id="evaluation_list">
+                    <form id="Form1" action="" method="post" autocomplete="off">
+                    <table class="sheet">
+                        <tr>
+                            <th class="id"><input class="form_checkbox" type="checkbox" name="All" onclick="selectAll(this)" /></th>
+                            <th class="name">评估名称</th>
+                            <th class="time" style="display:none;">评估时间</th>
+                            <th class="times">评估时间段</th>
+                            <th class="operate">操作</th>
+                        </tr>
+                        <html:foreach expression="EvaluateNameInfo evaluateName in EvaluateNameList">
+                        <tr>
+                            <td><input class="form_checkbox" type="checkbox" name="SelectID" title="<$evaluateName.ID$>" value=""></td>
+                            <td><$evaluateName.EvaluateName$></td>
+                            <td style="display:none;"><$evaluateName.Date$></td>
+                            <td><$evaluateName.StartDate$>到<$evaluateName.EndDate$></td>
+                            <td>
+                                <span class="handle">
+                                    <html:if expression="base.CompareUserPower("UpdateEvaluateName",PowerCheckType.Single)">
+                                    <a class="edit" href="EvaluateNameAdd.aspx?Id=<$evaluateName.ID$>&ReturnUrl=<$RequestHelper.RawUrl$>" title="编辑" alt="编辑"><i class="iconfont icon-bianji"></i></a>
+                                    </html:if>
+                                    <html:if expression="base.CompareUserPower("DeleteEvaluateName",PowerCheckType.Single)">
+                                    <a class="delete" href="javascript:deleteItems(<$evaluateName.ID$>);" title="删除" alt="删除"><i class="iconfont icon-iconfontshanchu"></i></a>
+                                    </html:if>
+                                </span>
+                            </td>
+                        </tr>
+                        </html:foreach>
+                    </table>
+                    <$base.CommonPager.ShowPage()$>
+                    <html:if expression="base.CompareUserPower("AddEvaluateName,DeleteEvaluateName",PowerCheckType.OR)">
+                    <div class="action">
+                        <html:if expression="base.CompareUserPower("AddEvaluateName",PowerCheckType.Single)">
+                        <input type="button" value=" 添 加 " class="button" onclick="newPage('EvaluateNameAdd.aspx')"/>&nbsp;
+                        </html:if>
+                        <html:if expression="base.CompareUserPower("DeleteEvaluateName",PowerCheckType.Single)">
+                        <input type="button" value=" 删 除 " class="button" id="DeleteButton" name="DeleteButton">&nbsp;
+                        </html:if>
+                    </div>
+                    </html:if>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+</body>
+</html>

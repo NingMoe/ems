@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Course.master.cs" Inherits="MobileEMS.Course" %>
+<%@ Import Namespace="XueFuShop.Common" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta name="MobileOptimized" content="320">
+    <link rel="stylesheet" href="css/common.css?v=01.011" type="text/css">	
+	<script src="js/zepto.min.js" type="text/javascript"></script>
+    <script src="js/touch.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/fastlogin_v2.js" type="text/javascript"></script>    
+    <link rel="stylesheet" href="css/course.css?v=01.012" type="text/css">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8f22623674e28d18e15a23608d41dda4";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</head>
+<body>
+    <div id="container" class="">
+        <div id="ctl00_pnlTemp">	
+            <header class="limit_length">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </header>            
+            <script>
+        window.addEventListener('orientationchange', function () {
+
+            //是微信浏览器和intro页面时.不显示竖屏浏览提示
+            if (navigator.userAgent.indexOf("iPad") != -1||(navigator.userAgent.indexOf("MicroMessenger") != -1&&(window.location.href.indexOf('CourseVideo.aspx')!=-1))){
+                return !1;
+            }
+            window.scrollTo(0, 1); //隐藏地址栏
+            var _orientation = window.orientation;
+            var _html = '<div id="landscapeTips"><div class="landscapeTips_con"><img src="images/landscapeTips.png" class="img_hands" />亲，还是竖屏浏览为佳</div></div>';
+            var $landscapeTips = $("#landscapeTips");
+            switch (_orientation) {　　
+            case 180:
+            case 0:
+                $landscapeTips.hide();
+                break;　　
+            case -90:                　　
+            case 90:                
+                setTimeout(function () {
+                    $landscapeTips.length || $(_html).appendTo("body");
+                    $landscapeTips.show();
+                }, 300);
+                break;
+            };
+        })
+        </script>      
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer>
+            <%--<<a href="#" target="_blank"><i class="icon_faceback"></i>意见反馈</a>
+            p class="mb5 hide" id="homeFooter" style="display: block;">
+                <a href="http://ems.mostool.com" class="icon_pc mr10"></a>
+                <span class="split"></span>
+                <a href="http://m.mostool.com/" class="icon_mobile ml10"></a>
+            </p>
+            <p>Copyright 2015 © 上海孟特</p>--%>
+            <p class="txt_c pb5"><span class="gray_9">CopyRight 2015-2018 © <a href="http://mostool.com">上海孟特</a></span></p>
+            <input type="hidden" id="hiUserID" value="<%=Cookies.User.GetUserID(true) %>">
+        </footer>
+        <div class="headerMask" style="display: none;"></div>
+    </div>
+    <a id="returnTop" href="javascript:scroll(0,0)" class="hide"><i class="icon-arrow-t"></i></a>
+    
+    <!--<div class="right_menu">
+        <div class="right_menu_con">
+        <h2 class="hjclass-txt">上海加禾汽修服务<br>上海孟特管理咨询</h2>
+        <div class="menu-list clearbox">
+            <a href="CourseCenter.aspx">
+              <span class="item-icon item-2"><i class="icon-course"></i></span>
+              岗位计划
+            </a> 
+            <a href="CourseCenter.aspx?Action=PostCourse">
+              <span class="item-icon item-3"><i class="icon-my"></i></span>
+              我的课程
+            </a>
+            <a href="PrePaidCourse.aspx?Action=PostCourse">
+              <span class="item-icon item-3"><i class="icon-my"></i></span>
+              已买课程
+            </a>
+            <a href="Search.aspx">
+              <span class="item-icon item-6"><i class="icon-search"></i></span>
+              搜索课程
+            </a>           
+        </div>
+        <div class="nav-list clearbox">
+            <a href="http://mostool.com" target="_blank">
+              <i class="icon-hj"></i>
+              <br>上海孟特
+            </a>                       
+        </div>
+        </div>
+    </div>-->
+    
+    <div class="user_center"></div>
+    <script id="usercenter-tmpl" type="text/tmpl">
+	    {{if(it.logined){  }}
+	    <div class="user_center_con">
+		    <div class="myinfo-box clearbox">
+			    <div class="doCard-box clearbox">
+				    <div class="userimg">
+					    <div class="userimg_con">
+		        		    <img src="{{=it.Favicon }}" title="{{=it.UserName }}">
+		        	    </div>
+		            </div>
+	                <p class="username mb10">{{=it.UserName }}</p>
+	                <div>
+	                   {{=it.StudyPostName }}
+	                <!--{{if(it.PunchCardSate === 0){ }}
+	            	    <a href="javascript:;" class="btn btnGreen btnUnCard">打卡</a>
+	                {{ }else if(it.PunchCardSate === 1){ }}
+	            	    <a href="javascript:;" class="btn btnGreen btnCard">打卡</a>
+	                {{ }else if(it.PunchCardSate === 2){ }}
+	            	    <span class="carded-txt"><i class="icon-carded"></i>已打卡</span>
+	                {{ } }}
+	            	    <div id="soud_mp3" class="hide"></div>-->
+	                </div>
+			    </div>
+	            <!--<ul class="myinfo-detail clearbox">
+	        	    <li>学分<span class="myinfo-item-num">{{=it.UserMark }}</span></li>
+	        	    <li>已学<span class="myinfo-item-num">{{=it.StudyedLessons }}</span></li>
+	            </ul>-->
+	        </div>
+		    <div class="my_wx">
+			    <a href="CourseCenter.aspx?Action=PostCourse">
+				    <i class="icon-profile"></i>我的课程
+			    </a>
+			    <!--<a href="MyOrder.aspx?Action=PostCourse">
+				    <i class="icon-profile"></i>我的订单
+			    </a>
+			    <a href="PrePaidCourse.aspx?Action=PostCourse">
+                  <span class="item-icon item-3"><i class="icon-my"></i></span>
+                  已买课程
+                </a>-->
+			    <a href="MyRecord.aspx">
+				    {{ if(it.IsHavePayOrder){ }}
+				    <i class="new-dot"></i>
+				    {{ } }}
+				    <i class="icon-order"></i>我的成绩
+			    </a>
+			    <a href="MyCert.aspx">
+				    <i class="icon-profile"></i>我的证书
+			    </a>
+		    </div>
+		    <a href="Logout.aspx?ReturnUrl={{=it.backUrl }}" class="relogin">退出<i class="icon-dobule-arrow"></i></a>
+	    </div>
+	    {{ }else{ }}
+	    <div class="user_center_con unlogin">
+		    <div class="myinfo-box clearbox">
+			    <div class="userimg">
+				    <div class="userimg_con">
+					    <img src="images/anonymous.png">
+				    </div>
+			    </div>
+			    <p class="unlogin-txt">未登录</p>
+		    </div>
+		    <div class="links-login">
+			    <a href="Login.aspx" class="btn btnGreen">登录</a>
+			    <!--<a href="Reg.aspx" class="btn btnDark mt20">注册</a>-->
+		    </div>
+	    </div>
+	    {{ } }}
+    </script>
+    <script type="text/javascript" src="js/doT.min.js"></script>
+    <script type="text/javascript" src="js/userCenter.js"></script>
+    <script type="text/javascript" src="js/class_mc.js"></script>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

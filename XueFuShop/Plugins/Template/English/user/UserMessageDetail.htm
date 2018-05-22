@@ -1,0 +1,62 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+    <script language="javascript" type="text/javascript" src="/Admin/Js/UnlimitClass.js" ></script>
+</head>
+
+<body>
+	<html:include file="Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        <html:include file="Menu.htm" />
+        		<div class="art_orderBox">
+                		<div class="orderTitle">会员中心</div>
+                        <div class="art_BuyersBox">
+                        		<!--右侧框架-->
+                                <div class="rightBox">
+                                <form action="" method="get">                                		
+                                        <!--我的订单-->
+                                        <div class="art_BuyersBox">
+                                        		<div class="buyTitle">我的资讯</div>
+                                                <div class="add">
+                                                    <ul>
+                                                        <li class="left">标题：</li>
+                                                        <li class="right"><$userMessage.Title$></li>
+                                                    </ul> 
+                                                    <ul>
+                                                        <li class="left">内容：</li>
+                                                        <li class="right"><$userMessage.Content$></li>
+                                                    </ul> 
+                                                    <ul>
+                                                        <li class="left">类型：</li>
+                                                        <li class="right"><$UserMessageBLL.ReadMessageType(userMessage.MessageClass)$></li>
+                                                    </ul>  
+                                                    <ul>
+                                                        <li class="left">时间：</li>
+                                                        <li class="right"><$userMessage.PostDate$></li>
+                                                    </ul>  
+                                                    <ul>
+                                                        <li class="left">处理意见：</li>
+                                                        <li class="right"><html:if expression="userMessage.IsHandler==1"><$userMessage.AdminReplyContent$><html:else>未处理</html:if></li>
+                                                    </ul>  
+                                                </div>
+                                        </div>
+                                </form>
+                                </div>
+                                <script language="javascript" type="text/javascript" src="<html:templatePath>/Js/Order.js" ></script>
+                        		<html:include file="/User/UserLeft.htm" />
+                        </div>
+                </div>
+
+        </div>
+        <!--底部版权信息-->
+        <div class="art_footer">2014 © Blue Butterfly Arts. All Rights Reserved</div>
+	
+
+</body>
+</html>

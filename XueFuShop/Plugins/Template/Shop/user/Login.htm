@@ -1,0 +1,65 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+</head>
+<body>
+	<html:include file="Top.htm" />     
+       <!--内容部分-->
+        <div  class="artWarp art_content">
+        		<!--左侧内容-->
+        		<div class="leftcon">
+                <html:include file="Menu.htm" />
+                        <!--用户登录-->
+                        <h2>用户登录</h2>
+                        <div class="art_loginIntro"> 欢迎您成为我站的合作伙伴或者商家 亲们分享原创布艺手工包包，原创个性，拒绝烂大街哦！爱生活！爱手工！每款都有开发材料包哦，更有个性定制，添加个人喜爱元素。一无二！</div>
+                        <!--标题-->
+                        <div class="art_titlebox">
+                            	<!--标题-->
+                                <div class="title">登  录</div>
+                        </div>
+                        <!--登录-->
+                        <div class="art_loginBox">
+                         <form action="/User/Login.aspx" method="post" name="form" >
+        <html:if expression="result!=string.Empty">
+        <div class="alertMessage"><$result$></div>
+        </html:if>
+        <input type="hidden" name="RedirectUrl" value="<$redirectUrl$>" />
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="loginTab">
+                              <tr>
+                                <td width="27%" align="right" valign="middle">用户名：</td>
+                                <td colspan="2" valign="middle">
+                                <input type="text" class="inputText" name="UserName" id="UserName" /></td>
+                              </tr>
+                              <tr>
+                                <td align="right" valign="middle">密码：</td>
+                                <td colspan="2" valign="middle"><input type="password" class="inputText" name="UserPassword" id="UserPassword"/></td>
+                              </tr>
+                              <tr>
+                                <td align="right" valign="middle">验证码：</td>
+                                <td colspan="2" valign="middle"><input type="text" class="inputText" style="width:65px" name="SafeCode" id="SafeCode"/> <img src="CheckCode.ashx" onClick="this.src='CheckCode.ashx?t=' + new Date();" style="cursor:pointer" alt="点击刷新验证码" align="absmiddle" /></td>
+                              </tr>
+                              <tr>
+                                <td align="right" valign="middle">&nbsp;</td>
+                                <td width="35%" height="40" valign="bottom">
+                                		<input type="submit" name="button" id="button" value="登  录" class="loginBt" onClick="return checkLogin()"><input type="hidden" name="Action" value="PostBack" />
+                                       <a href="/User/FindPassword.aspx" class="findPw">找回密码</a>
+                                </td>
+                                <td width="38%" valign="bottom"><a href="/User/Register.aspx">立即注册成为会员</a></td>
+                              </tr>
+                            </table>
+                          </form>
+                  </div>
+		  </div>
+        		<html:include file="Right.htm" />
+        </div>
+        <script language="javascript" type="text/javascript" src="<html:templatePath>/Js/Login.js" ></script>
+        <html:include file="Foot.htm" />
+       
+
+</body>
+</html>

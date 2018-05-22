@@ -1,0 +1,165 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>课程报表</h1>
+                </div>
+                <div id="hr_report">
+                    <div class="filter_range">
+                        <a class="filter_range_btn<$(string.IsNullOrEmpty(action)?" active":"")$>">筛选区域<i class="icon-flex"></i><span>展开</span></a>
+                    </div>
+                    <form id="filterform" action="" method="get" autocomplete="off">
+                        <table class="content_select hide">
+                            <html:if expression="base.ExistsSonCompany && base.CompareUserPower("ManageGroupCompany",PowerCheckType.Single)">
+                            <tr>
+                                <td class="leftlist">公司</td>
+                                <td class="company_select">
+                                    <select class="form_select form_long" id="CompanyID" name="CompanyID">
+                                        <option value="">请选择公司</option>
+                                        <html:foreach expression="CompanyInfo company in base.SonCompanyList">
+                                        <option value="<$company.CompanyId$>"<$(company.CompanyId == companyID?" selected":"") $>><$company.CompanyName$></option>
+                                        </html:foreach>
+                                    </select>
+                                </td>
+                            </tr>
+                            </html:if>
+                            <tr>
+                                <td class="leftlist">课程名称</td>
+                                <td class="course_select">
+                                    <input class="form_con" type="text" name="CourseName" id="CourseName" value="<$searchCourseName$>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="leftlist">时间段</td>
+                                <td class="date_select">
+                                    <input class="form_con form_date Wdate" type="text" name="SearchStartDate" id="SearchStartDate" value="<$(startDate != DateTime.MinValue?startDate.ToString("d"):"")$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'#F{$dp.$D(\\'SearchEndDate\\')}'})">
+                                    <label class="form_txt date_line" for="">——</label>
+                                    <input class="form_con form_date Wdate" type="text" name="SearchEndDate" id="SearchEndDate" value="<$(endDate != DateTime.MinValue?endDate.AddDays(-1).ToString("d"):"")$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'#F{$dp.$D(\\'SearchStartDate\\')}',startDate:'#F{$dp.$D(\\'SearchStartDate\\')}'})"> 不需要可以留空
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="leftlist">员工组别</td>
+                                <td class="postname">
+                                    <ul id="UserGroupList" data-action="GroupID" class="clearfix checkbox-li">
+                                        <html:foreach expression="AdminGroupInfo userGroup in userGroupList">
+                                        <li data-value="<$userGroup.ID$>"<$(string.IsNullOrEmpty(groupID) || StringHelper.CompareSingleString(groupID,userGroup.ID.ToString())?" class=\"current\"":"")$>><$userGroup.Name$></li>
+                                        </html:foreach>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="leftlist" data-action="StudyPostIdCondition">学习岗位<br><a href="javascript:void(0);">[反选]</a></td>
+                                <td class="postname">
+                                    <ul id="StudyPostList" data-action="StudyPostIdCondition" class="clearfix checkbox-li">
+                                        <html:foreach expression="PostInfo studyPost in postList">
+                                        <li data-value="<$studyPost.PostId$>"<$(string.IsNullOrEmpty(studyPostIdCondition) || StringHelper.CompareSingleString(studyPostIdCondition,studyPost.PostId.ToString())?" class=\"current\"":"")$>><$studyPost.PostName$></li>
+                                        </html:foreach>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="leftlist" data-action="PostIdCondition">工作岗位<br><a href="javascript:void(0);">[反选]</a></td>
+                                <td class="postname">
+                                    <ul id="WorkingPostList" data-action="PostIdCondition" class="clearfix checkbox-li">
+                                        <html:foreach expression="PostInfo studyPost in postList">
+                                        <li data-value="<$studyPost.PostId$>"<$(string.IsNullOrEmpty(postIdCondition) || StringHelper.CompareSingleString(postIdCondition,studyPost.PostId.ToString())?" class=\"current\"":"")$>><$studyPost.PostName$></li>
+                                        </html:foreach>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="searchlist">                                    
+                                    <input class="form_button" id="SearchButton" type="button" value="搜 索">
+                                    <input type="hidden" name="StudyPostIdCondition" id="StudyPostIdCondition" value="<$studyPostIdCondition$>" >
+                                    <input type="hidden" name="PostIdCondition" id="PostIdCondition" value="<$postIdCondition$>" >
+                                    <input type="hidden" name="GroupID" id="GroupID" value="<$groupID$>" >
+                                    <input type="hidden" name="Action" id="Action" value="Search" >
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <html:if expression="action=="Search"">
+                    <div class="ReportList">
+                        <$reportContentHtml$>
+                    </div>
+                    </html:if>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+    <script type="text/javascript" src="<html:templatePath>/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+var GetCatId=function(obj){
+    var checkedValue = "";
+    var parentObj = $(obj).parent();
+    if (!parentObj.hasClass('checkbox-li')) {
+        parentObj=parentObj.next().find("[data-action='"+parentObj.data("action")+"']");
+    }
+        parentObj.find('li.current').each(function(){checkedValue=checkedValue+","+$(this).data("value");});
+        $("#"+parentObj.data("action")).val(checkedValue.substr(1));
+}
+$(function(){
+    var loadChecked = function(objid){
+        var checkedValue = $("#"+objid).val();
+        if(checkedValue != ""){
+            $.each(checkedValue.split(','),function(i,item){
+                $("[data-action='"+objid+"']").find("[data-value='"+item+"']").click();
+            })
+        }
+        else{
+            $("[data-action='"+objid+"'] li").click();
+            $("#"+objid).val('');
+        }
+    }
+    var loaddata = function(companyID){
+        $.post("/Ajax.aspx?Action=GetUserGroupJson",{CompanyID:companyID},function(data){
+            $("#UserGroupList").html('');
+            data=JSON.parse(data);
+            $.each(data.data, function(i, item){
+                $("#UserGroupList").append("<li data-value='" + item.ID + "'><span>" + item.Name + "</span></li>")
+            });
+            loadChecked("GroupID");
+        })
+        $.post("/Ajax.aspx?Action=GetStudyPostJson",{CompanyID:companyID},function(data){
+            $("#StudyPostList,#WorkingPostList").html('');
+            data=JSON.parse(data);
+            $.each(data.data, function(i, item){
+                $("#StudyPostList,#WorkingPostList").append("<li data-value='" + item.ID + "'><span>" + item.Name + "</span></li>")
+            });
+            loadChecked("StudyPostIdCondition");
+            loadChecked("PostIdCondition");
+        })
+    }
+
+    $("#SearchButton").click(function(event) {
+        if($("#CourseName").val() == ''){
+            layer.msg('请输入课程名称');
+            return false;
+        }
+        $("#filterform").submit();
+        var index = layer.load(1, {
+          shade: [0.5,'#000'] //0.1透明度的白色背景
+        });
+    });
+
+    $("#CompanyID").change(function(event) {
+        loaddata($(this).val());
+    });
+    
+})
+</script>
+</body>
+</html>

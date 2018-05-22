@@ -1,0 +1,68 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1><$pageTitle$></h1>
+                </div>
+                <form action="?<$RequestHelper.FilterRequestQueryString(new string[] {"Action"})$>&Action=<$action$>" method="post" id="add_project-name" autocomplete="off">
+                    <!-- <div class="form_group">
+                        <label class="form_txt" for="CompanyID">公司名称：</label>
+                        <input class="form_con form_long" name="CompanyID" id="CompanyID">
+                    </div> -->
+                    <html:if expression="action=="Training"">
+                    <div class="form_group">
+                        <label class="form_txt" for="ParentId">分类名称：</label>
+                        <select class="form_select form_long" name="ParentID" id="ParentID" required>
+                            <option value="">请选择分类名称</option>
+                            <html:foreach expression="PostInfo postClass in parentPostList">
+                            <option value="<$postClass.PostId$>"<$(post.ParentId==postClass.PostId?" selected":"")$>><$postClass.PostName$></option>
+                            </html:foreach>
+                        </select>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="ProjectName">项目名称：</label>
+                        <input class="form_con" type="text" name="PostName" id="PostName" value="<$post.PostName$>">
+                    </div>
+                    <html:else>
+                    <div class="form_group">
+                        <label class="form_txt" for="ProjectName">分类名称：</label>
+                        <input class="form_con" type="text" name="PostName" id="PostName" value="<$post.PostName$>">
+                    </div>
+                    </html:if>
+                    <!-- <div class="form_group">
+                        <label class="form_txt" for="Sort">排序ID：</label>
+                        <input class="form_con" type="text" name="Sort" id="Sort" value="<$post.OrderIndex$>">
+                    </div> -->
+                    <div class="form_group form_submit">
+                        <input class="form_xmmc_button" type="submit" id="SubmitButton" name="SubmitButton" value="<$GetAddUpdate()$>">
+                        <input type="hidden" name="Action" value="PostBack" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+    <html:if expression="result=="Success"">
+    <script type="text/javascript">
+        layer.confirm('是否现在为培训项目添加一些课程？', {
+            btn: ['是','否'] 
+        }, function(){
+            location.href = "/User/TrainingCourseAdd.aspx";
+        }, function(){
+            location.href = "/User/TrainingAdd.aspx?Action=<$action$>";
+        });
+    </script>
+    </html:if>
+</body>
+</html>

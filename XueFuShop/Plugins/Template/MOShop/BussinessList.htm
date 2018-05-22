@@ -1,0 +1,94 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/index2016.css">
+    <link rel="stylesheet" href="<html:templatePath>/css/slide_plugin.css">
+    <link rel="stylesheet" href="<html:templatePath>/css/newsflash.css">
+    <link href="http://at.alicdn.com/t/font_miksknvxcz93sor.css" rel="stylesheet">
+</head>
+<body>
+        <div class="container-fluid wrap">
+            <div class="wrapmask"></div>
+            <html:include file="Top.htm" />
+
+            <div class="main">
+                <div class="container">
+                    <div class="position">
+                        <p>当前位置：<a href="/">首页</a>>><a><$title$></a><span class="returnhome"><a href="/">返回首页</a></span></p>
+                    </div>
+                    <div class="section clearfix">
+                        <div class="s-left">
+                            <ul class="category">
+                            <html:foreach expression="ArticleClassInfo articleClass in articleClassList">
+                                <a href="?ClassID=<$classID$>&ID=<$articleClass.ID$>"><li data-cat="<$articleClass.ID$>" <$(id==articleClass.ID?" class=\"active\"":"")$>><$articleClass.ClassName$></li></a>
+                            </html:foreach>
+                            </ul>
+                        </div>
+                        <div class="s-right">
+                            <div class="help-search">
+                                <label for="help-search">搜索：</label>
+                                <input type="text" id="help-search" name="help-search" placeholder="<$(string.IsNullOrEmpty(searchKey)?"请输入您要搜索的关键字":searchKey)$>">
+                                <a href="javascript:;" class="btn-search">
+                                    <i class="icon icon-search"></i>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <ul id="newsflash">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </div>  
+
+        <html:include file="Foot.htm" />
+
+    <script type="text/javascript">
+    layui.use('flow', function(){
+        var flow = layui.flow;
+        flow.load({
+            elem: '#newsflash',
+            mb:500,
+            done: function(page, next){ 
+                var lis = [];
+                var catId = $(".category li.active").data("cat");
+                if($(".category li.active").length==0){
+                    catId=<$classID$>;
+                }
+                $.get("/Ajax.aspx?Action=ArticleList&SearchKey="+escape("<$searchKey$>")+"&Page="+page+"&CateID="+catId, function(res){
+                    res = JSON.parse(res); 
+                    layui.each(res.data, function(index, item){
+                        lis.push('<li><div class="title"><a href="javascript:;">'+ item.title +'</a></div><div class="article" style="display:none;"><div>'+ item.content +'</div><a class="hide_btn" href="javascript:;">收起</a></div></li>');
+                    }); 
+                    next(lis.join(''), page < res.pages);    
+                });
+            }
+        });
+    });
+
+    $("#newsflash").on('click', '.title', function(event) {
+        var thisArticle = $(this).parent();
+        thisArticle.siblings().children(".article").slideUp("300");
+        thisArticle.children(".article").slideToggle(300);
+    });
+    $("#newsflash").on('click', '.hide_btn', function(event) {
+        $(this).parent(".article").slideUp("300");
+    });
+
+    $(".btn-search").click(function(event) {
+        var searchKey = $("#help-search").val();
+        if (searchKey != '') {
+            window.location.href = '/BussinessList.aspx?ClassID=<$classID$>&SearchKey=' + escape(searchKey);
+        }
+        else {
+            layer.alert("请输入您要搜索的问题");
+        }
+    });
+    </script> 
+</body>
+</html>

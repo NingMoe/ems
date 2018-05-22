@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>添加学员 - 孟特</title>
+    <link rel="shortcut icon" type="image/ico" href="../images/favicon.ico">
+    <link rel="bookmark" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/total.css">
+    <link rel="stylesheet" href="../css/ordermana.css">
+</head>
+<body>
+    <div class="top-bar cf" id="topBar">
+            <div class="clearfix container">
+                <div class="logo fl">
+                    <a href="../website/index.html">
+                        <img src="../images/logo.png" alt="孟特">
+                    </a>
+                </div>
+                <div class="account-nav">
+                    <ul class="cf">
+                        <li>
+                            <a href="../website/index.html"><span>首页</span></a>
+                        </li>
+                        <li>
+                            <a href="../website/contact.html"><span>联系我们</span></a>
+                        </li>
+                        <li>
+                            <a href="../help.html">
+                                <span>帮助中心</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><span>退出登录</span></a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="headShortVideoOpen"></div>
+        </div>
+        
+        <div class="ordermain">
+            <div class="clearfix ordermana">
+                <div class="left">
+                    <div class="picbox">
+                        <img src="../images/avatar.jpg" alt="头像">
+                        <div class="name">会员名：mcc</div>
+                        <div class="out"><a href="javascript:;">退出</a></div>
+                    </div>
+                    <div class="set-box">
+                        <div class="lev-box">
+                            <div class="lev-first"><a href="info.html"><b class="icon-set"></b>账号管理</a></div>
+                            <div class="lev-sec">
+                                <div class="lev-secin info"><a href="info.html">个人资料</a></div>
+                                <div class="lev-secin modifypass"><a href="modifypass.html">修改密码</a></div>
+                                <div class="lev-secin add"><a href="add.html" class="activeo">添加学员</a></div>
+                            </div>
+                        </div>      
+                        <div class="lev-box">
+                            <div class="lev-first"><a href="myorder.html"><b class="icon-set"></b>订单管理</a></div>                   
+                        </div>
+                        <div class="lev-box">
+                            <div class="lev-first"><a href="collect.html"><b class="icon-set"></b>我的收藏</a></div>
+                        </div>
+                        <div class="lev-box">
+                            <div class="lev-first"><a href="comment.html"><b class="icon-set"></b>评论管理</a></div>                   
+                        </div>
+                        <div class="lev-box">
+                            <div class="lev-first"><a href="test.html"><b class="icon-set"></b>考试记录</a></div>
+                        </div>
+                        <div class="lev-box">
+                            <div class="lev-first"><a href="mycourse.html"><b class="icon-set"></b>我的课程</a></div>                   
+                        </div>
+                        <div class="lev-box">
+                            <div class="lev-first"><a href="mycert.html"><b class="icon-set"></b>我的证书</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title"><h3 class="slide-title">添加学员</h3></div>
+                    <div class="right-content">
+                        <form id="rightform" action="javascript:;" enctype="multipart/form-data" method="post">
+                            <fieldset class="fieldset fieldset-add">
+                                <div class="even">
+                                    <label>公司名称：</label>
+                                    <input type="text" name="adcom" id="adcom" value="" class="txt">
+
+                                </div>
+                                <div>
+                                    <label>用户ID：</label>
+                                    <input type="text" name="adid" id="adid" value="" class="txt" datatype="*" nullmsg="请设置用户ID！">
+                                    <label for="" class="tips Validform_checktip"><span class="red">*</span>5-20位以字母开头、可带数字“-” “、” “.”的字串</label>
+                                </div>
+
+                                <div>
+                                    <label>电子邮箱：</label>
+                                    <input type="text" name="ademail" id="ademail" class="txt" datatype="*" nullmsg="请设置电子邮箱！">
+                                    <label for="" class="tips Validform_checktip"><span class="red">*</span></label>
+                                </div>
+                                <div>
+                                    <label>密码：</label>
+                                    <input type="password" name="adpass" id="adpass" value="" class="txt" datatype="*7-15" nullmsg="请设置密码！" errormsg="密码长度大于6位少于16位！">
+                                    <label for="" class="tips Validform_checktip"><span class="red">*</span>密码长度大于6位少于16位</label>
+                                </div> 
+                                <div>
+                                    <label>真实姓名：</label>
+                                    <input type="text" name="adname" id="adname" value="" class="txt" datatype="*" nullmsg="请设置真实姓名！">
+                                    <label for="" class="tips Validform_checktip"><span class="red">*</span></label>
+                                </div>
+                                <div class="clearfix sexadd">
+                                    <label>性别：</label>
+                                    <input type="radio" name="adsex" id="adsex" value="男" class="" checked="">男
+                                    <input type="radio" name="adsex" id="adsex" value="女" class="">女
+                                </div>
+                                <div>
+                                    <div class="addleft">
+                                        <label>职位：</label>
+                                        <select name="adtitle" id="adtitle">
+                                            <option value="请选择部门">请选择部门</option>
+                                            <option value="请选择部门">请选择部门</option>
+                                            <option value="请选择部门">请选择部门</option>
+                                        </select>
+                                    </div>
+                                    <label style="margin-left: 10px">原始岗位名称：</label>
+                                    <input type="text" name="adgangwei" id="adgangwei" value="" class="txt">
+                                </div>
+                                <div>
+                                    <label>学习岗位：</label>
+                                    <input type="text" name="adstudy" id="adstudy" value="" class="txt">
+                                    <label for="" class="tips Validform_checktip">正在进行哪个岗位的课程学习</label>
+                                </div>
+                                <div>
+                                    <label>QQ：</label>
+                                    <input type="text" name="adqq" id="adqq" value="" class="txt">
+                                </div>
+                                <div>
+                                    <label>固定电话：</label>
+                                    <input type="text" name="adtel" id="adtel" value="" class="txt">
+                                    <label for="" class="tips Validform_checktip">请填写区号及电话号码，格式如：021-50602208</label>
+                                </div>
+                                <div>
+                                    <label>移动电话：</label>
+                                    <input type="text" name="adphone" id="adphone" value="" class="txt" datatype="*" nullmsg="请设置移动电话！">
+                                    <label for="" class="tips Validform_checktip"><span class="red">*</span></label>
+                                </div>
+                                <div>
+                                    <label>详细地址：</label>
+                                    <input type="text" name="addizhi" id="addizhi" value="" class="addizhi" datatype="*" nullmsg="请设置详细地址！">
+                                    <label for="" class="tips tipsdizhi Validform_checktip"><span class="red">*</span>展厅地址不能为空</label>
+                                </div>
+                                <div class="clearfix sexadd">
+                                    <label>状态：</label>
+                                    <input type="radio" name="adstatus" id="adstatus" value="正常" class="" checked="">正常
+                                    <input type="radio" name="adstatus" id="adstatus" value="锁定" class="">锁定
+                                </div>
+                                <input type="submit" value="确认" class="addsubmit">
+                                
+                            </fieldset>
+                        </form>
+                    <!--form_end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class=" footer">
+            <div class="clearfix container">
+                <ul class="clearfix foot-o">
+                    <h5><a href="../help.html">帮助中心<span class="xianf"></span></a></h5>
+                    <li><a href="../website/guide.html">新手指南</a></li>
+                    <li><div class="text">最近经常有客户询问网站备案（ICP备案）和ICP经营性备案，我们发现很多客户经常将...</div></li>
+                    <li class="plan"><a href="../website/jobplan.html">岗位计划</a></li>
+                    <li><div class="text">最近经常有客户询问网站备案（ICP备案）和ICP经营性备案，我们发现很多客户经常将...</div></li>
+                </ul>
+                <ul class="clearfix foot-o foot-t">
+                    <h5><a href="../website/intro.html">关于我们<span class="xianf"></span></a></h5>
+                    <li><a href="../website/intro.html">公司介绍</a></li>
+                    <li><div class="text">最近经常有客户询问网站备案（ICP备案）和ICP经营性备案，我们发现很多客户经常将...</div></li>
+                    <li class="plan"><a href="../website/contact.html">联系我们</a></li>
+                    <li>
+                        <div class="text text02">
+                            <p>地址：上海徐汇区斜土路2601号嘉汇广场T1栋13楼</p>
+                            <p>电话：021-5062020<span class="qq">QQ：80052251</span></p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="clearfix foot-o foot-weixin">
+                    <h6>营销QQ：80052251</h6>
+                    <li>
+                        <img src="../images/weixin01.jpg" alt="微信">
+                        <p>微信订阅号</p>
+                    </li>                    
+                    <li>
+                        <img src="../images/weixin02.jpg" alt="微信">
+                        <p>微信服务号</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-sub">
+                <p class="copyright">Copyright © 2007-2016  |  上海孟特  版权所有</p>
+                <p>ISP备案号　沪ICP备11015523号-1  |  业务许可证：B1.B2-20140071</p>
+                <p><img src="../images/copyright.png" alt="">上海网警网络110            <img src="../images/copyright.png" alt="">上海工商             <img src="../images/copyright.png" alt="">沪公网安备 31011302000653号</p>
+            </div>
+        </div>
+
+
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+
+ <script src="../js/Validform_v5.3.2_min.js"></script>
+
+<script>
+    $(function(){
+        $("#rightform").Validform({
+            tiptype:3,  //输入信息提示显示在输入框后面
+            showAllError:true,  //提交时显示所有错误信息
+            usePlugin:{
+                passwordstrength:{
+                    minLen:6,
+                    maxLen:18
+                }
+            }
+        });
+    })
+</script>
+</body>
+</html>

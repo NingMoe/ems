@@ -1,0 +1,91 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+    <script language="javascript" type="text/javascript" src="/Admin/Js/UnlimitClass.js" ></script>
+</head>
+
+<body>
+	<html:include file="Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        <html:include file="Menu.htm" />
+        		<div class="art_orderBox">
+                <form action="/CheckOut.aspx" method="post" name="form" >
+                      <!--选择收货地址-->
+                		<div class="orderTitle02">收货人信息</div>
+                                    <div class="add checkOut">
+                                        <html:if expression="userAddressList.Count>0">
+                                        <ul>
+                                            <li class="left"> 地址簿：</li>
+                                            <li class="right"><select id="UserAddress" name="UserAddress" onChange="readUserAddress()"><html:foreach expression="UserAddressInfo tempUserAddress in userAddressList"><option <html:if expression="tempUserAddress.IsDefault==(int)BoolType.True">selected="selected"</html:if> value="<$tempUserAddress.ID$>"><$tempUserAddress.Consignee$> [<$RegionBLL.RegionNameList(tempUserAddress.RegionID)$>] <$tempUserAddress.Address$></option></html:foreach></select></li>
+                                        </ul> 
+                                        </html:if>
+                                        <div id="CheckOutAddressAjax"></div>
+                                    </div>
+                               <!--<div class="deliveryAddr"><a href="firmOrder_addr.html"  class="newAddr" id="">管理收货地址</a></div>-->
+                      <!--选择快递方式-->
+                		<div class="orderTitle02">选择配送方式</div>
+                        <div class="art_delivery">
+                        		<ul class="checkOutList" id="ShippingListAjax"></ul>
+                               <!--<a href="#"  class="freight" >运费介绍</a>-->
+                        </div>
+                        <!--选择支付方式-->
+                		<div class="orderTitle02">选择支付方式</div>
+                        <div class="art_delivery">
+                        		<ul class="checkOutList">
+                                    <html:csharp>int i=0;</html:csharp>
+                                    <html:foreach expression="PayPluginsInfo payPlugins in payPluginsList">
+                                    <li><input type="radio" name="Pay" value="<$payPlugins.Key$>" <html:if expression="i==0"> checked="checked"</html:if> /> <$payPlugins.Name$> <span><$payPlugins.Description$></span></li>
+                                    <html:csharp>i++;</html:csharp>
+                                    </html:foreach>
+                                </ul>
+                        </div>
+                        
+                        <div class="orderTitle02">其他信息</div>
+                        <div class="art_delivery">
+                        		<ul>
+                                    <li class="left">订单留言：</li>
+                                    <li class="right"><input type="text" class="input" name="UserMessage" style="width:500px" /></li>
+                                </ul> 
+                                <ul>
+                                    <li class="left"> </li>
+                                    <li class="right">如果您需要发票，请点击 <input type="checkbox" onClick="needInvoice(this.checked)" /> <a>索要发票</a></li>
+                                </ul> 
+                                <div style="display:none" id="InvoiceDiv">
+                                    <ul>
+                                        <li class="left"> 发票标题：</li>
+                                        <li class="right"><input type="text" class="input" name="InvoiceTitle" style="width:300px" /> <span>*</span></li>
+                                    </ul>  
+                                    <ul>
+                                        <li class="left"> 发票内容：</li>
+                                        <li class="right"><input type="text" class="input" name="InvoiceContent" style="width:300px;" /></li>
+                                    </ul> 
+                                </div>
+                        </div>
+                 		<!--确认订单-->
+                		<div class="orderTitle02">费用信息</div>
+                        <!--订单表-->
+                        <div class="art_firmOrderBox">
+                                <input type="hidden" id="ProductMoney" name="ProductMoney" value="<$Sessions.ProductTotalPrice$>" />
+                                <input type="hidden" id="FavorableMoney" name="FavorableMoney" value="0" />
+                                <input type="hidden" id="ShippingMoney" name="ShippingMoney" value="0" />
+                                <input type="hidden" id="Balance" name="Balance" value="0" />
+                                <input type="hidden" id="CouponMoney" name="CouponMoney" value="0"/>
+                                <input type="hidden" id="FavorableActivityID" name="FavorableActivityID" value="<$favorableActivity.ID$>" />
+                                <div class="mony" id="MoneyDetail"></div>
+                                <div class="height10"></div>  
+                                <div class="cartOperate"><a href="/Cart.aspx"> <img src="<html:templatePath>/Images/cart.png"  />返回购物车</a> <input class="insertBt" style="float:right;" value="确定提交" type="submit"  onclick="return checkSubmit()" /><input type="hidden" name="Action" value="PostBack" /></div>
+                   		</div>
+                </form>
+                </div>
+
+        </div>
+        <script language="javascript" type="text/javascript" src="<html:templatePath>/Js/CheckOut.js" ></script>
+        <html:include file="Foot.htm" />
+</body>
+</html>

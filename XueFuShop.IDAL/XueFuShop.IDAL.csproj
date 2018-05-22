@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A21D800-08AC-4179-B25A-102BA714D8AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XueFuShop.IDAL</RootNamespace>
+    <AssemblyName>XueFuShop.IDAL</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAd.cs" />
+    <Compile Include="IAdmin.cs" />
+    <Compile Include="IAdminLog.cs" />
+    <Compile Include="IAdRecord.cs" />
+    <Compile Include="IArticle.cs" />
+    <Compile Include="IArticleClass.cs" />
+    <Compile Include="IAttribute.cs" />
+    <Compile Include="IAttributeClass.cs" />
+    <Compile Include="IAttributeRecord.cs" />
+    <Compile Include="IBookingProduct.cs" />
+    <Compile Include="ICart.cs" />
+    <Compile Include="IChangeNum.cs" />
+    <Compile Include="ICompany.cs" />
+    <Compile Include="ICompanyPostPlan.cs" />
+    <Compile Include="ICompanyRule.cs" />
+    <Compile Include="ICoupon.cs" />
+    <Compile Include="ICourse.cs" />
+    <Compile Include="ICourseCate.cs" />
+    <Compile Include="IBaseDAL.cs" />
+    <Compile Include="IEmailSendRecord.cs" />
+    <Compile Include="IEvaluateName.cs" />
+    <Compile Include="IFavorableActivity.cs" />
+    <Compile Include="IFlash.cs" />
+    <Compile Include="IFlashPhoto.cs" />
+    <Compile Include="IGift.cs" />
+    <Compile Include="IGiftPack.cs" />
+    <Compile Include="IKPI.cs" />
+    <Compile Include="IKPIEvaluate.cs" />
+    <Compile Include="IKPITemplet.cs" />
+    <Compile Include="ILink.cs" />
+    <Compile Include="IMemberPrice.cs" />
+    <Compile Include="IMenu.cs" />
+    <Compile Include="IPostKPISetting.cs" />
+    <Compile Include="IRenZhengCate.cs" />
+    <Compile Include="ISMSRecord.cs" />
+    <Compile Include="IAdminGroup.cs" />
+    <Compile Include="IOrder.cs" />
+    <Compile Include="IOrderAction.cs" />
+    <Compile Include="IOrderDetail.cs" />
+    <Compile Include="IPost.cs" />
+    <Compile Include="IPostPass.cs" />
+    <Compile Include="IProduct.cs" />
+    <Compile Include="IProductBrand.cs" />
+    <Compile Include="IProductClass.cs" />
+    <Compile Include="IProductCollect.cs" />
+    <Compile Include="IProductComment.cs" />
+    <Compile Include="IProductPhoto.cs" />
+    <Compile Include="IProductReply.cs" />
+    <Compile Include="IQuestion.cs" />
+    <Compile Include="IReceiveMessage.cs" />
+    <Compile Include="IRegion.cs" />
+    <Compile Include="ISendMessage.cs" />
+    <Compile Include="IShipping.cs" />
+    <Compile Include="IShippingRegion.cs" />
+    <Compile Include="IStandard.cs" />
+    <Compile Include="IStandardRecord.cs" />
+    <Compile Include="ITags.cs" />
+    <Compile Include="ITeacher.cs" />
+    <Compile Include="ITestPaper.cs" />
+    <Compile Include="ITestSetting.cs" />
+    <Compile Include="IThemeActivity.cs" />
+    <Compile Include="IUpload.cs" />
+    <Compile Include="IUser.cs" />
+    <Compile Include="IUserAccountRecord.cs" />
+    <Compile Include="IUserAddress.cs" />
+    <Compile Include="IUserApply.cs" />
+    <Compile Include="IUserCoupon.cs" />
+    <Compile Include="IUserFriend.cs" />
+    <Compile Include="IUserGrade.cs" />
+    <Compile Include="IUserMessage.cs" />
+    <Compile Include="IUserRecharge.cs" />
+    <Compile Include="IVote.cs" />
+    <Compile Include="IVoteItem.cs" />
+    <Compile Include="IVoteRecord.cs" />
+    <Compile Include="IWorkingPost.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XueFuShop.Common\XueFuShop.Common.csproj">
+      <Project>{E150603E-2A27-47DB-9A27-8C98F4936761}</Project>
+      <Name>XueFuShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Models\XueFuShop.Models.csproj">
+      <Project>{83AE4726-C1C6-4601-930E-B5F5CF62F1FC}</Project>
+      <Name>XueFuShop.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

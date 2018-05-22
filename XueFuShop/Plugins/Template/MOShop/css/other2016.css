@@ -1,0 +1,106 @@
+@charset "utf-8";
+/**
+ * @web name        mengte-index
+ * @function        stuty
+ * @developer       
+ * @time            2016-06
+*/
+
+.othermain{min-height: 440px; padding-bottom: 60px; border-bottom: 1px solid #fff;}
+
+.bggred{background-color: #f4f4f4;}
+
+
+
+.register{position: relative; width: 100%;background-color: #fff;}
+.register .register-content{padding: 0 20px;}
+.register .register-content .title{width: 100%;height: 63px;line-height: 95px; border-bottom: 1px solid #ccc;font-size: 16px;color: #333;font-weight: bold;}
+
+.register .register-content .fieldset{width: 890px;margin: 0 auto;padding-top: 70px;}
+
+.register .register-content .fieldset .fieldset-left{width: 580px;float: left;padding-bottom: 50px;}
+
+.register .register-content .fieldset .red{color: #c70000;font-size: 14px;margin-right: 8px;}
+.register .register-content .fieldset .fieldset-left>div{position: relative; margin-bottom: 20px;}
+.register .register-content .fieldset label {font-size: 14px;color: #999; width: 100px; display: block; float: left; text-align: right;line-height: 34px;}
+.register .register-content .fieldset .txt{width: 238px; height: 32px;line-height: 32px;padding: 0 5px; color: #333; font-size: 14px; border: 1px solid #ccc;}
+.register .register-content .fieldset .txt-short{width: 113px;}
+
+
+.regisubmit{margin-left: 100px;margin-top: 21px; width: 250px; height: 37px; line-height: 37px;background: #18bd9c; border-radius: 5px; color: #fff; font-size: 14px;cursor: pointer;}
+
+
+label.error{position: absolute; top: 0; left: -80px;width: 600px!important;  float: none!important; }
+
+.register .register-content .loginp1{border:0px;font-size: 12px;height: 37px;}
+.register .register-content .loginp1 label{ width: 90%; margin-left: 100px; text-align: left;}
+.register .register-content .loginp1 input{vertical-align: middle;margin-right: 6px;}
+
+.register .register-content .loginp1 span em{margin-right: 5px;}
+.register .register-content .loginp1 span em img{margin-top: -5px;}
+
+
+.register .register-content .loginp2 label{ width: 253px; margin-left: 100px; text-align: left;}
+
+.register .register-content .loginp2 .resgterqq{display: block;float: right;}
+
+.register .register-content .loginp2 .resgterqq-pic{margin-top: 4px;margin-left: 5px;}
+
+
+
+.register .register-content .fieldset .fieldset-right{position: relative; background: url(../images/resgterright.png) no-repeat; width: 220px;height: 275px; float: left;margin-left: 63px;}
+
+.fieldset-right .text{position: absolute;top: 177px;left: 26px;width: 174px;text-align: center;line-height: 22px;}
+
+.fieldset-right .text .grey{color: #999;}
+
+.fieldset-right .text .blue{color: #18bd9c;font-size: 14px;}
+
+
+
+.forget{margin-left: 110px;}
+
+.login-even{margin-bottom: 20px!important;}
+
+.login-right {position: relative; width: 255px;height: 275px; float: left;margin-left: 55px;color: #4e4e4e;font-size: 14px; letter-spacing: 1px;}
+.login-right .grey{font-size: 16px;margin-bottom: 17px;}
+.login-right a.res{width: 250px; height: 37px; line-height: 37px;  border-radius: 5px; color: #18bd9c; display: block; border: 1px solid #18bd9c;  text-align: center;margin-bottom: 25px;}
+.login-right ul {margin-top: 32px;}
+.login-right ul li {list-style: initial; list-style-position: inside;line-height: 32px;}
+
+.login-even img{margin: 7px 0 0 10px;}
+.login-even a{display:inline-block;margin:10px 0 0 10px;}
+
+
+.setpass{width: 500px!important;}
+.register .register-content .fieldset .w175 { width: 158px; height: 32px; line-height: 32px; padding: 0 5px; color: #ccc; font-size: 12px; border: 1px solid #ccc;}
+
+.getyzm{color: #fff; display: inline; height: 33px; line-height: 33px; /*margin-left: 50px;*/width: 100px; background: #18bd9c; cursor: pointer;text-align: center;}
+
+
+.Validform_wrong {
+    color: #f00!important;
+    padding-left: 20px;
+    white-space: nowrap;
+    background: url(../images/unchecked.gif) no-repeat left center;
+}
+.Validform_checktip {
+    margin-left: 8px;
+    line-height: 26px;
+    height: 20px;
+    overflow: hidden;
+    color: #999;
+    font-size: 12px;
+}
+
+
+
+
+.out_text { color:red; line-height:32px;display:inline-block; padding-left: 21px;background: url(../images/unchecked.gif) no-repeat left center; margin-left: 8px;}
+
+
+.out_textright {background: none;color: #999;padding-left: 3px;}
+
+
+
+

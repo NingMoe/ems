@@ -1,0 +1,43 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="English/Head.htm" />
+</head>
+
+<body>
+	<html:include file="English/Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        <html:include file="English/Menu.htm" />
+        		<div class="art_orderBox">
+                		<div class="orderTitle">Member Center</div>
+                        <div class="art_BuyersBox">
+                        		<!--右侧框架-->
+                                <div class="rightBox">
+                                <form action="" method="get">
+                                		<!--欢迎用户信息-->
+                                		<div class="userInfoBox">
+                                        		<div class="buyerInfo">
+                                                		<h3>Welcome,<$base.UserName$></h3>
+                                                        <p>Last Login: <$user.LastLoginDate$></p>
+                                                        <p>Last Login IP:  <$user.LastLoginIP$>(Not you are logged in? Please<a href="/User/ChangePassword.aspx">click here</a>)</p>
+                                                        <p class="address"><a href="UserAddress.aspx">Change my delivery address</a></p>
+                                                </div>                                               
+            
+                                        		<div class="pic"><img src="<html:templatePath>/images/buyer_pic01.png"></div>
+                                        </div>
+                                        
+                                </form>
+                                </div>
+                        		<html:include file="English/User/UserLeft.htm" />
+                        </div>
+                </div>
+
+        </div>
+        <html:include file="Foot.htm" />
+</body>
+</html>

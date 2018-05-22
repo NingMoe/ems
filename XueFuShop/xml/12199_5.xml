@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="5" QuestionNum="25" SingleNum="12" MultiNum="0" PanDunNum="13">
+  <Single>
+    <QuestionInfo1 id="90727">
+      <Question>爱丽舍顶配版本车型配备了（    ），无论是车辆受到正面撞击或者侧面撞击，都能有效保护车内乘员的人身安全，将对乘员的伤害减少到最低，被动安全防护全面到位。</Question>
+      <A>10气囊</A>
+      <B>8气囊</B>
+      <C>4气囊</C>
+      <D>6气囊</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>90727</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="67739">
+      <Question>大众Polo的（   ）变速器一般用在更高一级别的车型中，用在Polo这样的小型车上只能是成为厂家抬高车价和广宣噱头的鸡肋配置，另外这也是一种资源的浪费，飞度采用的5AT变速器已经足够使用。</Question>
+      <A>6速手自一体</A>
+      <B>CVT变速器</B>
+      <C>DSG双离合变速器</C>
+      <D>5速手自一体</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>67739</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="95356">
+      <Question>奇骏的后排座椅没有配备（）功能，在乘坐时无法根据需求进行调整，舒适性不如可调节的翼虎。</Question>
+      <A>电动按摩</A>
+      <B>电动调节</B>
+      <C>靠背调节</C>
+      <D>按比例放倒</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>95356</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="40947">
+      <Question>荣威350搭载了源自英伦的（   ）XBM HI-FI音响，完美演绎各种格式的乐曲，天音环绕下，不啻为对身心全方位的洗礼。我方顾问应表示，音响的好坏与喇叭的数量没有直接关系，重要的是亲身体验。
+</Question>
+      <A>10喇叭</A>
+      <B>7喇叭</B>
+      <C>8喇叭</C>
+      <D>9喇叭</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>40947</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="71201">
+      <Question>日前网上爆出了国产第七代高尔夫的部分资料，据资料表明该车型将和奥迪全新（）共线生产，最快将于今年8月在一汽-大众佛山工厂投产。</Question>
+      <A>A2</A>
+      <B>A4</B>
+      <C>A1</C>
+      <D>A3</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>71201</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="127806">
+      <Question>卡罗拉的1.6L车型主动安全仅配备了（），还停留在上一代的水平上，简直和微型车一个级别，可见安全性上远远不及明锐。</Question>
+      <A>ABS+EBD+TCS</A>
+      <B>ABS</B>
+      <C>ABS+EBD</C>
+      <D>ABS+EBD+BA</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>127806</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="105245">
+      <Question>在销售业绩报表中，根据不同的计算口径，所获得的“毛利润”数据也会有所不同，其中（）是指销售价格-购进价格-赠送装潢-精装车成本+单车返利+零售达成返利+广告补贴，只要在报表中将这些数据填写完成，系统就会自动得到该数据。</Question>
+      <A>总毛利</A>
+      <B>保险毛利</B>
+      <C>整车毛利</C>
+      <D>二手车毛利</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>105245</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="78649">
+      <Question>在安全配备部分，索八全系不具备致胜所拥有的（    ），在受到撞击时，能有效保护乘员人身安全，是同级别车中非常少见的安全气囊，更突显了致胜在细节设计部分完胜索八。</Question>
+      <A>前排双气囊</A>
+      <B>后排侧气帘</B>
+      <C>膝部气囊</C>
+      <D>后排侧气囊</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>78649</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="75754">
+      <Question>飞度采用的是（     ）门把手设计，这种设计方式：1、仅出现在廉价小车上，档次低；2、受力面积小，易脱手，不安全，这是我方销售顾问在介绍外观部分时，可与顾客沟通的部分。</Question>
+      <A>门锁式</A>
+      <B>隐藏式</B>
+      <C>上提式</C>
+      <D>外拉式</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75754</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="63242">
+      <Question>在举办自驾游活动中，经销商可通过（   ）的方式，一方面可以拉近与客户之间的关系，另一方面可以扩大品牌形象与知名度。</Question>
+      <A>游车河</A>
+      <B>网络宣传</B>
+      <C>赠送折价券</C>
+      <D>活动邀约</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>63242</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="33570">
+      <Question>K2与雨燕相比，外观方面最大的亮点在于（   ），使得K2更有气派，对此，我方销售顾问应强调雨燕属于运动型小型车，更注重日常驾驶的灵活性，两车的侧重点不同。</Question>
+      <A>车身尺寸</A>
+      <B>2门设计</B>
+      <C>外型设计</C>
+      <D>高科技配置</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>33570</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="88679">
+      <Question>福克斯全系仅配备了（   ），相比于骐达的大灯配备，照射亮度低，使用能耗高，是普通廉价小车常使用的大灯配备，档次低。</Question>
+      <A>氙气大灯</A>
+      <B>激光大灯</B>
+      <C>卤素大灯</C>
+      <D>LED大灯</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>88679</QuestionId>
+    </QuestionInfo12>
+  </Single>
+  <Multi>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="51999">
+      <Question>信用是商业的基础，守信用是销售成功并且在未来获得客户转介绍的基础。所以顾问答应客户的事情要办到，不要为了一两个订单，而损失了销售顾问的个人口碑和职业形象。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>51999</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="120567">
+      <Question>在制动系统部分，创酷采用了~前盘后鼓~制动，其散热效果更佳，使得车辆持续制动稳定性能更出色，是中高级车普遍采用的制动形式！</Question>
+      <A>前后盘式</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>120567</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="76135">
+      <Question>任何的一个场景都是设定出来的，团购会同样如此。一个好的团购会场景中就可以设定好车型颜色及排量等，让顾客感受到优惠，这样库存车也可以更快的卖出去。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>76135</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="122375">
+      <Question>锐界的天窗采用的是全景天窗的设计，可以大大的提高车内的采光，更加亲近大自然，而且让车辆的内饰更具有档次，是消费者十分喜欢的配置。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122375</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="119935">
+      <Question>做生意，关系很重要，客户买车会找关系，顾问卖车要找关系，所以，销售顾问平时就要将关系的工作有系统的进行。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>119935</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="83276">
+      <Question>对于速腾的后排出风口配置，我方顾问需和客户沟通，后排出风口~开启会中断前排空调的送风~，实际使用中会影响到前排空调的风力，影响前排乘客的使用。</Question>
+      <A>只是将前排空调的一部分风力导到后排</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>83276</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="137064">
+      <Question>由于车身较重，博瑞的1.8T的涡轮增压发动机略显力不从心，为了有更好的动力性能，6AT变速箱在调教方面刻意偏向于~积极升档~，当随之而来的就是油耗的上升，另外变速箱的换挡逻辑和速度也是慢一拍。</Question>
+      <A>积极降档</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>137064</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="31472">
+      <Question>在外观细节方面，启辰D50~并未配备发动机隔音棉，该配置不但能抑制噪音，更能阻隔热量，保护车漆，~可见启辰D50在细节部分并不到位。</Question>
+      <A>虽然配有发动机隔音棉，但其覆盖面积极小，使得隔音隔热效果稍打折扣，</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31472</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="92198">
+      <Question>仓库管理九原则中，按形状大小存放原则是将形状相同、相似以及标准库存数量占用空间相同配件存放在一起，确保同一层货架上摆放的配件占用的仓储空间相当，这样做能够节省存储空间、提高货位利用率，确保配件的存取安全。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>92198</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="46094">
+      <Question>天语前排遮阳板都附有化妆镜设计，虽然并不是高档配置，但相当贴心，满足了乘员的使用需求，也说明了厂家对细节设计的重视。相比之下，~比亚迪F3只有副驾驶座带有化妆镜设计~，节约成本意图明显，也显现了厂家对细节设计的忽视。</Question>
+      <A>比亚迪F3前排均无化妆镜设计</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>46094</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="9329">
+      <Question>~同为中高级车型，卡罗拉整车尺寸数据仅车高比B70占有一点优势，其余数据均落后，可见买卡罗拉就是掉脸面，买B70才是真正的有面子。~</Question>
+      <A>从整车车身数据上来看，卡罗拉整车尺寸数据仅车高比B70占有一点优势，其他数据均落后B70，从这点就能看到卡罗拉仅仅是紧凑级别的车格，相较于B70中高级车型车格来看买卡罗拉车主没脸面，掉身价。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>9329</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="33640">
+      <Question>销售顾问平时可以走访老客户并经常给老客户馈赠小礼物及来店礼、运用适当的借口话术，加深和客户的关系，才能有底气要求顾客给你做转介绍。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>33640</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="29095">
+      <Question>对顾问来说，在与客户做价格商谈时，~不提供价格而光谈价值~，谈成了也没钱赚，谈输了窝心又冤枉！不如不谈。</Question>
+      <A>不提供价值而光谈价格</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29095</QuestionId>
+    </QuestionInfo13>
+  </PanDuan>
+</TestPaper>
