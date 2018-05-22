@@ -1,0 +1,296 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/bundle-db2c1.css">
+    <link rel="stylesheet" type="text/css" href="<html:templatePath>/css/order_buy.css">
+    <link rel="stylesheet" href="<html:templatePath>/css/sobox.css">
+
+</head>
+<body>
+    <html:include file="Top.htm" />
+
+    <div class="wrap clearfix logoBar pt100">
+        <div class="position">
+            <p>当前位置：<a href="index.html">首页</a>>><a class="active">购物车</a><span class="returnhome"><a href="index.html">返回首页</a></span></p>
+        </div>
+        <div class="bgcwhite">
+            <div class="clearfix ntop">
+                <div class="logo">
+                    <a>购物车</a>
+                </div>
+            </div>
+            
+            <div class="gwc" style=" margin:auto;">
+                <table cellpadding="0" cellspacing="0" class="gwc_tb1">
+                    <tr class="bgreent">
+                        <td class="tb1_td1"><input id="Checkbox1" type="checkbox"  class="allselect"/>全选</td>
+                        <td class="tb1_td3">商品信息</td>
+                        <td class="tb1_td5">数量</td>
+                        <td class="tb1_td6">单价</td>
+                        <td class="tb1_td7">操作</td>
+                    </tr>
+                </table>
+                
+                <table cellpadding="0" cellspacing="0" class="gwc_tb2">
+                    <tr>
+                        <td class="tb1_td1"><input type="checkbox" value="{$vo.id}" class="otherselect" name="newslist[]" /></td>
+                        <td class="tb1_td3">
+                            <div class="photo">
+                                <a href="javascript:;" target="_blank">
+                                    <img src="<html:templatePath>/images/myorder.jpg" class="lazy-image" width="108px" height="72px">
+                                </a>
+                            </div>
+                            <div class="titleg">
+                                <div class="name">
+                                    <a href="javascript:;" target="_blank">韩语生活会话基础【6月班】</a>
+                                </div>
+                                <div class="order">
+                                    灯体：棉布；灯罩：棉布 - 灯罩：粉色五彩绣花星星<br>规格: 宽45X高30CM；安装高度：40~180CM
+                                </div>
+                            </div>
+                        </td>
+                        <td class="tb1_td5 btnchange">
+                            <div class="tbl_number">
+                                <input id="min1" class="jia" name="" type="button" value="-" />
+                                <input id="text_box1" class="text_box carnum" name="" type="text" value="1" />
+                                <input id="add1" class="jian" name="" type="button" value="+" />
+                            </div>
+                        </td>
+                        <td class="tb1_td6 tot">211</td>
+                        <td class="tb1_td7">
+                            <div class="tbl_number"><a href="javascript:;" class="deletea">删除</a></div>
+                        </td>
+                    </tr>
+                </table>
+                
+                
+                <table cellpadding="0" cellspacing="0" class="gwc_tb2">
+                    <tr>
+                        <td class="tb1_td1"><input type="checkbox" value="{$vo.id}" class="otherselect" name="newslist[]" /></td>
+                        <td class="tb1_td3">
+                            <div class="photo">
+                                <a href="javascript:;" target="-blank">
+                                    <img src="<html:templatePath>/images/myorder.jpg" class="lazy-image" width="108px" height="72px">
+                                </a>
+                            </div>
+                            <div class="titleg">
+                                <div class="name">
+                                    <a href="javascript:;" target="-blank">韩语生活会话基础【6月班】</a>
+                                </div>
+                                <div class="order">
+                                    灯体：棉布；灯罩：棉布 - 灯罩：粉色五彩绣花星星<br>规格: 宽45X高30CM；安装高度：40~180CM
+                                </div>
+                            </div>
+                        </td>
+                        <td class="tb1_td5 btnchange">
+                            <div class="tbl_number">
+                            <input id="min1" class="jia" name="" type="button" value="-" />
+                            <input id="text_box1" class="text_box carnum" name="" type="text" value="1" />
+                            <input id="add1" class="jian" name="" type="button" value="+" />
+                            </div>
+                        </td>
+                        <td class="tb1_td6 tot">211</td>
+                        <td class="tb1_td7">
+                            <div class="tbl_number"><a href="javascript:;" class="deletea">删除</a></div>
+                        </td>
+                    </tr>
+                </table>
+                
+                
+                <table cellpadding="0" cellspacing="0" class="gwc_tb3">
+                    <tr>
+                        <td class="tb1_td1">&nbsp;</td>
+                        <td class="tb3_td2">已选商品 <label id="shuliang" style="color:#ff5500;font-size:14px; font-weight:bold;">0</label> 件</td>
+                        <td class="tb3_td2">已选数量 <label id="shuliang2" style="color:#ff5500;font-size:14px; font-weight:bold;">0</label> 件</td>
+                        <td class="tb3_td3">合计(不含运费):<span style=" color:#f60;">￥<label id="zong1"></label></span></td>
+                        <td class="tb3_td4"></td>
+                    </tr>
+                </table>
+                <div class="continue">
+                <a class="continue1" href="course.html">继续购物</a>
+                <span id="jz1">下一步</span><a href="order_buy.html" target="_blank" style=" display:none;"  class="jz2" id="jz2">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <html:include file="Foot.htm" />
+
+    <script type="text/javascript" src="<html:templatePath>/js/Calculation.js"></script>
+
+    <script src="<html:templatePath>/js/jquery.sobox.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        // 上面的全选       
+        $("#Checkbox1").click(function() {
+            $("#cancel").prop("checked", false);
+            $(".gwc_tb2 input[name=newslist\\[\\]]").each(function() {
+                $(this).prop("checked", $(".allselect:eq(0)").prop("checked") ? true : false);
+            });
+            $("#checkAll").prop("checked", $(".allselect:eq(0)").prop("checked") ? true : false);
+            GetCount();
+        });
+        //下面的全选
+        $("#checkAll").click(function() {
+            $("#cancel").prop("checked", false);
+            $(".gwc_tb2 input[name=newslist\\[\\]]").each(function() {
+                $(this).prop("checked", $(".allselect:eq(1)").prop("checked") ? true : false);
+            });
+            $("#Checkbox1").prop("checked", $(".allselect:eq(1)").prop("checked") ? true : false);
+            GetCount();
+        });
+        //全部取消
+        $("#cancel").click(function() {
+            $(".gwc_tb2 input[name=newslist\\[\\]]").each(function() {
+                $(this).prop("checked", false);
+            });
+            $(".allselect").prop("checked", false);
+            GetCount();
+        });
+        //单选后，取消框取消选中
+        $(".gwc_tb2 input[name=newslist\\[\\]]").click(function() {
+            $("#cancel").prop("checked", false);
+            GetCount();
+        });
+
+        /***********加减，结算***************/
+        $(function() {
+            // 改变数量
+            $(".btnchange").click(function() {
+                // 获取当前元素下的子元素（编码、数量）
+                var carsid = $(this).children('.ccid').val();
+                var carsnum = $(this).children('.carnum').val();
+                // ajax传值给后台改变数量
+                //$.post("{U('makeshop/changenum')}", { carsid: carsid, carsnum: carsnum });
+            });
+
+            // 结算
+            $("#jz1").click(function() {
+                // 判断有没有选中礼品 如果有为空的则不允许提交
+                var ids = $('input:checkbox[name="newslist[]"]:checked').val();
+                if (ids == null) {
+                    var tips = "您还没有选中要结算的商品！";
+                        $.sobox.pop({
+                            title:'提示',
+                            content:tips,
+                            btn:[
+                                { text:'确定',cls:'a-sopop-cancel' }
+                                ]
+
+                            });
+                    return;
+                }
+                $('#myforms').submit();
+            });
+        });
+
+        // <!--加减算总数-->
+        $(function() {
+            var t = $(".text_box");
+            $(".jian").click(function() {
+                var x = parseFloat($(this).siblings('.text_box').val()) + 1;
+                if (x < 1) {
+                    x = 1;
+                    $(this).siblings('.text_box').val(x);
+                } else if (x >= $(this).siblings('.carid').val()) {
+                    x = $(this).siblings('.carid').val();
+                    $(this).siblings('.text_box').val(x);
+                    var tips = "数量不能大于库存"+ $(this).siblings('.carid').val();
+                        $.sobox.pop({
+                            title:'提示',
+                            content:tips,
+                            btn:[
+                                { text:'确定',cls:'a-sopop-cancel' }
+                                ]
+
+                            });
+                };
+                $(this).siblings('.text_box').val(x);
+                //$(this).parents(".gwc_tb2").find(".tot").html((parseFloat($(this).siblings('.text_box').val()) * $(this).parents(".gwc_tb2").find(".tb1_td6").text()).toFixed(2));
+                getallcount();
+                GetCount();
+            })
+            $(".jia").click(function() {
+                var x = parseFloat($(this).siblings('.text_box').val()) - 1;
+                if (x < 1) {
+                    x = 1;
+                    $(this).siblings('.text_box').val(x);
+                } else if (x >= $(this).siblings('.carid').val()) {
+                    x = $(this).siblings('.carid').val();
+                    $(this).siblings('.text_box').val(x);
+                    var tips = "数量不能大于库存"+ $(this).siblings('.carid').val();
+                        $.sobox.pop({
+                            title:'提示',
+                            content:tips,
+                            btn:[
+                                { text:'确定',cls:'a-sopop-cancel' }
+                                ]
+
+                            });
+                };
+                $(this).siblings('.text_box').val(x);
+                //$(this).parents(".gwc_tb2").find(".tot").html((parseFloat($(this).siblings('.text_box').val()) * $(this).parents(".gwc_tb2").find(".tb1_td6").text()).toFixed(2));
+                getallcount();
+                GetCount();
+            })
+            $(".gwc_tb2").each(function() {
+
+
+                $(this).find(".tot").html((parseFloat($(this).find(".text_box").val()) * $(this).find(".tb1_td6").text()).toFixed(2));
+
+
+            });
+
+            $(".text_box").each(function() {
+                $(this).change(function() {
+                    var x = parseFloat($(this).val());
+                    // alert(x);
+                    if (x < 1) {
+                        x = 0;
+                    }
+                    if (isNaN(x)) {
+                        console.log("123")
+                        x = 0;
+                    }
+                    $(this).val(parseInt(x));
+                    // $(this).parents(".gwc_tb2").find(".tot").html((parseFloat(x) * $(this).parents(".gwc_tb2").find(".tb1_td6").text()).toFixed(2));
+                    GetCount();
+                });
+            });
+        })
+
+        function getallcount() {
+            var count_number = 0;
+            $(".text_box").each(function() {
+                count_number += parseFloat($(this).val());
+            });
+            $(".top-s").text("(" + count_number + ")");
+        }
+        getallcount();
+    }); //jquery end
+    //******************
+    function GetCount() {
+        var conts = 0;
+        var aa = 0;
+        var all_cont = 0;
+        $(".gwc_tb2 input[name=newslist\\[\\]]:checked").each(function() {
+            var cur_cont = parseInt($(this).parents(".gwc_tb2").find(".text_box").val());
+            all_cont += cur_cont;
+            conts += parseFloat($(this).parents(".gwc_tb2").find(".tot").text()) * cur_cont;
+            
+            aa += 1;
+        });
+        $("#shuliang").text(aa);
+        $("#shuliang2").text(all_cont);
+        $("#zong1").html((conts).toFixed(2));
+        $("#jz1").css("display", "none");
+        $("#jz2").css("display", "block");
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" href="<html:templatePath>/lightgallery/lightgallery.css">
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/index2016.css">
+    <link rel="stylesheet" href="<html:templatePath>/css/slide_plugin.css">
+    <link rel="stylesheet" href="<html:templatePath>/css/community.css">
+    <link href="http://at.alicdn.com/t/font_n6075vr2to4m42t9.css" rel="stylesheet">
+    <style>
+        #lightGallery_counter{
+            top:22px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 16px;
+        }
+        #lightGallery-close::after {
+            font-size: 32px;
+        }
+        #lightGallery-action{
+            position: static;
+        }
+        #lightGallery-action #lightGallery-prev{
+            position: absolute;
+            left:60px;
+            top:40%;
+            width:128px;
+            height:128px;
+        }
+        #lightGallery-action #lightGallery-next{
+            position: absolute;
+            right: 60px;
+            top:40%;
+            width:128px;
+            height:128px;
+        }
+        #lightGallery-action a#lightGallery-prev::before,
+        #lightGallery-action a#lightGallery-next::after{
+            font-size: 96px;
+        }
+        @media screen and (max-width: 640px) {
+            .layui-layer { left: 90px !important; top: 100px !important;}
+        }
+        .QRCode { width: 221px; height: 261px; text-align: center; background: #fff; }
+        .QRCode .codename { font-size: 14px; line-height: 180%; padding: 10px; white-space:nowrap; overflow: hidden; }
+        #code { text-align: center; }
+
+        .container li .iconcc a {
+            float: left;
+            font-size: 14px;
+            display: inline-block;
+          width: 80px;
+          margin: 0 5px 10px 0;
+        }
+        .container li .iconcc i.iconfont{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          font-size: 20px;
+        }
+        .recommendcourse .bd li .bd-text-sub a:after {
+            background: none;
+        }
+    </style>
+</head>
+<body>
+        <div class="container-fluid wrap">
+            <div class="wrapmask"></div>
+            <html:include file="Top.htm" />
+            <div id="slideBox" class="slider">
+                <div class="hd">
+                    <ul><li class="on"></li><li class=""></li><!-- <li class=""></li> --></ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        <li style="background: url(<html:templatePath>/images/banner1.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover;"></li>
+                        <li onclick="window.open('http://www.capech.cn/intro.asp');" style="background: url(<html:templatePath>/images/banner5.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover; cursor: pointer;"></li>
+                        <!-- <li style="background: url(<html:templatePath>/images/banner2.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover;"></li>
+                        <li style="background: url(<html:templatePath>/images/banner3.jpg) no-repeat center center; -webkit-background-size: cover;background-size: cover;"></li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="community">
+                    <div class="origin c-block">
+                        <!-- <h3>销字服字爱车讲堂</h3> -->
+                        <ul class="clearfix">
+                            <li class="module active" onclick="GoURL('BussinessList.aspx?ClassID=36&ID=37')">
+                                <div class="border-top"></div>
+                                <div class="item">
+                                    <div class="item-top">
+                                        <div>
+                                            <i class="iconfont icon-xiaoshou"></i>
+                                        </div>
+                                        <h4>销售盈利法</h4>
+                                        <$(articleDc.ContainsKey(37)?"<p><span>NEW!</span>"+articleDc[37].Title+"</p>":"")$>
+                                    </div>
+                                    <div class="item-bottom">
+                                        <div>
+                                            <i class="iconfont icon-xiaoshou"></i>
+                                        </div>
+                                        <h4>销售盈利法</h4>
+                                        <p>孟特诸君走南闯北多年，吸收各品牌营销亮点之精华，去其无用糟粕，由专业讲师融汇贯通而成！每周一门课，帮您提升销售毛利！</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="module" onclick="GoURL('BussinessList.aspx?ClassID=36&ID=38')">
+                                <div class="border-top"></div>
+                                <div class="item">
+                                    <div class="item-top">
+                                        <div>
+                                            <i class="iconfont icon-shouhou"></i>
+                                        </div>
+                                        <h4>售后盈利法</h4>
+                                        <$(articleDc.ContainsKey(38)?"<p><span>NEW!</span>"+articleDc[38].Title+"</p>":"")$>
+                                    </div>
+                                    <div class="item-bottom">
+                                        <div>
+                                            <i class="iconfont icon-shouhou"></i>
+                                        </div>
+                                        <h4>售后盈利法</h4>
+                                        <p>售后业务没有捷径，只有踏实步步向前！孟特君在这里给出不花钱少花钱，产值提升法！帮您售后提毛利！</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- <li class="module" onclick="GoURL('BussinessList.aspx?ClassID=36&ID=33')">
+                                <div class="border-top"></div>
+                                <div class="item">
+                                    <div class="item-top">
+                                        <div>
+                                            <i class="iconfont icon-jiangtang"></i>
+                                        </div>
+                                        <h4>爱车讲堂</h4>
+                                        <$(articleDc.ContainsKey(33)?"<p><span>NEW!</span>"+articleDc[33].Title+"</p>":"")$>
+                                    </div>
+                                    <div class="item-bottom">
+                                        <div>
+                                            <i class="iconfont icon-jiangtang"></i>
+                                        </div>
+                                        <h4>爱车讲堂</h4>
+                                        <p>还为怎么跟进潜客伤脑筋吗？还在为怎样强化保有客户粘度费神吗？孟特为您提供每天一篇爱车小讲堂，作为贵店每天联系客户的好素材！</p>
+                                    </div>
+                                </div>
+                            </li> -->
+                        </ul>
+                        <div class="main-block cf">
+                            <div class="b-block bk-2 bk-hori bk-num3">
+                                <div class="b-cube">
+                                    <div class="title">
+                                        <p><i></i><span class="title-cn">最新课程/</span><span class="title-en">Notice</span></p> 
+                                    </div>
+                                    <div class="board clearfix">
+                                        <ul class="content clearfix">
+                                            <html:foreach expression="ProductInfo product in newProductList">
+                                            <li><em><$product.Name$></em><span>[<$AttributeRecordBLL.ReadAttributeRecord(attributeRecordList, 3, product.ID).Value$>]</span></li>
+                                            </html:foreach>
+                                        </ul>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div class="container" style="margin-top: 60px; margin-bottom: -30px;">
+                        <ul>
+                            <li style="float: left;"><a href="/Plugins/Adv/U2/index.html" target="_blank"><img src="<html:templatePath>/images/adv/1.jpg" width="396px"></a></li>
+                            <li style="float: left; margin:0 6px;"><a href="/Plugins/Adv/JingPai/index.html" target="_blank"><img src="<html:templatePath>/images/adv/2.jpg" width="396px"></a></li>
+                            <li style="float: left;"><a href="http://www.pen-links.com/" target="_blank" rel="nofollow"><img src="<html:templatePath>/images/adv/3.jpg" width="396px"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="container">            
+                        <!-- 推荐课程 -->
+                        <div class="clearfix slideTxtBox recommendcourse" id="recommendcourse">
+                            <div class="hd">
+                                <h3 class="slide-title">最新课程</h3>
+                                <ul class="clearfix">
+                                </ul>
+                                <a href="/User/CourseCenter.aspx" class="slider-more">MORE+</a>
+                            </div>
+                            <div class="bd">
+                                <ul class="clearfix">
+                                    <li class="recommend-o">
+                                        <a href="javascript:;"><img src="<html:templatePath>/images/i41.jpg" width="285" height="400" alt="菜鸟变身达人"></a>
+                                        <div class="bd-text">
+                                            <a href="javascript:;"><p class="text-title">菜鸟变身达人</p>
+                                            <p class="text-desc">无门槛 从零学起</p></a>
+                                        </div>
+                                    </li>
+                                    <html:csharp>int i=0;</html:csharp>
+                                    <html:foreach expression="ProductInfo product in newProductList">
+                                    <html:csharp>
+                                    i++;
+                                    if(i>6) break;
+                                    </html:csharp>
+                                    <li>
+                                        <a href="javascript:;"><img src="<html:templatePath>/images/i<$RandomHelper.GetRandomInt(42,48)$>.png" alt="<$product.Name$>"></a>
+                                        <div class="bd-text-sub">
+                                            <p class="text-title"><$ProductClassBLL.ReadProductClassName(product.ClassID,2)$></p>
+                                            <p class="text-desc"><$product.Name$></p>
+                                            <html:if expression="StringHelper.CompareStringContainSpecialValue(companyBrandID, product.BrandID)">
+                                            <div class="iconcc">
+                                                <html:if expression="!string.IsNullOrEmpty(product.ProductNumber)">
+                                                <a href="javascript:OpenVideo(<$product.ID$>,'<$product.Name$>');">
+                                                    <i class="iconfont icon-bofang"></i>
+                                                    播放视频
+                                                </a>
+                                                </html:if>
+                                                <html:if expression="!string.IsNullOrEmpty(product.Accessory)">
+                                                <html:if expression="StringHelper.CompareSingleString(passPostCourseID, product.ID.ToString())">
+                                                <a><i class="iconfont icon-kaoshi"></i>已完成</a>
+                                                <html:else>
+                                                <a href="javascript:OpenTestPage(<$product.ID$>);">
+                                                    <i class="iconfont icon-kaoshi"></i>
+                                                    开始考试
+                                                </a>
+                                                <!-- <a><i class="iconfont icon-shijian"></i>{{ item.hour }}h后</a> -->
+                                                </html:if>
+                                                </html:if>
+                                                <html:csharp>
+                                                    string url=AttributeRecordBLL.ReadAttributeRecord(attributeRecordList, 1, product.ID).Value;
+                                                </html:csharp>
+                                                <html:if expression="!string.IsNullOrEmpty(url)">
+                                                <a class="CourseURL" href="javascript:void(0);" data-src="<$url$>">
+                                                    <i class="iconfont icon-xiazai"></i>
+                                                    课件下载
+                                                </a>
+                                                </html:if>
+                                                <html:csharp>
+                                                    string sUrl=AttributeRecordBLL.ReadAttributeRecord(attributeRecordList, 2, product.ID).Value;
+                                                </html:csharp>
+                                                <html:if expression="!string.IsNullOrEmpty(sUrl)">
+                                                <a class="saletool" href="javascript:void(0);" data-src="<$sUrl$>" data-name="<$product.Name$>">
+                                                    <i class="iconfont icon-tool"></i>
+                                                    助销工具
+                                                </a>
+                                                </html:if>
+                                            </div>
+                                            </html:if>
+                                        </div>
+                                    </li>
+                                    </html:foreach>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 推荐课程 end-->                
+                    </div>
+
+                    <div class="collect c-block">
+                        <h2 class="block-title important-block-title">行业研究数据</h2>
+                        <ul class="item-block clearfix">
+                            <li class="item item-0">
+                                <div class="item-top">
+                                    <div class="item-title">品牌故事</div>
+                                    <div class="item-icon">
+                                        <i class="iconfont icon-pinpai"></i>
+                                    </div>
+                                </div>
+                                <div onclick="GoURL('/User/Download.aspx?SpreadPath=5235')" class="item-bottom">
+                                    <div class="item-title">品牌故事</div>
+                                    <p class="item-content">操控目录、安全目录、节油目录、价值目录。</p>
+                                </div>
+                            </li>
+                            <li class="item item-1">
+                                <div class="item-top">
+                                    <div class="item-title">车企人物专访</div>
+                                    <div class="item-icon">
+                                        <i class="iconfont icon-consult"></i>
+                                    </div>
+                                </div>
+                                <div onclick="GoURL('/User/Download.aspx?SpreadPath=3644,3645')" class="item-bottom">
+                                    <div class="item-title">车企人物专访</div>
+                                    <p class="item-content">了解各大厂商重大车企人物在面对市场问题时的反馈。</p>
+                                </div>
+                            </li>
+                            <li class="item item-2">
+                                <div class="item-top">
+                                    <div class="item-title">15大厂汽车销量环比分析</div>
+                                    <div class="item-icon">
+                                        <i class="iconfont icon-duibifenxi"></i>
+                                    </div>
+                                </div>
+                                <div onclick="GoURL('/User/Download.aspx?SpreadPath=3644,3647')" class="item-bottom">
+                                    <div class="item-title">15大厂汽车销量环比分析</div>
+                                    <p class="item-content">销量为王，让您了解谁是当前市场的主导者。</p>
+                                </div>
+                            </li>
+                            <li class="item item-3">
+                                <div class="item-top">
+                                    <div class="item-title">厂家新车广宣促销&amp;<br />售后活动促销汇总</div>
+                                    <div class="item-icon">
+                                        <i class="iconfont icon-xuanchuan"></i>
+                                    </div>
+                                </div>
+                                <div onclick="GoURL('/User/Download.aspx?SpreadPath=3644,3648')" class="item-bottom">
+                                    <div class="item-title">厂家新车广宣促销&amp;<br />售后活动促销汇总</div>
+                                    <p class="item-content">市场经理的智囊库！想不出活动主题就看这里！</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="newsflash">
+                        <div class="title">
+                            <h3 class="slide-title">每日快报</h3>
+                            <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=29">查看更多</a>
+                            <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=29&ID=35">车市要闻</a>
+                            <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=29&ID=32">后市场新闻</a>
+                            <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=29&ID=31">新车上市</a>
+                            <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=29&ID=30">市场调研</a>
+                            <a class="cm-btn" target="_blank" href="BussinessList.aspx?ClassID=36&ID=33">爱车讲堂</a>
+                        </div>
+                        <div class="title_table">
+                            <ul class="title_th clearfix">
+                                <li class="news_title">
+                                    <a>标题</a><span>时间</span>
+                                </li>
+                                <li class="news_title">
+                                    <a>标题</a><span>时间</span>
+                                </li>
+                            </ul>
+                            <ul class="title_td clearfix">
+                            <html:foreach expression="ArticleInfo article in newsList">
+                                <li class="news_title">
+                                    <a href="javascript:;" data-newsid="<$article.ID$>"><$article.Title$></a><span><$article.Date.ToString("yyyy-MM-dd")$></span>
+                                </li>
+                            </html:foreach>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="honor">
+                        <h3 class="title">荣誉墙</h3>
+                        <div class="picScroll-left">
+                            <div class="hd">
+                                <span class="arrow"><a class="next"></a><a class="prev"></a></span>
+                            </div>
+                            <div class="bd">
+                                <ul class="picList" id="lightGallery">
+                                    <html:foreach expression="string certPath in certList">
+                                    <li data-src="<$certPath$>">
+                                        <div class="pic"><a href="javascript:;" target="_blank"><img src="<$certPath$>" /></a></div>
+                                    </li>
+                                    </html:foreach>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <html:include file="Foot.htm" />
+
+    <script src="<html:templatePath>/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="<html:templatePath>/lightgallery/lightgallery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(".slider").slide({mainCell:".bd ul",autoPlay:true,interTime:5000,effect:"fade",pnLoop:true,mouseOverStop:false,delayTime:1000});
+        jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",easing:"swing",pnLoop:true,mouseOverStop:false,autoPlay:true,vis:4,delayTime:1000});
+        
+        $(document).ready(function(){
+            layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.ready(function(){
+                    var newsArray = [];
+                    $(".newsflash .title_td a").click(function(event) {
+                        var newsid = parseInt($(this).data('newsid'));
+                        var grepResult=$.grep(newsArray,function(value){
+                            return value.id == newsid;
+                        });
+                        if(grepResult.length<=0){
+                            $.ajax({
+                                url: '/Ajax.aspx?Action=ReadArticle&ID='+newsid,
+                                async: false
+                            })
+                            .done(function(data) {
+                                grepResult = JSON.parse(data);
+                                newsArray.push(grepResult); 
+                            })
+                        }
+                        else{
+                            grepResult=grepResult[0];
+                        }
+                        var index = layer.open({
+                            type: 1,
+                            title: grepResult.title,
+                            content: '<div class="news"><h2 class="title">'+ grepResult.title +'</h2><div class="article">'+ grepResult.content +'</div></div>'
+                        });
+                        layer.full(index);                    
+                    });
+                }); 
+
+                $(".container").on('click', '.saletool', function(event) {
+                    layer.open({            
+                        type: 1,
+                        title: false,
+                        area: ['221px','261px'],
+                        skin: 'layui-layer-nobg', //没有背景色
+                        shadeClose: true,
+                        resize: false,
+                        //scrollbar: false,
+                        content: '<div class="QRCode"><div class="codename">'+$(this).data("name")+' <br>助销工具二维码</div><div id="code"><img src="QRCode.ashx?s='+ $(this).data('src')+'"></div></div>'
+                    }); 
+                });
+
+                $(".container").on('click', '.CourseURL', function(event) {
+                    layer.open({            
+                        type: 2,
+                        title: false,
+                        area: ['1020px', '518px'],
+                        skin: 'layui-layer-rim', //加上边框
+                        shadeClose: true,
+                        resize: false,
+                        scrollbar: false,
+                        content: '/User/CourseURL.aspx?Url='+ $(this).data('src') //iframe的url
+                    }); 
+                });
+            });
+
+            $(".origin .module").hover(function() {
+                $(this).addClass('active');
+                $(this).find('.item-bottom').animate({opacity:'1'},500,"swing");
+                $(this).siblings('.module').removeClass('active');
+                $(this).siblings('.module').find('.item-bottom').animate({opacity:'0'},"fast");
+            }, function() {
+                
+            });
+
+            $("#lightGallery").lightGallery({
+                speed: 500,
+                thumbnail: false,
+                closable: false,
+                counter:true,
+            });
+
+            $(".collect li.item").hover(function(){
+                $(this).children('.item-bottom').addClass('active');
+            },function(){
+                $(this).children('.item-bottom').removeClass('active');
+            });
+        });
+        function GoURL(url){
+            window.location.href=url;
+        }
+        var OpenTestPage = function(productID) {
+            window.open ('/TestCenter.aspx?ProductID=' + productID,'newwindow','width='+(window.screen.availWidth-10)+',height='+(window.screen.availHeight-30)+ ',top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');
+        }
+        var OpenVideo = function(productID, name) {
+            layer.open({
+                type: 2,
+                title: name,
+                skin: 'layui-layer-rim', //加上边框
+                area: ['1020px', '518px'],
+                resize: false,
+                scrollbar: false,
+                content: '/Verify.aspx?ID='+ productID //iframe的url
+            }); 
+        }
+        $(".board").Scroll({
+            line: 1,
+            speed: 800,
+            timer: 3000
+        });
+    </script>
+</body>
+</html>

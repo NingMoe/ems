@@ -1,0 +1,518 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<!DOCTYPE html>
+<html>
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/public2.css" type="text/css" />
+    <style type="text/css">
+    @media screen and (max-width: 640px) {
+        .layui-layer { left: 90px !important; top: 100px !important;}
+    }
+    .QRCode { width: 221px; height: 261px; text-align: center; background: #fff; }
+    .QRCode .codename { font-size: 14px; line-height: 180%; padding: 10px; white-space:nowrap; overflow: hidden; }
+    .courselayer { margin: 0 auto; position: relative; color: #fff; }
+    .courselayer .content,.courselayer .content div { position: absolute;}
+    .courselayer .content { width:100%; height:100%; z-index: 999; top:0; }
+    /*.courselayer .title  { font-size: 46px; top:50px; left: 30px; }
+    .courselayer .coursetitle { width: 600px; text-align: center; font-size: 30px; top:190px; left: 200px;}
+    .courselayer .button { text-align: center; width: 600px; height: 50px; top:320px; left: 200px;}
+    .courselayer .button a { font-size: 16px; cursor: pointer; padding: 10px; margin: 60px; color: #18bd9c; border:1px solid #18bd9c;}
+    .courselayer .button a:hover{background:#18bd9c;color:#fff}*/
+    .courselayer .title  { font-size: 56px; top:120px; width: 600px; left: 200px; text-align: center; }
+    .courselayer .coursetitle { width: 500px; font-size: 30px; top:160px; left: 220px;}
+    .courselayer .searchbox {
+        width: 540px;
+        height: 50px;
+        border-radius: 4px;
+        padding-left: 20px;
+        border: 1px solid hsla(0,0%,98%,.8);
+        background-color: hsla(0,0%,98%,.2);
+        margin: 60px auto 20px;
+        position: relative;
+    }
+    .courselayer .searchbox input {
+        width: 520px;
+        height: 98%;
+        outline: none;
+        border: 0;
+        background-color: transparent;
+        font-weight: initial;
+        font-size: 16px;
+        color: #fafafa;
+    }
+    .courselayer input[type=search] {
+        -webkit-appearance: textfield;
+        box-sizing: content-box;
+    }
+    .courselayer .tips {top:280px; left:240px; color: #ccc;}
+    .courselayer .iconfont { font-size: 100px; line-height: 50px; cursor: pointer; }
+    .courselayer .iconfont:hover { color: #18bd9c; }
+    .courselayer .content:hover{background-color: rgb(0, 0, 0); opacity: 0.3;}
+    #lookvideo { left: calc(50% - 50px); top: calc(50% - 51px);}
+    </style>
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/97729/19491/587af53df629d81b881ebe20.css' rel='stylesheet' type='text/css' />
+    <link href='<$ShopConfig.ReadConfigInfo().IconFontPath$>' rel='stylesheet' type='text/css' />
+</head>
+<body  id="List_courseId">
+<html:include file="Top.htm" />
+<div id="main" class="wrap">
+    <div class="g-layer g-layer-left clearfix">
+        <div class="position">
+            <p>当前位置：<a href="/">首页</a>>><a href="javascript:void(0);" class="active">学习大厅</a><span class="returnhome"><a href="/">返回首页</a></span></p>
+        </div>
+        <div class="left">
+            <div class="head">
+                <img src="<html:templatePath>/images/<$postImageName$>">
+            </div>
+            <!-- <a class="joincourse" href="javascript:;">参加该课程</a> -->
+            <!-- <div class="info">
+                <div class="title">培训介绍</div>
+                <div class="text">零基础学起，让你快速成为汽车销售达人!<br>从汽车基础知识到绕车销售话术，掌握基本的汽车产品知识，面对客户，专业知识信手拈来；销售流程与运管管理课程，轻松提升自我专业能力与管理能力，汽车职业生涯上升通道自然为你敞开！</div>                
+            </div> -->
+            <div class="notice-board">
+                <div class="title">最新课程公告</div>
+                <div class="board">
+                    <ul>
+                        <html:foreach expression="ProductInfo product in newProductList">
+                        <li>
+                            <a href="javascript:void"><$product.Name$></a>
+                            <span><$AttributeRecordBLL.ReadAttributeRecord(newProductAttributeRecordList, 3, product.ID).Value$></span>
+                        </li>
+                        </html:foreach>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="layer-container">
+            <div class="plan-main">
+                <div class="plan-top">
+                    <h2><$studyPost.PostName$></h2>
+                    <div class="plan-meta">
+                        <!-- <span class="meta meta-tags">
+                            <span class="g-tag">前端</span>
+                            <span class="g-tag">求职</span>
+                            <span class="g-tag">实战</span>
+                        </span> -->
+                        <span class="meta meta-course">培训共计 <span style="color:#18bd9c"><$postCourseNum$></span> 门课程</span>
+                        <span class="meta meta-member">已完成 <span style="color:#18bd9c"><$passCourseNum$></span> 门，剩余 <span style="color:#18bd9c"><$(postCourseNum-passCourseNum)$></span> 门</span>
+
+                        <span class="model_switch">
+                            <a href="CourseCenter.aspx?RZ=<$rz$>&Type=<$passType$>&View=Grid">
+                                <i data-type="Grid" class="model_grid<$(view=="Grid" ?" active":"")$>"></i>
+                            </a>
+                            <a href="CourseCenter.aspx?RZ=<$rz$>&Type=<$passType$>&View=List">
+                                <i data-type="List" class="model_list<$(view=="List" ?" active":"")$>"></i>
+                            </a>
+                        </span>
+                        <span class="course_switch">
+                            <html:if expression="(",251,258,265,276,286,293,302,308,312,318,327,341,354,441,").IndexOf(","+studyPost.PostId.ToString()+",") < 0">
+                            <a class="course_btn<$(pc==1 ?" active":"")$>" data-type="4" href="CourseCenter.aspx?PC=1&View=<$view$>">大课件</a>
+                            </html:if>
+                            <a class="course_btn<$(rz==1 ?" active":"")$>" data-type="3" href="CourseCenter.aspx?RZ=1&View=<$view$>">综合认证</a>
+                            <a class="course_btn<$(passType==0 ?" active":"")$>" data-type="0" href="CourseCenter.aspx?Type=0&View=<$view$>">未通过</a>
+                            <a class="course_btn<$(passType==1 ?" active":"")$>" data-type="1" href="CourseCenter.aspx?Type=1&View=<$view$>">已通过</a>
+                            <a class="course_btn<$(passType==2 ?" active":"")$>" data-type="2" href="CourseCenter.aspx?Type=2&View=<$view$>">全部</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                                
+            <div class="plan-step-wrap js-route-panel" id="js-route-panel">
+                <ul class="plan-step clearfix">                    
+                    <html:csharp>int i=0;</html:csharp>
+                    <html:if expression="hasSpecialTest">
+                    <html:csharp>i++;</html:csharp>
+                    <li class="step-item clearfix step-first">
+                        <i class="line"></i>
+                        <i class="dot"></i>
+                        <span class="hd l">特定考试</span>
+                        <i class="v-line l"></i>
+                        <div class="bd l clearfix">
+                            <a href="javascript:;" data-pid="special0" data-id="0" data-type="2" class="step-anchor"><b>指定时间</b></a>
+                        </div>
+
+                        <div class="step-medias-wrap">
+                            <div data-pid="special0" class="step-medias course-list">
+                            </div>
+                            <div class="layui-layer-loading"><div id="" class="layui-layer-content layui-layer-loading1"></div></div>
+                        </div>
+                    </li>
+                    </html:if>
+                    <html:foreach expression="string key in postProductClassList.Keys">
+                    <html:csharp>i++;</html:csharp>
+                    <li class="step-item clearfix <$(i==1?"step-first":"")$><$(passType<0 && i==postProductClassList.Keys.Count?"step-last":"")$>">
+                        <i class="line"></i>
+                        <i class="dot"></i>
+                        <span class="hd l"><$ProductClassBLL.ReadProductClassByProductClassList(productClassList,int.Parse(key)).ClassName$><$(key=="6"?"【必修】":"")$></span>
+                        <i class="v-line l"></i>
+                        <div class="bd l clearfix">
+                            <html:csharp>tempProductClassList=productClassSort(postProductClassList[key]);int j=0;</html:csharp>
+                            <html:foreach expression="string secondKey in tempProductClassList.Keys">
+                            <html:csharp>j++;</html:csharp>
+                            <a href="javascript:;" data-pid="<$key$>" data-id="<$secondKey$>" class="step-anchor"><b><$tempProductClassList[secondKey]$></b><$(j < tempProductClassList.Keys.Count?"<i class=\"step-arr\">|</i>":"")$></a>
+                            </html:foreach>
+                        </div>
+
+                        <div class="step-medias-wrap">
+                            <div data-pid="<$key$>" class="step-medias course-list">
+                            </div>
+                            <div class="layui-layer-loading"><div id="" class="layui-layer-content layui-layer-loading1"></div></div>
+                        </div>
+                    </li>
+                    </html:foreach>
+
+
+                    <html:if expression="passType>=0">
+                    <html:foreach expression="string key in xxProductClassList.Keys">
+                    <li class="step-item xx clearfix step-last">
+                        <i class="line"></i>
+                        <i class="dot"></i>
+                        <span class="hd l"><$ProductClassBLL.ReadProductClassByProductClassList(productClassList,int.Parse(key)).ClassName$>【选修】</span>
+                        <i class="v-line l"></i>
+                        <div class="bd l clearfix">
+                            <html:csharp>tempProductClassList=xxProductClassList[key];int j=0;</html:csharp>
+                            <html:foreach expression="string secondKey in tempProductClassList.Keys">
+                            <html:csharp>j++;</html:csharp>
+                            <a href="javascript:;" data-pid="xx<$key$>" data-id="<$secondKey$>" data-type="1" class="step-anchor"><b><$tempProductClassList[secondKey]$></b><$(j < tempProductClassList.Keys.Count?"<i class=\"step-arr\">|</i>":"")$></a>
+                            </html:foreach>
+                        </div>
+
+                        <div class="step-medias-wrap">
+                            <div data-pid="xx<$key$>" class="step-medias course-list">
+                            </div>
+                            <div class="layui-layer-loading"><div id="" class="layui-layer-content layui-layer-loading1"></div></div>
+                        </div>
+                    </li>
+                    </html:foreach>
+                    </html:if>
+                </ul>
+            </div>
+
+            <div id="list_model" class="hide">
+                <div class="list_model">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<html:include file="Foot.htm" />
+<script id="GridCourseTpl" type="text/html">
+<ul data-cid="{{ d.cid }}" class="clearfix">
+    {{#  layui.each(d.list, function(index, item){ }}
+    <li class="course-one">
+        <a>                  
+            <div class="course-list-img">
+                <img width="220" height="149" alt="{{ item.name }}" src="{{# if(item.image == '' || item.image == '/') { }} <html:templatePath>images/nopic.jpg {{# }else{ }} {{ item.image }} {{# } }}">
+            </div>
+            <h5>
+                <span title="{{ item.name }}">{{ item.name }}</span>
+            </h5>
+        </a>
+        <div class="iconcc">
+            {{# if(item.video != ''){ }}
+            <a href="javascript:OpenVideo({{ item.id }},'{{ item.name }}');">
+                <i class="iconfont icon-bofang"></i>
+                播放视频
+            </a>
+            {{# } }}
+            {{# if(item.rcurl != ''){ }}
+            <a class="rcjb" href="javascript:void(0);" data-src="{{ item.rcurl }}">
+                <i class="iconfont icon-bofang"></i>
+                绕车剧本
+            </a>
+            {{# } }}
+            {{# if(item.istest == 'true'){ }}
+            <a href="javascript:OpenTestPage({{ item.id }});">
+                <i class="iconfont icon-kaoshi"></i>
+                开始考试
+            </a>
+            {{# }else if(item.pass == 'true'){ }}
+            <a><i class="iconfont icon-kaoshi"></i>已完成</a>
+            {{# }else if(item.pass == 'false'){ }}
+            <a><i class="iconfont icon-shijian"></i>{{ item.hour }}h后</a>
+            {{# } }}
+            {{# if(item.surl != ''){ }}
+            <a class="saletool" href="javascript:void(0);" data-src="{{ item.surl }}" data-name="{{ item.name }}">
+                <i class="iconfont icon-tool"></i>
+               {{$(".step-item a.active").data("pid")=="5"?"文本学习":"助销工具"}} 
+            </a>
+            {{# } }}
+            {{# if(item.url != ''){ }}
+            <a class="CourseURL" href="javascript:void(0);" data-src="{{ item.url }}">
+                <i class="iconfont icon-xiazai"></i>
+                课件下载
+            </a>
+            {{# } }}
+        </div>
+    </li>
+    {{#  }); }}
+</ul>
+</script>
+<script id="ListCourseTpl" type="text/html">
+{{#  layui.each(d.list, function(index, item){ }}
+<li class="clearfix">
+    <a class="list_img">               
+        <img alt="{{ item.name }}" src="{{# if(item.image == '' || item.image == '/') { }} <html:templatePath>images/nopic.jpg {{# }else{ }} {{ item.image }} {{# } }}">
+    </a>
+    <div class="list_info">
+        <h4>{{ item.name }}</h4>
+        <span>讲师：{{ item.teacher }}</span>
+        <span class="test_time">考试时间：{{ (item.startdate || item.enddate) ? item.startdate + '—' + item.enddate : '全天' }}</span>
+        <p>{{ item.summary }}</p>
+    </div>
+    <div class="list_icon">
+        {{# if(item.video != ''){ }}
+        <a href="javascript:OpenVideo({{ item.id }},'{{ item.name }}');">
+            <i class="iconfont icon-bofang"></i>
+            播放视频
+        </a>
+        {{# } }}
+        {{# if(item.istest == 'true'){ }}
+        <a href="javascript:OpenTestPage({{ item.id }});">
+            <i class="iconfont icon-kaoshi"></i>
+            开始考试
+        </a>
+        {{# }else if(item.pass == 'true'){ }}
+        <a><i class="iconfont icon-kaoshi"></i>已完成</a>
+        {{# }else if(item.pass == 'false'){ }}
+        <a><i class="iconfont icon-shijian"></i>{{ item.hour }}h后</a>
+        {{# } }}
+        {{# if(item.surl != ''){ }}
+        <a class="saletool" href="javascript:void(0);" data-src="{{ item.surl }}" data-name="{{ item.name }}">
+            <i class="iconfont icon-tool"></i>
+            文本学习
+        </a>
+        {{# } }}
+        {{# if(item.url != ''){ }}
+        <a class="CourseURL" href="javascript:void(0);" data-src="{{ item.url }}">
+            <i class="iconfont icon-xiazai"></i>
+            课件下载
+        </a>
+        {{# } }}
+    </div>
+</li>
+{{#  }); }}
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    layui.use(['flow','laytpl'], function(){
+        var flow = layui.flow,
+        laytpl = layui.laytpl;
+        var getCourseList = function(obj){
+            if ($(".model_list.active").length > 0) {
+                flow.load({
+                    elem: '.list_model ul',
+                    end: '',
+                    isLazyimg:true,
+                    done: function(page, next){
+                        $.post('/Ajax.aspx?Action=GetPostProductList', {ResultType: $(".course_btn.active").data("type"),Page:page,View:'List'}, function(data, textStatus, xhr) {
+                            data = JSON.parse(data);
+                            laytpl($("#ListCourseTpl").html()).render(data, function(html){
+                                next(html, page < 1);
+                            });
+                        });
+                    }
+                });
+            }
+        }
+
+        var getCourseGridList = function(obj){
+            var pid = $(obj).data("pid"),
+            cid = $(obj).data("id");
+            if($("[data-pid='"+pid+"'] [data-cid='"+ cid +"']").length == 0){
+                var loadingobj = $(obj).parents('.step-item').find('.layui-layer-loading').css({
+                    width: '100px',
+                    margin: '30px auto'
+                }).slideDown();
+                $.post('/Ajax.aspx?Action=GetPostProductList', {ClassID: $(obj).data("id"),ResultType: $(".course_btn.active").data("type"),ClassType: $(obj).data("type")}, function(data, textStatus, xhr) {
+                    data = JSON.parse(data);
+                    loadingobj.hide();
+                    laytpl($("#GridCourseTpl").html()).render(data, function(html){
+                        $(".course-list[data-pid='"+pid+"']").append(html);
+                    });
+                    $("[data-cid='" + $(obj).data("id") + "']").slideDown("slow");
+                });
+            }            
+        }
+
+        $('.js-route-panel').on('click', '.step-anchor', function(e){
+            var _this = $(this),
+            index = _this.index(),
+            mediaWrap = _this.parents('.step-item').find('.step-medias-wrap:first');
+
+            mediaWrap.stop(true, true);
+            if(_this.hasClass('active')){
+                _this.removeClass('active');
+                mediaWrap.slideUp('fast');
+                return;
+            }
+
+            $('.js-route-panel').find('.active').removeClass('active');
+            _this.addClass('active');            
+
+            var cidul = mediaWrap.find('ul').hide().filter("[data-cid='" + _this.data("id") + "']");
+            if(cidul.length > 0){
+                cidul.slideDown();
+            }
+            else{
+                getCourseGridList(_this);
+            }
+
+            if(!mediaWrap.is(':visible')){
+                $('.js-route-panel').find('.step-medias-wrap').hide();
+                mediaWrap.show();//.slideDown();
+                goPageTop();
+            }
+        });
+
+        if($(".model_switch i.active").data("type") == "List") {
+            getCourseList();
+            $("#js-route-panel").hide();
+            $("#list_model").show();
+        }
+        else{
+            if($(".course_btn.active").data("type") == "0"){
+                if($(".step-item:not(.xx) .step-anchor:first").length <= 0){
+                    window.location.href = $(".course_btn[data-type='3']").attr("href");
+                }
+            }
+            $(".step-item:not(.xx) .step-anchor:first").click();
+        }
+        
+        layer.ready(function(){
+            // layer.open({            
+            //     type: 1,
+            //     title: false,
+            //     area: ['1000px','400px'],
+            //     skin: 'layui-layer-nobg', //没有背景色
+            //     anim: 2,
+            //     closeBtn: 0,
+            //     scrollbar: false,
+            //     content: '<div class="courselayer"><iframe src="/API/canvasbg.html" style="margin: 0;padding: 0;width: 100%;height: 400px;border: none;"></iframe><div class="content"><div class="title css843135bea17dc1">孟特大课件 来帮你赚钱 </div><div class="coursetitle css84577415c17dc1">孟特盈利法：爱车讲堂促进新车转介绍赚钱法</div><!--<div class="searchbox" cname="SysSearchBox"><input type="search" class="searchinput" value="孟特盈利法84577415c17dc1：爱车讲堂促进新车转介绍赚钱法" maxlength="30"><a onclick="">观看</a></div>--><div class="button"><a id="lookvideo">&nbsp;&nbsp;立即观看&nbsp;&nbsp;</a><a id="closelayer">&nbsp;&nbsp;关&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;闭&nbsp;&nbsp;</a></div></div></div>'
+            // });
+            // 
+            <html:if expression="string.IsNullOrEmpty(CookiesHelper.ReadCookieValue("PublicCourseView")) && (",251,258,265,276,286,293,302,308,312,318,327,341,354,441,").IndexOf(","+studyPost.PostId.ToString()+",") < 0">
+            <html:if expression="DateTime.Now > Convert.ToDateTime("2018-5-21 0:00:00")">
+            layer.open({
+                type: 1,
+                title: false,
+                area: ['897px','507px'],
+                skin: 'layui-layer-nobg', //没有背景色
+                anim: 2,
+                resize: false,
+                scrollbar: false,
+                content: '<div class="courselayer"><img src="<html:templatePath>/images/dkj/6065.png"><div class="content"><div id="lookvideo"><i class="iconfont icon-bofang"></i></div></div></div>'
+            });
+            <html:else>
+            layer.open({            
+                type: 1,
+                title: false,
+                area: ['895px','501px'],
+                skin: 'layui-layer-nobg', //没有背景色
+                anim: 2,
+                resize: false,
+                scrollbar: false,
+                content: '<div class="courselayer"><img src="<html:templatePath>/images/dkj/6054.png"><div class="content"><div id="lookvideo"><i class="iconfont icon-bofang"></i></div></div></div>'
+            });
+            </html:if>
+            <html:csharp>CookiesHelper.AddCookie("PublicCourseView","1");</html:csharp>
+            </html:if>
+        });
+
+    });
+
+    $("body").on('click', '.courselayer #closelayer', function(event) {
+        layer.closeAll();
+    });
+
+    $(".board").Scroll({
+        line: 1,
+        speed: 800,
+        timer: 3000
+    });
+
+    $("body").on('click', '.courselayer #lookvideo', function(event) {
+        layer.closeAll();
+        <html:if expression="DateTime.Now > Convert.ToDateTime("2018-5-21 0:00:00")">
+        OpenVideo(6065,'孟特大课件：做好坦克加步兵，客流订单双丰收');
+        <html:else>
+        OpenVideo(6054,'孟特大课件：邀约不简单，用对方法赚钱快');
+        </html:if>
+    });
+
+    $(".layer-container").on('click', '.rcjb', function(event) {
+        layer.open({            
+            type: 2,
+            title: false,
+            area: ['1000px','550px'],
+            skin: 'layui-layer-rim', //加上边框
+            resize: false,
+            //scrollbar: false,
+            content: '/Plugins/Template/MOShop/pdfjs/web/viewer.html?file='+$(this).data('src')
+        }); 
+    });
+
+    $(".layer-container").on('click', '.saletool', function(event) {
+        layer.open({            
+            type: 1,
+            title: false,
+            area: ['221px','261px'],
+            skin: 'layui-layer-nobg', //没有背景色
+            shadeClose: true,
+            resize: false,
+            //scrollbar: false,
+            content: '<div class="QRCode"><div class="codename">'+$(this).data("name")+' <br>'+$(this).text()+'二维码</div><div id="code"><img src="QRCode.ashx?s='+ $(this).data('src')+'"></div></div>'
+        }); 
+    });
+
+    $(".layer-container").on('click', '.CourseURL', function(event) {
+        layer.open({            
+            type: 2,
+            title: false,
+            area: ['1020px', '518px'],
+            skin: 'layui-layer-rim', //加上边框
+            shadeClose: true,
+            resize: false,
+            scrollbar: false,
+            content: 'CourseURL.aspx?Url='+ $(this).data('src') //iframe的url
+        }); 
+    });
+});
+
+var OpenTestPage = function(productID) {
+    // var isTestAgain = "";
+    // if(isTestAgain == "True" && productID != 5368){
+    //     layer.confirm('请先完成《孟特销售工具应用与说明》课程的学习', {
+    //         btn: '确定', //按钮
+    //         title:'友情提示'
+    //     }, function(){
+    //         layer.load(1, {shade: [0.8,'#000']});
+    //         window.location.href = $(".course_btn[data-type='4']").attr("href");
+    //     });
+    // }
+    // else{
+        window.open ('/TestCenter.aspx?ProductID=' + productID,'newwindow','width='+(window.screen.availWidth-10)+',height='+(window.screen.availHeight-30)+ ',top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');
+    // }    
+}
+var OpenVideo = function(productID, name) {
+    layer.open({
+        type: 2,
+        title: name,
+        skin: 'layui-layer-rim', //加上边框
+        area: ['1020px', '518px'],
+        resize: false,
+        scrollbar: false,
+        content: '/Verify.aspx?ID='+ productID //iframe的url
+    }); 
+}
+</script>
+</body>
+</html>

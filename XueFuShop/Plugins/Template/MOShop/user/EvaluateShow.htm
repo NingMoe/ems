@@ -1,0 +1,38 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+        <div class="right" style="margin: 0 16px;">
+            <div class="right_content">
+                <div id="evaluation_sheet">
+                    <form action="?UserId=<$userId$>&PostId=<$workPostId$>&EvaluateNameId=<$evaluateNameId$>" method="post" id="evaluation_choose">
+                        <table class="evaluation_sheet evaluation_choose" data-edit="disable">
+                            <tr>
+                                <td colspan="8"><$RequestHelper.GetQueryString<string>("UserName")$> <$RequestHelper.GetQueryString<string>("PostName")$> <$RequestHelper.GetQueryString<string>("EvaluateName") $></td>
+                            </tr>
+                            <tr>
+                                <th class="evaluation_sheet_th1">指标类</th>
+                                <th class="evaluation_sheet_th2">指标<br>属性</th>
+                                <th class="evaluation_sheet_th3">评估项目内容</th>
+                                <th class="evaluation_sheet_th4" data-value="59">赶紧开始<br>59%≤</th>
+                                <th class="evaluation_sheet_th5" data-value="60">要加速了<br>≥60%</th>
+                                <th class="evaluation_sheet_th6" data-value="75">再加把劲<br>≥75%</th>
+                                <th class="evaluation_sheet_th7" data-value="90">只差一点<br>≥90%</th>
+                                <th class="evaluation_sheet_th8" data-value="100">达标超标<br>≥100%</th>
+                            </tr>
+                            <$trHtml.ToString()$>
+                        </table>
+                            <input id="kpiidstr" name="kpiidstr" type="hidden" value="<$kpiIdStr$>" />
+                    </form>
+                </div>
+            </div>
+        </div>
+<script type="text/javascript" src="<html:templatePath>/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<html:templatePath>/js/manage.js"></script>
+</body>
+</html>

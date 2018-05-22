@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Template>
+  <Path Value="English"/>
+  <Name Value="英文版"/>
+  <Photo Value="/Plugins/Template/English/cover.jpg"/>  
+  <DisCreateFile Value=""/>
+  <CopyRight Value="XueFuShop"/>
+  <PublishDate Value="2014-9-10"/>
+</Template>

@@ -1,0 +1,56 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+</head>
+
+<body>
+	<html:include file="Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        		<!--左侧内容-->
+        		<div class="leftcon">
+                	<!--分类导航-->
+                		<html:include file="Menu.htm" />
+                        <html:if expression="RequestHelper.GetQueryString<int>("IsNew")==1">
+                        <h3>最新资讯</h3>
+                        <div id="ProductAjax"></div>
+                        <html:else>
+                        <!--购物商城-->
+                        <h3><html:if expression="RequestHelper.GetQueryString<int>("BrandID")>0"><$showTitle$><html:else>购物商城</html:if></h3>
+                        <div class="art_artworkIntro"><$showDescription$></div>
+                        <!--标题-->
+                        <div class="art_titlebox">
+                                <div class="title"><html:if expression="RequestHelper.GetQueryString<int>("BrandID")>0">作品<html:else><$showTitle$></html:if><!--<$showCondition$>--></div>
+                        </div>
+                        <!--艺术品列表-->
+                        <div class="art_artworkList">
+                        
+                        		<ul>                                		
+                                <div id="ProductAjax"></div>                                        
+                                </ul>
+                        </div>
+                        <!--置顶-->
+                        <div class="art_artworkToTop"><a href="#totop"><img src="<html:templatePath>images/icon_05.png" alt="置顶"></a></div>
+                        </html:if>
+                        <div class="productPannel" style="display:none;">
+                            适合您需求的商品共<a id="ProductCount"></a>个&nbsp;&nbsp;
+                            显示方式：<a id="showWayDiv"></a>
+                            排序方式：<select id="ProductOrderType" onChange="changeProductOrderType(this.value)"><option value="ID">默认排序</option><option value="MemberPrice1">按价格由高到低</option><option value="MemberPrice2">按价格由低到高</option><option value="PerPoint">按评分由高到低</option><option value="CommentCount">按评论数由高到低</option><option value="CollectCount">按收藏数由高到低</option><option value="ViewCount">按浏览数由高到低</option></select>                
+                        </div>
+          </div>
+        		<html:include file="Right.htm" />
+        </div>
+        <script language="javascript">
+        var searchContion="<$searchCondition$>";
+        var searchType="<%=searchType %>";     
+        var templatePath="<html:templatePath>";
+    </script>
+    <script language="javascript" type="text/javascript" src="<html:templatePath>/Js/Product.js" ></script>
+        <html:include file="Foot.htm" />
+</body>
+</html>

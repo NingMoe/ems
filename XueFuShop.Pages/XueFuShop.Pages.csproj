@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0954DAB-DDD9-4D70-BC7F-73375DF21D31}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XueFuShop.Pages</RootNamespace>
+    <AssemblyName>XueFuShop.Pages</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json.Net20, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Net20.dll.3.5.0\lib\2.0\Newtonsoft.Json.Net20.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.cs" />
+    <Compile Include="ActiveUser.cs" />
+    <Compile Include="Activity.cs" />
+    <Compile Include="Ad.cs" />
+    <Compile Include="AdminBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax.cs" />
+    <Compile Include="AjaxBasePage.cs" />
+    <Compile Include="ArticleDetail.cs" />
+    <Compile Include="BasePage.cs" />
+    <Compile Include="BookingProduct.cs" />
+    <Compile Include="BookingProductAdd.cs" />
+    <Compile Include="BookingProductDetail.cs" />
+    <Compile Include="Brand.cs" />
+    <Compile Include="BrandDetail.cs" />
+    <Compile Include="BussinessList.cs" />
+    <Compile Include="Bussiness.cs" />
+    <Compile Include="Cart.cs" />
+    <Compile Include="CartAjax.cs" />
+    <Compile Include="ChangePassword.cs" />
+    <Compile Include="CheckOut.cs" />
+    <Compile Include="CheckOutAddressAjax.cs" />
+    <Compile Include="CheckOutShippingAjax.cs" />
+    <Compile Include="CompanyAdd.cs" />
+    <Compile Include="CompanyList.cs" />
+    <Compile Include="CourseCenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CourseDetail.cs" />
+    <Compile Include="CourseReport.cs" />
+    <Compile Include="CourseURL.cs" />
+    <Compile Include="DefaultNew.cs" />
+    <Compile Include="Download.cs" />
+    <Compile Include="EvaluateAdd.cs" />
+    <Compile Include="EvaluateName.cs" />
+    <Compile Include="EvaluateNameAdd.cs" />
+    <Compile Include="EvaluateProReport.cs" />
+    <Compile Include="EvaluateReport.cs" />
+    <Compile Include="EvaluateShow.cs" />
+    <Compile Include="Free.cs" />
+    <Compile Include="HelpDetail.cs" />
+    <Compile Include="HRReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KPI.cs" />
+    <Compile Include="KPIAdd.cs" />
+    <Compile Include="LayerPage.cs" />
+    <Compile Include="MobileUserBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyCert.cs" />
+    <Compile Include="MyTestRecord.cs" />
+    <Compile Include="PostPlanRate.cs" />
+    <Compile Include="PostPlanReport.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="SMSAjax.cs" />
+    <Compile Include="StaffEvaluateAdd.cs" />
+    <Compile Include="StaffEvaluateProReport.aspx.cs" />
+    <Compile Include="StaffEvaluateReport.cs" />
+    <Compile Include="TestCenter.cs" />
+    <Compile Include="TestPaperRecord.cs">
+    </Compile>
+    <Compile Include="Training.cs" />
+    <Compile Include="TrainingAdd.cs" />
+    <Compile Include="TrainingCourseAdd.cs" />
+    <Compile Include="UserChangePassword.cs" />
+    <Compile Include="UserCommonBasePage.cs" />
+    <Compile Include="UserInfoShow.cs" />
+    <Compile Include="UserList.cs" />
+    <Compile Include="UserManageBasePage.cs" />
+    <Compile Include="Verify.cs" />
+    <Compile Include="VideoShow.cs" />
+    <Compile Include="CommonBasePage.cs" />
+    <Compile Include="Controls\Foot.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Head.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Top.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.cs" />
+    <Compile Include="FavorableActivity.cs" />
+    <Compile Include="FavorableActivityDetail.cs" />
+    <Compile Include="FindPassword.cs" />
+    <Compile Include="Finish.cs" />
+    <Compile Include="GiftPackAjax.cs" />
+    <Compile Include="GiftPackDetail.cs" />
+    <Compile Include="GiftPackDetailAjax.cs" />
+    <Compile Include="Help.cs" />
+    <Compile Include="Index.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="Logout.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="MessageAjax.cs" />
+    <Compile Include="MessageDetail.cs" />
+    <Compile Include="News.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderAjax.cs" />
+    <Compile Include="OrderDetail.cs" />
+    <Compile Include="PagerClass.cs" />
+    <Compile Include="PluginsBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductAjax.cs" />
+    <Compile Include="ProductCommentAjax.cs" />
+    <Compile Include="ProductDetail.cs" />
+    <Compile Include="ProductReply.cs" />
+    <Compile Include="ProductReplyAjax.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadMessage.cs" />
+    <Compile Include="Register.cs" />
+    <Compile Include="ResetPassword.cs" />
+    <Compile Include="ThemeActivityAjax.cs" />
+    <Compile Include="ThemeActivityDetail.cs" />
+    <Compile Include="UserAccountRecord.cs" />
+    <Compile Include="UserAccountRecordAjax.cs" />
+    <Compile Include="UserAdd.cs" />
+    <Compile Include="UserAddress.cs" />
+    <Compile Include="UserAjaxBasePage.cs" />
+    <Compile Include="UserApply.cs" />
+    <Compile Include="UserApplyAjax.cs" />
+    <Compile Include="UserBasePage.cs" />
+    <Compile Include="UserCoupon.cs" />
+    <Compile Include="UserCouponAjax.cs" />
+    <Compile Include="UserFriend.cs" />
+    <Compile Include="UserLeft.cs" />
+    <Compile Include="UserMessage.cs" />
+    <Compile Include="UserMessageAjax.cs" />
+    <Compile Include="UserMessageDetail.cs" />
+    <Compile Include="UserProductCollect.cs" />
+    <Compile Include="UserProductComment.cs" />
+    <Compile Include="UserProductReply.cs" />
+    <Compile Include="UserRecharge.cs" />
+    <Compile Include="UserRechargeAjax.cs" />
+    <Compile Include="UserTags.cs" />
+    <Compile Include="VoteResult.cs" />
+    <Compile Include="WorkingPost.cs" />
+    <Compile Include="WorkingPostAdd.cs" />
+    <Compile Include="ZongHeReport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MXLMS\YXTSMS\YXTSMS.csproj">
+      <Project>{BACED633-9410-4F6D-AC1D-A7865ACA9C73}</Project>
+      <Name>YXTSMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFu.EntLib\XueFu.EntLib.csproj">
+      <Project>{DBDD8CA0-1F46-4061-B0A5-20B189568925}</Project>
+      <Name>XueFu.EntLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.BLL\XueFuShop.BLL.csproj">
+      <Project>{B1AC3BBE-3477-4EC4-ACF3-7A7164FAEA8C}</Project>
+      <Name>XueFuShop.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Common\XueFuShop.Common.csproj">
+      <Project>{E150603E-2A27-47DB-9A27-8C98F4936761}</Project>
+      <Name>XueFuShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.IBLL\XueFuShop.IBLL.csproj">
+      <Project>{5C40FB82-9680-4C66-82EC-C3F223FB86F2}</Project>
+      <Name>XueFuShop.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Log\XueFuShop.Log.csproj">
+      <Project>{11702FCD-7C75-435B-9659-F5F12914B877}</Project>
+      <Name>XueFuShop.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Models\XueFuShop.Models.csproj">
+      <Project>{83AE4726-C1C6-4601-930E-B5F5CF62F1FC}</Project>
+      <Name>XueFuShop.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,49 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/about.css">
+</head>
+<body>
+    <div class="container-fluid wrap">
+        <html:include file="Top.htm" />
+        <!-- main -->
+        <div class="about-main">
+            <div class="container">
+                <div class="position">
+                    <p>当前位置：<a href="/">首页</a>>><a href="/AboutUs.aspx?ID=6">关于我们</a>>><a class="active"><$article.Title$></a><span class="returnhome"><a href="/">返回首页</a></span></p>
+                </div>
+                <div class="subnav">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="/AboutUs.aspx?ID=6"<$(id==6?" class=\"active\"":"")$>>
+                                <p>公司介绍</p>
+                                <p>Company introduction</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/AboutUs.aspx?ID=7"<$(id==7?" class=\"active\"":"")$>>
+                                <p>联系我们</p>
+                                <p>Contact us</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/AboutUs.aspx?ID=8"<$(id==8?" class=\"active\"":"")$>>
+                                <p>岗位计划</p>
+                                <p>Jobs plan</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="intro-text">
+                    <$article.Content$>
+                </div>
+            </div>
+        </div>
+
+        <html:include file="Foot.htm" />
+</body>
+</html>

@@ -1,0 +1,138 @@
+        <html:if expression="StringHelper.CompareSingleString(base.ParentCompanyID,"667") || base.UserID <= 0">
+        <div class="top-bar cf" id="topBar">
+            <div class="container">
+                <div class="logo fl">
+                    <a href="/"><img src="<html:templatePath>/images/logo.png" alt="孟特"></a>
+                </div>
+                <html:if expression="base.UserID==0">
+                <div class="user">                    
+                    <div class="login cf">
+                        <a href="/User/Login.aspx" class="fastLogin" title="登录" rel="nofollow" ><span>登录</span></a>
+                        <!-- <span class="xian"></span>
+                        <a href="/User/Register.aspx" class="fastRegister" title="注册" rel="nofollow"><span>注册</span></a> -->
+                    </div>                    
+                </div>
+                <html:else>
+                <div class="login-out">
+                    <a href="/User/Logout.aspx">退出</a>
+                </div>
+                <div id="newheader">
+                    <div class="header-container">
+                        <ol class="header-block header-menu posright login" style="display: block;">
+                            <li class="header-my">
+                                <a href="javascript:;" class="username" target="_blank">
+                                    <span class="user-name"><$base.UserRealName$><!-- 的会员中心 --></span>
+                                    <i class="hui-icon hui-icon-down-dir"></i>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                </html:if>
+                <!-- <div class="search" id="searchDiv">
+                    <div class="search-cont">
+                        <input type="text" id="textSearch">
+                        <div class="search-layer"></div>
+                        <a href="javascript:;" id="btnSearch" class="btn-search">
+                            <i class="icon icon-search"></i>
+                        </a>
+                    </div>
+                </div> -->
+                <div class="side-nav">
+                    <ul class="cf">
+                        <li><a href="/"><span>首页</span></a></li>
+                        <li><a href="/Product.aspx"><span>选课中心</span></a></li>
+                        <li class="nav_zx">
+                            <div><a href="/AboutUs.aspx?ID=6"><span>关于我们</span><i class="icon icon-arrow-down"></i></a></div>
+                            <div class="sec-nav">
+                                <ul class="pic-list cf">
+                                    <li><a href="/AboutUs.aspx?ID=6">公司介绍</a></li>
+                                    <li><a href="/AboutUs.aspx?ID=7">联系我们</a></li>
+                                    <li><a href="/AboutUs.aspx?ID=8">岗位计划</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="headShortVideoOpen"></div>
+        </div>
+        <html:else>
+        <div class="top-bar cf" id="topBar">
+            <div class="container">
+                <div class="logo fl">
+                    <a href="/Bussiness.aspx"><img src="<html:templatePath>/images/logo.png" alt="孟特"></a>
+                </div>
+                <html:if expression="base.UserID==0">
+                <div class="user">                    
+                    <div class="login cf">
+                        <a href="/User/Login.aspx" class="fastLogin" title="登录" rel="nofollow" ><span>登录</span></a>
+                        <!-- <span class="xian"></span>
+                        <a href="/User/Register.aspx" class="fastRegister" title="注册" rel="nofollow"><span>注册</span></a> -->
+                    </div>                    
+                </div>
+                <html:else>
+                <div class="login-out">
+                    <a href="/User/Logout.aspx">退出</a>
+                </div>
+                <div id="newheader">
+                    <div class="header-container">
+                        <ol class="header-block header-menu posright login" style="display: block;">
+                            <li class="header-my">
+                                <a href="javascript:;" class="username" target="_blank">
+                                    <span class="user-name"><$base.UserRealName$><!-- 的会员中心 --></span>
+                                    <i class="hui-icon hui-icon-down-dir"></i>
+                                </a>
+                                <ol class="header-block header-left header-my-list">
+                                    <html:if expression="base.CompareUserPower("ManageOther", PowerCheckType.Single)">
+                                    <li><a href="/User/UserList.aspx" alt="管理中心">管理中心</a></li>
+                                    <li><span class="top-line"></span></li>
+                                    </html:if>
+                                    <li><a href="/User/UserInfoShow.aspx" alt="个人资料">个人资料</a></li>
+                                    <li><a href="/User/UserChangePassword.aspx" alt="修改密码">修改密码</a></li>
+                                    <li><a href="/User/MyTestRecord.aspx" alt="我的成绩">我的成绩</a></li>
+                                    <li><a href="/User/MyCert.aspx" alt="我的证书">我的证书</a></li>
+                                    <li><a href="/User/StaffEvaluateProReport.aspx" alt="评估报告">评估报告</a></li>
+                                    <li><span class="top-line"></span></li>
+                                    <li><a href="/User/Logout.aspx" alt="退出">退出</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                </html:if>
+                <!-- <div class="search" id="searchDiv">
+                    <div class="search-cont">
+                        <input type="text" id="textSearch">
+                        <div class="search-layer"></div>
+                        <a href="javascript:;" id="btnSearch" class="btn-search">
+                            <i class="icon icon-search"></i>
+                        </a>
+                    </div>
+                </div> -->
+                <div class="side-nav">
+                    <ul class="cf">
+                        <li><a href="/Bussiness.aspx"><span>首页</span></a></li>
+                        <!-- <li><a href="/Product.aspx"><span>选课中心</span></a></li> -->
+                        <li><a href="/User/CourseCenter.aspx"><span>学习大厅</span></a></li>
+                        <html:if expression="base.UserID>0 && !StringHelper.CompareSingleString("400,401,402,403,404",CookiesHelper.ReadCookieValue("UserStudyPostId"))">
+                        <li><a href="/User/Download.aspx"><span>下载中心</span></a></li>
+                        </html:if>
+                        <li class="nav_zx">
+                            <div><a href="/AboutUs.aspx?ID=6"><span>关于我们</span><i class="icon icon-arrow-down"></i></a></div>
+                            <div class="sec-nav">
+                                <ul class="pic-list cf">
+                                    <li><a href="/AboutUs.aspx?ID=6">公司介绍</a></li>
+                                    <li><a href="/AboutUs.aspx?ID=7">联系我们</a></li>
+                                    <li><a href="/AboutUs.aspx?ID=8">岗位计划</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="headShortVideoOpen"></div>
+        </div>
+        </html:if>

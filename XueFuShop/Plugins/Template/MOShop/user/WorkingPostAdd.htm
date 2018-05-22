@@ -1,0 +1,130 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>工作岗位<$base.GetAddUpdate()$></h1>
+                </div>
+                <ul class="step hide clearfix">
+                    <li class="step1 current">
+                        <span class="step_num">1</span>添加工作岗位
+                        <span class="triangle"></span>
+                    </li>
+                    <li class="step2">
+                        <span class="step_num">2.1</span>学习指标
+                        <span class="triangle"></span>
+                    </li>
+                    <li class="step3">
+                        <span class="step_num">2.2</span>能力指标
+                        <span class="triangle"></span>
+                    </li>
+                    <li class="step4">
+                        <span class="step_num">2.3</span>贡献指标
+                    </li>
+                </ul>
+                <div class="illustration" id="isPost_illustration">说明：若勾选是否岗位，则需设置评估表</div>
+                <div id="preset_indicator" class="hide">
+                    <div class="illustration" id="preset_illustration">说明：若选择相关岗位，则所填岗位将按勾选岗位指标进行预设<a class="flex_button"><i class="icon-flex"></i><span>展开</span></a></div>
+                    <table class="preset_post hide">
+                        <$GetPostHtml()$>
+                    </table>
+                </div>
+                <div class="step_order">
+                    <form action="" method="post" id="evaluating_indicator" name="evaluating_indicator" autocomplete="off">
+                        <div id="addjob">
+                            <html:if expression="base.ExistsSonCompany">
+                            <div class="form_group">
+                                <label class="form_txt" for="CompanyID">公司名称：</label>
+                                <select class="form_select form_long {required:true}" id="CompanyID" name="CompanyID">
+                                    <option value="">请选择公司</option>
+                                    <html:foreach expression="CompanyInfo company in SonCompanyList">
+                                    <option value="<$company.CompanyId$>"<$(company.CompanyId == CompanyID?" selected":"") $>><$company.CompanyName$></option>
+                                    </html:foreach>
+                                </select>
+                            </div>
+                            </html:if>
+                            <div class="form_group">
+                                <label class="form_txt" for="ParentId">上级岗位：</label>
+                                <select class="form_select {required:true}" id="ParentId" name="ParentId">
+                                    <option value="0">作为最大类</option>
+                                    <html:foreach expression="WorkingPostInfo partmentPost in WorkingPostClassList">
+                                    <option value="<$partmentPost.ID$>"<$(partmentPost.ID == WorkingPost.ParentId?" selected":"") $>><$partmentPost.PostName$></option>
+                                    </html:foreach>
+                                </select>
+                            </div>
+                            <div class="form_group">
+                                <label class="form_txt" for="PostName">岗位：</label>
+                                <input class="form_con" type="text" name="PostName" id="PostName" value="<$WorkingPost.PostName$>">
+                            </div>
+                            <div class="form_group">
+                                <label class="form_txt" for="IsPostCheck">是否岗位：</label>
+                                <input class="form_zjgw_checkbox" type="checkbox" name="IsPostCheck" id="IsPostCheck" value="1"<$(WorkingPost.IsPost == 1?" checked":"")$>>
+                            </div>
+                        </div>
+                        <table class="evaluation_sheet evaluation_set hide" id="evaluation_set">
+                            <tr>
+                                <th class="evaluation_sheet_th1 evaluation_set">指标类</th>
+                                <th class="evaluation_sheet_th2 evaluation_set">核定担当</th>
+                                <th class="evaluation_sheet_th3 evaluation_set">评估项目内容</th>
+                                <!-- <th class="evaluation_sheet_th4 evaluation_set">隶属公司</th> -->
+                                <th class="evaluation_sheet_th5 evaluation_set">设置</th>
+                            </tr>
+                            <tbody id="KPIListArea">
+                                <$GetTrHtml(TempList1)$>
+                                <$GetTrHtml(TempList2)$>
+                                <$GetTrHtml(TempList3)$>
+                            </tbody>
+                        </table>
+                        <div class="form_group form_submit">
+                            <input class="form_pjzb_button hide" type="button" name="prev" id="prev" value="上一步">
+                            <input class="form_pjzb_button complete job" type="submit" name="next" id="next" value="保存并提交">
+                            <input id="kpiidstr" name="kpiidstr" type="hidden" value="<$KPIContent$>">
+                            <html:if expression="base.CompareUserPower("AddWorkingPost,UpdateWorkingPost",PowerCheckType.OR)">
+                            <input type="hidden" name="Action" value="PostBack" />
+                            </html:if>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+<script type="text/javascript">
+$(function(){
+    $(window).keydown(function (e) {
+        if (e.which == 13) {
+            return false;
+        }
+    })
+    
+    $("#CompanyID").change(function(event) {
+        $.post("/Ajax.aspx?Action=GetWorkPostList",{CompanyID:$(this).val()},function(data){
+            $("#ParentId").html(data);
+        })
+        $("#IsPostCheck").change();
+    });
+    
+    $("#IsPostCheck").change(function(){
+        var companyid=parseInt($("#CompanyID").val());
+        if($(this).is(':checked')){
+            if(companyid > 0 && companyid != <$CompanyID$>){
+                $.post("/Ajax.aspx?Action=GetKPIListByCompanyId",{CompanyID:companyid},function(data){
+                    $("#KPIListArea").html(data);
+                })
+            }
+        }
+    });
+})
+</script>
+</body>
+</html>

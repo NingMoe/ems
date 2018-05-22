@@ -1,0 +1,37 @@
+            <div class="left">
+                <div class="picbox">
+                    <img src="<html:templatePath>/images/<$(User.Sex==1?"male.png":"female.png")$>">
+                    <div class="name">用户ID：<$base.UserName$></div>
+                    <div class="out"><a href="Logout.aspx">退出</a></div>
+                </div>
+                <div class="set-box">
+                    <html:if expression="base.CompareUserPower("ManageOther", PowerCheckType.Single)">
+                    <div class="lev-box">
+                        <div class="lev-first"><a href="UserList.aspx"><b class="icon-set"></b>管理中心</a></div>
+                    </div>
+                    </html:if>
+                    <div class="lev-box">
+                        <div class="lev-first"><a href="CourseCenter.aspx"><b class="icon-set"></b>学习大厅</a></div>
+                    </div>
+                    <div class="lev-box">
+                        <div class="lev-first"><a href="javascript:void(0);"><b class="icon-set"></b>账号管理</a></div>
+                        <div class="lev-sec">
+                            <div class="lev-secin info"><a href="UserInfoShow.aspx"<$(IsCurrentPage("UserInfoShow.aspx")?" class=\"active\"":"")$>>个人资料</a></div>
+                            <div class="lev-secin modifypass"><a href="UserChangePassword.aspx"<$(IsCurrentPage("UserChangePassword.aspx")?" class=\"active\"":"")$>>修改密码</a></div>
+                        </div>
+                    </div>
+                    <div class="lev-box">
+                        <div class="lev-first<$(IsCurrentPage("MyTestRecord.aspx")?" active":"")$>"><a href="MyTestRecord.aspx"><b class="icon-set"></b>我的成绩</a></div>
+                    </div>
+                    <div class="lev-box">
+                        <div class="lev-first<$(IsCurrentPage("MyCert.aspx")?" active":"")$>"><a href="MyCert.aspx"><b class="icon-set"></b>我的证书</a></div>
+                    </div>
+                    <div class="lev-box">
+                        <div class="lev-first"><a href="javascript:void(0);"><b class="icon-set"></b>TPR报表</a></div>
+                        <div class="lev-sec">
+                           <!--  <div class="lev-secin info"><a href="EvaluateProReport.aspx"<$(IsCurrentPage("/EvaluateProReport.aspx")?" class=\"active\"":"")$>>岗位评估报表</a></div> -->
+                            <div class="lev-secin modifypass"><a href="StaffEvaluateProReport.aspx?CompanyId=<$base.UserCompanyID.ToString() $>&UserId=<$base.UserID.ToString()$>"<$(IsCurrentPage("StaffEvaluateProReport.aspx")?" class=\"active\"":"")$>>综合评估报表</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>

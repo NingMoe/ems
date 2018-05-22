@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="2" QuestionNum="25" SingleNum="12" MultiNum="0" PanDunNum="13">
+  <Single>
+    <QuestionInfo1 id="28755">
+      <Question>在制作DM宣传页时，有一个"8+1"的原则，这里的"8"主要分为（   ）。从这8个方面入手，能够制作出更出色的DM单。</Question>
+      <A>信心、需求、按揭、购买力、产品、价格、关系和MOT</A>
+      <B>按揭、购买力、产品、价格、关系、促销、MOT和紧迫</B>
+      <C>信心、需求、按揭、便利、产品、价格、促销和渠道</C>
+      <D>信心、便利、按揭、购买力、产品、价格、关系和促销</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>28755</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="120103">
+      <Question>途观采用的（     ）变速器看似先进，但是相比CR-V的变速器来说的动力损失大，而且换挡有顿挫，油耗较高。我方顾问在介绍动力总成是可以强调CR-V全新换代的变速器及发动机所带来的全新体验。</Question>
+      <A>CVT无极</A>
+      <B>EMT</B>
+      <C>双离合</C>
+      <D>六档手自一体</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>120103</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="67853">
+      <Question>迈锐宝为消费者准备了（）娱乐系统，既能畅听音乐，又能观看电影视频，十分高档，我方销售顾问切勿与顾客强辩此功能，可先予以肯定，再向顾客做精品推荐。</Question>
+      <A>BD</A>
+      <B>CD</B>
+      <C>VCD</C>
+      <D>DVD</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>67853</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="94186">
+      <Question>以下关于福特翼虎后窗隐私玻璃的描述，不正确的是（     ）</Question>
+      <A>2.0GTDi AT运动型标配</A>
+      <B>1.6GTDi AT精英型选配</B>
+      <C>2.0GTDi AT尊贵型标配</C>
+      <D>2.0GTDi AT精英型标配</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>94186</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="88373">
+      <Question>以通用汽车公司的分类标准为例。通用公司一般将轿车分为6 级，它是综合考虑了（）、排量、装备和售价之后得出的分类。</Question>
+      <A>品牌</A>
+      <B>口碑</B>
+      <C>车型尺寸</C>
+      <D>油耗</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>88373</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="51513">
+      <Question>（   ）接口是国际上专门针对儿童安全座椅的标准接口，它能让儿童安全座椅与汽车成为一体，可以提前随汽车减速而不是通过安全带间接减速，极大提高了儿童的安全。</Question>
+      <A>以安全带方式固定</A>
+      <B>ISOFIX </B>
+      <C>以上都不是</C>
+      <D>LATCH</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>51513</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="78631">
+      <Question>在被动安全配置方面，索纳塔低配车型仅配备（   ）气囊，堪比小型车，被动安全防护存在较大缺失，不符合该级别的安全标准！</Question>
+      <A>前排双气囊</A>
+      <B>前排双气囊+侧气囊</B>
+      <C>无</C>
+      <D>驾驶席</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>78631</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="47240">
+      <Question>卡罗拉较思域而言，不够运动，没有配备（   ），而思域的高配版则配有此配置，该配置源于F1的操控利器，能够体验用手指驾驭的快感，足可见卡罗拉缺少了驾驶乐趣。
+</Question>
+      <A>方向盘集成换挡拨片</A>
+      <B>GPS导航系统</B>
+      <C>定速巡航系统</C>
+      <D>方向盘音量快拨键</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>47240</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="60855">
+      <Question>在影音娱乐性方面，ix35还具有（），档次更高，娱乐性更强。但是我方销售顾问需要指出，在车内使用这项配置对驾乘人员的视力不佳，而且我方销售顾问需要指出翼虎采用的是sony音响主机，档次更高，音响效果更为出色。</Question>
+      <A>单碟DVD</A>
+      <B>收音机</B>
+      <C>多碟CD</C>
+      <D>多碟DVD</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>60855</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="105306">
+      <Question>高速公路行车比较多见，驾驶员在高速巡航时右脚要时刻踩着油门踏板，这样会带来腿部疲劳，（）能够很好解决这类疲劳，它能够按照驾驶员设定的速度让车辆始终保持一个车速匀速行驶，提高了高速公路驾驶的便利性。</Question>
+      <A>油门限位开关</A>
+      <B>定速巡航系统</B>
+      <C>自动驾驶系统</C>
+      <D>导航系统</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>105306</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="60759">
+      <Question>在后悬的选择上，宝来采用的是小车上常见的（）悬挂，而B70则采用的是多连杆式悬挂，相较于宝来所采用的悬挂，奔腾B70的后悬使得车辆的操控性及乘坐舒适性更为出色，我方销售顾问可邀请客户试乘试驾来感受一下。</Question>
+      <A>麦弗逊式悬挂</A>
+      <B>多连杆式</B>
+      <C>扭力梁式</C>
+      <D>拖曳臂式</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>60759</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="124922">
+      <Question>销售就是（），销售顾问在提出问题后，应该积极倾听，理解顾客的意思，并帮助顾客找出他们的真正需求。</Question>
+      <A>报价</A>
+      <B>聆听</B>
+      <C>提问</C>
+      <D>谈单</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>124922</QuestionId>
+    </QuestionInfo12>
+  </Single>
+  <Multi>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="118219">
+      <Question>经理报表中“本月预估公司运营费用”指的是年度预算中销售部承担的月度费用，其中会覆盖一些后勤的费用，将该数据除以30天得出的数据就是销售部每日预估的运营费用，（每日车辆销售综合毛利）减去（每日运营费用）就可以得到当月运营中每天的运营净利润的数据。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>118219</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="118548">
+      <Question>车辆在高速行驶时的方向盘助力与低速行驶时~是相同的，只需像普通公路驾驶一样，放松稳定地转动方向盘即可~。</Question>
+      <A>是不同的，高速公路行驶时打方向盘的手势要放缓，如果手势过快，那么车辆转向指向性灵活性一定要比城市行车来的更快，会存在安全隐患</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>118548</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="41635">
+      <Question>实际上每个厂家都自己独特的安全车身结构，丰田有GOA，而福特则有高强度吸能式车体，它们的理念和所起到的作用都是大同小异的。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>41635</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="110757">
+      <Question>面对客户对车辆在技术层面上的故障存有困惑、异议、恐惧、不安，而要求来店退车的客户，由于车辆在维修过程中会发生拆解，因此投诉处理人员一定要做到“人车分离”，舒缓客户的恐惧不安心理，表示一定会将车辆的故障问题完美解决，这样的做法能有效避免该类问题的扩大。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>110757</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="47833">
+      <Question>马自达6车身相当没质感，这点从发动机盖的份量、车门关门时的手感就可以体会的出，而且关门声音很难听，没有厚重感，如果说引擎盖薄是为了吸能，那车门那么薄只能用节省铸造材料来解释了。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>47833</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="105079">
+      <Question>思域虽然配备有独立后悬，但专业媒体曾试驾后表示："思域的悬挂结构比较简单、单薄，在平坦路面上行驶时可能比较正常，但是经过坑洼路面时则有一种一沉到底的感觉，特别对后排乘客来说会更加难受一点。"这也说明了思域的后排舒适性及操控性不如轩逸出色。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>105079</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="40408">
+      <Question>和传统手自一体变速器不同，马自达6的变速箱并不是直列式的，换挡时需要左右拐动，操作手感偏差差，而且切换手动模式时还需再将挡位切入~S挡~内，繁琐的操作方式更让其手动模式成为鸡肋。</Question>
+      <A>M挡</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>40408</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="128772">
+      <Question>宝马X1全系配备防爆轮胎，可以保证轮胎在爆裂的情况下依然能够卡在轮毂上，并且继续以80km/h的速度行驶一段距离。但由于此类轮胎的胎壁较厚，会影响乘坐的舒适性。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>128772</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="35476">
+      <Question>针对奇瑞QQ3的全金属封闭承载式车身设计，我方顾问可指出：奥拓所采用的TECT安全车身结构，不但提高了车辆整体的刚性结构和抗弯抗扭性能，同时还是轻量化的车身设计，更有助于降低油耗。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>35476</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="131773">
+      <Question>《车王》杂志在试驾完国产途观后表示："途观的初段加速力道好像没有预料中强悍，相对于整备质量1592kg的进口版本，在起步初段会带来额外负担。"可见国产途观为了适应国情，而导致肉大身沉，起步慢！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>131773</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="84790">
+      <Question>迈腾在车内走线非常偷懒，仅仅在部分区域采用导线槽，而其余电线则大部分裸露在外，长时间行驶容易导致电线破损，造成后果不堪设想。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>84790</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="81872">
+      <Question>同为1.6L发动机，朗行的1.6L发动机只有可变气门正时系统，而骐达的发动机则配备了非常先进的双可变气门正时技术，这使得骐达发动机效率更高，动力更加强劲！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>81872</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="46945">
+      <Question>在整车车身数据上来看，~羚羊与金刚2代车身尺寸相差无几~，不过销售顾问可以从品牌影响力及造车年代来进行防御回避，告诉客户我们铃木造车时间更长，技术更成熟，更值得消费者信赖。</Question>
+      <A>金刚2代要比羚羊更大气、更气派</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>46945</QuestionId>
+    </QuestionInfo13>
+  </PanDuan>
+</TestPaper>

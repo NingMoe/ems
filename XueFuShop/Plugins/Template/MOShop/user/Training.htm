@@ -1,0 +1,75 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>培训列表</h1>
+                </div>
+                <div id="project_list">
+                    <table class="project_list evaluation_sheet">
+                        <tr>
+                            <th class="project">项目名称</th>
+                            <th class="company">公司名称</th>
+                            <th class="manage">管理</th>
+                        </tr>
+                        <html:foreach expression="PostInfo post in postList">
+                        <tr>
+                            <td class="first"><$post.PostName$></td>
+                            <td>上海孟特</td>
+                            <td>
+                                <html:if expression="post.ParentId!=0 && post.CompanyID == base.UserCompanyID">
+                                <span class="handle">
+                                    <html:if expression="post.IsPost == 1">
+                                    <a href="TrainingCourseAdd.aspx?PostID=<$post.PostId$>&ReturnURL=<$ServerHelper.UrlEncode(RequestHelper.RawUrl)$>" alt="设置课程"><i class="iconfont icon-shezhi"></i></a>
+                                    </html:if>
+                                    <a class="edit" href="TrainingAdd.aspx?ID=<$post.PostId$>&ReturnURL=<$ServerHelper.UrlEncode(RequestHelper.RawUrl)$>" title="编辑" alt="编辑"><i class="iconfont icon-bianji"></i></a>
+                                    <a class="delete" href="javascript:if(confirm('确定要删除吗？')){window.location.href='?Action=Delete&SelectID=<$post.PostId$>'}" title="删除" alt="删除"><i class="iconfont icon-iconfontshanchu"></i></a>
+                                </span>
+                                </html:if>
+                            </td>
+                        </tr>
+                        </html:foreach>
+                        <!-- <tr>
+                            <td class="second">├销售顾问[0]</td>
+                            <td>上海孟特</td>
+                            <td>
+                                <span class="handle">
+                                    <a href="" alt="编辑"><i class="iconfont icon-bianji"></i></a>
+                                    <a href="" alt="删除"><i class="iconfont icon-iconfontshanchu"></i></a>
+                                    <a href="" alt="设置课程"><i class="iconfont icon-shezhi"></i></a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="third">├销售内训师[0]</td>
+                            <td>上海孟特</td>
+                            <td>
+                                <span class="handle">
+                                    <a href="" alt="编辑"><i class="iconfont icon-bianji"></i></a>
+                                    <a href="" alt="删除"><i class="iconfont icon-iconfontshanchu"></i></a>
+                                    <a href="" alt="设置课程"><i class="iconfont icon-shezhi"></i></a>
+                                </span>
+                            </td>
+                        </tr> -->
+                    </table>
+                    <div class="action">
+                        <input type="button" style="width: 100px;"  value=" 添加培训分类 " class="button" onclick="newPage('TrainingAdd.aspx?Action=TrainingClass');">
+                        <input type="button" style="width: 100px;" value=" 添加培训项目 " class="button" onclick="newPage('TrainingAdd.aspx?Action=Training');">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+</body>
+</html>

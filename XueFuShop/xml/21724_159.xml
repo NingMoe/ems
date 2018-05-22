@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="159" QuestionNum="25" SingleNum="1" MultiNum="0" PanDunNum="24">
+  <Single>
+    <QuestionInfo1 id="31262">
+      <Question>在与客户的电话联系当中，经常套近乎、（   ） 、称赞对方、闲聊客户工作、家庭生活等话题可以帮助你更准确地了解客户的需求，同时表现出对客户的关怀和热情。 </Question>
+      <A>直接告知最低价格</A>
+      <B>为对方找各种购买理由    </B>
+      <C>寻找共同兴趣点   </C>
+      <D>直接宣传产品的优点 </D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31262</QuestionId>
+    </QuestionInfo1>
+  </Single>
+  <Multi>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="30267">
+      <Question>每个销售顾问都要能够熟练说出客户找我们买车的好处：公司品牌的价值、4S店的诚信价值、车辆产品的价值
+售后的服务价值、省时省力便利主动积极热情的服务价值。</Question>
+      <A>2个月</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30267</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="30077">
+      <Question>价格谈判通常都是一退一进的，买方在心理价位的基础上将价格再压低（通常是低到你的成本价以下），然后在一点一点的往上加，过程中，谈判高手会观察你的身体语言和你的说话，一旦价格触到你的底线，技巧差的销售员往往会漏陷儿，买方就获得最低的购买价；同理，销售员在销售过程中要尽全力为客户争取好的条件（即不断释放出你的条件已经到底的信号），装可怜让客户摸不清你的底线，在融洽的氛围下用自然成交法与客户在谈笑中无压力成交。</Question>
+      <A>提供上门服务是必要的方法。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30077</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="30245">
+      <Question>与客户约定好时间了，要在时间到达之前，给客户打电话，关怀客户到来展厅是否顺利，是否需要接送服务。
+</Question>
+      <A>要给每一个客户发送问讯和关怀感谢的短消息。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30245</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="30045">
+      <Question>老客介绍朋友向你买车，如果已经是下班时间了，最好在第二天上班后再给潜客打电话，才不会打扰人。</Question>
+      <A>通常已经得到朋友的首肯，正在期待你的销售服务的电话，你接到这样的介绍电话时，记得询问老客，能不能立刻打电话给他的朋友，尽量在短时间内给潜在客户电话问讯。
+
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30045</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="30217">
+      <Question>要买车的客户都喜欢积极、执着、坚持、有毅力的销售员，但客户在寻价、考虑的过程当中则会不断考验你，搞销售一定要有耐心。
+</Question>
+      <A>“客户买完车后，像朋友一样保持联系，偶尔送礼，维持良好的关系”，是转介绍的基础工作。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30217</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="30071">
+      <Question>90天以上的C级客户，~每三个月联系一次就可以了。~
+</Question>
+      <A>每个月定期对C级客户进行客户激活的电话回访。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30071</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="30046">
+      <Question>陌生来店客户的成交率通常在15%左右，平均成交日程在7-10天；介绍客户的成交率在75%左右，而成交日程仅2天上下。很明显的，你平时应该努力作好老客户的工作，对老客户提供良好的售后服务与问询关怀。并经常电话老客户为你介绍朋友买车。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30046</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="30075">
+      <Question>想赚钱快速成交，就要在便利性和关系上面进行努力：和客户建立良好深厚的关系，提供超便利省时省事的销售服务。</Question>
+      <A>提供上门服务是必要的方法。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30075</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="30242">
+      <Question>经过非正式的统计，客户在第二次来店即进行购买的达到75%，因此，谁能约到客户进行见面就决定了定单落在谁家，请认真努力邀约客户见面，不论来店或者是上门， “见面为王”。
+</Question>
+      <A>卖车没有捷径的，顾问要用遵守销售原理原则的方法和技巧来提供销售服务，千万不要以为用小聪明，给客户不合适的压力让客户定车，他就会来开票。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30242</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="30266">
+      <Question>对来店客户与朋友提供一致的销售流程介绍，朋友的一句话等同销售顾问一千句甜言蜜语。
+</Question>
+      <A>2个月</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30266</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="30073">
+      <Question>客户信息是每个销售顾问接待后产生的，~所以是私人的机密，公司不好干涉的。~
+</Question>
+      <A>由销售顾问保管的客户信息卡必须编注流水号码，进行总量管理，客户信息卡是公司最重要的销售资产。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30073</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="30048">
+      <Question>介绍来的客户，价格不等同于介绍人买的优惠价，但通常在赠品上面会被要求相同价位或价值，这种优惠的感觉是客户相当坚持的，你不可不察！</Question>
+      <A>就会得罪他的同事(介绍人)，在商谈的同时，你的服务就会变成对抗价格战的利器，这种案子通常会有较好的成交价格。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30048</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="30244">
+      <Question>客户离去后~视情况给客户发送问讯和关怀感谢的短消息， 不一定每一个都要发送,，可以省点钱。~
+</Question>
+      <A>要给每一个客户发送问讯和关怀感谢的短消息。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30244</QuestionId>
+    </QuestionInfo13>
+    <QuestionInfo14 id="30265">
+      <Question>客户在朋友的陪同下从外地到本地赏车，购车热度超强，对于此类客户速度是决定成败的关键，你要比竞争对手更快地介绍展厅工作九步骤，积极邀约客户进行试乘试驾，快速进入议价成交阶段。
+
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30265</QuestionId>
+    </QuestionInfo14>
+    <QuestionInfo15 id="31263">
+      <Question>对H级客户要积极跟进不断促进，“对客户不断引导来看车的优点，以及完善的售后服务”。客户不是天生就来砍价的，你努力积极地为客户解决购车的困难，客户感激在心，对价格也就不太坚持了。 </Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31263</QuestionId>
+    </QuestionInfo15>
+    <QuestionInfo16 id="30216">
+      <Question>~客户买完车后，就交由客服部和售后服务部门来进行维护，销售顾问不须再联系，要赶紧对买车的客户进行促进。~</Question>
+      <A>“客户买完车后，像朋友一样保持联系，偶尔送礼，维持良好的关系”，是转介绍的基础工作。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30216</QuestionId>
+    </QuestionInfo16>
+    <QuestionInfo17 id="30236">
+      <Question>与客户熟悉后，即便还没有买车，也会向你介绍买车的朋友，所以联系C级客户也要像联系老客户一样，拜托客户介绍朋友向你买车。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30236</QuestionId>
+    </QuestionInfo17>
+    <QuestionInfo18 id="30232">
+      <Question>虽然迟到总是会有无法抗拒的原因，但销售工作最忌讳的就是迟到，尤其是第一次到客户家里，实在不可原谅，给客户留下了最坏的MOT。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30232</QuestionId>
+    </QuestionInfo18>
+    <QuestionInfo19 id="30233">
+      <Question>主动上门提供客户方便的服务，客户不出门，在家就能了解产品，而且“家”是在客户的舒适区，最能了解客户的需求。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30233</QuestionId>
+    </QuestionInfo19>
+    <QuestionInfo20 id="30074">
+      <Question>对于忙碌没有时间的客户，他没时间不能接受邀约前来赏车，~见不到面只好放弃。~
+</Question>
+      <A>提供上门服务是必要的方法。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30074</QuestionId>
+    </QuestionInfo20>
+    <QuestionInfo21 id="30215">
+      <Question>卖车就是一个交朋友的过程，是朋友了，彼此关系不错，相信定单就指日可待了。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30215</QuestionId>
+    </QuestionInfo21>
+    <QuestionInfo22 id="30218">
+      <Question>销售顾问要尽量培养自己谈单的能力，让经理来谈是个方法，但长此以往你就变成接待代表而不是销售顾问了。
+
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30218</QuestionId>
+    </QuestionInfo22>
+    <QuestionInfo23 id="30047">
+      <Question>市场最低价≠你的成交价≠公司的最低限价≠介绍人的价格。</Question>
+      <A>就会得罪他的同事(介绍人)，在商谈的同时，你的服务就会变成对抗价格战的利器，这种案子通常会有较好的成交价格。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30047</QuestionId>
+    </QuestionInfo23>
+    <QuestionInfo24 id="30234">
+      <Question>C级客户促进的过程重点在：通过持续的接触，与客户熟悉，建立信任关系。
+
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30234</QuestionId>
+    </QuestionInfo24>
+  </PanDuan>
+</TestPaper>

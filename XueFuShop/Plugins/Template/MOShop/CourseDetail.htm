@@ -1,0 +1,356 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/course_detail.css">
+</head>
+<body>
+    <div class="container-fluid wrap">
+        <html:include file="Top.htm" />
+        <!-- main -->
+        <div class="course-detailmain">
+            <div class="container">
+                <div class="position">
+                    <p>当前位置：<a href="/">首页</a>>><a href="product.aspx">选课中心</a>>><a class="active">详情</a><span class="returnhome"><a href="/">返回首页</a></span></p>
+                </div>
+                <div class="intro-header" id="intro-header">
+                    <div class="intro-info clearfix">
+                        <h1 class="intro-title"><$product.Name$></h1>
+                        <p class="intro-desc"><$product.Name$></p>
+                        <div class="intro-info-con clearfix">
+                            <div class="intro-info-l">
+                                <a href="video.html" class="intro-cover htevent btn_view_demo">
+                                    <i class="icon-btnstart"></i>
+                                    <img src="<$product.Photo.Replace("Original","340-340")$>" width="100%">
+                                    <!-- <span class="favorite-span"><span class="favorite-num">1982</span>人感兴趣</span> -->
+                                </a>
+                                <div class="more-intro-wrapper">
+                                    <i class="org-bg"></i>
+
+                                    <div class="favorite-span">
+                                        <a href="javascript:;" class="btn_favorite htevent add-favorite"><i class="hui-icon hui-icon-star"></i></a>
+                                        <span class="favorite-num">1983</span><span class="favorite-txt">人感兴趣</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="intro-info-r">
+                                <div class="intro-info-box clearfix">
+                                    <div class="intro-info-t">
+                                        <p>
+                                            <span class="class-price-unit">￥</span><span class="class-price"><$product.MarketPrice$></span>
+                                            <!-- <s>￥1399</s> 8折  -->                                  
+                                        </p>
+                                        <!-- <div class="coupon-box">
+                                            <span class="coupon-title">优惠活动</span>
+                                            <div class="coupon-con">
+                                                <i class="icon-arrowdown"></i>
+                                                <a href="javascript:;" class="numall">共2项</a>
+                                                <ul class="coupon-list">
+                                                    <li><i class="icon-coupon">折</i><span class="salename">暑期课程预售限时8折</span><span class="split">/</span> <span class="endDate-box">6月30日13:00 结束</span>
+                                                    </li>
+                                                    <li><i class="icon-coupon">折</i><span class="salename">暑期课程预售限时8折</span><span class="split">/</span> <span class="endDate-box">6月30日13:00 结束</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <div class="clearfix">
+                                        <dl id="panel_class_feature" class="class-info-dl feature-info-dl hide" style="display: block;">
+                                            <dt>特色服务</dt>
+                                            <dd id="container_class_feature" class="container_class_feature clearfix">
+                                                <div class="inner clearfix">
+                                                    <span class="feture-item"><i class="feature-icon" style="background-image:url(../images/cd01.png);background-position: 3px 3px;"></i>课程名称</span>
+                                                    <span class="feture-item"><i class="feature-icon" style="background-image:url(../images/cd02.png);background-position: 3px 3px;"></i>适用岗位</span>
+                                                    <span class="feture-item"><i class="feature-icon" style="background-image:url(../images/cd03.png);background-position: 3px 3px;"></i>价格</span>
+                                                    <span class="feture-item"><i class="feature-icon" style="background-image:url(../images/cd04.png);background-position: 3px 3px;"></i>授课老师</span>
+                                                    <span class="feture-item"><i class="feature-icon" style="background-image:url(../images/cd05.png);background-position: 3px 3px;"></i>视频时长</span>
+                                                    <i class="icon-arrowdown icon" style="display: none;"></i>
+                                                </div>
+                                            </dd>
+                                        </dl>
+
+                                        <dl id="panel_class_siblings" class="class-info-dl feature-info-dl class-info-siblings">
+                                            <dt>选择班次</dt>
+                                            <dd class="active"><a target="_blank" href="javascript:;">奖学金班</a><i class="arrow"></i>
+                                            </dd>
+                                            <dd><a target="_blank" href="javascript:;">随到随学班</a><i class="arrow"></i>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="class-info-dl time-info-dl">
+                                            <dd>48课时 <span class="split">/</span>
+                                        2016.7.1 至 2016.11.9 </dd>                       
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btns-box">
+                                <a href="order_buy.html" target="_blank" class="btnBuy2 htevent">立即购买</a>
+                                <a href="javascript:addToCart(<$product.ID$>,<$product.Name$>,<$product.MarketPrice$>);" target="_blank" class=" btnConsult htevent"><img class="buy" src="<html:templatePath>/images/joinbuy.png" alt="">加入购物车</a>
+                            </div>
+                        </div>
+
+                        <div class="support-device">
+                        <!-- <div class="fl">
+                        移动客户端下载 : &nbsp;&nbsp;<span class="support-device-con">iPhone<span class="split">/</span><span class="ipad-code">iPad</span><span class="split">/</span>安卓</span>
+                        </div> -->
+                        <div class="btnOther2">
+                        <a href="javascript:;" class="btn_order htevent"><i class="icon-order"></i>预约</a>
+                        </div><span class="split">/</span>
+                        <div class="btnOther">
+                        <a href="javascript:;" class="btn_order htevent"><i class="icon-star"></i>收藏</a>
+                        </div>
+                        </div>
+                        <div class="support-device support-device-r" id="timeclassPart">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 内容模块导航开始 -->
+                <div class="intro-nav intro-nav1">
+                    <div class="intro-nav-main">
+                        <div class="intro-nav-con">
+                            <div class="fr nav-price-box" style="display: none;">
+                                 <span class="class-price-unit">￥</span><span class="class-price">1119.2</span>
+                                <a href="gouwuche.html" target="_blank" class="btnBuy htevent" target="_blank"><img class="buynone" src="<html:templatePath>/images/joinbuy.png" alt="">加入购物车</a>                                
+                            </div>
+                            <div class="nav-list clearfix">
+                                <a href="javascript:;" class="htevent cur">课程详情</a>                            
+                                <!-- <a href="javascript:;" class="htevent">课程大纲                                
+                                    <i class="icon-listen">试听</i>                                
+                                </a> -->
+                                <a href="javascript:;" class="htevent ask">课程咨询</a>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-nav intro-nav2 pofixed">
+                    <div class="intro-nav-main">
+                        <div class="intro-nav-con">
+                            <div class="fr nav-price-box">
+                                <span class="class-price-unit">￥</span><span class="class-price">1119.2</span>
+                                <a href="gouwuche.html" target="_blank" class="btnBuy htevent" target="_blank"><img class="buynone" src="<html:templatePath>/images/joinbuy.png" alt="">加入购物车</a>
+                            </div>
+                            <div class="nav-list clearfix">
+                                <a href="javascript:;" class="htevent cur">课程详情</a>
+                                <a href="javascript:;" class="htevent ask">课程咨询</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 内容模块导航结束 -->
+
+                <!-- 课程详情开始 -->
+                <div class="wrapper detailboxo">
+                    <div class="main clearfix">
+
+                        <!-- 右侧导航开始 -->
+                        <div class="intro-siderbar">
+                            <div class="link-consult-box">
+                                <!-- <a href="javascript:;" class="link-consult">
+                                    <i class="icon-consult"></i><br />
+                                    在线咨询
+                                </a> -->
+                                <div class="hover clearfix">
+                                    <a href="javascript:;" id="link-qq1" class="link-qq htevent">
+                                        <i class="icon-qq"></i><br>
+                                        课程咨询
+                                    </a>
+                                    <a href="javascript:$('#BizQQWPA').click();" class="link-consult2 a_kf htevent">
+                                        <i class="icon-consult2"></i><br>
+                                        在线客服
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="siderbar-nav siderbar-consult-nav">
+                                <a href="javascript:;" data-panel="intro-desc-panel" class="cur"><i class="icon-dot"></i>课程简介</a>
+                                <a href="javascript:;" data-panel="intro-role-panel"><i class="icon-dot"></i>适合对象</a>
+                                <a href="javascript:;" data-panel="intro-teacher-panel" class="siderbar-detail-consult"><i class="icon-dot"></i>师资介绍</a>
+                                <!-- <a href="javascript:;" data-panel="relate-panel"><i class="icon-dot"></i>猜您喜欢</a> -->
+                            </div>
+                        </div>
+                        <!-- 右侧导航结束 -->
+
+                        <div class="nav-panel" id="intro-detail-panel">
+                            <!--课程简介-->
+                            <div class="intro-panel intro-desc-panel">
+                                <ul>
+                                    <li class="panel-title">课程简介</li>
+                                </ul>
+
+                                <div class="panel-con">                                
+                                    <$product.Introduction$>
+                                </div>
+                            </div>
+                           
+                            <div class="intro-panel intro-role-panel">
+                                <ul>
+                                    <li class="panel-title">适合对象</li>
+                                </ul>
+                                <div class="panel-con">
+                                    <div class="roles-detail">
+                                        <div>
+                                            <p>1.销售顾问;</p>
+                                            <p>2.销售经理;</p>
+                                            <p>3.销售主管;</p>
+                                            <p>4.展厅经理;</p>
+                                            <p>5.销售经理;</p>
+                                            <p>6.小工;</p>
+                                            <p>7.中工;</p>
+                                            <p>8.大工;</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="intro-panel intro-teacher-panel">
+                                <ul>
+                                    <li class="panel-title">师资介绍</li>
+                                </ul>
+                                <div class="panel-con">
+                                    <!-- <div class="sliderMask"></div> -->
+                                    <div class="bx-wrapper">
+                                        <div class="hd">
+                                            <span class="arrow"><a class="next"></a><a class="prev"></a></span>
+                                        </div>
+                                        <div class="bx-viewport bd">
+                                            <!-- <div class="bd"> -->
+                                            <ul class="teacher-bxslider clearfix picList">
+                                            <html:foreach expression="TeacherInfo teacher in teacherList">
+                                                <li class="bx-clone">
+                                                    <a class="teacher-headimg">
+                                                    <img src="<html:templatePath>/images/cc45.jpg" alt=""> <$teacher.Name$>老师 </a> 
+                                                    <div class="teacher-info"> <$teacher.Introduction$> <a class="orange link-more htevent" href="javascript:;">更多<i class="icon-arrow-b"></i></a>
+                                                    </div>
+                                                </li>
+                                            </html:foreach>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <!-- 课程详情结束 -->
+
+                <!-- 课程咨询开始 -->
+                <div class="wrapper detailboxt">
+                    <div class="main clearfix">
+
+                        <!-- 右侧导航开始 -->
+                        <div class="intro-siderbar">
+                            <div class="link-consult-box">
+                                <div class="hover clearfix">
+                                    <a href="javascript:;" id="link-qq2" class="link-qq htevent">
+                                        <i class="icon-qq"></i><br>
+                                        课程咨询
+                                    </a>
+                                    <a href="javascript:;" class="link-consult2 a_kf htevent">
+                                        <i class="icon-consult2"></i><br>
+                                        在线客服
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="siderbar-nav siderbar-detail-nav">
+                                <a href="javascript:;" class="cur"><i class="icon-dot"></i>课程咨询</a>
+                                <a href="javascript:;" class="siderbar-detail-consult"><i class="icon-dot"></i>用户咨询</a>
+                            </div>
+                        </div>
+                        <!-- 右侧导航结束 -->
+
+                        <div class="nav-panel" id="intro-consult-panel" style="display: block;">
+                            <div class="consult-pic clearfix intro-consultentry-panel">
+                                <ul>
+                                    <li class="panel-title">课程咨询</li>
+                                </ul>
+                                <div class="pic-wrapper fl hover">
+                                    <img src="<html:templatePath>/images/zixun01.jpg" alt="专业老师指导" class="pcPic">
+                                    <div class="cons-way">
+                                            <i class="icon-qq-w icon"></i>
+                                            专业老师指导
+                                    </div>
+                                    <div class="zixun">
+                                        <a href="javascript:;" class="htevent link-qq">立即咨询</a>
+                                    </div>
+                                </div>
+                                <!-- <div class="pic-wrapper fl hover a_kf">
+                                    <img src="<html:templatePath>/images/zixun02.jpg" alt="客服服务全程咨询" class="pcPic">
+                                    <div class="cons-way">
+                                            <i class="icon-consult2-w icon"></i>
+                                           客服服务全程咨询
+                                    </div>
+                                    <div class="zixun">
+                                        <a href="javascript:;" class="a_kf htevent">立即咨询</a>
+                                    </div>
+                                </div> -->
+                                <div class="pic-wrapper fl tel3">
+                                    <img src="<html:templatePath>/images/zixun03.jpg" alt="电话咨询" class="pcPic">
+                                    <div class="cons-way">
+                                            <i class="icon-phone icon"></i>
+                                           电话咨询 021-50620208
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="consult-pic intro-consult2-panel">
+                                <ul>
+                                    <li class="panel-title">用户咨询<span id="total-consult-num">(1)</span></li>
+                                </ul>
+                                <div class="panel-con">
+                                    <div class="pager_box">
+                                        <ul class="consult-pager">
+                                            <li class="pager-1" style="display: list-item;">
+                                                <div class="user-q clearfix">
+                                                    <div class="username fl"> <img src="images/cc45.jpg" alt="" class="user-icon">
+                                                        <div class="username-word">u***0：</div>
+                                                    </div>
+                                                    <div class="user-question"> 时间是固定的吗？这个只能通过手机学习吗？</div>
+                                                    <span class="date fr">2016-6-21</span>
+                                                    <div class="hj-answer clearfix">
+                                                        <div class="arrow"></div>
+                                                        <div class="hj-name fl">孟特回复：<div class="answer-content">您好！本课程是录播课，不规定上课时间，课程发布后即可随时随地进行学习，有效期内可以反复学习，另外课程在电脑、手机或ipad等移动终端上都可以学习。欢迎报名学习！<p><a href="javascript:void(0);" target="_blank">小学生看图写话【起步+提高+实战】</a></p></div>
+                                                         
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="msg intro-postconsult-panel">
+                                <textarea class="msg-ta" id="consult-textarea" placeholder="如有任何问题都可留言，我们将尽快回复。"></textarea>
+                                <a href="javascript:void(0);" class="consult-submit htevent" data-htevent="555">提交问题</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 课程咨询结束 -->
+            </div>
+        </div>
+    </div>
+    <!-- main -->
+    <html:include file="Foot.htm" />
+    <script src="<html:templatePath>/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript">
+        jQuery(".bx-wrapper").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",easing:"swing",pnLoop:true,mouseOverStop:false,autoPlay:true,vis:3,delayTime:2000});
+    </script>
+    <script type="text/javascript" src="<html:templatePath>/js/global.js"></script>
+    <script>
+        $(function(){
+            BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 800052251, selector: 'link-qq1'});
+            BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 800052251, selector: 'link-qq2'});
+        })
+//添加到购物车
+function addToCart(productID,productName,productPrice){
+    var url="/Ajax.aspx?Action=AddToCart&ProductID="+productID+"&ProductName="+ encodeURIComponent(productName)+"&BuyCount="+buyCount+"&CurrentMemberPrice="+productPrice;
+    Ajax.requestURL(url,dealAddToCart);
+}
+    </script>
+</body>
+</html>

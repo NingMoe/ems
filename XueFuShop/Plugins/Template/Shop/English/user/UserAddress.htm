@@ -1,0 +1,97 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="English/Head.htm" />
+    <script language="javascript" type="text/javascript" src="/Admin/Js/Calendar.js" ></script>
+    <script language="javascript" type="text/javascript" src="/Admin/Js/UnlimitClass.js" ></script>
+    <script language="javascript" type="text/javascript" src="<html:templatePath>/Js/UserAddress.js" ></script>
+</head>
+
+<body>
+	<html:include file="English/Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        <html:include file="English/Menu.htm" />
+        		<div class="art_orderBox">
+                		<div class="orderTitle">会员中心</div>
+                        <div class="art_BuyersBox">
+                        		<!--右侧框架-->
+                                <div class="rightBox">
+                                <div class="art_BuyersBox">
+                                <div class="buyTitle">我的收货地址</div>
+                                    <div class="prodBox">
+                                    <form action="/User/UserAddress.aspx" method="post" name="form" >
+                                        <input type="hidden" class="input"  name="ID" value="<$userAddress.ID$>"/>
+                                        <div class="deliveryAddress">
+                                            <ul>
+                                            <html:foreach expression="UserAddressInfo tempUserAddress in userAddressList">
+                                                <li>
+                                                    <a href="?Action=Delete&ID=<$tempUserAddress.ID$>" onClick="return deleteRecord(this);"><span class="delete">删除</span></a>
+                                                    <label for="radio"><input type="radio" name="radio" value="radio"></label>
+                                                    <$tempUserAddress.Consignee$> <$RegionBLL.RegionNameList(tempUserAddress.RegionID).Replace(">","")$> <$tempUserAddress.Address$> TEL：<$tempUserAddress.Mobile$>
+                                                </li>
+                                            </html:foreach>
+                                            </ul>
+                                        </div>
+                                        <div class="height10"></div>
+                                        <a href="javascript:ToggleAddressWin()"  class="newAddr" id="addNewAddr">新增收货地址</a>
+                                        <div class="height10"></div>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="addrTab" id="addrTab" style="display:none;">
+                                            <!--<tr>
+                                                <td width="20%" align="right" valign="middle">姓<sup>*</sup></td>
+                                                <td width="80%" align="left" valign="middle"><input type="text" class="text"></td>
+                                            </tr>-->
+                                            <tr>
+                                                <td align="right" valign="middle">收货人<sup>*</sup></td>
+                                                <td align="left" valign="middle"><input type="text" class="text" name="Consignee" id="Consignee" value="<$userAddress.Consignee$>"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" valign="middle">所在地区<sup>*</sup></td>
+                                                <td align="left" valign="middle"><$singleUnlimitClass.ShowContent()$></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" valign="middle">联系地址<sup>*</sup></td>
+                                                <td align="left" valign="middle"><input type="text" class="text" name="Address" id="Address" value="<$userAddress.Address$>"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" valign="middle">邮政编码<sup>*</sup></td>
+                                                <td align="left" valign="middle"><input type="text" class="text" name="ZipCode" id="ZipCode" value="<$userAddress.ZipCode$>"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" valign="middle">电话<sup>*</sup></td>
+                                                <td align="left" valign="middle"><input type="text" class="text" name="Tel" id="Tel" value="<$userAddress.Tel$>"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" valign="middle">手机<sup>*</sup></td>
+                                                <td align="left" valign="middle"><input type="text" class="text" name="Mobile" id="Mobile" value="<$userAddress.Mobile$>" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" valign="middle">设为默认地址</td>
+                                                <td align="left" valign="middle"><input type="radio" name="IsDefault" value="0" <html:if expression="userAddress.IsDefault==0">checked="checked"</html:if> />否 &nbsp;&nbsp;<input type="radio" name="IsDefault" value="1" <html:if expression="userAddress.IsDefault==1">checked="checked"</html:if>/>是</td>
+                                            </tr>
+                                            <tr>
+                                                <td height="40" colspan="2" align="center" valign="middle"><input type="radio" name="radio" id="radio" value="radio">
+                                                <label for="radio">核查填写的信息并且记住细节</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" align="center" valign="middle"><span class="buybox">
+                                                <input class="shopCartBt" id="newAddrBt" value="点击添加新增收货地址" type="submit" onClick="return checkSubmit()"  /><input type="hidden" name="Action" value="PostBack" />                                                            
+                                                </span></td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                    </div>
+                                </div>
+                                </div>
+                        		<html:include file="English/User/UserLeft.htm" />
+                        </div>
+                </div>
+
+        </div>
+        <html:include file="Foot.htm" />
+</body>
+</html>

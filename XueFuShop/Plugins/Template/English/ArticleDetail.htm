@@ -1,0 +1,67 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+</head>
+
+<body>
+	<html:include file="Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        		<!--左侧内容-->
+        		<div class="leftcon">
+                	<html:include file="Menu.htm" />
+                        <!--合作伙伴-->
+                        <h2><$article.Title$></h2>
+                        <$article.Content$>
+                        
+                        <html:switch name="article.ID">
+                        <html:case value="6">
+                        <!--标题-->
+                        <div class="art_titlebox">
+                            	<!--标题-->
+                                <div class="title">注　册</div>
+                        </div>
+                        <!--登录-->
+                        <div class="art_loginBox">
+                        <form action="" method="get">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="loginTab">
+                              <tr>
+                                <td width="27%" align="right" valign="middle">E-mail*</td>
+                                <td width="73%" valign="middle">
+                                <input type="email" class="inputText"></td>
+                              </tr>
+                              <tr>
+                                <td align="right" valign="middle">姓*</td>
+                                <td valign="middle"><input type="text" class="inputText"></td>
+                              </tr>
+                              <tr>
+                                <td align="right" valign="middle">名*</td>
+                                <td valign="middle"><input type="text" class="inputText"></td>
+                              </tr>
+                              <tr>
+                                <td height="40" colspan="2" align="center" valign="middle">
+                                <input type="submit" name="button" id="button" value="点击注册信息并且购买" class="parterBt"></td>
+                              </tr>
+                            </table>
+                          </form>
+                  </div>
+                        <html:break>
+                        
+                        <html:case value="3">                        
+                        <html:include file="user/UserMessage1.htm" />
+                        <html:break>
+                        <html:default>
+                        <html:break>
+                        </html:swith>
+		  </div>
+        		<html:include file="Right.htm" />
+        </div>
+        <html:include file="Foot.htm" />
+        <script>jQuery.noConflict(); </script>
+</body>
+</html>

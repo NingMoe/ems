@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="158" QuestionNum="25" SingleNum="1" MultiNum="1" PanDunNum="23">
+  <Single>
+    <QuestionInfo1 id="29979">
+      <Question>“三杯茶理论”是指通过方法让（   ），那么成交的机会就越大。
+</Question>
+      <A>客户在展厅停留的时间越久</A>
+      <B>客户喝不同的三杯茶</B>
+      <C>来店客户喝三杯茶</C>
+      <D>客户到棋牌室喝茶</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29979</QuestionId>
+    </QuestionInfo1>
+  </Single>
+  <Multi>
+    <QuestionInfo1 id="31402">
+      <Question>客户行为模式可分为：（   ）。其中，社交型的客户不擅长做决定，常需要周围的人帮忙做出决定，所以，当您发现客户是社交型时候，您就需要帮忙客户做决定，给客户足够的信心。</Question>
+      <A>主宰型</A>
+      <B>分析型</B>
+      <C>社交型</C>
+      <D>沉默型</D>
+      <Answer>ABC</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>2</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31402</QuestionId>
+    </QuestionInfo1>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="30034">
+      <Question>给老客户联系~要在办公室进行，通过公司的坐机打电话以节省自己的话费。~
+</Question>
+      <A>是随时随地可以进行的，将老客户的电话号码存在你的手机中，打车或等待的时间，你就可以给老客户打电话聊天与提供关怀。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30034</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="30224">
+      <Question>和客户是朋友了、熟悉了，您要了解客户的需求自然会更加的驾轻就熟，客户信任您是销售成功的最基本要素。
+</Question>
+      <A>三个少一个保证无法成交。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30224</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="30054">
+      <Question>客户买车通常~只做一次的试驾，所以，我们要珍惜这个机会。~
+</Question>
+      <A>客户买车通常愿意多做几次的试驾，你要不厌其烦地不停的邀约客户做试驾，制造与客户见面的机会。
+千万不要以为客户已经试驾过一次了，就不好意思在约客户试驾。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30054</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="30012">
+      <Question>电话联系的最终目的在邀约客户见面，进行商谈，通过各种可能尝试邀请客户反复进行试驾是最常用也是最容易成功的方法。
+</Question>
+      <A>你要记下客户电话，在10分钟以后主动回电，问询客户是否顺利能够找到我们4S店。再次主动给客户提供咨询。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30012</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="30068">
+      <Question>买卖车就是交朋友，交朋友就要经常地给客户打电话，并通过活动邀约客户见面。</Question>
+      <A>要在第一时间要求与客户见面，当面为客户进行销售咨询服务，并在取得客户的同意后立即赶到约见的地点。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30068</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="30065">
+      <Question>值班时候要随时注意来店(电话)的客户，~但临下班时间段来的客户，要商谈时间也不够了，成交不了，还是请他明天再来。~
+</Question>
+      <A>尤其下班时间段，这时候产生的客户许多是忙碌没时间但要买车的，或者是在其他店看过车后来你这里看车的客户，欲望都很高昂的；如果你是值班组，那么在开夕会的时候，也要安排人员值班。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30065</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="30220">
+      <Question>如果您和客户没有交情，那么您只是众多销售顾问中的一个，对客户而言没有任何特别的价值，这样的话，您只是客户砍杀价格的对象而已，再低的价格也没法促成销售，因为客户会向他喜欢的顾问要求以这个价格销售，您这时就只是客户询价的对象。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30220</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="30222">
+      <Question>交易三要素：是指：信心、需求、购买力。~只要有一个要素您比较强，就几乎保证您会赢得定单~。
+
+</Question>
+      <A>三个要素缺一不可。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30222</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="30269">
+      <Question>当客户再次到其他4S店看车时，客户会把两次/多次到不同展厅看车的接待流程从中对比，从中选择自己要选购的品牌、产品、销售顾问。
+</Question>
+      <A>不可以因客户是路过/随便来看看/穿着穷酸样/只是….就提供有差别性的服务，因为客户经常都是会隐藏购买信号的
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30269</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="30067">
+      <Question>女性销售顾问外出与客户见面要特别注意安全，最好约在公共场所，如果是在私人的地点则最好与同事一起前往，互相照应。</Question>
+      <A>要在第一时间要求与客户见面，当面为客户进行销售咨询服务，并在取得客户的同意后立即赶到约见的地点。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30067</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="30013">
+      <Question>在与潜在客户的电话联系当中，经常套近乎、称赞对方、闲聊客户的工作、兴趣、家庭生活、小孩等话题可以帮助你更精确的了解客户的用车需求，并与客户建立良好的互动关系。</Question>
+      <A>你要记下客户电话，在10分钟以后主动回电，问询客户是否顺利能够找到我们4S店。再次主动给客户提供咨询。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30013</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="30015">
+      <Question>新进销售顾问的优点多是老实、没心眼、容易取得客户的信任，但同时也容易被客户宰杀价格，主管这时要起作用，协助新人促进销售。
+</Question>
+      <A>你要记下客户电话，在10分钟以后主动回电，问询客户是否顺利能够找到我们4S店。再次主动给客户提供咨询。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30015</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="30058">
+      <Question>感动客户其实很简单，你有用心客户自然会感觉到的，要热情的\经常性的给客户回访，不要怕会烦客户，若客户感觉你的回访不好，你就要反思你电话客户的内容是否恰当，经常反省，不断自我改善，电话打的越多，不断改进，你的电话技巧自然会进步，请记住，技巧与经验就是要从“做”当中学习和积累的。</Question>
+      <A>虽然公司有保险专员也有按揭专员，但作为一个汽车销售顾问，你一定要学会保险和按揭的试算表，才能在上门服务的时候提供客户专业完整的服务，让客户更加的信任你。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30058</QuestionId>
+    </QuestionInfo13>
+    <QuestionInfo14 id="30035">
+      <Question>有计划(至少2个月一次电话老客)，有系统(MTV)地联系老客户是销售顾问获得额外老客转介绍不可间断的销售工作，客户买车会找关系，你要买车更要不断的建立与维持好关系，毕竟，有了关系就没关系了。</Question>
+      <A>是随时随地可以进行的，将老客户的电话号码存在你的手机中，打车或等待的时间，你就可以给老客户打电话聊天与提供关怀。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30035</QuestionId>
+    </QuestionInfo14>
+    <QuestionInfo15 id="30270">
+      <Question>消除陌生感与客户建立良好关系及其重要，有了关系，卖车自然就没问题了。</Question>
+      <A>不可以因客户是路过/随便来看看/穿着穷酸样/只是….就提供有差别性的服务，因为客户经常都是会隐藏购买信号的
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30270</QuestionId>
+    </QuestionInfo15>
+    <QuestionInfo16 id="30010">
+      <Question>对每一个来店客户都要提供全套完整的展厅工作步骤，包括试驾、试算提车的全部价格、引导议价、邀请购买、留下联系方式等；若客户在中途表示还要离开，你依旧要设法留住客户，当客户留得越久，你成交的机会就会越高。
+</Question>
+      <A>卖车其实就是一个交朋友的过程，在与客户进行联系时，不断抱着“交客户这个朋友”的想法来与客户交流，将能更好的与客户进行有效的沟通，是朋友的话生意就更好做了。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30010</QuestionId>
+    </QuestionInfo16>
+    <QuestionInfo17 id="30223">
+      <Question>成交三要素：是指：便利、关系、价格。~三个少一个保证无法成交~。
+
+</Question>
+      <A>只要有一个要素您比较强，就几乎保证您会赢得定单</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30223</QuestionId>
+    </QuestionInfo17>
+    <QuestionInfo18 id="30011">
+      <Question>对来电话询问4S店地址的客户，~在详细告知地址后，你要注意客户随后来店了没，若没来，则表示这客户是假装的，不是诚心买车。~
+
+</Question>
+      <A>你要记下客户电话，在10分钟以后主动回电，问询客户是否顺利能够找到我们4S店。再次主动给客户提供咨询。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30011</QuestionId>
+    </QuestionInfo18>
+    <QuestionInfo19 id="30219">
+      <Question>电话里面不能报优惠的条件，应该以展厅报价为借口，要求与客户见面。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30219</QuestionId>
+    </QuestionInfo19>
+    <QuestionInfo20 id="30014">
+      <Question>当客户要买车时，心理会期望销售顾问电话追踪回访，提供咨询，主动关怀。所以，销售顾问不要害怕给客户打电话，在电话回访前，要先从客户信息卡了解前面与客户的联系内容，准备好邀约内容(参加活动、试驾等)，通过电话邀约见面，但不要在电话里谈条件，一定见面谈。
+</Question>
+      <A>你要记下客户电话，在10分钟以后主动回电，问询客户是否顺利能够找到我们4S店。再次主动给客户提供咨询。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30014</QuestionId>
+    </QuestionInfo20>
+    <QuestionInfo21 id="30053">
+      <Question>买车除了外观，就是要试驾，邀约客户试驾是您最好的邀约手法。</Question>
+      <A>嫌货才是买货人， 世上没有完美的产品，客户对产品有想法是好事情，表示对我们的产品感兴趣了，千万不要因客户的一点反面意见而放弃跟进客户。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30053</QuestionId>
+    </QuestionInfo21>
+    <QuestionInfo22 id="30036">
+      <Question>当已经和客户谈妥最终成交价格后，要想法子克服客户的所有难题（借口），一定要在当时（当天）和客户签约并收订金。
+</Question>
+      <A>是随时随地可以进行的，将老客户的电话号码存在你的手机中，打车或等待的时间，你就可以给老客户打电话聊天与提供关怀。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30036</QuestionId>
+    </QuestionInfo22>
+    <QuestionInfo23 id="30268">
+      <Question>对来店赏车的客户提供一致热情接待服务，~但车行是卖万元级的产品，是个高级卖场，客户穿着穷酸样，走路来的，问路的，我们就不需要表现的太热情，一般也就可以了。~
+
+</Question>
+      <A>不可以因客户是路过/随便来看看/穿着穷酸样/只是….就提供有差别性的服务，因为客户经常都是会隐藏购买信号的。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30268</QuestionId>
+    </QuestionInfo23>
+  </PanDuan>
+</TestPaper>

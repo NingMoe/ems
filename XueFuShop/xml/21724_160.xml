@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="160" QuestionNum="25" SingleNum="0" MultiNum="0" PanDunNum="25">
+  <Single>
+  </Single>
+  <Multi>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="30251">
+      <Question>卖车是个交朋友的过程。从获得客户好感入手，逐步建立客户对你的信任，直到建立一种可靠的关系才是销售的终极目标。是朋友了，彼此关系不错，信任和诚实才是促进成交的不二法宝。
+
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30251</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="30038">
+      <Question>陌生来店客户的成交率在15%左右，老客户介绍来的客户成交率会较低，在10%左右。
+</Question>
+      <A>老客户的转介绍成交率会在50%以上。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30038</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="29995">
+      <Question>现在买车，~价格是客户主要关心的，其他都是次要的，起的作用不大。~
+</Question>
+      <A>价格不一定是赢得定单的首要关键，反而服务专业与热情经常会先让客户选择你做为他的销售顾问，虽然也会要谈价格，但关键在于你要先取得客户的认同，否则会连被客户杀价的机会都没有，因为客户没有选择你。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29995</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="30210">
+      <Question>每天下班前作好第二天的工作计划，在拜访路线上的潜在客户们都是你主动上门的最好对象，主管要主动关心销售顾问的工作内容，不断提醒上门定车、上门开票。
+</Question>
+      <A>见面才能谈生意，见面才有三分情，养成经常主动上门的习惯，一定能够提高成交率，虽然辛苦，但结果都很甜美。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30210</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="30664">
+      <Question>客户离开4S店前表明要买他牌车，~所以是战败客户了，要做战败分析了解失败的原因。~
+</Question>
+      <A>但只要她还没买，就不能放弃做促进。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30664</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="30812">
+      <Question>对于H级客户，~销售顾问不应该每天都打电话询问客户，这样客户会觉得你很烦，是在骚扰他，反而留下不好印象，如果每隔3天打个电话反而效果更好。~</Question>
+      <A>每天打一个电话，真正要向你买的客户会向你询问购车细节，因为他们喜欢积极的销售顾问。而怕你烦的客户一般是属于不会向你买的那个群体。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30812</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="30249">
+      <Question>要买车既要看外观，最重要的要亲身体验（试驾）。试乘试驾是销售顾问邀约客户见面的最好借口。你要不厌其烦地邀约客户做试驾，制造与客户见面的机会。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30249</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="30209">
+      <Question>新进人员没有客户资源，这时，C级客户就变的弥足珍贵了。虽然C级客户变定单是比较难，但皇天终究不会辜负苦心人，手上没资源就努力电话C级客户，一定会有所成，如果你再配合MTV的技巧，那么成交的机会就更高！
+</Question>
+      <A>见面才能谈生意，见面才有三分情，养成经常主动上门的习惯，一定能够提高成交率，虽然辛苦，但结果都很甜美。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30209</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="30208">
+      <Question>~汽车销售主要以电话联系促进为主。因此，要准备好随时在电话里面和客户进行价格商谈。~</Question>
+      <A>见面才能谈生意，见面才有三分情，养成经常主动上门的习惯，一定能够提高成交率，虽然辛苦，但结果都很甜美。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30208</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="31271">
+      <Question>俗话说佛靠金装，人靠衣装。第一次见面务必给对方留下好印象，所以各位销售顾问一定要做好平时的MOT，给消费者留下好感。 </Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31271</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="30212">
+      <Question>别人说你好，胜过你自夸十句，而体现专业是获得客户肯定最佳办法，若你不懂车，~就更要学会吹牛，让客户认为你专业。~
+
+</Question>
+      <A>请善用“孟特销售工具”，这里可以应用：“正确使用车辆的方法”、“竞车对比目录”、“车型亮点目录”，拿给客户看更胜自夸说破嘴。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30212</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="29992">
+      <Question>送走客户后，~第二天再给客户电话联系回访。~</Question>
+      <A>要马上发感谢来店的短信，第二天再给客户电话回访邀约再见面。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29992</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="30029">
+      <Question>轮值班的时候要在展厅作好接待与销售服务的工作，而没值班的时候，就要好好的休息，养精蓄锐，为下次值班作好准备。</Question>
+      <A>在没值班的时候，有计划的邀约\上门拜访老客是必须的基本开拓工作，做好值班会有基本的销量，但要卖得好，就要靠老客与亲友的额外介绍了。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30029</QuestionId>
+    </QuestionInfo13>
+    <QuestionInfo14 id="30031">
+      <Question>产品好坏是要经过说明的，哪个销售员和客户见面次数多，自然能获得更多的机会。这里，通过老客户经常到单位露脸， 也好获得客户的好感，自然取得客户的认同。见面次数越多，成功机会越大。</Question>
+      <A>在没值班的时候，有计划的邀约\上门拜访老客是必须的基本开拓工作，做好值班会有基本的销量，但要卖得好，就要靠老客与亲友的额外介绍了。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30031</QuestionId>
+    </QuestionInfo14>
+    <QuestionInfo15 id="31270">
+      <Question>销售顾问要到消费者联系方式后一定要热炒，第二天就要发短信联系对方以加深彼此间的印象，获得先机！ </Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31270</QuestionId>
+    </QuestionInfo15>
+    <QuestionInfo16 id="31260">
+      <Question>在潜在客户的产生过程中，虽然销售顾问努力介绍了我牌车型的优点，但是客户已经执意要买它牌车型的时候，~销售顾问也只能放弃了。~</Question>
+      <A>销售顾问依然不能放弃，只要客户还没有买车，就不能放弃做促进。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31260</QuestionId>
+    </QuestionInfo16>
+    <QuestionInfo17 id="30033">
+      <Question>汽车市场越来越混乱，更难卖了，市场秩序也没有被良好管理，是一个夕阳产业，现在要赶快转行。</Question>
+      <A>没有一笔生意是容易的，如果你认为必须是好客不抗拒不用考虑才是生意，而且在期待那样的客人的话，那么你做任何生意或任何行业都会相当累，因为你的期望是错误的。切记，任何一笔生意都有一个过程。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30033</QuestionId>
+    </QuestionInfo17>
+    <QuestionInfo18 id="30250">
+      <Question>成交三要素：1、方便、便利的购买体验   2、有良好的关系、交情   3、价格较低廉、有可比性；要快速成交就必须在便利性和关系上努力，在与客户建立良好深厚的关系上提供便利省时省事的销售服务。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30250</QuestionId>
+    </QuestionInfo18>
+    <QuestionInfo19 id="30211">
+      <Question>客户买车喜欢找关系然后要求便宜，所以，~顾问平时不要认识太多人，免得被要求杀价。~</Question>
+      <A>顾问在平时就要多多从各方面积累人脉，既可以获得转介绍，也能够为客户牵线，提供额外的服务价值。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30211</QuestionId>
+    </QuestionInfo19>
+    <QuestionInfo20 id="30207">
+      <Question>当有销售员离职，销售主管要将他的客户信息卡如数收回，然后再分发给在职的顾问去追踪促进。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30207</QuestionId>
+    </QuestionInfo20>
+    <QuestionInfo21 id="30213">
+      <Question>有志者事竞成！四个月不短，但也不太长，符合“C级客户成交定律”的微笑曲线，经过与客户的不断联系，逐渐找到和客户的关系，对客户也更加的了解，奠定了买卖双方坚实的基础，客户对你有了信心，当客户买车的热度再次提升后，成交自然完成。
+</Question>
+      <A>请善用“孟特销售工具”，这里可以应用：“正确使用车辆的方法”、“竞车对比目录”、“车型亮点目录”，拿给客户看更胜自夸说破嘴。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30213</QuestionId>
+    </QuestionInfo21>
+    <QuestionInfo22 id="30815">
+      <Question>客户对价格没有疑虑以后，顾问的服务就成了关键了，虽然，许多客户在价格上面会进行很大的商议，但那毕竟是交易的一部分，一个成功的销售，除了价格外，方方面面的支持与服务在一个交易当中都扮演了不同的角色，而服务是：“路遥知马力”的坚持。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30815</QuestionId>
+    </QuestionInfo22>
+    <QuestionInfo23 id="30023">
+      <Question>买车就是要到汽车展厅来买的，对介绍的客户和来电问讯的客户，我们仅提供指路服务，即使客户有要求上门，最好还是让他自己来展厅赏车购车，尽量减少上门服务。</Question>
+      <A>对介绍客户或来电客户， 邀约客户来展厅时，尽量提供上门接送的服务， 因为客户还没有车，交通很不便利，会欢迎你的接送服务的。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30023</QuestionId>
+    </QuestionInfo23>
+    <QuestionInfo24 id="31269">
+      <Question>陪女孩子看电影~只需买好电影票即可，无需做过多“动作”，即可获得女生芳心！这点在销售过程中也十分重要，只要做到顾客需求的事即可！~</Question>
+      <A>前主动为女孩子买咖啡和爆米花可以体现你的细心与绅士风度。通过超越期望值的服务让女孩子开心，舍不得孩子套不到狼，小钱千万不能省。这点在销售过程中也十分重要，要让顾客感到有意外收获！</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31269</QuestionId>
+    </QuestionInfo24>
+    <QuestionInfo25 id="30030">
+      <Question>同级竞车产品之间通常不会有绝对的优势，而是互有输赢的，客户当然会做比较，你则要努力对客户做工作，说明我们产品的优势，你可以将孟特的配置性价比表\动态比较PK\竞车话术等“竞争对比目录”具体提供给客户了解，增加我们产品的竞争力。</Question>
+      <A>在没值班的时候，有计划的邀约\上门拜访老客是必须的基本开拓工作，做好值班会有基本的销量，但要卖得好，就要靠老客与亲友的额外介绍了。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30030</QuestionId>
+    </QuestionInfo25>
+  </PanDuan>
+</TestPaper>

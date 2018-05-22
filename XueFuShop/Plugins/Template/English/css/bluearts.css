@@ -1,0 +1,895 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,code,em,img,q,small,strong,dd,dl,dt,li,ol,ul,fieldset,form,label,tbody,tr,th,td,input {
+  margin: 0;
+  padding: 0;
+}
+body{ background:#fff; font:12px "Microsoft Yahei", "微软雅黑", SimHei,Tahoma, Arial, Helvetica, STHeiti;}
+h1,h2,h3,h4{ font-family:corbel bold; }
+a img,
+:link img,
+:visited img {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  word-wrap:break-word;
+}
+ul {
+  list-style: none;
+}
+
+a{color:#44b9e9;  text-decoration:none;}
+a:visited {text-decoration: none;}
+a:hover{ color:#028bc3; text-decoration:none;}
+a:active { text-decoration: none;}
+
+/*blue art*/
+.artWarp{ margin:0 auto; width:853px; border-left:#d2d2d2 solid 1px; border-right:#d2d2d2 solid 1px;}
+.art_head{ height:72px;}
+.art_head .logo{ float:left; width:180px; height:72px; background:url(../images/blueart_logo.png) no-repeat center center;}
+.art_head .linkbox{ float:right; padding-top:30px;}
+.art_head .linkbox li{ float:left; padding:0 12px; height:18px; line-height:18px; background:url(../images/blue_line01.gif) no-repeat left 5px;}
+.art_head .linkbox li:first-child{ background:none;}
+.art_head .linkbox li a{ color:#8d8d8d; }
+.art_head .linkbox li a:hover{color:#44b9e9;}
+.art_head .linkbox li a.hovlink{ display:block; height:25px;}
+.art_head .linkbox li a.email{ margin-left:5px; padding-top:2px; display:block; float:right;}
+.art_head .spinner{ position:relative;}
+.art_head .spinner .downlist{ position:absolute; top:24px; background:#fff; left:3px; z-index:999; border:#CCCCCC solid 1px; border-radius:5px; display:none; padding:10px; text-align:center;}
+.art_head .spinner .downlist p{ padding:2px 0;}
+
+.art_banner{border-top:#d2d2d2 solid 1px; height:378px; padding:2px; overflow:hidden; position:relative;}
+#art_bannerBox{position:relative;}
+.art_shiftnavbar{ position:absolute; bottom:5px; left:403px; width:100px; height: 22px; _display: inline}
+.art_shiftnavbar li{list-style:none;MARGIN-TOP: 8px; background:url(../images/blueart_ico.png) no-repeat left -42px; FLOAT: left; MARGIN-LEFT: 10px; WIDTH: 9px; CURSOR: pointer; HEIGHT: 9px; _display: inline}
+.art_shiftnavbar li.active {background:url(../images/blueart_ico.png) no-repeat left top}
+
+.art_content{ border-bottom:#d2d2d2 solid 1px; border-top:#d2d2d2 solid 1px; height:auto; overflow:hidden;}
+.art_content .leftcon{ float:left; width:705px;  border-right:#d2d2d2 solid 1px; min-height:900px; overflow:hidden}
+.breadnav{ padding:5px 0 20px; height:auto; overflow:hidden;}
+.breadnav ul{ float:right; height:26px; line-height:26px; padding-right:25px;}
+.breadnav ul li{ float:left; padding-left:30px; background:url(../images/blue_line01.png) no-repeat 9px 7px; font-size:13px;}
+.breadnav ul li:first-child{ background:none;}
+.breadnav ul li a.linkin{ color:#e10400; font-size:14px;}
+.art_content .leftcon h2{ border-bottom:#d5d5d5 solid 1px; height: 40px; line-height:40px; color:#000000; font-size:22px; margin:0 40px;}
+.art_content .leftcon h3{ height: 40px; line-height:40px; color:#000000; font-size:22px; padding:0 40px;}
+.art_content .rightbox{ float:left; width:145px; height:auto; overflow:hidden;}
+.art_content .rightbox .artists{ padding:0 10px; height:auto; overflow:hidden;}
+.art_content .rightbox h3{ font-size:16px; color:#000000; height:40px; line-height:40px; padding:0 3px; text-align:center; overflow:hidden}
+.art_content .rightbox h5{ font-size:12px; color:#535353; height:30px; line-height:30px; padding:0 10px; text-align:center;}
+.art_content .rightbox .artists ul{ padding:5px 0 20px; height:auto; overflow:hidden;}
+.art_content .rightbox .artists li{ text-align:center; color:#727272; line-height:18px; padding:3px 0;}
+.art_content .rightbox .artists li a{color:#727272;}
+.art_content .rightbox .artists li a:hover{color:#930000;}
+.art_content .rightbox .sortlist{ padding:0 10px 0 50px; height:auto; overflow:hidden;}
+.art_content .rightbox .sortlist li{ padding-left:15px; height:22px; line-height:22px; background:url(../images/icon_02.png) no-repeat left 6px; color:#8b8b8b;}
+.art_content .rightbox .sortlist li a{ color:#8b8b8b; font-size:12px;}
+.art_content .rightbox .sortlist li a:hover{color:#930000;}
+#art_bannerContentID img{width: 848px; height:378px;}
+.redfont{ color:#930000;}
+
+.art_loginIntro{ padding:10px 40px; line-height:20px; text-indent:2em; color:#000000;}
+.art_loginBox{ padding:40px; height:600px;}
+.art_loginBox .loginTab td{ padding:8px; font-size:14px; }
+.art_loginBox .loginTab .inputText{ height:27px; line-height:27px; padding:0 10px; border:#dcdcdc solid 1px; width:300px; color:#a3a3a3; line-height:24px;}
+.art_loginBox .loginTab .inputarea{ padding:0 10px; border:#dcdcdc solid 1px; width:500px; color:#a3a3a3}
+.art_loginBox .loginTab .inputarea::-webkit-input-placeholder{ line-height:24px; color:#919191; font-size:13px;}
+.art_loginBox .loginTab .inputarea::-moz-placeholder{ line-height:24px; color:#919191; font-size:13px;}
+.art_loginBox .loginBt, .art_loginBox .registerBt{ float:left; background:url(../images/bt_03.png) no-repeat left top; width:88px; height:30px; line-height:30px; color:#fff;  text-align:center; margin-right:20px; font-size:14px;  font-weight:lighter; border:none; outline:none; cursor:pointer;}
+.art_loginBox .parterBt{ background:url(../images/bt_04.png) no-repeat left top; width:178px; height:30px; line-height:30px; color:#fff; text-align:center; font-size:14px; font-weight:lighter; border:none; outline:none; cursor:pointer;}
+.art_loginBox a.findPw{ float:left; display:block;  background:url(../images/bt_03.png) no-repeat left top;  width:88px; height:30px; line-height:30px; color:#fff; text-align:center; font-size:14px; font-weight:lighter;}
+.art_loginBox a.zhuce{ color:#005f96; text-decoration:underline; font-size:12px;}
+
+.art_payway{ border-bottom:#dcdcdc dashed 1px; margin:0 40px; padding:50px 0; height:auto; overflow:hidden;}
+.art_payway img{ float:left; height:auto; overflow:hidden; padding-right:20px;}
+.art_payway ol{ padding:5px 0 0 20px; height:auto; overflow:hidden;}
+.art_payway ol li{font-size:12px; line-height:22px; list-style:disc;}
+
+.art_aboutus{ padding:0px 40px 40px; height:auto; overflow:hidden;} 
+.art_aboutus .contacts{ border-bottom:#d2d2d2 dashed 1px; padding:40px 0; height:auto; overflow:hidden;}
+.art_aboutus .contacts .imgbox{ float:left; padding:15px 0 0 0; height:auto; overflow:hidden}
+.art_aboutus .contacts .imgbox02{ float:left; height:auto; overflow:hidden}
+.art_aboutus .contacts .info{ float:right; width:350px; height:auto; overflow:hidden;}
+.art_aboutus .contacts .info h6{ font-size:14px; color:#000; height:30px; line-height:30px;}
+.art_aboutus .contacts .info p{ line-height:20px; color:#585858;}
+.art_aboutus .contacts .info02{ float:right; width:500px; height:auto; overflow:hidden;}
+.art_aboutus .contacts .info02 .date{color:#000; height:40px; line-height:40px;}
+.art_aboutus .contacts .info02 p{ line-height:20px; color:#585858;}
+
+.art_artworkIntro{ padding:10px 40px; line-height:20px; text-indent:2em; color:#757575;}
+.art_titlebox{ clear:both;  border-bottom:#dadada solid 1px; margin:10px 40px;  position:relative; min-height:40px; }
+.art_titlebox .title{ position:absolute; height:20px; line-height:20px; text-align:center; color:#585858; padding:0px 20px; border:#dadada solid 1px; border-top-left-radius:5px; border-top-right-radius:5px; border-bottom:none; background:#fff; left:0; bottom:-1px;}
+.art_titlebox .searchbox{ float:right; background:#f2f2f2; padding:10px 5px 10px 10px; height:auto; overflow:hidden;}
+.art_titlebox .searchbox label{ float:left; width:38px; height:16px; line-height:16px; text-align:center; background:#dfdfdf; color:#8c8c8c; border:#c5c5c5 solid 1px; float:left;}
+.art_titlebox .searchbox .text{ float:left;  border-right:#d7d7d7 solid 1px; border-top:#d7d7d7 solid 1px; border-bottom:#d7d7d7 solid 1px; height:16px; line-height:16px; padding:0 10px; background:#f2f2f2; color:#c2c2c2; width:180px;}
+.art_titlebox .searchbox .sbt{float:left; width:20px; height:16px; background:url(../images/icon_04.png) no-repeat center center; border:none; cursor:pointer;}
+.art_titlebox  a.more{ float:right; display:block; height:25px; line-height:25px; padding-right:10px; background:url(../images/icon_06.png) no-repeat right 10px;  color:#585858; margin-top:15px;}
+
+.art_artworkList{ padding:30px 20px; height:auto; overflow:hidden;}
+.art_artworkList ul li{ float:left; width:130px; text-align:center; height:150px; margin:10px 0px 20px 30px;}
+.art_artworkList ul li img{ width:130px; height:130px;}
+.art_artworkList ul li p{ line-height:30px; text-align:center; overflow:hidden;}
+.art_artworkList ul li p a{ color:#585858}
+.art_artworkList ul li p a:hover{ color:#028bc3;}
+.art_artworkToTop{padding:10px 20px 10px 20px; height:auto; overflow:hidden; text-align:right; }
+
+.art_newsBox{ border-bottom:#dadada solid 1px; height:auto; overflow:hidden; padding:45px 0; margin:10px 40px; clear:both;}
+.art_newsBox .newstext{float: left; line-height: 18px; color: #666666; width: 350px; padding-top:40px; height:auto; overflow:hidden;}	
+.art_newsBox .newstext h4{ color:#000000; height:30px; line-height:30px; font-size:14px; font-weight:bold;}
+.art_newsBox .newstext a{ color:#0178a8}
+.art_newsBox .newstext a:hover{ text-decoration:underline}
+.art_newsBox .viewImg{ float:right;}
+.art_newsBox .viewImg img{ width:210px; height:210px;}
+
+.art_orderBox{ padding:70px 45px ; height:auto; overflow:hidden; }
+.art_orderBox .orderTitle{ height:40px; line-height:40px; border-bottom:#e0e0e0 solid 1px; font-size:20px; color:#000000; margin-bottom:10px;}
+.art_orderBox .orderTitle02{ height:40px; line-height:40px; border-bottom:#e0e0e0 solid 1px; font-size:16px; color:#000000; margin-bottom:10px;}
+.art_orderBox .tabTitleBox{padding:0px 30px;}
+.art_orderBox .tabTitle{ font-size:14px; color:#6e6e6e}
+.art_orderBox .shopCartTabBox{ border:#e0e0e0 solid 1px; padding:0 30px; height:auto; overflow:hidden;}
+.art_orderBox .shopCartTab td{ padding:10px;  border-bottom:#e0e0e0 solid 1px; }
+.art_orderBox .shopCartTab img{ width:100px; height:100px;}
+.art_orderBox .shopCartTab h3{ font-size:14px; color:#000; line-height:25px;}
+.art_orderBox .shopCartTab h3 a{ color:#000;}
+.art_orderBox .shopCartTab h3 a:hover{ color:#028bc3; text-decoration:none;}
+.art_orderBox .shopCartTab p{  color:#686868}
+.art_orderBox .shopCartPrice{ height:40px; line-height:40px; text-align:right;}
+.art_orderBox .shopCartPrice .total{ float:right; display:block; width:105px; text-align:center; overflow:hidden}
+.art_orderBox .shopCartPrice .totalPrice{  float:right;  width:106px; text-align:right; overflow:hidden}
+.art_orderBox .returnlink{ height:30px; line-height:30px; text-align:right;}
+.art_orderBox .returnlink a{ color:#005f96; text-decoration:underline;}
+.art_orderBox .buybox{ padding:10px 0; text-align:center;  height:auto; overflow:hidden;}
+
+.art_BuyersBox{ padding-bottom:30px; height:auto; overflow:hidden;}
+.art_BuyersBox .leftnav{ float:left; width:90px; height:auto; overflow:hidden;}
+.art_BuyersBox .leftnav li{ line-height:20px; padding-bottom:10px; color:#6e6e6e; font-size:14px; height:auto; overflow:hidden;}
+.art_BuyersBox .leftnav li a{font-size:14px; color:#7b7b7b;}
+.art_BuyersBox .leftnav li a.linkin{ color:#046f9b; }
+.art_BuyersBox .leftnav li a:hover{ color:#028bc3;}
+.art_BuyersBox .rightBox{ float:right; width:610px; border:#dcdcdc solid 1px; padding:25px 30px; height:auto; overflow:hidden; box-sizing:content-box;}
+.art_BuyersBox .rightBox .userInfoBox{ height:auto; overflow:hidden; padding:10px 0;}
+.art_BuyersBox .rightBox .userInfoBox .pic{ float:left; width:80px; padding-right:10px;}
+.art_BuyersBox .rightBox .userInfoBox .pic img{ width:80px; height:80px;}
+.art_BuyersBox .rightBox .userInfoBox .buyerInfo{ float:right; width:510px; color:#a8a8a8; font-size:13px; }
+.art_BuyersBox .rightBox .userInfoBox .buyerInfo h3{ font-size:14px; line-height:20px; padding-bottom:15px; color:#000;}
+.art_BuyersBox .rightBox .userInfoBox .buyerInfo p{ line-height:22px;}
+.art_BuyersBox .rightBox .userInfoBox .buyerInfo .address{ padding-top:5px;}
+.art_BuyersBox .rightBox .userInfoBox .buyerInfo .address a{ padding-top:5px; color:#046f9b}
+.art_BuyersBox .rightBox .userInfoBox .buyerInfo .address a:hover{  color:#028bc3;}
+.art_BuyersBox .buyTitle{ height:30px; line-height:30px; border-bottom:#e0e0e0 solid 1px; font-size:16px; margin:10px 0;}
+.art_BuyersBox .prodBox{ border:#dcdcdc solid 1px; padding:15px 30px; height:auto; overflow:hidden;}
+.art_BuyersBox .prodBox .prolist{ padding:15px 0; height:auto; overflow:hidden;}
+.art_BuyersBox .prodBox .prolist .imgbox{ float:left; width:100px; padding-right:40px;}
+.art_BuyersBox .prodBox .prolist .imgbox img{ width:100px; height:100px;}
+.art_BuyersBox .prodBox .prolist .prodInfo{ float:left; width:310px; padding:20px 0 0;}
+.art_BuyersBox .prodBox .prolist .prodInfo h3{ font-size:14px; color:#000; line-height:25px;}
+.art_BuyersBox .prodBox .prolist .prodInfo h3 a{ color:#000;}
+.art_BuyersBox .prodBox .prolist .prodInfo h3 a:hover{ color:#028bc3; text-decoration:none;}
+.art_BuyersBox .prodBox .prolist .prodInfo p{  color:#686868}
+.art_BuyersBox .prodBox .prolist .status{ float:right; width:80px; padding-top:30px; text-align:center; font-size:14px;}
+.art_BuyersBox .prodBox .prolist .success{ color:#005f96}
+.art_BuyersBox .prodBox .prolist .success a{color:#005f96}
+.art_BuyersBox .prodBox .prolist .cancel{ color:#919191}
+.art_BuyersBox .prodBox .prolist .cancel a{  color:#919191}
+
+.art_BuyersBox .inforBox{ border:#dcdcdc solid 1px; padding:15px 30px; height:auto; overflow:hidden;}
+.art_BuyersBox .inforBox .BBS{padding:15px 0; height:auto; overflow:hidden;}
+.art_BuyersBox .inforBox .BBS .imgbox{ float:left; width:70px;}
+.art_BuyersBox .inforBox .BBS .imgbox img{ width:72px; height:72px;}
+.art_BuyersBox .inforBox .BBS .talkbox{ float:right; width:460px; height:auto; overflow:hidden;}
+.art_BuyersBox .inforBox .BBS .talkbox .visiter{ line-height:20px; font-size:13px; padding-bottom:10px;}
+.art_BuyersBox .inforBox .BBS .talkbox .visiter .date{ padding-left:10px; color:#a2a2a2}
+.art_BuyersBox .inforBox .BBS .talkbox p{ line-height:22px;}
+.art_BuyersBox .inforBox .BBS .replay{float:left; width:445px; height:auto; overflow:hidden;}
+.art_BuyersBox .inforBox .BBS .replay td{ padding: 5px 10px;}
+.art_BuyersBox .inforBox .BBS .replay .name{ font-size:14px;}
+.art_BuyersBox .inforBox .BBS .replay .name a{color:#005f96}
+.art_BuyersBox .inforBox .BBS .messageBt{ float:right; width:90px; text-align:right; height:auto; overflow:hidden;}
+.art_BuyersBox .Buynow{ padding:20px; text-align:center; height:auto; overflow:hidden;}
+.deliveryAddress li{ line-height:24px; padding-bottom:5px; font-size:13px;}
+.deliveryAddress li label{ float:left; padding-right:10px;}
+.art_BuyersBox a.newAddr{ clear:both; height:40px; line-height:40px; font-size:13px; text-decoration:underline; color:#037bad;}
+.art_BuyersBox .addrTab{ display:none;}
+.art_BuyersBox .addrTab td{ padding:5px 10px; font-size:13px;}
+.art_BuyersBox .addrTab .text{ height:27px; line-height:27px; padding:0 10px; border:#dcdcdc solid 1px; width:300px;}
+
+.art_firmOrderBox{ padding-bottom:20px; height:auto; overflow:hidden;}
+.art_firmOrderBox .firmOrderTabBox{ border:#e0e0e0 solid 1px; height:auto; overflow:hidden;}
+.art_firmOrderBox .firmOrderTabBox td{ padding:10px;  border-bottom:#e0e0e0 solid 1px; }
+.art_firmOrderBox .firmOrderTabBox img{ width:100px; height:100px;}
+.art_firmOrderBox .firmOrderTabBox h3{ font-size:14px; color:#000; line-height:25px;}
+.art_firmOrderBox .firmOrderTabBox h3 a{ color:#000;}
+.art_firmOrderBox .firmOrderTabBox h3 a:hover{ color:#028bc3; text-decoration:none;}
+.art_firmOrderBox .firmOrderTabBox p{  color:#686868}
+.art_firmOrderBox .firmOrderPrice{ height:40px; line-height:40px; text-align:center;}
+.art_firmOrderBox .firmOrderPrice .total{ float:right; display:block; width:115px; text-align:center; overflow:hidden}
+.art_firmOrderBox .firmOrderPrice .totalPrice{  float:right;  width:115px; text-align:center; overflow:hidden}
+.art_firmOrderBox .returnlink{ height:30px; line-height:30px; text-align:right;}
+.art_firmOrderBox .returnlink a{ color:#005f96; text-decoration:underline;}
+.art_firmOrderBox .buybox{ padding:10px 0; text-align:center;  height:auto; overflow:hidden;}
+.deliveryAddr{ padding-bottom:20px; height:auto; overflow:hidden;}
+.deliveryAddr a.newAddr{ clear:both; height:40px; line-height:40px; font-size:13px; text-decoration:underline; color:#037bad;}
+.deliveryAddr .addrTab{ display:none}
+.deliveryAddr .addrTab td{ padding:5px 10px; font-size:13px;}
+.deliveryAddr .addrTab .text{ height:27px; line-height:27px; padding:0 10px; border:#dcdcdc solid 1px; width:300px;}
+.art_delivery{ padding-bottom:20px;}
+.art_delivery ul{ padding:10px 0; }
+.art_delivery ul li{ line-height:24px; padding-bottom:5px; font-size:13px;}
+.art_delivery ul li label{ float:left; padding-right:10px;}
+.art_delivery a.freight{ height:30px; line-height:30px; text-decoration:underline; color:#037bad;}
+
+.art_prodInsideBox{ padding:50px 20px; height:auto; overflow:hidden;}
+.art_prodInsideBox .BigProdImg{ float:left; width:320px; height:auto; overflow:hidden; text-align:center;}
+.art_prodInsideBox .BigProdImg img{ width:320px; height:320px;}
+.art_prodInsideBox .BigProdImg a{ text-align:center; line-height:25px; color:#bdbdbd;}
+.art_prodInsideBox .prodInfoBox{ float:right; width:310px; height:auto; overflow:hidden; font-size:12px; color:#585858;}
+.art_prodInsideBox .prodInfoBox .titleInfo{ height:auto; border-bottom:#d2d2d2 solid 1px; padding-bottom:10px;  overflow:hidden; margin-bottom:20px;}
+.art_prodInsideBox .prodInfoBox .titleInfo h1{  line-height:30px; font-size:20px;}
+.art_prodInsideBox .prodInfoBox .titleInfo p{ line-height:18px;}
+.art_prodInsideBox .prodInfoBox .intro{ padding:15px 0 0 0; clear:both;}
+.art_prodInsideBox .prodInfoBox .intro p{ line-height:20px;}
+.art_prodInsideBox .prodInfoBox .intro .redprice{ color:#d30000;}
+.art_prodInsideBox .prodInfoBox .intro .selectNum{ width:40px; margin-left:10px; border:#dddddd solid 1px;}
+.art_prodInsideBox .prodInfoBox .intro .insertBt{ float:left; background:url(../images/bt_03.png) no-repeat left top; width:88px; text-align:center; height:30px; line-height:30px; font-size:12px; color:#fff; border:none; cursor:pointer; outline:none;}
+.art_prodInsideBox .prodInfoBox .intro .buybus{ float:left; margin-left:10px; padding-top:5px; height:auto; overflow:hidden;}
+.art_prodInsideBox .prodInfoBox .intro .gamico a{ margin-right:5px;}
+.insertBt{ float:left; background:url(../images/bt_03.png) no-repeat left top; width:88px; text-align:center; height:30px; line-height:30px; font-size:12px; color:#fff; border:none; cursor:pointer; outline:none;}
+
+
+
+.shopCartBt{ background:url(../images/shopCart_bt.png) no-repeat left top; border:none; cursor:pointer; outline:none; color:#fff; font-size:14px; text-align:center; width:178px; height:30px; line-height:30px;  box-shadow: 0px 2px 5px #CCC; border-radius:3px;}
+
+.art_hr{height:1px;border:none; border-top:#dcdcdc solid 1px; }
+
+.art_footer{ text-align:center; line-height:40px; color:#bdbdbd;}
+
+/*艺术品分页*/
+.art_pagebox{ float:right; height:18px; line-height:18px; padding:20px 40px;}
+.art_pagebox a{ color:#000; padding:0 5px;}
+.art_pagebox a:hover{ color:#005f96; }
+.art_pagebox a.link{ color:#005f96;}
+.art_pagebox span{ padding:0 5px;}
+
+/*lightbox*/
+#lightbox{	position: absolute;	left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0;}
+#lightbox img{ width: auto; height: auto;}
+#lightbox a img{ border: none; }
+
+#outerImageContainer{ position: relative; background-color: #fff; width: 250px; height: 250px; margin: 0 auto; }
+#imageContainer{ padding: 10px; }
+
+#loading{ position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }
+#hoverNav{ position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+#imageContainer>#hoverNav{ left: 0;}
+#hoverNav a{ outline: none;}
+
+#prevLink, #nextLink{ width: 49%; height: 100%; background-image: url(data:image/gif;base64,AAAA); /* Trick IE into showing hover */ display: block; }
+#prevLink { left: 0; float: left; background: url(../images/prevlabel.gif) left 15% no-repeat;}
+#nextLink { right: 0; float: right;background: url(../images/nextlabel.gif) right 15% no-repeat;}
+
+#imageDataContainer{ font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: auto; width: 100%	; }
+
+#imageData{	padding:0 10px; color: #666; }
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	
+#imageData #caption{ font-weight: bold;	}
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; outline: none;}	 	
+
+#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #000; }
+
+/*弹出购物车*/
+.popCart{ background:##ededed; padding:20px;}
+.popCartBox{ padding:10px 20px ; height:auto; overflow:hidden; }
+.popCartBox .orderTitle{ height:40px; line-height:40px; border-bottom:#e0e0e0 solid 1px; font-size:20px; color:#000000; margin-bottom:10px;}
+.popCartBox .orderTitle02{ height:40px; line-height:40px; border-bottom:#e0e0e0 solid 1px; font-size:16px; color:#000000; margin-bottom:10px;}
+.popCartBox .tabTitleBox{padding:0px 30px;}
+.popCartBox .tabTitle{ font-size:14px; color:#6e6e6e}
+.popCartBox .shopCartTabBox{ border:#e0e0e0 solid 1px; padding:0 30px; height:auto; overflow:hidden;}
+.popCartBox .shopCartTab td{ padding:10px;  border-bottom:#e0e0e0 solid 1px; }
+.popCartBox .shopCartTab img{ width:100px; height:100px;}
+.popCartBox .shopCartTab h3{ font-size:14px; color:#000; line-height:25px;}
+.popCartBox .shopCartTab h3 a{ color:#000;}
+.popCartBox .shopCartTab h3 a:hover{ color:#028bc3; text-decoration:none;}
+.popCartBox .shopCartTab p{  color:#686868}
+.popCartBox .shopCartPrice{ height:40px; line-height:40px; text-align:right;}
+.popCartBox .shopCartPrice .total{ float:right; display:block; width:105px; text-align:center; overflow:hidden}
+.popCartBox .shopCartPrice .totalPrice{  float:right;  width:106px; text-align:right; overflow:hidden}
+.popCartBox .returnlink{ height:30px; line-height:30px; text-align:right;}
+.popCartBox .returnlink a{ color:#005f96; text-decoration:underline;}
+.popCartBuy{ padding:20px 0; text-align:right;  height:auto; overflow:hidden;}
+.popCartBuy .toBuyBt{background:url(../images/bt_03.png) no-repeat left top; width:88px; text-align:center; height:30px; line-height:30px; font-size:14px; color:#fff; border:none; cursor:pointer; outline:none;}
+
+/*艺术品图片点击浮层插件样式*/
+#ImageBoxOverlay
+{
+	background-color: #000;
+}
+#ImageBoxCaption
+{
+	background-color: #F4F4EC;
+}
+#ImageBoxContainer
+{
+	width: 250px;
+	height: 250px;
+	background-color: #F4F4EC;
+}
+#ImageBoxCaptionText
+{
+	font-weight: bold;
+	padding-bottom: 5px;
+	font-size: 13px;
+	color: #000;
+}
+#ImageBoxCaptionImages
+{
+	margin: 0;
+}
+#ImageBoxNextImage
+{
+	background-image: url(../images/spacer.gif);
+	background-color: transparent;
+}
+#ImageBoxPrevImage
+{
+	background-image: url(../images/spacer.gif);
+	background-color: transparent;
+}
+#ImageBoxNextImage:hover
+{
+	background-image: url(../images/next_image.jpg);
+	background-repeat:	no-repeat;
+	background-position: right top;
+}
+#ImageBoxPrevImage:hover
+{
+	background-image: url(../images/prev_image.jpg);
+	background-repeat:	no-repeat;
+	background-position: left bottom;
+}
+
+.deliveryAddress li .delete{ float:right; font-size:12px; border-radius:3px; height:24px; line-height:24px; color:#FFFFFF; padding:0 5px; margin-left:10px; cursor:pointer;  background:#68c3eb; background:-webkit-linear-gradient(top,#84ceee,#59beea); background:-moz-linear-gradient(top,#84ceee,#59beea);background:-o-linear-gradient(top,#84ceee,#59beea);background:linear-gradient(top,#84ceee,#59beea);}
+
+/*会员中心*/
+.member_titlebox{ clear:both;  border-bottom:#dadada solid 1px;   position:relative; min-height:20px; margin-bottom:20px; }
+.member_titlebox .title{ position:absolute; height:20px; line-height:20px; text-align:center; color:#585858; padding:0px 20px; border:#dadada solid 1px; border-top-left-radius:5px; border-top-right-radius:5px; border-bottom:none; background:#fff; left:0; bottom:-1px;}
+.member_tab td{ padding:10px 0 0 20px; font-size:14px; line-height:25px; color:#000;}
+.member_tab .radiolab{ padding:0 20px 0 3px;}
+.member_tab sup{ color:#FF0000; padding-left:5px;}
+.member_tab input[type="text"]{ min-width:220px; height:26px; line-height:26px; border:#dcdcdc solid 1px; padding:0 5px;}
+.member_tab input[type="password"]{ min-width:220px; height:26px; line-height:26px; border:#dcdcdc solid 1px; padding:0 5px;}
+.member_tabText01{ width:410px;}
+.member_tabTextarea{ width:410px; padding:5px; border:#dcdcdc solid 1px; resize:none; min-height:140px;}
+.member_tab .pic{ float:left; width:80px; padding-right:10px;}
+.member_tab .pic img{ width:80px; height:80px;}
+.member_tab .picUpload{ padding:5px 0 0 8px;}
+.member_tab .picUploadBt{ width:65px; border:#707070 solid 1px; height:20px; line-height:20px; color:#000000; background:#ebebeb; background:-webkit-linear-gradient(top,#f2f2f2,#cfcfcf); background:-moz-linear-gradient(top,#f2f2f2,#cfcfcf); background:-o-linear-gradient(top,#f2f2f2,#cfcfcf); background:linear-gradient(top,#f2f2f2,#cfcfcf); border-radius:3px; cursor:pointer;}
+.member_tab .submitInfoBt{ background:url(../images/bt_03.png) no-repeat left top; width:88px; height:30px; line-height:30px; color:#fff; text-align:center; font-size:14px; border:none; outline:none; cursor:pointer;}
+.art_BuyersBox .inforBox .BBS .BBSarea{ width:535px; padding:5px; border:#dcdcdc solid 1px; resize:none; min-height:140px; margin:10px 0;}
+.art_BuyersBox .inforBox .BBS .BBSBt{ float:right; background:url(../images/bt_03.png) no-repeat left top; width:88px; text-align:center; height:30px; line-height:30px; font-size:14px; color:#fff; border:none; cursor:pointer; outline:none; }
+#SubmitMessage{ display:none;}
+/*分页控件样式*/
+.pageCss{
+	 margin-right:2px; float:right;  
+} 
+.pageCss .disCount,.pageCss .prenextType,.pageCss .numType,.pageCss .listType{
+	border:none; margin:0px; padding:0px; width:auto; height:auto; float:left;
+}       
+.pageCss .disCount li,.pageCss .prenextType li,.pageCss .numType li,.pageCss .listType li{ 
+	border:solid 1px #E6E6E6; margin:1px; float:left; padding:1px 5px 1px 5px; line-height:20px;overflow:hidden;
+}
+.pageCss a {
+	text-decoration:none; color:#4C5A62
+}
+.pageCss select {
+	height:18px;
+}
+#currentPage {
+	background-color:#E6E6E6; font-weight:800; color:#A00200;
+}
+/**表格**/
+.listTable
+{
+	width:100%; border-collapse:collapse;
+}
+.listTableHead
+{
+	width: 100%; background-color:#F5F5F5; height:25px; line-height:25px;
+}
+.listTableHead td
+{
+	 text-align:center;color:#4C5A62; font-weight:800;border:#E6E6E6 1px solid;
+}
+.listTableMain
+{
+	width: 100%; height:28px; line-height:28px;  overflow:hidden;
+}
+.listTableMain td
+{
+	text-align:center;border-right:#E6E6E6 1px solid;border-bottom:#E6E6E6 1px solid;border-left:#E6E6E6 1px solid;
+}
+.listTableMain .textLeft
+{
+	text-align:left;border-right:#E6E6E6 1px solid;border-bottom:#E6E6E6 1px solid;border-left:#E6E6E6 1px solid; padding-left:5px;
+}
+/**添加**/
+.add 
+{
+	margin-bottom:10px;
+}
+.add ul {
+	background: #fff;
+	padding: 0;
+	margin-top: -1px;
+	list-style: none;
+	overflow: hidden;
+	zoom: 1;
+}
+.add ul li {
+	float: left;
+	padding-top: 5px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 1005px;
+	margin-bottom: -1000px;
+	zoom: 1;
+	overflow: hidden;	
+}
+.add ul .left {
+	width: 120px;
+	text-align: right;
+	padding-right: 10px;
+	padding-top: 8px;
+	margin-top: 1px;
+	margin-right: 1px;
+	font-weight: 800;
+}
+.add ul .right {
+	width: auto;
+	padding-left: 10px;
+	margin-left: -1px;
+	overflow:hidden;
+	line-height:22px;
+}
+.add .foot {
+	width: 100%;
+	background: #FCFCFC;
+	margin-top: -1px;
+	text-align: center;
+	zoom: 1;
+}
+/**Product.htm**/
+.productPannel
+{
+	 background-color:#E6EAF3; line-height:25px; height:25px;padding:1px 10px 1px 10px;
+	}
+.productPannel img
+{
+	 vertical-align:text-bottom; cursor:pointer; margin-right:5px;
+}
+.productPannel .right
+{
+	   float:none; margin-left:30px;
+}
+.productPannel span a
+{
+	  margin-left:8px; 
+}
+.productarea{padding:30px 20px; height:auto; overflow:hidden;}
+.productPicture{
+	float:left; line-height:22px; width:130px; text-align:center; padding: 10px;
+}
+.productPicture .photo{
+	 width:120px; height:120px;  margin-left:5px; text-align:left;
+}
+.productPicture .maketPrice{
+	 text-decoration:line-through; color:#999999
+}
+.productPicture .salePrice{
+	 color:#A10000
+}
+
+.productList
+{
+	height:130px; width:650px; margin-top:10px; line-height:23px;
+}
+.productList ul
+{
+	float:left;height:130px; text-align:left	
+}
+.productList .productLeft
+{
+	 width:150px;
+}
+.productList .productCenter
+{
+	 width:350px;
+}
+.productList .productRight
+{
+	 width:150px; text-align:center; line-height:28px;
+}
+.productList .photo{
+	 width:120px; height:120px; border:1px #E6E6E6 solid; margin-left:5px; text-align:left;
+}
+.productList .productName
+{
+	  font-size:15px; font-weight:800;
+}
+.productList .maketPrice{
+	 text-decoration:line-through; color:#999999; margin-top:15px;
+}
+.productList .salePrice{
+	 color:#A10000; font-weight:bold; font-size:13px
+}
+.productBox .line
+{
+	height:1px; width:650px; background-color:#E6E6E6; overflow:hidden;
+	}
+.productList .productCenter .point,.productList .productCenter .commentCount
+{
+	    color:#A10000; font-size:15px; font-weight:bold;
+}
+
+/**productDetail.htm**/
+.leftcon .productPhoto
+{
+	float:left;
+}
+.leftcon .bigPhoto
+{
+	width:330px; height:340px; border:#E6E6E6 1px solid; padding:2px;
+}
+.photoList {
+	height:54px;  margin-top:10px; overflow:hidden; width:330px; padding-left:6px; 
+}
+.photoListLeft {
+	float:left;
+	width:14px;
+	height:54px;
+	background:url(../images/goodsPhoto_bg.gif) left center no-repeat;
+}
+.photoListContent {
+	float:left;
+	height:54px;
+	width:290px;
+	overflow:hidden;
+}
+.photoListInner {
+	width:10000px;
+	white-space:nowrap;
+}
+.photoListContent a {
+	width:50px;
+	height:50px;
+	display:inline-block;
+	margin:0 2px;
+	padding:1px;
+	border:1px solid #C9CACA;
+	overflow:hidden;
+}
+#PhotoList1,#PhotoList2 {
+ background:#fff;
+}
+* html .photoListContent a {
+	margin:0 5px;
+}
+*+html .photoListContent a {
+	margin:0 5px;
+}
+.photoListContent a:hover {
+	padding:0;
+	border:2px solid #669;
+	overflow:hidden;
+}
+.photoListRight {
+	float:left;
+	width:14px;	
+	height:54px;
+	background:url(../images/goodsPhoto_bg.gif) right center no-repeat;
+}
+.photoListLeft p,.photoListRight p {
+	position:relative;
+	top:20px;
+	width:14px;
+	height:13px;
+	cursor:pointer;
+}
+
+.leftcon .productInfo
+{
+	 line-height:25px; margin-left:10px; width:314px;float:left;
+}
+.leftcon .productInfo .name
+{
+	  color:#4C5A62; font-size:16px; font-weight:bold;
+}
+.leftcon .productInfo .point,.leftcon .productInfo .commentCount
+{
+	    color:#A10000; font-size:15px; font-weight:bold;
+}
+.leftcon .productInfo .maketPrice
+{
+	   text-decoration:line-through;
+}
+.leftcon .productInfo .salePrice
+{
+	   color:#A10000; font-size:20px; font-weight:bold;
+}
+.leftcon .productInfo .buy
+{
+	    background-color:#E6EAF3; border:#E6E6E6 1px solid; padding:5px 8px 5px 60px;
+}
+.leftcon .productInfo .buy div
+{
+	    line-height:40px; height:40px; 
+}
+.leftcon .productInfo .buy input
+{
+	    margin-right:10px;
+}
+.leftcon .productInfo .buy a
+{
+	    margin-left:15px;
+}
+.leftcon .productInfo .count
+{
+	    width:30px; height:15px;
+}
+.leftcon .productInfo .border1
+{
+	   line-height:1px; height:1px; width:100%; clear:both; background-color:#CCCCCC; overflow:hidden;
+}
+.leftcon .productInfo .standard
+{
+	   padding-left:20px;
+}
+.leftcon .productInfo .standard .standardBlock
+{
+	   line-height:25px; width:25px;  height:25px; display:block; margin-left:5px; float:left; cursor:pointer; border:#CCCCCC 1px solid; text-align:center; color:#A10000; font-weight:bold; padding:0px;
+}
+.leftcon .productInfo .standard .multiStandardBlock
+{
+	   line-height:30px; width:auto;  height:30px; display:block; margin-left:5px; float:left; cursor:pointer; border:#CCCCCC 1px solid; text-align:center; color:#A10000; font-weight:bold; padding:0 5px 0 5px; font-size:13px; font-weight:600;
+}
+.leftcon .productAccessory li
+{
+	float:left;  margin-left:22px; text-align:center; line-height:22px; width:122px; overflow:hidden
+}
+.leftcon .productAccessory li .photo
+{
+	width:120px; height:120px; border:#CCCCCC 1px solid;  display:block; text-align:left; overflow:hidden;
+}
+.leftcon .productDetailTitle
+{
+	 height:2px; line-height:2px; background-color:#59beea ;overflow:hidden;
+}
+.leftcon .productPageTag
+{
+	height:23px;
+	}
+	.leftcon .productPageTag li
+{
+	 margin-left:6px; font-weight:800; font-size:13px;  width:72px; float:left; text-align:center; height:23px; line-height:23px;
+	}
+.leftcon .productPageTag .productOn
+{
+	  background-image:url(../images/pageTagOn.png); color:#fff ;
+}
+.leftcon .productPageTag .productOff
+{
+	  background-image:url(../images/pageTagOff.png);  cursor:pointer;
+}
+.leftcon .productIntroduce .productAttribute
+{
+	 background-color:#F6F6F6; border:#DDDDDD 1px solid; overflow:hidden; padding:3px 10px 3px 10px;
+}
+.leftcon .productIntroduce .productAttribute li
+{
+	  float:left; width:33%; line-height:25px;
+}
+.leftcon .productIntroduce .productContent
+{
+	 line-height:22px;
+}
+.leftcon .productTag a
+{
+	margin-right:10px;
+}
+.leftcon .productCommentTitle
+{
+	  background-image:url(../images/titleBg.png);  height:28px; line-height:28px; font-size:13px; font-weight:bold; padding-left:10px;
+}
+.leftcon .productComment
+{
+	width:750px; height:80px;
+}
+.leftcon .productComment .userInfo
+{
+	width:120px; float:left; text-align:center;
+}
+.leftcon .productComment .userInfo li
+{
+	 line-height:22px;
+}
+.leftcon .productComment .userInfo .photo
+{
+	width:70px; height:70px; border:#DDDDDD 1px solid; margin-left:25px; text-align:left;
+}
+.leftcon .productComment .userInfo .name
+{
+	 font-weight:800;
+}
+.leftcon .productComment .commentContent
+{
+	  width:530px; overflow:hidden; line-height:22px;
+}
+.leftcon .productComment .commentContent .name
+{
+	 font-weight:800;
+}
+.leftcon .productComment .commentContent .adminReplyContent
+{
+	 border:#A10000 1px dashed; padding:3px; 
+}
+.leftcon .productComment .commentContent .name strong
+{
+	 font-weight:800; color:#A10000
+}
+.leftcon .productComment .commentContent .name span
+{
+	  float:right; font-weight:500; margin-right:10px;
+}
+.leftcon .productComment .commentContent .border1
+{
+	  height:1px; line-height:1px; border-top:1px #ddd dashed; margin:3px 0 3px 0; overflow:hidden;
+}
+.leftcon .postComment
+{
+	border:#DDDDDD 1px solid;  padding:10px;
+}
+.leftcon .postComment li
+{
+	 line-height:25px;
+}
+.leftcon .postComment .title input
+{
+	  width:450px;
+}
+.leftcon .postComment textarea
+{
+	  width:700px; height:60px;
+}
+.body {
+	background-image:url(text.txt); /* for IE6 */
+	background-attachment:fixed;
+}
+.toTop 
+{
+	background-color:#096;
+	z-index:999;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	_position:absolute; /* for IE6 */
+	_top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight-20); /* for IE6 */
+	overflow:visible;
+}
+.jiathis
+{
+	margin-top:20px;
+	}
+/**cart.htm**/
+.step
+{
+	width:100%; text-align:center; margin:20px 0 30px 0px;
+	}
+
+.cartHead
+{
+	background-color:#F5F5F5;height:30px; line-height:30px;
+	}	
+.cartHead td
+{
+	font-weight:bold; font-size:13px;  text-align:center; color:#6e6e6e;
+}
+.cartMain td
+{
+	text-align:center;   border-bottom:#DDDDDD 1px solid; padding-bottom:8px; padding-top:8px;
+}	
+.cartMain td input
+{
+	 width:30px;
+}	
+.cartMain .photo a
+{
+	   border:#E6E6E6 1px solid;  padding:1px; overflow:hidden; display:block; width:60px; height:60px;
+}
+.cartMain .smallBox
+{	  
+	border:#E6E6E6 1px dashed; overflow:hidden;background-color:#fafafa; margin-top:5px; line-height:32px; width:auto;
+}
+.totalMoney
+{
+	font-size:15px; font-weight:bold; text-align:right; padding-right:10px;
+	}
+.totalMoney span
+{
+	 color:#A40102
+	}
+.cartOperate .shopCartBt
+{
+	 float:right; margin-right:10px;	
+}
+.cartOperate img
+{
+	 vertical-align:middle
+	}
+.cartOperate a
+{
+	  margin-right:20px;
+	}
+/**checkOut.htm**/
+.checkOutTitle
+{
+	font-weight:bold; color:#4C5A62; font-size:15px; margin-top:20px;
+	}
+.checkOutLine
+{
+	height:1px; line-height:1px; background-color:#DDDDDD; width:100%; margin-top:10px; margin-bottom:10px; overflow:hidden;
+	}
+
+.checkOut ul .left {
+	width: 180px;
+	font-weight: 500;
+}
+.checkOut ul .right {
+	width: auto;
+	padding-left: 10px;
+	margin-left: -1px;
+	overflow:hidden;
+	line-height:30px;
+}
+.checkOutList
+{
+	 padding-left:50px;
+}
+.checkOutList li
+{
+	line-height:25px; 
+}
+.checkOutList li span
+{
+	margin-left:20px;
+}
+.checkOut .right span,.checkOut .right a
+{
+	color:#A40102; font-weight:600;
+}
+.giftList
+{
+	float:left; width:100%; margin-left:100px;
+}
+.giftList .giftInfo
+{
+	width:150px; text-align:center; float:left; line-height:25px;
+}
+.mony
+{
+	text-align:right;
+}
+.mony span
+{
+	color:#A40102; font-weight:800; font-size:16px;
+}
+.finishButton
+{
+	width:200px; text-align:center; margin:0px auto 80px;
+}
+.alertMessage
+{
+	color:#FF0000; font-weight:700; width:650px; text-align:center;  margin:30px auto; font-size:14px; background-color:#F5F5F5; height:28px; line-height:28px; border:#E6E6E6 1px solid;
+}
+.height10{ height:10px; clear:both;}

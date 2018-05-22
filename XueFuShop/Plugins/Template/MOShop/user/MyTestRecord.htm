@@ -1,0 +1,61 @@
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <html:include file="user/UserHead.htm" />
+</head>
+<body>
+    <html:include file="user/UserTop.htm" />
+    <div class="ordermain">
+        <div class="clearfix ordermana">
+            <html:include file="user/UserLeft.htm" />
+            <div class="right">
+                <div class="title"><h3 class="slide-title">考试记录</h3></div>
+                <div class="slideTxtBox">
+                    <div class="hd">
+                        <ul>
+                            <a href="?"><li<$(action != "All"?" class=\"on\"":"")$>>本月成绩</li></a>
+                            <a href="?Action=All"><li class="all<$(action == "All"?" on":"")$>">所有成绩</li></a>
+                        </ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+                            <table>
+                                <tbody>
+                                <tr class="green">
+                                    <th class="w412"><span class="ml10">课程名称</span></th>
+                                    <th class="w130"><span class="ml10">考试分数</span></th>
+                                    <th class="w306"><span>时间</span></th>
+                                    <!-- <th class="w230"><span>操作</span></th> -->
+                                </tr>
+                                <html:foreach expression="TestPaperInfo testPaper in testPaperList">
+                                <tr class="border-b">
+                                    <td><span><$ProductBLL.ReadProduct(testPaper.CateId).Name$></span></td>
+                                    <td><span><$(int)testPaper.Scorse$>分</span></td>
+                                    <td><span><$testPaper.TestDate.ToString("d")$></span></td>
+                                    <!-- <td class="w230"><a href="javascript:;" target="_blank">查看成绩</a></td> -->
+                                </tr>
+                                </html:foreach>
+                                </tbody>
+                            </table>
+                        </ul>
+                    </div>
+                </div>
+                <$CommonPager.ShowPage()$>
+            </div>
+        </div>
+    </div>
+
+<html:include file="Foot.htm" />
+
+<script type="text/javascript">
+$(function(){
+    $(".hd li").click(function(event) {
+        /* Act on the event */
+    });
+})
+</script>
+
+</body>
+</html>

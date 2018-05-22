@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bluearts.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/lightwindow.css" />
+    	<script type="text/javascript" src="js/MSClass.js"></script>	
+		<script type="text/javascript" src="js/prototype.js"></script>
+        <script type="text/javascript" src="js/effects.js"></script>
+        <script type="text/javascript" src="js/lightwindow.js"></script>
+        <script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+        <script>
+		jQuery.noConflict(); 
+			jQuery(document).ready(function($){
+				
+				$(".hovlink").mouseover(function(){
+					$(this).next("div").slideDown(500);
+					});
+				$(".spinner").mouseleave(function(){
+					$(this).children("div").slideUp(500);
+					});
+					
+			})
+    </script>
+</head>
+
+<body>
+	<!--头部导航-->
+	<div class="artWarp art_head">
+        		  <div class="linkbox">
+                  			<ul>
+                            		<li><a href="news.html">首页</a></li>
+                                    <li><a href="#">英文</a></li>
+                                    <li class="spinner">
+                                    <a href="Login.html" class="hovlink" >登录</a>
+                                    <div class="downlist">
+                                            <p><a href="#"><img src="images/gam_ico05.png"></a></p>
+                                            <p><a href="#"><img src="images/gam_ico04.png"></a></a></p>
+                                            <p><a href="#"><img src="images/gam_ico03.png"></a></a></p>
+                                            <p><a href="#"><img src="images/gam_ico02.png"></a></a></p>
+                                            <p><a href="#"><img src="images/gam_ico01.png"></a></a></p>
+                                    </div>
+                                    </li>
+                                    <li class="spinner">
+                                    <a href="#" class="hovlink" >分享</a>
+                                    <div class="downlist">
+                                            <p><a href="#"><img src="images/gam_ico05.png"></a></p>
+                                            <p><a href="#"><img src="images/gam_ico04.png"></a></p>
+                                            <p><a href="#"><img src="images/gam_ico03.png"></a></p>
+                                            <p><a href="#"><img src="images/gam_ico02.png"></a></p>
+                                            <p><a href="#"><img src="images/gam_ico01.png"></a></p>
+                                    </div>
+                                    </li>
+                                    <li><a  class="lightwindow page-options" params="lightwindow_width=800,lightwindow_height=600,lightwindow_type=external"  href="popCart.html"><img src="images/icon_01.png" alt="购物车" ></a></li>
+                            </ul>
+          </div>
+                  <div class="logo" id="totop"></div>
+        </div>
+        <!--切换banner-->
+        <div  class="artWarp">
+        		<div class="art_banner">
+                        <div id="art_bannerBox" style="overflow: hidden; width: 848px; height:378px; position: relative;">
+                            <ul id="art_bannerContentID" style=" width: 1696px; height: 378px;">
+                                <li><a href="#"><img src="images/blueart_banner01.jpg"></a></li>
+                                <li><a href="#"><img src="images/blueart_banner02.jpg"></a></li>
+                            </ul>
+                        </div>
+						<div class="art_shiftnavbar"><ul id="shiftTab" ><li></li><li></li></ul></div>
+                </div>
+        </div>
+        <script type="text/javascript">
+					/*********DIV + CSS开始等待、间歇滚动、点击控制左右滑动实例(缓动)***************/
+					new Marquee(["art_bannerBox","art_bannerContentID","shiftTab","onclick"],2,[0.5,20],848,378,20,5000,5000)	//DIV + CSS开始等待、间歇滚动、TAB点击切换、点击控制左右滑动实例(缓动)
+			 </script>
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        		<div class="art_orderBox">
+                		<div class="orderTitle">购物车</div>
+                        <!--购物车表-->
+                        <form action="firmOrder.html" method="get">
+                        <div class="tabTitleBox">
+                                <table width="703" border="0" cellspacing="0" cellpadding="0" class="tabTitle">
+                                  <tr>
+                                    <td width="120" height="40" align="center" valign="middle">艺术品</td>
+                                    <td width="300" align="center" valign="middle">&nbsp;</td>
+                                    <td width="71" height="40" align="center" valign="middle">数量</td>
+                                    <td width="106" align="center" valign="middle">价格</td>
+                                    <td width="106" height="40" align="right" valign="middle">总价</td>
+                                  </tr>
+                                </table>
+                  </div>
+                        <div class="shopCartTabBox">
+                        		<table width="701" border="0" cellspacing="0" cellpadding="0" class="shopCartTab">
+                                  <tr>
+                                    <td width="120" align="center" valign="middle"><img src="images/shopCart_01.jpg" width="100" height="100"></td>
+                                    <td width="298" align="left" valign="middle"><h3><a href="#">2014.7.24 Art Bag by Filippo Picone</a></h3>
+                                    <p>意大利大师菲利普为教李小冉设计的袋子</p></td>
+                                    <td width="72" align="center" valign="middle">1</td>
+                                    <td width="105" align="center" valign="middle"> ¥4,515</td>
+                                    <td width="106" align="right" valign="middle"> ¥4,515</td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="middle"><img src="images/shopCart_02.jpg" alt="" ></td>
+                                    <td align="left" valign="middle"><h3><a href="#">2014.7.24 Art Bag by Filippo Picone</a></h3>
+                                    <p>意大利大师菲利普为教李小冉设计的袋子</p></td>
+                                    <td align="center" valign="middle">1</td>
+                                    <td align="center" valign="middle"> ¥4,515</td>
+                                    <td align="right" valign="middle"> ¥4,515</td>
+                                  </tr>
+                                </table>
+                                <div class="shopCartPrice">
+                                		<span class="totalPrice">¥9,030</span>
+                                  <span class="total">Order Total:  </span>
+                                </div>
+                        </div>
+                        <!--返回上一层-->
+                        <div class="returnlink"><a href="#" target="_parent">返回上一层</a></div>
+                        <!--注册购买-->
+                        <div class="buybox"><input name="Submit" type="submit" class="shopCartBt" value="点击注册信息并且购买"></div>
+                        </form>
+                </div>
+
+        </div>
+        <!--底部版权信息-->
+        <div class="art_footer">2014 © Blue Butterfly Arts. All Rights Reserved</div>
+	
+
+</body>
+</html>

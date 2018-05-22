@@ -1,0 +1,39 @@
+<!--右侧列表-->
+        		<div class="rightbox">
+                		<!--艺术家-->
+                		<div class="artists">
+                        		<h3>艺术家/设计师</h3>
+                                <ul>
+                                        <html:foreach expression="ProductBrandInfo productBrand in productBrandList">
+                                        <html:csharp>string url=productBrand.Url; if(url==string.Empty){url="Product-B"+productBrand.ID+".aspx";}</html:csharp>
+                                        <html:if expression="RequestHelper.GetQueryString<int>("BrandID")==productBrand.ID">
+                                        <li><a href="/<$url$>"><img src="<html:templatePath>/images/icon_03.png"><span class="redfont"><$productBrand.Name$></span></a></li>
+                                        <html:else>
+                                        <li><a href="/<$url$>"><$productBrand.Name$></a></li>
+                                        </html:if>
+                                        </html:foreach>
+                                </ul>
+                        </div>
+                        <!--分类-->
+                        <h3>分类</h3>
+                        <html:foreach expression="ProductClassInfo productClass in productClassList">
+                        <html:if expression="RequestHelper.GetQueryString<int>("ClassID")==productClass.ID">
+                        <h5><a href="/Product-C<$productClass.ID$>.aspx"><img src="<html:templatePath>/images/icon_03.png"><span class="redfont"><$productClass.ClassName$></span></a></h5>
+                        <html:else>
+                        <h5><a href="/Product-C<$productClass.ID$>.aspx"><$productClass.ClassName$></a></h5>
+                        </html:if>
+                        <html:if expression="ProductClassBLL.ReadProductClassChildList(productClass.ID).Count>0">
+                        <div class="sortlist">
+                                <ul>                                        
+                                        <html:foreach expression="ProductClassInfo childProductClass in ProductClassBLL.ReadProductClassChildList(productClass.ID)">
+                                		<html:if expression="RequestHelper.GetQueryString<int>("ClassID")==childProductClass.ID">
+                                        <li><a href="/Product-C<$childProductClass.ID$>.aspx"><img src="<html:templatePath>/images/icon_03.png"><span class="redfont"><$childProductClass.ClassName$></span></a></li>
+                                        <html:else>
+                                        <li><a href="/Product-C<$childProductClass.ID$>.aspx"><$childProductClass.ClassName$></a></li>
+                                        </html:if>
+                                        </html:foreach>
+                                </ul>
+                        </div>
+                        </html:if>
+                        </html:foreach>
+                </div>

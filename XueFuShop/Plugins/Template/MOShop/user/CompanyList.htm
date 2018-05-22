@@ -1,0 +1,64 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>公司列表</h1>
+                </div>
+                <div id="staff_list">
+                    <form action="" method="get" autocomplete="off">
+                        <div class="form_group form_center">
+                            <label class="form_txt" for="CompanyID">公司名称：</label>
+                            <input class="form_con" type="text" name="CompanyName" id="CompanyName" value="<$companyName$>">
+                            <label class="form_txt" for="UserId">隶属公司：</label>
+                            <input class="form_con" type="text" name="ParentCompanyName" id="ParentCompanyName" value="<$parentCompanyName$>">
+                            <input class="form_button" style="margin-left: 20px;" id="search" type="submit" value="搜 索">
+                        </div>
+                    </form>
+                    <table class="evaluation_sheet staff_list">
+                        <tr>
+                            <!-- <th class="id">选择</th> -->
+                            <th class="email">全称</th>
+                            <th class="name">简称</th>
+                            <th class="post">隶属公司</th>
+                            <th class="state">状态</th>
+                            <th class="manage">管理</th>
+                        </tr>
+                        <html:foreach expression="CompanyInfo company in searchCompanyList">
+                        <tr>
+                            <!-- <td><input name="SelectID" type="checkbox" title="<$company.CompanyId$>" value="<$company.CompanyId$>"></td> -->
+                            <td><$company.CompanyName$></td>
+                            <td><$company.CompanySimpleName$></td>
+                            <td><$CompanyBLL.ReadParentCompanyName(company.ParentId)$></td>
+                            <td><$EnumHelper.ReadEnumChineseName<State>(company.State)$></td>
+                            <td>
+                                <span class="handle">
+                                    <html:if expression="base.CompareUserPower("UpdateSubCompany", PowerCheckType.Single)">
+                                    <a class="edit" href="CompanyAdd.aspx?ID=<$company.CompanyId$>&ReturnURL=<$ServerHelper.UrlEncode(RequestHelper.RawUrl)$>" title="编辑" alt="编辑"><i class="iconfont icon-bianji"></i></a>
+                                    </html:if>
+                                    <html:if expression="base.CompareUserPower("ReadUser",PowerCheckType.Single)">
+                                    <a class="edit" href="UserList.aspx?CompanyID=<$company.CompanyId$>" title="员工列表" alt="员工列表"><i class="iconfont icon-yonghuliebiao"></i></a>
+                                    </html:if>
+                                </span>
+                            </td>
+                        </tr>
+                        </html:foreach>
+                    </table>
+                    <$base.CommonPager.ShowPage()$>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+</body>
+</html>

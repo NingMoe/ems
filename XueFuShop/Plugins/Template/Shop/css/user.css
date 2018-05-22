@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+.height10
+{
+	line-height:10px; height:10px; width:100%; clear:both; overflow:hidden;
+	}
+.userTitle
+{
+	  background-image:url(images/titleBg.png);  height:28px; line-height:28px; font-size:13px; font-weight:bold; padding-left:10px;
+}
+.add span
+{
+	color:#A10000;
+} 
+/**UserAdd.htm**/
+.line
+{
+	border-top:1px solid #e3e3e3;
+}
+.add .left .userPhoto
+{
+	 width:70px; height:70px; display:block; border:#E3E3E3 1px solid; margin:auto;
+}
+

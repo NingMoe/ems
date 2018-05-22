@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1AC3BBE-3477-4EC4-ACF3-7A7164FAEA8C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XueFuShop.BLL</RootNamespace>
+    <AssemblyName>XueFuShop.BLL</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdBLL.cs" />
+    <Compile Include="AdRecordBLL.cs" />
+    <Compile Include="BaseBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLLArticle\ArticleBLL.cs" />
+    <Compile Include="BLLArticle\ArticleClassBLL.cs" />
+    <Compile Include="CertBLL.cs" />
+    <Compile Include="PolyvBLL.cs" />
+    <Compile Include="RenZhengCateBLL.cs" />
+    <Compile Include="SMSRecordBLL.cs" />
+    <Compile Include="PostPassBLL.cs" />
+    <Compile Include="ChangeNumBLL.cs" />
+    <Compile Include="BLLAdmin\AdminBLL.cs" />
+    <Compile Include="BLLAdmin\AdminLogBLL.cs" />
+    <Compile Include="BLLAdmin\AdminGroupBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLLCommon\EmailSendRecordBLL.cs" />
+    <Compile Include="BLLCommon\MenuBLL.cs" />
+    <Compile Include="BLLCommon\RegionBLL.cs" />
+    <Compile Include="BLLCommon\ShippingBLL.cs" />
+    <Compile Include="BLLCommon\ShippingRegionBLL.cs" />
+    <Compile Include="BLLCommon\UploadBLL.cs" />
+    <Compile Include="CompanyRuleBLL.cs" />
+    <Compile Include="CompanyPostPlanBLL.cs" />
+    <Compile Include="TeacherBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPaperBLL.cs" />
+    <Compile Include="TestSettingBLL.cs" />
+    <Compile Include="QuestionBLL.cs" />
+    <Compile Include="CourseBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CourseCateBLL.cs" />
+    <Compile Include="PostBLL.cs" />
+    <Compile Include="CompanyBLL.cs" />
+    <Compile Include="BLLOrder\OrderActionBLL.cs" />
+    <Compile Include="BLLOrder\OrderBLL.cs" />
+    <Compile Include="BLLOrder\OrderDetailBLL.cs" />
+    <Compile Include="BLLProduct\AttributeBLL.cs" />
+    <Compile Include="BLLProduct\AttributeClassBLL.cs" />
+    <Compile Include="BLLProduct\AttributeRecordBLL.cs" />
+    <Compile Include="BLLProduct\ProductClassBLL.cs" />
+    <Compile Include="BLLProduct\BookingProductBLL.cs" />
+    <Compile Include="BLLProduct\ProductBLL.cs" />
+    <Compile Include="BLLProduct\ProductBrandBLL.cs" />
+    <Compile Include="BLLProduct\ProductCollectBLL.cs" />
+    <Compile Include="BLLProduct\ProductCommentBLL.cs" />
+    <Compile Include="BLLProduct\ProductPhotoBLL.cs" />
+    <Compile Include="BLLProduct\ProductReplyBLL.cs" />
+    <Compile Include="BLLProduct\StandardBLL.cs" />
+    <Compile Include="BLLProduct\StandardRecordBLL.cs" />
+    <Compile Include="BLLProduct\TagsBLL.cs" />
+    <Compile Include="BLLProduct\ThemeActivityBLL.cs" />
+    <Compile Include="BLLUser\BLLUserManage.cs" />
+    <Compile Include="BLLUser\CartBLL.cs" />
+    <Compile Include="BLLUser\MemberPriceBLL.cs" />
+    <Compile Include="BLLUser\ReceiveMessageBLL.cs" />
+    <Compile Include="BLLUser\SendMessageBLL.cs" />
+    <Compile Include="BLLUser\UserAccountRecordBLL.cs" />
+    <Compile Include="BLLUser\UserAddressBLL.cs" />
+    <Compile Include="BLLUser\UserApplyBLL.cs" />
+    <Compile Include="BLLUser\UserBLL.cs" />
+    <Compile Include="BLLUser\UserFriendBLL.cs" />
+    <Compile Include="BLLUser\UserGradeBLL.cs" />
+    <Compile Include="BLLUser\UserMessageBLL.cs" />
+    <Compile Include="BLLUser\UserRechargeBLL.cs" />
+    <Compile Include="CouponBLL.cs" />
+    <Compile Include="FavorableActivityBLL.cs" />
+    <Compile Include="FlashBLL.cs" />
+    <Compile Include="FlashPhotoBLL.cs" />
+    <Compile Include="GiftBLL.cs" />
+    <Compile Include="GiftPackBLL.cs" />
+    <Compile Include="LinkBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TPR\EvaluateNameBLL.cs" />
+    <Compile Include="TPR\KPIBLL.cs" />
+    <Compile Include="TPR\KPIEvaluateBLL.cs" />
+    <Compile Include="TPR\KPITempletBLL.cs" />
+    <Compile Include="TPR\PostKPISettingBLL.cs" />
+    <Compile Include="TPR\WorkingPostBLL.cs" />
+    <Compile Include="UserCouponBLL.cs" />
+    <Compile Include="VoteBLL.cs" />
+    <Compile Include="VoteItemBLL.cs" />
+    <Compile Include="VoteRecordBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XueFu.EntLib\XueFu.EntLib.csproj">
+      <Project>{DBDD8CA0-1F46-4061-B0A5-20B189568925}</Project>
+      <Name>XueFu.EntLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Common\XueFuShop.Common.csproj">
+      <Project>{E150603E-2A27-47DB-9A27-8C98F4936761}</Project>
+      <Name>XueFuShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.DAL\XueFuShop.DAL.csproj">
+      <Project>{C006D3A0-8915-4368-88A6-6E7E6F9D9CAA}</Project>
+      <Name>XueFuShop.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.IBLL\XueFuShop.IBLL.csproj">
+      <Project>{5C40FB82-9680-4C66-82EC-C3F223FB86F2}</Project>
+      <Name>XueFuShop.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.IDAL\XueFuShop.IDAL.csproj">
+      <Project>{3A21D800-08AC-4179-B25A-102BA714D8AA}</Project>
+      <Name>XueFuShop.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Log\XueFuShop.Log.csproj">
+      <Project>{11702FCD-7C75-435B-9659-F5F12914B877}</Project>
+      <Name>XueFuShop.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XueFuShop.Models\XueFuShop.Models.csproj">
+      <Project>{83AE4726-C1C6-4601-930E-B5F5CF62F1FC}</Project>
+      <Name>XueFuShop.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLLNews\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

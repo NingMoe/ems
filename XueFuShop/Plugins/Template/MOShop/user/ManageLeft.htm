@@ -1,0 +1,140 @@
+        <div class="left">
+            <html:csharp>
+            </html:csharp>
+            <ul class="tabs">
+                <li class="base<$(isBase?" on":"")$>">
+                    <a href="javascript:">
+                        <i class="icon setup"></i>
+                        <span>基础管理</span>
+                    </a>
+                </li>
+                <html:if expression="base.CompareUserPower("EMSMenu",PowerCheckType.Single)">
+                <li class="ems<$(isEMS?" on":"")$>">
+                    <a href="javascript:">
+                        <i class="icon manage"></i>
+                        <span>EMS管理</span>
+                    </a>
+                </li>
+                </html:if>
+                <html:if expression="base.CompareUserPower("TPRMenu",PowerCheckType.Single)">
+                <li class="tpr<$(isTPR?" on":"")$>">
+                    <a href="javascript:">
+                        <i class="icon account"></i>
+                        <span>TPR</span>
+                    </a>
+                </li>
+                </html:if>
+            </ul>
+            <div class="tabs_nav">
+                <ul class="base<$(isBase?"":" hide")$>">
+                    <li>
+                        <h2>我的信息</h2>
+                        <div class="tabs_nav_con">
+                            <a<$(IsCurrentPage("UserAdd.aspx?ID="+base.UserID+"$")?" class=\"current\"":"")$> href="/User/UserAdd.aspx?ID=<$base.UserID$>">修改个人信息</a>
+                            <a<$(IsCurrentPage("ChangePassword.aspx")?" class=\"current\"":"")$> href="/User/ChangePassword.aspx">修改密码</a>
+                        </div>
+                    </li>
+                    <html:if expression="base.CompareUserPower("ReadCompany,UpdateCompany,ReadCompanyList,ReadUser,AddUser",PowerCheckType.OR)">
+                    <li>
+                        <h2>公司管理</h2>
+                        <div class="tabs_nav_con">
+                            <html:if expression="base.CompareUserPower("ReadCompany,UpdateCompany",PowerCheckType.OR)">
+                            <a<$(IsCurrentPage("/CompanyAdd.aspx")?" class=\"current\"":"")$> href="/User/CompanyAdd.aspx">修改公司信息</a>
+                            </html:if>
+                            <html:if expression="base.ExistsSonCompany">
+                            <html:if expression="base.CompareUserPower("ReadCompanyList",PowerCheckType.Single)">
+                            <a<$(IsCurrentPage("/CompanyList.aspx")?" class=\"current\"":"")$> href="/User/CompanyList.aspx">公司列表</a>
+                            </html:if>
+                            </html:if>
+                            <html:if expression="base.CompareUserPower("ReadUser",PowerCheckType.Single)">
+                            <a<$(IsCurrentPage("/UserList.aspx")?" class=\"current\"":"")$> href="/User/UserList.aspx">员工列表</a>
+                            </html:if>
+                            <html:if expression="base.CompareUserPower("AddUser",PowerCheckType.Single)">
+                            <a<$(IsCurrentPage("/UserAdd.aspx$")?" class=\"current\"":"")$> href="/User/UserAdd.aspx">增加员工</a>
+                            </html:if>
+                        </div>
+                    </li>
+                    </html:if>
+                </ul>
+                <ul class="ems<$((isEMS && base.CompareUserPower("EMSMenu",PowerCheckType.Single))?"":" hide")$>">
+                    <li>
+                        <h2>培训管理</h2>
+                        <div class="tabs_nav_con">
+                            <a<$(IsCurrentPage("Training.aspx$")?" class=\"current\"":"")$> href="/User/Training.aspx">培训列表</a>
+                            <a<$(IsCurrentPage("TrainingAdd.aspx?Action=TrainingClass")?" class=\"current\"":"")$> href="/User/TrainingAdd.aspx?Action=TrainingClass">添加培训分类</a>
+                            <a<$(IsCurrentPage("TrainingAdd.aspx?Action=Training$")?" class=\"current\"":"")$> href="/User/TrainingAdd.aspx?Action=Training">添加培训项目</a>
+                        </div>
+                    </li>
+                    <html:if expression="base.CompareUserPower("ReadEMSReport",PowerCheckType.Single)">
+                    <li>
+                        <h2>成绩列表</h2>
+                        <div class="tabs_nav_con">
+                            <a<$(IsCurrentPage("TestPaperRecord.aspx")?" class=\"current\"":"")$> href="/User/TestPaperRecord.aspx">成绩列表</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h2>EMS报表</h2>
+                        <div class="tabs_nav_con">
+                            <!-- <a href="evaluating_indicator.html">成绩月度报表</a>-->
+                            <a<$(IsCurrentPage("CourseReport.aspx")?" class=\"current\"":"")$> href="/User/CourseReport.aspx">课程报表</a>
+                            <html:if expression="!StringHelper.CompareSingleString("400,401,402,403,404",User.StudyPostID.ToString())">
+                            <a<$(IsCurrentPage("PostPlanRate.aspx")?" class=\"current\"":"")$> href="/User/PostPlanRate.aspx">岗位学习进度分析</a>
+                            <a<$(IsCurrentPage("HRReport.aspx")?" class=\"current\"":"")$> href="/User/HRReport.aspx">HR人资报表</a>
+                            <a<$(IsCurrentPage("PostPlanReport.aspx")?" class=\"current\"":"")$> href="/User/PostPlanReport.aspx">最小学习量达成分析表</a>
+                            <a<$(IsCurrentPage("ZongHeReport.aspx")?" class=\"current\"":"")$> href="/User/ZongHeReport.aspx">综合情况统计表</a>
+                            </html:if>
+                        </div>
+                    </li>
+                    </html:if>
+                </ul>
+                <ul class="tpr<$((isTPR && base.CompareUserPower("TPRMenu",PowerCheckType.Single))?"":" hide")$>">
+                    <html:if expression="base.CompareUserPower("ReadKPI,AddKPI",PowerCheckType.OR)">
+                    <!-- <li>
+                        <h2>指标管理</h2>
+                        <div class="tabs_nav_con">
+                            <html:if expression="base.CompareUserPower("ReadKPI",PowerCheckType.Single)">
+                            <a<$(IsCurrentPage("/KPI.aspx")?" class=\"current\"":"")$> href="/User/KPI.aspx">指标列表</a>
+                            </html:if>
+                            <html:if expression="base.CompareUserPower("AddKPI",PowerCheckType.Single)">
+                            <a<$(IsCurrentPage("KPIAdd.aspx")?" class=\"current\"":"")$> href="/User/KPIAdd.aspx">添加指标</a>
+                            </html:if>
+                        </div>
+                    </li> -->
+                    </html:if>
+                    <html:if expression="base.CompareUserPower("ReadWorkingPost,AddWorkingPost",PowerCheckType.OR)">
+                    <!-- <li>
+                        <h2>工作岗位</h2>
+                        <div class="tabs_nav_con">
+                            <html:if expression="base.CompareUserPower("ReadWorkingPost",PowerCheckType.Single)">
+                            <a<$(IsCurrentPage("/WorkingPost.aspx")?" class=\"current\"":"")$> href="/User/WorkingPost.aspx">岗位列表</a>
+                            </html:if>
+                            <html:if expression="base.CompareUserPower("AddWorkingPost",PowerCheckType.Single)">
+                            <a<$(IsCurrentPage("WorkingPostAdd.aspx")?" class=\"current\"":"")$> href="/User/WorkingPostAdd.aspx">添加岗位</a>
+                            </html:if>
+                        </div>
+                    </li> -->
+                    </html:if>
+                    <html:if expression="base.CompareUserPower("ReadTPRReport,AddEvaluate,AddEvaluateName,ReadEvaluateName",PowerCheckType.OR)">
+                    <li>
+                        <h2>评估管理</h2>
+                        <div class="tabs_nav_con">
+                            <html:if expression="base.CompareUserPower("AddEvaluateName",PowerCheckType.Single)">
+                            <a<$(IsCurrentPage("/EvaluateNameAdd.aspx")?" class=\"current\"":"")$> href="/User/EvaluateNameAdd.aspx">评估名称添加</a>
+                            </html:if>
+                            <html:if expression="base.CompareUserPower("ReadEvaluateName",PowerCheckType.Single)">
+                            <a<$(IsCurrentPage("EvaluateName.aspx")?" class=\"current\"":"")$> href="/User/EvaluateName.aspx">评估名称列表</a>
+                            </html:if>
+                            <html:if expression="base.CompareUserPower("AddEvaluate",PowerCheckType.Single)">
+                            <!-- <a<$(IsCurrentPage("/EvaluateAdd.aspx")?" class=\"current\"":"")$> href="/User/EvaluateAdd.aspx">岗位评估</a> -->
+                            <a<$(IsCurrentPage("/StaffEvaluateAdd.aspx")?" class=\"current\"":"")$> href="/User/StaffEvaluateAdd.aspx">综合能力评估</a>
+                            </html:if>
+                            <html:if expression="base.CompareUserPower("ReadTPRReport",PowerCheckType.Single)">
+                            <!-- <a<$(IsCurrentPage("/EvaluateReport.aspx")?" class=\"current\"":"")$> href="/User/EvaluateReport.aspx">岗位评估报表</a> -->
+                            <a<$(IsCurrentPage("StaffEvaluateReport.aspx")?" class=\"current\"":"")$> href="/User/StaffEvaluateReport.aspx?CompanyId=<$base.UserCompanyID$>">综合能力评估报表</a>
+                            </html:if>
+                        </div>
+                    </li>
+                    </html:if>
+                </ul>
+            </div>
+        </div>

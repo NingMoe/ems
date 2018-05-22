@@ -1,0 +1,95 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+    <script language="javascript" type="text/javascript" src="/Admin/Js/Calendar.js" ></script>
+    <script language="javascript" type="text/javascript" src="/Admin/Js/UnlimitClass.js" ></script>
+</head>
+
+<body>
+	<html:include file="Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        <html:include file="Menu.htm" />
+        		<div class="art_orderBox">
+                		<div class="orderTitle">Member Center</div>
+                        <div class="art_BuyersBox">
+                        		<!--右侧框架-->
+                                <div class="rightBox">                                
+                                    <div class="buyTitle">Personal Information</div>
+                                    <form action="/User/UserAdd.aspx" method="post" name="form" enctype="multipart/form-data" >
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="member_tab">
+                                          <tr>
+                                                <td width="20%" height="30" align="left" valign="top">UserName:</td>
+                                                <td width="80%" align="left" valign="top"><$base.UserName$></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">Email:</td>
+                                            <td align="left" valign="top">
+                                            <input type="text" name="Email" value="<$user.Email$>" /><sup>*</sup></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">Sex:</td>
+                                            <td align="left" valign="top"><input type="radio" name="Sex" value="1" <html:if expression="user.Sex==1">checked="checked"</html:if> />Male &nbsp;&nbsp;<input type="radio" name="Sex" value="2" <html:if expression="user.Sex==2">checked="checked"</html:if>/>Female &nbsp;&nbsp;<input type="radio" name="Sex" value="3" <html:if expression="user.Sex==3">checked="checked"</html:if>/>Confidential</td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">Birthday:</td>
+                                            <td align="left" valign="top"><input type="text" name="Birthday" onFocus="cdr.show(this);" value="<$user.Birthday$>"/> </td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">MSN:</td>
+                                            <td align="left" valign="top"><input type="text" name="MSN" value="<$user.MSN$>"/></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">QQ:</td>
+                                            <td align="left" valign="top"><input type="text" name="QQ" value="<$user.QQ$>"/></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">Telephone:</td>
+                                            <td align="left" valign="top"><input type="text" name="Tel" value="<$user.Tel$>"/></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">Mobile Phone:</td>
+                                            <td align="left" valign="top"><input type="text" name="Mobile" value="<$user.Mobile$>" /></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">Region:</td>
+                                            <td align="left" valign="top"><$singleUnlimitClass.ShowContent()$></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">Address:</td>
+                                            <td align="left" valign="top"><input type="text" name="Address" value="<$user.Address$>"/></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">Introduction:</td>
+                                            <td align="left" valign="top"><textarea  class="member_tabTextarea" cols="45" rows="5" name="Introduce"><$user.Introduce$></textarea></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="30" align="left" valign="top">
+                                            <div class="pic"><span class="userPhoto"><img src="<$UserBLL.ReadUserPhoto("70-70")$>"  id="UserPhoto" onload="photoLoad(this,70,70)" /></span></div>
+                                            <div class="picUpload"><input type="file" name="Photo" class="picUploadBt" /></div>
+                                            </td>
+                                            <td align="left" valign="top"><p>Personal image will be displayed on your personal home page, merchandise reviews, discussion area. Want you to be more attention, please upload:</p>
+                                              <p>1.their true single photo;</p>
+                                              <p>2.clear, positive, close photos; </p>
+                                              <p>3.photos without watermarks or other sites logo;</p></td>
+                                          </tr>
+                                          <tr>
+                                            <td height="60" align="left" valign="top">&nbsp;</td>
+                                            <td align="center" valign="bottom"><input type="submit" name="button" id="button" value="确认资料" class="submitInfoBt"><input type="hidden" name="Action" value="PostBack" /></td>
+                                          </tr>
+                                    </table>
+                                    </form>
+                                </div>
+                        		<html:include file="/User/UserLeft.htm" />
+                        </div>
+                </div>
+
+        </div>
+        <html:include file="Foot.htm" />
+</body>
+</html>

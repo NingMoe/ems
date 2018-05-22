@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="64" QuestionNum="25" SingleNum="10" MultiNum="0" PanDunNum="15">
+  <Single>
+    <QuestionInfo1 id="29587">
+      <Question>在现抓这一销售方法中，销售顾问的（  ）是起到一定作用的，并不是凭运气。</Question>
+      <A>销售技巧</A>
+      <B>外表</B>
+      <C>穿着</C>
+      <D>发型</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29587</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="29103">
+      <Question>在潜客开发中，（   ）是所有方式中销售成本最低廉的，成交率高达75%，所以顾问一定要努力做好这点。</Question>
+      <A>集客活动</A>
+      <B>广告宣传</B>
+      <C>走商开拓</C>
+      <D>转介绍</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29103</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="29577">
+      <Question>在潜在客户开发这一环节，与走商开拓紧密配合的方法是（  ）。</Question>
+      <A>集密活动</A>
+      <B>广告宣传</B>
+      <C>电话销售</C>
+      <D>转介绍</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29577</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="29099">
+      <Question>交易三要素主要包括（   ），了解了这三点才能更好地从事销售工作。</Question>
+      <A>产品、价格、关系</A>
+      <B>信心、需求、购买力</B>
+      <C>便利、关系、价格</C>
+      <D>信心、产品、便利</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29099</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="29113">
+      <Question>销售对销售顾问而言，其实是一个（   ）的过程，在与客户关系密切后，生意更容易做。</Question>
+      <A>交朋友</A>
+      <B>产品介绍</B>
+      <C>陪客户唱歌吃饭 </C>
+      <D>交车服务</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29113</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="29111">
+      <Question>在交易三宝中，（   ）是创造买卖，而信赖则是加速交易。</Question>
+      <A>便利</A>
+      <B>需求</B>
+      <C>关系</C>
+      <D>购买力</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29111</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="138227">
+      <Question>顾客所做出的购买决定，绝大多数都是感性的，所以我方顾问应多用（），从让顾客激动、冲动、感动，从而促进成交。</Question>
+      <A>否定成交法</A>
+      <B>价格成交法</B>
+      <C>理性成交法</C>
+      <D>三动成交法</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>138227</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="125661">
+      <Question>潜在客户开发的包括四个方面，其中（     ）成本最低，（       ）应让新人多加锻炼，能够了解市场并且锻炼口才。</Question>
+      <A>转介绍；集客活动</A>
+      <B>集客活动；转介绍</B>
+      <C>转介绍；走商外拓</C>
+      <D>走商外拓；转介绍</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>125661</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="29100">
+      <Question>成交三要素主要包括（   ），了解了这三点才能更好地促进成交。</Question>
+      <A>信心、产品、便利</A>
+      <B>便利、关系、价格</B>
+      <C>产品、价格、关系</C>
+      <D>信心、需求、购买力</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29100</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="29108">
+      <Question>（   ）是做生意、谈生意的准则和守则。</Question>
+      <A>欺骗、腰软、腿勤快、返利</A>
+      <B>信用、原则、守时、产品</B>
+      <C>信用、守时、腰软、腿勤快</C>
+      <D>欺骗、腰软、腿勤快、产品</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29108</QuestionId>
+    </QuestionInfo10>
+  </Single>
+  <Multi>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="125676">
+      <Question>对于现抓而言，更多的是靠销售顾问平时积累的销售技巧，通过准确的判断和深入的需求分析来把握客户</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>125676</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="138238">
+      <Question>对待H级的客户，销售顾问应该每天给客户电话，通过活动、借口等方式邀约客户见面，追紧客户，通过这些方法能有效提高成交的机率。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>138238</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="29578">
+      <Question>销售不等于现抓，是因为现抓时若遇到早有准备的顾客，这时通常不会有太大的利润。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29578</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="29586">
+      <Question>往往大多汽车销售的成功案例中，销售顾问都抓住并掌握了案例中客户真正的购车需求又或是潜在需求。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29586</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="125667">
+      <Question>交易三要素中的需求也相当重要，顾问在和客户商谈时，应当通过各种提问，来深度挖掘客户的需求，最后促成成交。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>125667</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="125665">
+      <Question>日工作计划表的重点是时间管理，让顾问养成合理安排其工作时间的习惯，对于第二天的工作做好详细的安排，使得工作井井有条，更高效。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>125665</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="29580">
+      <Question>在市场竞争的过程中，现抓和邀约工作的变得越发的重要，决定了销售的成败。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29580</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="138242">
+      <Question>销售首要的工作就是找客户，潜在客户开发应该从四个大方向来着手，分别是广告宣传、集客活动、转介绍和~号外宣传~。</Question>
+      <A>走商外拓</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>138242</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="138239">
+      <Question>现抓与展厅工作步骤密不可分，销售顾问要做好完整的展厅工作步骤，如果顾客在某个销售流程退出，要尽力把顾客拉回来，如果顾客肯回来，这就是非常强的购买信号。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>138239</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="125672">
+      <Question>对于店内客流较少的地方，更应该注重潜在客户的开发，潜客的开发包括广告宣传、转介绍、走商开拓和集客互动这四部分。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>125672</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="138241">
+      <Question>"常想一二，不思八九"对销售顾问的意义在于，要经常想着成功案例，并做成功案例分析，从成功中集思广益，获得更大的成功；而对于失败案例则不要作过多思考。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>138241</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="29092">
+      <Question>在日计划工作表中，时间栏位是十分重要的，一定要做好时间管理，各项工作才能更为顺利地开展。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29092</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="29579">
+      <Question>在销售淡季，~现抓成交的比例会大大的超过邀约成交。~</Question>
+      <A>多次邀约成交的比例会大大增加。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29579</QuestionId>
+    </QuestionInfo13>
+    <QuestionInfo14 id="29581">
+      <Question>所谓的“卖车就是交朋友的过程”其实指的是销售顾问要博得顾客的信任。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29581</QuestionId>
+    </QuestionInfo14>
+    <QuestionInfo15 id="138232">
+      <Question>销售五步法的顺序是~约客户——找客户——见客户——签订单——写表卡~，所以销售顾问要开发潜在客户，要有订单必须按照这样的步骤执行。</Question>
+      <A>找客户——约客户——见客户——签订单——写表卡</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>138232</QuestionId>
+    </QuestionInfo15>
+  </PanDuan>
+</TestPaper>

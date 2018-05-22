@@ -1,0 +1,36 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+</head>
+
+<body>
+	<html:include file="Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        <html:include file="Menu.htm" />
+        		<div class="art_orderBox">
+                		<div class="orderTitle">Member Center</div>
+                        <div class="art_BuyersBox">
+                        		<!--右侧框架-->
+                                <div class="rightBox">
+                                    <!--我的资讯-->
+                                    <div class="art_BuyersBox">
+                                        <div class="buyTitle">My Information</div>                                        
+                                        <div id="UserMessageAjax"></div>
+                                    </div>                                                        
+                                </div>
+                        		<html:include file="/User/UserLeft.htm" />
+                        </div>
+                </div>
+
+        </div>
+        <html:include file="/Foot.htm" />
+        <script language="javascript" type="text/javascript" src="<html:templatePath>/Js/UserMessage.js" ></script>
+</body>
+</html>
+                  

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/public.css">
+    <link rel="stylesheet" href="<html:templatePath>/css/soboxtest.css">
+<style>
+.new-result .layui-layer-btn {text-align:center; margin-top:-50px;}
+.new-result .layui-layer-btn0 {width:60px; height:35px; line-height:35px; font-size:16px; text-align:center; cursor: pointer !important;}
+</style>
+</head>
+<body class="bodytest">
+
+    <div class="container-fluid wrap">
+        <!-- main -->
+        <div class="publictest">
+            <div class="container">
+                <div class="subject">
+                    <span class="title">考试名称：<$paperName$></span>
+                    <span class="time"><i class="hui-icon-timer"></i>剩余时间<a id="times" class="last">0:00</a></span>
+                </div>
+                <div class="clearfix public">
+                    <div class="testleft">
+                        <div class="info">
+                            <$paperInfoHtml$>
+                        </div>
+                        <div class="choose" id="QuestionMenu">
+                            <div class="hd">
+                                <ul class="clearfix">
+                                    <$questionStyleHtml$>
+                                </ul>
+                            </div>
+                            <div class="bd">
+                                <$questionIndexHtml$>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testright">
+                        <div class="btitle"><img src="<html:templatePath>/images/testtopic.png" alt="">试题</div>
+                        <div class="btopic">
+                            <div class="testcontent"></div>
+                            <div class="clearfix operation">
+                                <a href="javascript:;" class="testbtn nextquestion">下一道</a>
+                                <a href="javascript:;" class="testbtn pause" id="PauseTest">暂停</a>
+                                <a href="javascript:;" class="testbtn complete">交卷</a>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" id="TestTime" value="<$testTime$>">
+                <input type="hidden" id="ProductID" value="<$productID$>">
+            </div>
+        </div>
+        <!-- main -->        
+    </div>
+ 
+<script type="text/javascript" src="<html:templatePath>/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="<html:templatePath>/js/test.js?t=<$DateTime.Now$>"></script>
+<script type="text/javascript" src="<html:templatePath>/layui/layui.js"></script>
+<script type="text/javascript" src="<html:templatePath>/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer
+        ,form = layui.form();
+    });
+    jQuery("#QuestionMenu").slide({ trigger:"click" });
+</script>
+</body>
+</html>

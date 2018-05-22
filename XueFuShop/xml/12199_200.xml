@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="200" QuestionNum="25" SingleNum="14" MultiNum="0" PanDunNum="11">
+  <Single>
+    <QuestionInfo1 id="75144">
+      <Question>与嘉年华同价位的起亚K2仅配备（      ）轮毂，其档次低、质量重、油耗高，是廉价车专用配置，我方顾问应向顾客予以说明。</Question>
+      <A>铜制</A>
+      <B>镁制</B>
+      <C>钢制</C>
+      <D>铝制</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75144</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="75156">
+      <Question>K2全系都未配备（），而嘉年华则有该配置，它能在车辆熄火后继续照亮前方的道路，是十分人性化的配置。</Question>
+      <A>大灯遥控关闭</A>
+      <B>大灯持续照明</B>
+      <C>快闪超车灯</C>
+      <D>伴我回家功能</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75156</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="75159">
+      <Question>起亚K2的发动机采用了（   ）连续可变气门正时技术，但嘉年华的i-VCT发动机不仅拥有相同的可变气门正时系统，还具有可变进气歧管技术，能够根据发动机的转速调节进气歧管长短，保证发动机在任何情况下都有良好的动力表现。</Question>
+      <A>DVVT</A>
+      <B>i-VTCE</B>
+      <C>CVVT</C>
+      <D>VTCE</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75159</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="75154">
+      <Question>起亚K2在被动安全部分全系未配有（   ），该配置能有效地保障驾乘人员的侧面发生二次碰擦，从而保障车主的生命安全。高配的嘉年华配有该气囊，进而提升了整车的安全性能，是车主外出行车的保障。</Question>
+      <A>侧安全气囊</A>
+      <B>膝部气囊</B>
+      <C>侧安全气帘</C>
+      <D>双SRS安全气囊</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75154</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="75141">
+      <Question>K2的仪表盘显示屏能显示许多信息，如燃油续航里程、小计里程、经济驾驶模式、平均速度等信息，不过其字体颜色为（       ），长时间观看会引起眼部疲劳，不利于安全驾驶。</Question>
+      <A>红色</A>
+      <B>紫色</B>
+      <C>蓝色</C>
+      <D>橙色</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75141</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="75167">
+      <Question>K2的大灯设计与（   ）相仿，整个前脸造型动感十足。K2车身设计紧凑，犹如缩小版的K5，侧身线条简洁明快，而在外形设计部分，新款嘉年华类似于阿斯顿马丁的家族前脸，大口的进气格栅，让前脸的拉风指数足够得高。</Question>
+      <A>悦动</A>
+      <B>瑞纳</B>
+      <C>福瑞迪</C>
+      <D>K5</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75167</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="75157">
+      <Question>起亚K2的变速箱仅配有（   ）变速箱，在驾驶操控上，不如嘉年华的六速双离合便器变速箱换挡平顺，我方销售顾问可以强调嘉年华的6速双离合变速器是领先一个时代的科技结晶。</Question>
+      <A>四速自动</A>
+      <B>五速手动</B>
+      <C>五速自动</C>
+      <D>四速手动</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75157</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="75147">
+      <Question>外观方面，K2的尾灯采用（）设计，《汽车导报》表示：“K2的尾灯采用的这种设计，让人误认为是LED尾灯，但实际上是卤素大灯，如此设计极其容易误导消费者。”</Question>
+      <A>透镜式</A>
+      <B>滴水状</B>
+      <C>碎石状</C>
+      <D>蜂窝状</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75147</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="75169">
+      <Question>相较于K2配备的（      ）变速器，嘉年华的6速双离合变速器不仅档次高，而且换挡平顺性好，同时能更好地提升燃油经济性。</Question>
+      <A>6挡手自一体</A>
+      <B>4挡自动</B>
+      <C>7挡手自一体</C>
+      <D>5挡自动</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75169</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="75166">
+      <Question>在科技化配备部分，K2车型身上不具备嘉年华所拥有的（      ），它先进的人机交互方式通过语音指令可以直达所需功能，方便车主未来使用，同时也凸显出嘉年华的高档！</Question>
+      <A>SYNC系统</A>
+      <B>insight系统</B>
+      <C>Command系统</C>
+      <D>G-BOOK系统</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75166</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="75155">
+      <Question>起亚K2低配转向系统采用（   ）助力系统，转向指向性不是很明朗，转向比较费力。相比之下，嘉年华的转向系统全系采用EPS电子助力转向，并拥有随速助力系统，高速时方向盘沉稳，低速时方向盘更为轻盈，减轻车主的驾驶疲劳。</Question>
+      <A>VGR可变齿比</A>
+      <B>电液</B>
+      <C>液压</C>
+      <D>机械液压</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75155</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="75160">
+      <Question>起亚K2整备质量为1089Kg，而嘉年华的整备质量为1115Kg，整备质量越高，整体看上去更厚实以外，车辆的（   ）越好。</Question>
+      <A>运动性</A>
+      <B>行车稳定性</B>
+      <C>加速性</C>
+      <D>舒适性</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75160</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="75158">
+      <Question>嘉年华的整车质保期为三年或十万公里，而K2的整车质保期只有（   ），在售后服务方面不及嘉年华做得出色，无法带给消费者更长时间，更持久的售后服务。</Question>
+      <A>三年或五万公里</A>
+      <B>三年或六万公里</B>
+      <C>三年或四万公里</C>
+      <D>三年或两万公里</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75158</QuestionId>
+    </QuestionInfo13>
+    <QuestionInfo14 id="75146">
+      <Question>K2与嘉年华相比，外观方面最大的亮点在于（      ），使得K2更有气派，不过这种设计和起亚K5几乎如出一辙，这说明汽车厂家底蕴不足，品牌沉淀积累不够，所以当出现一款热销车型时就反复抄袭它的外观设计。</Question>
+      <A>车身尺寸</A>
+      <B>高科技配置</B>
+      <C>2门设计</C>
+      <D>虎啸式前脸设计</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75146</QuestionId>
+    </QuestionInfo14>
+  </Single>
+  <Multi>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="75148">
+      <Question>K2的~后悬~压缩行程较短，在颠簸/坑洼路面行驶时，路面反馈来的长短波都会直接传递给驾驶员和前排乘客，大大影响乘坐舒适性。</Question>
+      <A>前悬</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75148</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="75163">
+      <Question>起亚K2发动机采用普通的布置方式，~前进气后排气~，而嘉年华的发动机采用反置式发动机，~前排气后进气~，加大了进气岐管的冷却效果，提高净化废气能力。</Question>
+      <A>前排气后进气~前进气后排气</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75163</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="75173">
+      <Question>在安全性部分，K2配备的前后盘式制动，盘式制动相对于鼓式制动档次更高，关于这点，我方顾问可指出：对于整备重量在1.2吨以下的小车来说，前盘后鼓的制动完全够用，由于小车对后轮的制动要求没有大车那么高，在刹车的时候主要制动力集中在前轮，所以嘉年华前盘后鼓的制动方式完全能满足平日用车需求。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75173</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="75152">
+      <Question>K2位于中央的显示屏显示的车辆信息比较全面，包括有燃油续航里程、小计里程、经济驾驶模式、平均速度等信息显示，其中~燃油续航里程~告诉您油门踩到怎样的程度时才是最省油的，让驾驶者养成节油驾驶的习惯。实际上，该配置只是起到一个提示作用，不能在不良驾驶时干预发动机，并无太大作用。</Question>
+      <A>经济驾驶模式</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75152</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="75164">
+      <Question>起亚K2和嘉年华在国内最权威的碰撞测试中都获得了5星安全成绩，但是在欧洲的碰撞测试中，起亚K2却并没有测试过，而嘉年华却获得了5星安全成绩，由此可见，嘉年华更有安全保障，车主买车更放心。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75164</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="75149">
+      <Question>K2的车侧线条采用的是溜背式的设计，因此会对本来就小的后排头部空间造成影响，稍高的乘客就会"头顶天花板了"，乘坐较为压抑。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75149</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="75161">
+      <Question>为使车内乘客得到最舒适的乘坐环境，在车宽的设计上，嘉年华的车宽为1722mm，而起亚K2的车宽为1700mm，相比之下，乘坐着嘉年华拥有较为宽裕~的头部空间，放松的坐姿~。</Question>
+      <A>的横向空间，前后排乘客乘坐更为舒适</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75161</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="75170">
+      <Question>K2的发动机配有~VIS可变进气歧管~，它会根据发动机的运行情况，调整气门开合时间、角度，使进入的空气量达到最佳，提高燃烧效率，同时可以节省燃油消耗。而嘉年华的发动机技术同样出色，嘉年华的发动机配备了Ti-VCT双独立可变气门正时，能够精准控制气门开启和关闭时间，从而改善了燃烧过程，提升燃烧效率。</Question>
+      <A>CVVT连续可变气门正时技术</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75170</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="75150">
+      <Question>K2后排的头枕采用的是整体式设计，头枕的高度不可调节，不仅没档次，而且会影响乘坐舒适性，不能满足不同身高的后排乘员对乘坐姿势的需求。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75150</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="75153">
+      <Question>在乘坐舒适性方面，专业试车手表示："K2的前排座椅坐姿相对较高，虽然驾驶席支持6方向手动调节，但是其实只能调整椅垫角度，即便将座椅调到最低，方向盘调到最高，对于个头比较高的驾驶者，还是会显得有点别扭。"可见其座椅调整范围有限。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75153</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="75172">
+      <Question>在车内饰的设计部分，起亚K2采用了传统的设计模式，而嘉年华的中控面板操控键采用与手机相同的模式，独特而又新颖的设计模式让大家以熟悉的方式操控，再加上每个按键都设计得很大，令操作更便捷。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>75172</QuestionId>
+    </QuestionInfo11>
+  </PanDuan>
+</TestPaper>

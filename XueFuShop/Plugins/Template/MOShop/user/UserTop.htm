@@ -1,0 +1,23 @@
+    <div class="top-bar cf" id="topBar">
+        <div class="clearfix container">
+            <div class="logo fl">
+                <a href="/">
+                    <img src="<html:templatePath>/images/logo.png" alt="孟特">
+                </a>
+            </div>
+            <div class="account-nav">
+                <ul class="cf">
+                    <!-- <li><a href="/"><span>首页</span></a></li>
+                    <li><a href="/Product.aspx">选课中心</a></li> -->
+                    <li><a href="/User/CourseCenter.aspx">学习大厅</a></li>
+                    <html:if expression="base.CompareUserPower("ManageOther", PowerCheckType.Single)">
+                    <li><a href="/User/UserList.aspx">管理中心</a></li>
+                    </html:if>
+                    <li><a href="/AboutUs.aspx?ID=6"><span>联系我们</span></a></li>
+                    <li><a href="/Help-I24.aspx"><span>帮助中心</span></a></li>
+                    <li><a href="/User/Logout.aspx"><span>退出登录</span></a></li>
+                </ul>
+            </div>            
+        </div>        
+        <div class="headShortVideoOpen"></div>
+    </div>

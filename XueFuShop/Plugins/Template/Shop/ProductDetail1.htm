@@ -1,0 +1,206 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+</head>
+
+<body>
+	<html:include file="Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        		<!--左侧内容-->
+        		<div class="leftcon">
+                	<!--分类导航-->
+                		<html:include file="Menu.htm" />
+                        <!--产品信息-->
+                        <div class="art_prodInsideBox">
+                        		<!--产品信息-->
+                          <!--<div class="prodInfoBox">
+                                		<div class="titleInfo">
+                               					<h1><$product.Name$></h1>
+                                                <p>设计师：<$ProductBrandBLL.ReadProductBrandCache(product.BrandID).Name$></p>
+                                                <p>品牌： 利郎</p>
+                                        </div>
+                            <div class="intro">
+                                                 <$product.Introduction$>
+                                        </div>
+                            <div class="intro">
+                                                <p>商品尺寸: 29 x 27 x 6.5 cm</p>
+                                                <p>商品重量: <$product.Weight$> g</p>
+                                                <p>发货重量: 599 g</p>
+                                        </div>
+                            <div class="intro">
+                                          <p>价格:	<del>￥<$product.MarketPrice$></del></p>
+                                                <p>特价:	<span class="redprice">￥<$currentMemberPrice$></span>
+                                                      <select name="select" id="select" class="selectNum">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                      </select>
+                                                </p>
+                                                <p>选择购买件数，或者加入购物车中</p>
+                                        </div>
+                                        <div class="intro">
+                                        		<input type="button" class="insertBt"  onClick="addToCart(<$product.ID$>,'<$product.Name$>',<$product.StandardType$>)" value="加入购物车">
+                                                <a href="javascript:addToCart(<$product.ID$>,'<$product.Name$>',<$product.StandardType$>)" class="buybus"><img src="images/icon_01.png" alt="购物车"></a>
+                                  		</div>
+                                         <div class="intro">
+                                         		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                      <tr>
+                                                        <td width="22%" height="25" align="left" valign="middle">一键分享：</td>
+                                                        <td width="78%" id="ckepop" align="left" valign="middle" class="gamico">
+                                                        		<a class="jiathis_button_tsina"></a>
+                                                                <a href="#"><img src="images/gam_ico02.png"></a>
+                                                                <a href="#"><img src="images/gam_ico03.png"></a>
+                                                                <a href="#"><img src="images/gam_ico04.png"></a>
+                                                                <a href="#"><img src="images/gam_ico05.png"></a>
+                                                        </td>
+                                                      </tr>
+                                                </table>
+                                         </div>
+                                </div>-->
+                                
+                        		<!--产品图片-->
+                        		<!--<div class="BigProdImg">
+                                <html:csharp>int j=0;</html:csharp>
+                                <html:foreach expression="ProductPhotoInfo productPhoto in productPhotoList">
+                                <html:csharp>j++;</html:csharp>
+                                 <a href="<$productPhoto.Photo$>" class="lightwindow page-options" rel="Random[S]" title="<$product.Name$>" caption="<$productPhoto.Name$>" author="" ><html:if expression="j==1"><img src="<$product.Photo.Replace("Original","340-340")$>"><br>点击打开扩展图</a></html:if>
+                                            <a href="images/new_prod02.jpg" class="lightwindow page-options" rel="Random[S]" title="欧式田园静音钟" caption="白P1206.WWE TH温湿度计挂钟 10寸(25.4cm)采用百折胶外壳，百折不断，百摔不烂" author="" ></a>
+                                            <a href="images/new_prod03.jpg"  class="lightwindow page-options" rel="Random[S]" title="欧式田园静音钟" caption="高清PS树脂镜面，整钟轻质树脂构造使用静音扫描机芯，营造安全宁静的居室环境。" author=""></a>
+                                 </html:foreach>
+                                </div>-->
+    <div class="productPhoto">
+        <div class="bigPhoto"><img src="<$product.Photo.Replace("Original","340-340")$>" onload="photoLoad(this,340,340)"  id="BigPhoto" /></div>
+        <div class="photoList">
+            <div class="photoListLeft"><p id="PhotoLeft" ></p></div>
+            <div class="photoListContent" id="PhotoCount">
+                <div class="photoListInner">
+                    <div id="PhotoList1" style="float:left;">  
+                        <html:foreach expression="ProductPhotoInfo productPhoto in productPhotoList">                         
+                            <a href="javascript:void(0);"><img src="<$productPhoto.Photo.Replace("Original","60-60")$>" onload="photoLoad(this,50,50)" onclick="showPhoto('<$productPhoto.Photo.Replace("Original","340-340")$>')" alt="<$productPhoto.Name$>" /></a>     
+                        </html:foreach>                     
+                    </div>
+                    <div id="PhotoList2" style="float:left; padding-left:3px; padding-right:3px;"></div>
+                </div>
+            </div>
+            <div class="photoListRight"><p id="PhotoRight"></p></div>
+        </div>        
+        <!-- JiaThis Button BEGIN -->
+        <div id="ckepop" class="jiathis">
+            <span class="jiathis_txt">分享到：</span>
+            <a class="jiathis_button_qzone"></a>
+            <a class="jiathis_button_tsina"></a>
+            <a class="jiathis_button_renren"></a>
+            <a class="jiathis_button_kaixin001"></a>
+            <a class="jiathis_button_msn"></a>
+            <a class="jiathis_button_douban"></a>
+            <a class="jiathis_button_taobao"></a>
+            <a class="jiathis_button_tqq"></a>
+            <a class="jiathis_button_tianya"></a>
+            <a class="jiathis_button_51"></a>
+            <a class="jiathis_button_mop"></a>
+            <a class="jiathis_button_tsohu"></a>
+            <a class="jiathis_button_xiaoyou"></a>
+            <a class="jiathis_button_baidu"></a>
+        </div>
+    <!-- JiaThis Button END -->
+    </div>
+    <div class="productInfo">
+        <div class="name" style="<$product.FontStyle$><html:if expression="product.Color!=string.Empty"> ;color:<$product.Color$></html:if>"><$product.Name$></div> 
+        <div class="height10"></div>
+        <div class="border1"></div>
+        <div class="height10"></div>                
+        <div>设计师：<$ProductBrandBLL.ReadProductBrandCache(product.BrandID).Name$></div>
+        <div>分类：<$ProductClassBLL.ProductClassNameList(product.ClassID)$></div>
+        <div>用户综合评分：<span class="grade"><i style="width:<$product.PerPoint*20$>%"></i></span> <span class="point"><$product.PerPoint$></span>（已有 <span class="commentCount"><$product.CommentCount$></span> 人评价）</div>
+        <div class="height10"></div>
+        <div class="border1"></div>
+        <div class="height10"></div>
+        <div>市场价：<span class="maketPrice">￥<$product.MarketPrice$></span></div>
+        <div>销售价：<span class="salePrice">￥<$currentMemberPrice$><input id="CurrentMemberPrice" value="<$currentMemberPrice$>" type="hidden" /></span>   节省：￥ <$(product.MarketPrice-currentMemberPrice)$></div>                
+        <div><html:foreach expression="UserGradeInfo userGrade in userGradeList"><$userGrade.Name$>价：￥<$MemberPriceBLL.ReadMemberPrice(userGrade,memberPriceList,product)$>  </html:foreach></div>
+        <div class="height10"></div>
+        <div class="border1"></div>
+        <div class="height10"></div>
+        <html:if expression="product.StandardType==1">      
+            <input id="StandardRecordValueList" value="<$standardRecordValueList$>" type="hidden" />
+            <html:foreach expression="StandardInfo standard in standardList"> 
+                <div class="clear"><$standard.Name$>：<input id="StandardValue_<$standard.ID$>"  name="StandardValue" type="hidden" /><span id="Standard_<$standard.ID$>">请选择</span></div>
+                <div class="standard">
+                    <html:csharp>
+                    string[] valueArray = standard.ValueList.Split(',');
+                    string[] photoArray = standard.PhotoList.Split(',');
+                    </html:csharp>
+                    <html:for init="int i=0" condtion="i<valueArray.Length" expression="i++">
+                        <html:if expression="standard.DisplayTye==1">
+                            <span class="standardBlock" title="<$valueArray[i]$>" onClick="selectSingleStandard('<$valueArray[i]$>',<$standard.ID$>)"><$valueArray[i]$></span>
+                        <html:else>
+                            <span class="standardBlock" title="<$valueArray[i]$>" onClick="selectSingleStandard('<$valueArray[i]$>',<$standard.ID$>)"><img src="<$photoArray[i]$>" width="25" height="25" /></span>
+                        </html:if>
+                    </html:for>
+                </div>
+            </html:foreach>
+        <html:else>
+            <div class="clear"></div>
+            <div class="standard">
+                <html:foreach expression="StandardRecordInfo standardRecord in standardRecordList">  
+                    <span class="multiStandardBlock" title="<$standardRecord.ValueList$>" onClick="selectMultiStandard('<$standardRecord.ProductID$>')"><$standardRecord.ValueList$></span>
+                </html:foreach>
+            </div> 
+        </html:if>  
+        <div class="height10"></div> 
+        <div class="buy clear">                
+            <html:if expression="leftStorageCount>0">
+                <div>数量：<input type="text" class="input count" id="BuyCount" value="1" onBlur="countPrice(this.value,<$leftStorageCount$>)" /> 小计：￥<span id="currentTotalMemberPrice"><$currentMemberPrice$></span>  <a href="javascript:collectProduct(<$product.ID$>)">收藏</a> </div><div><input class="insertBt" value="放入购物车"  type="button" onClick="addToCart(<$product.ID$>,'<$product.Name$>',<$product.StandardType$>)"/>  <input class="insertBt" value="立即购买"  type="button" onClick="buyNow(<$product.ID$>,'<$product.Name$>',<$product.StandardType$>)"/></div>
+            <html:else>
+                <div><input class="bigbutton" value="缺货登记"  type="button" onClick="bookingProduct(<$product.ID$>,'<$product.Name$>',<$product.StandardType$>)"/>  <a href="javascript:collectProduct(<$product.ID$>)">收藏</a></div>
+            </html:if>                
+        </div>
+    </div>
+    
+</div>
+                        <!--相似艺术品-->
+                        <!--标题-->
+                        <div class="art_titlebox">
+                        		<a class="more" href="artwork.html">更多</a>
+                                <div class="title">相似艺术品</div>
+                        </div>
+                        <!--艺术品列表-->
+                        <div class="art_artworkList">
+                        		<ul>
+                                		<li>
+                                                <a href="productInside.html"><img src="images/blueart_artwork01.jpg"></a>
+                                                <p><a href="productInside.html">龙泉青瓷</a></p>
+                                        </li>
+                                		<li>
+                                                <a href="productInside.html"><img src="images/blueart_artwork02.jpg"></a>
+                                                <p><a href="productInside.html">龙泉青瓷</a></p>
+                                        </li>
+                                		<li>
+                                                <a href="productInside.html"><img src="images/blueart_artwork03.jpg"></a>
+                                                <p><a href="productInside.html">龙泉青瓷</a></p>
+                                        </li>
+                                		<li>
+                                                <a href="productInside.html"><img src="images/blueart_artwork04.jpg"></a>
+                                                <p><a href="productInside.html">龙泉青瓷</a></p>
+                                        </li>
+                                  </ul>
+                         </div>
+                </div>
+        		<html:include file="Right.htm" />
+        </div>
+        <html:include file="Foot.htm" />
+        <script language="javascript" type="text/javascript" src="<html:templatePath>/Js/Scroll.js" ></script>
+		<script language="javascript" type="text/javascript" src="<html:templatePath>/Js/ProductDetail.js" ></script>
+        <script language="javascript">
+            var productID=<$product.ID$>;
+            pageInit(<$product.AllowComment$>);
+        </script> 
+
+</body>
+</html>

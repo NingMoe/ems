@@ -1,0 +1,172 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>成绩列表</h1>
+                </div>
+                <div id="score_list">
+                    <form id="searchform" action="" method="get" autocomplete="off">
+                        <div class="filter">
+                            <div class="filter_area">
+                                <a class="filter_btn active">筛选区域<i class="icon-flex"></i><span>展开</span></a>
+                            </div>
+                            <table class="filter_table hide">
+                                <tbody>
+                                    <html:if expression="base.ExistsSonCompany && base.CompareUserPower("ManageGroupCompany",PowerCheckType.Single)">
+                                    <tr>
+                                        <td class="filter_label">公司</td>
+                                        <td class="filter_content" colspan="3">
+                                            <select class="form_select form_long" id="CompanyID" name="CompanyID">
+                                                <option value="">请选择公司</option>
+                                                <html:foreach expression="CompanyInfo company in base.SonCompanyList">
+                                                <option value="<$company.CompanyId$>"<$(company.CompanyId == companyID?" selected":"") $>><$company.CompanyName$></option>
+                                                </html:foreach>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    </html:if>
+                                    <tr>
+                                        <td class="filter_label">课程名称</td>
+                                        <td class="filter_content" colspan="3">
+                                            <input class="form_con w200" type="text" name="CourseName" id="CourseName" value="<$courseName$>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label">考试时间</td>
+                                        <td class="filter_content" colspan="3">
+                                            <input class="form_con Wdate w120" type="text" name="SearchStartDate" id="SearchStartDate" value="<$(startDate != DateTime.MinValue?startDate.ToString("d"):"")$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'#F{$dp.$D(\\'SearchEndDate\\')}'})">
+                                            <label class="form_txt" for="">——</label>
+                                            <input class="form_con Wdate w120" type="text" name="SearchEndDate" id="SearchEndDate" value="<$(endDate != DateTime.MinValue?endDate.AddDays(-1).ToString("d"):"")$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'#F{$dp.$D(\\'SearchStartDate\\')}',startDate:'#F{$dp.$D(\\'SearchStartDate\\')}'})">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label">用户名</td>
+                                        <td class="filter_content">
+                                            <input class="form_con w120" type="text" name="UserName" id="UserName" value="<$userName$>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label">姓名</td>
+                                        <td class="filter_content">
+                                            <input class="form_con w120" type="text" name="RealName" id="RealName" value="<$realName$>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label">分数</td>
+                                        <td class="filter_content">
+                                            <input class="form_con w120" type="text" name="Score" id="Score" value="<$(score>0?score.ToString():"")$>">
+                                            <label class="form_txt" for="">及以上</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label">通过状态</td>
+                                        <td class="filter_content">
+                                            <select class="form_select w120" id="IsPass" name="IsPass">
+                                                <option value="">所有</option>
+                                                <option value="1"<$(isPass == 1?" selected":"") $>>通过</option>
+                                                <option value="0"<$(isPass == 0?" selected":"") $>>未通过</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="filter_label" colspan="4">                                  
+                                            <input class="form_button" id="SearchButton" type="submit" value="搜 索">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <!-- <form id="searchform" action="" method="get" autocomplete="off">
+                        <div class="form_group form_center">
+                            <html:if expression="base.ExistsSonCompany && base.CompareUserPower("ManageGroupCompany",PowerCheckType.Single)">
+                            <label class="form_txt" for="CompanyID">公司：</label>
+                            <select class="form_select form_long" id="CompanyID" name="CompanyID">
+                                <option value="">请选择公司</option>
+                                <html:foreach expression="CompanyInfo company in base.SonCompanyList">
+                                <option value="<$company.CompanyId$>"<$(company.CompanyId == companyID?" selected":"") $>><$company.CompanyName$></option>
+                                </html:foreach>
+                            </select>
+                            </html:if>
+                            <label class="form_txt" for="UserName">用户名：</label>
+                            <input class="form_con" type="text" name="UserName" id="UserName" value="<$userName$>">
+                            <label class="form_txt" for="RealName">姓名：</label>
+                            <input class="form_con" type="text" name="RealName" id="RealName" value="<$realName$>">
+                            <label class="form_txt" for="CourseName">课程名称：</label>
+                            <input class="form_con form_long" type="text" name="CourseName" id="CourseName" value="<$courseName$>">
+                            <label class="form_txt" for="UserName">时间：</label>
+                            <input class="form_con form_date Wdate" type="text" name="SearchStartDate" id="SearchStartDate" value="<$(startDate != DateTime.MinValue?startDate.ToString("d"):"")$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'#F{$dp.$D(\\'SearchEndDate\\')}'})">
+                            <label class="form_txt date_line" for="">——</label>
+                            <input class="form_con form_date Wdate" type="text" name="SearchEndDate" id="SearchEndDate" value="<$(endDate != DateTime.MinValue?endDate.AddDays(-1).ToString("d"):"")$>" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,minDate:'#F{$dp.$D(\\'SearchStartDate\\')}',startDate:'#F{$dp.$D(\\'SearchStartDate\\')}'})">
+                            <label class="form_txt" for="IsPass">通过状态：</label>
+                            <select class="form_select form_long" id="IsPass" name="IsPass">
+                                <option value="">所有</option>
+                                <option value="1"<$(isPass == 1?" selected":"") $>>通过</option>
+                                <option value="0"<$(isPass == 0?" selected":"") $>>未通过</option>
+                            </select>
+                            <label class="form_txt" for="Score">分数：</label>
+                            <input class="form_con form_long" type="text" name="Score" id="Score" value="Score">以上
+                            <input class="form_cjlb_button" id="SearchButton" type="submit" value="搜 索">
+                        </div>
+                    </form> -->
+                    <table class="score_list evaluation_sheet">
+                        <tr>
+                            <th class="course">课程名称</th>
+                            <th class="score">分数</th>
+                            <th class="name">姓名</th>
+                            <th class="company">公司名称</th>
+                            <th class="time">考试时间</th>
+                        </tr>
+                        <html:foreach expression="TestPaperInfo testPaper in testPaperList">
+                        <tr>
+                            <td><$testPaper.PaperName$></td>
+                            <td><$testPaper.Scorse$></td>
+                            <td><$GetRealName(testPaper.UserId)$></td>
+                            <td><$GetCompanyName(testPaper.CompanyId)$></td>
+                            <td><$testPaper.TestDate.ToString()$></td>
+                        </tr>
+                        </html:foreach>
+                    </table>
+                    <$CommonPager.ShowPage()$>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+    <script type="text/javascript" src="<html:templatePath>/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("#SearchButton").click(function(event) {
+        if($("#CompanyID").val() == '' && $("#UserName").val() == '' && $("#RealName").val() == '' && $("#CourseName").val() == ''){
+            layer.msg('请至少选择或填写一项');
+            return false;
+        }
+        if($("#UserName").val() != '' && $("#UserName").val().length<5){
+            layer.msg('用户名搜索长度最少为5位');
+            return false;
+        }
+        if($("#RealName").val() != '' && $("#RealName").val().length<2){
+            layer.msg('姓名搜索长度最少为2位');
+            return false;
+        }
+        $("#searchform").submit();
+        var index = layer.load(1, {
+          shade: [0.5,'#000'] //0.1透明度的白色背景
+        });
+    });
+})
+</script>
+</body>
+</html>

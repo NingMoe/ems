@@ -1,0 +1,213 @@
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <html:include file="Head.htm" />
+    <link rel="stylesheet" href="<html:templatePath>/css/course.css">
+    <link rel="stylesheet" href="<html:templatePath>/font/hui-icon.css">
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/97729/19491/587af53df629d81b881ebe20.css' rel='stylesheet' type='text/css' />
+    <link href='<$ShopConfig.ReadConfigInfo().IconFontPath$>' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div class="container-fluid wrap">
+        <html:include file="Top.htm" />
+        <!-- main -->
+        <div class="course-centermain">
+            <div class="container">
+                <div class="position">
+                    <p>当前位置：<a href="/">首页</a>>><a class="active">选课中心</a><span class="returnhome"><a href="/">返回首页</a></span></p>
+                </div>
+                <div class="wrap clearfix">
+                    
+                    <div class="course-multi-type clearfix">
+                        <div class="course-first-category">
+                            <a href="javascript:void(0);" class="category-text">已选条件</a>
+                        </div>
+                        <div class="course-category">
+                            <ul class="clearfix">
+                                <$showCondition$>
+                            </ul>
+                        </div>
+                        <html:csharp>/*</html:csharp>
+                        <!-- <div class="course-category"><i class="hui-icon hui-icon-carat-r-small"></i>
+                            <a class="category-text"><span href="javascript:void(0);">品牌</span> <i class="hui-icon hui-icon-carat-d-small"></i></a>
+                            <div class="course-category-list">
+                                <a href="javascript:void(0);">岗位</a>
+                                <a href="javascript:void(0);">模块</a>
+                                <a href="javascript:void(0);">种类</a>
+                            </div>
+                        </div>
+                        <div class="course-category">
+                            <i class="hui-icon hui-icon-carat-r-small"></i>
+                            <a class="category-text"><span href="javascript:void(0);">北京现代</span><i class="hui-icon hui-icon-carat-d-small"></i>
+                            </a>
+                            <div  class="course-category-list">
+                                <a href="javascript:void(0);">北京现代</a>
+                                <a href="javascript:void(0);">北京现代</a>
+                                <a href="javascript:void(0);">北京现代</a>
+                                <a href="javascript:void(0);">北京现代</a>
+                            </div>
+                        </div> --> 
+                        <html:csharp>*/</html:csharp>                     
+                    </div>
+
+                    <ul class="course-category-all clearfix">
+                        <li class="course-category-li clearfix" data-id="ClassID">
+                            <h3><a href="javascript:void(0);">课程分类</a>：</h3>
+                            <ul class="category-list" style="height: auto;">
+                                <li class="select-all<$((classID<0)?" selected":"")$>"><a href="?">不限</a></li>
+                                <li class="<$(classID==8 ?"selected":"")$>"><a href="?ClassID=8">基础知识培训</a> <i class="hui-icon hui-icon-close"></i></li>
+                                <li class="<$(classID==5 ?"selected":"")$>"><a href="?ClassID=5">产品知识培训</a> <i class="hui-icon hui-icon-close"></i></li>
+                                <li class="<$(classID==6 ?"selected":"")$>"><a href="?ClassID=6">竞车话术培训</a> <i class="hui-icon hui-icon-close"></i></li>
+                                <li class="<$(classID==9 ?"selected":"")$>"><a href="?ClassID=9">销售流程与技巧培训</a> <i class="hui-icon hui-icon-close"></i></li>
+                                <li class="<$(classID==10 ?"selected":"")$>"><a href="?ClassID=10">销售运营管理培训</a> <i class="hui-icon hui-icon-close"></i></li>
+                                <li class="<$(classID==3550 ?"selected":"")$>"><a href="?ClassID=3550">综合管理知识</a> <i class="hui-icon hui-icon-close"></i></li>
+                            </ul>
+                        </li>
+                        <html:csharp>/*</html:csharp>
+                        <!-- <li class="course-category-li clearfix" data-id="BrandID">
+                            <h3><a href="javascript:void(0);">品牌</a>：</h3>
+                            <ul class="category-list">
+                                <html:csharp>string searchURL=FilterSearchConditionUrl("BrandID");</html:csharp>
+                                <li class="select-all selected"><a href="?<$searchURL$>">不限</a></li>
+                                <html:foreach expression="ProductBrandInfo productBrand in productBrandList">
+                                <li><a href="?BrandID=<$productBrand.ID$>&<$searchURL$>"><$productBrand.Name$></a> <i class="hui-icon hui-icon-close"></i></li>
+                                </html:foreach>
+                            </ul>
+                            <a class="more-category">更多</a>
+                        </li>
+
+                        <li class="course-category-li clearfix" data-id="PostID">
+                            <h3><a href="javascript:void(0);">岗位</a>：</h3>
+                            <ul class="category-list">
+                                <html:csharp>searchURL=FilterSearchConditionUrl("PostID");</html:csharp>
+                                <li class="select-all selected"><a href="?<$RequestHelper.FilterRequestQueryString(new string[]{"PostID"})$>">不限</a></li>
+                                <html:foreach expression="PostInfo post in postList">
+                                <li><a href="?PostID=<$post.PostId$>&<$RequestHelper.FilterRequestQueryString(new string[]{"PostID"})$>"><$post.PostName$></a> <i class="hui-icon hui-icon-close"></i></li>
+                                </html:foreach>
+                            </ul>
+                            <a class="more-category">更多</a>
+                        </li>
+
+                        <li class="course-category-li clearfix" data-id="ClassID">
+                            <h3><a href="javascript:void(0);">模块</a>：</h3>
+                            <ul class="category-list">
+                                <html:csharp>searchURL=FilterSearchConditionUrl("PostID");</html:csharp>
+                                <li class="select-all selected"><a href="?<$RequestHelper.FilterRequestQueryString(new string[]{"ClassID"})$>">不限</a></li>
+                                <html:foreach expression="ProductClassInfo productClass in productClassList">
+                                <li><a href="?ClassID=<$productClass.ID$>&<$RequestHelper.FilterRequestQueryString(new string[]{"ClassID"})$>"><$productClass.ClassName$></a> <i class="hui-icon hui-icon-close"></i></li>
+                                </html:foreach>
+                            </ul>
+                            <a class="more-category">更多</a>
+                        </li>
+
+                        <li class="course-category-li clearfix" data-id="select4">
+                            <h3><a href="javascript:void(0);">种类</a>：</h3>
+                            <ul class="category-list">
+                                <li class="select-all"><a href="javascript:void(0);">不限</a></li>
+                                <li><a href="javascript:void(0);">推荐课程</a> <i class="hui-icon hui-icon-close"></i></li>
+                                <li><a href="javascript:void(0);">免费课程</a> <i class="hui-icon hui-icon-close"></i></li>
+                                <li><a href="javascript:void(0);">热销课程</a> <i class="hui-icon hui-icon-close"></i></li>
+                            </ul>
+                        </li> -->
+                        <html:csharp>*/</html:csharp>
+                    </ul>
+                </div>
+                <!-- 筛选结束 -->
+                
+                <!-- 课程开始 -->
+                <div class="course-list-block clearfix" id="toolbar">
+                    <div class="main clearfix fl">
+                        <div class="tool-bar clearfix">
+                            <div class="toolbar-order-type clearfix">
+                                <a href="javascript:void(0);" class="order-type active">综合</a>
+                                <!-- <a class="order-type" href="javascript:void(0);">价格<span class="icon-wrap"><i class="hui-icon hui-icon-carat-u-small"></i><i class="hui-icon hui-icon-carat-d-small"></i></span></a>
+                                <a href="javascript:void(0);" class="order-type">人气 <span class="icon-wrap"><i class="hui-icon hui-icon-arrow-down"></i></span></a> -->
+                            </div>
+                        </div>
+                        <div class="main clearfix fl">
+                            <div class="course-list-block clearfix">
+                                <div class="main clearfix fl">
+                                    <ul class="course-list-stark clearfix">  
+                                        <html:foreach expression="ProductInfo product in productSearchList">
+                                        <li class="list-stark clearfix">
+                                            <a class="img-wrap preset-img" href="javascript:OpenVideo(<$product.ID$>,'<$product.Name$>');"><img src="<$product.Photo$>"></a>
+                                            <div class="info">
+                                                <div class="course-stark-title">
+                                                    <a class="title-text" href="javascript:OpenVideo(<$product.ID$>,'<$product.Name$>');"><$product.Name$></a>
+                                                    <!-- <a href="course_detail.html" class="audition" title="<$product.Name$>"><i class="icon-listen"></i>试听</a> -->
+                                                </div>
+                                                <div class="discript"><span></span><span><$product.Introduction$></span></div>
+                                                <!-- <span class="price">￥<$product.MarketPrice$></span>
+                                                <del>￥2188</del> 
+                                                <span class="start-time">
+                                                    <i class="hui-icon hui-icon-timer"></i>
+                                                    <strong>32</strong>
+                                                    <span> 天后开班</span>
+                                                </span>-->
+
+                                                <div class="remark">
+                                                    <!-- <span>2016.08.22至2016.08.22</span> / 总 <span>30</span> 课时 <span class="team">老师：孟特教学组</span>-->
+                                                    <span>授课老师：<$product.Editor$></span>
+                                                </div>
+                                                <!-- <a target="_blank" class="detail" href="CourseDetail.aspx?ID=<$product.ID$>">查看详情</a> -->
+                                                <a class="detail" href="javascript:OpenVideo(<$product.ID$>,'<$product.Name$>');">
+                                                    <i class="iconfont icon-bofang"></i>
+                                                    播放视频
+                                                </a>
+                                            </div>
+                                        <!-- <div class="fr scalInfo"><span class="tag normal"><span>惠</span></span></div> -->
+                                        </li>
+                                        </html:foreach>
+                                    </ul>
+                                    <$commonPagerClass.ShowPage()$>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--侧边栏部分-->
+                    <div class="side-bar fl clearfix">
+                        <div class="ad-wrap clearfix">
+                            <div class="advertisement">
+                                <a href="http://www.u2-solar.com/main.asp" target="_blank" rel="nofollow"><img src="<html:templatePath>/images/adv/1.jpg" width="230px"></a>
+                            </div>
+                            <div class="advertisement">
+                                <a href="/Plugins/Adv/JingPai/index.html" target="_blank"><img src="<html:templatePath>/images/adv/2.jpg" width="230px"></a>
+                            </div>
+                            <div class="advertisement">
+                                <a href="http://www.pen-links.com/" target="_blank" rel="nofollow"><img src="<html:templatePath>/images/adv/3.jpg" width="230px"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 课程结束 -->
+            </div>
+        </div>
+    </div>
+
+    <html:include file="Foot.htm" />
+    <script type="text/javascript" src="<html:templatePath>/js/course.js" ></script>
+    <script type="text/javascript">
+    var OpenVideo = function(productID, name) {
+        <html:if expression="base.UserID==0">
+        window.location.href="/User/Login.aspx?RedirectUrl="+window.location.pathname+window.location.search;
+        <html:else>
+        layer.open({
+            type: 2,
+            title: name,
+            skin: 'layui-layer-rim', //加上边框
+            area: ['1020px', '518px'],
+            resize: false,
+            scrollbar: false,
+            content: '/Verify.aspx?ID='+ productID //iframe的url
+        }); 
+        </html:if>
+    }
+    </script>
+</body>
+</html>

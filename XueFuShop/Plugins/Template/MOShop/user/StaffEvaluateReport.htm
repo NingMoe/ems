@@ -1,0 +1,125 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>综合能力评估</h1>
+                </div>
+                <div id="general_evaluation_countdetail" class="choose_company">
+                    <div class="CountDetail">
+                        <html:if expression="action != "Detail"">
+                        <html:if expression="base.ExistsSonCompany">
+                        <form id="searchform" action="" method="post">
+                            <div class="form_group form_center form_br form_width">
+                                <label class="form_txt" for="CompanyID">公司名称：</label>
+                                <select class="form_select" name="CompanyID" id="CompanyID">
+                                    <option value="">请选择公司</option>
+                                    <option value="0"<$(companyID == 0 ? " selected" : "")$>>集团所有公司</option>
+                                    <html:foreach expression="CompanyInfo company in base.SonCompanyList">
+                                    <option value="<$company.CompanyId$>"<$(company.CompanyId==companyID?" selected":"")$>><$company.CompanyName$></option>
+                                    </html:foreach>
+                                </select>
+                                <label class="form_txt" for="EvaluationName">工作岗位：</label>
+                                <select class="form_select" name="PostID" id="PostID">
+                                    <%=GetPostNameListHtml()%>
+                                </select>
+                            </div>
+                            <div class="form_group form_center form_width">
+                                <label class="form_txt" for="EvaluationName">评估名称：</label>
+                                <select class="form_select" name="EvaluationName" id="EvaluationName">
+                                    <$EvaluateNameBLL.GetEvaluateNameListHtml(base.GetCompanyIDString(companyID),evaluateNameId)$>
+                                </select>
+                                <label class="form_txt" for="EvaluationType">评估类型：</label>
+                                <select class="form_select" name="EvaluationType" id="EvaluationType">
+                                    <option value="">请选择评估类型</option>
+                                    <option value="530"<$(evaluateType == 530?" selected":"")$>>员工综合能力评估</option>
+                                    <option value="541"<$(evaluateType == 541?" selected":"")$>>主管综合能力评估</option>
+                                    <option value="564"<$(evaluateType == 564?" selected":"")$>>经理综合能力评估</option>
+                                </select>
+                                <input class="form_button" name="query" id="query" type="button" value="查 询">
+                                <input id="action" name="action" type="hidden" value="Search">
+                            </div>
+                        </form>
+                        <html:else>
+                        <form id="searchform" action="" method="post">
+                            <div class="form_group form_center">
+                                <label class="form_txt" for="EvaluationType">评估类型：</label>
+                                <select class="form_select" name="EvaluationType" id="EvaluationType">
+                                    <option value="">请选择评估类型</option>
+                                    <option value="530"<$(evaluateType == 530?" selected":"")$>>员工综合能力评估</option>
+                                    <option value="541"<$(evaluateType == 541?" selected":"")$>>主管综合能力评估</option>
+                                    <option value="564"<$(evaluateType == 564?" selected":"")$>>经理综合能力评估</option>
+                                </select>
+                                <label class="form_txt" for="EvaluationName">评估名称：</label>
+                                <select class="form_select" name="EvaluationName" id="EvaluationName">
+                                    <$EvaluateNameBLL.GetEvaluateNameListHtml(base.GetCompanyIDString(companyID),evaluateNameId)$>
+                                </select>
+                                <label class="form_txt" for="EvaluationName">工作岗位：</label>
+                                <select class="form_select" name="PostID" id="PostID">
+                                    <%=GetPostNameListHtml()%>
+                                </select>
+                                <input class="form_button" name="query" id="query" type="button" value="查 询">
+                                <input id="action" name="action" type="hidden" value="Search">
+                            </div>
+                        </form>
+                        </html:if>
+                        </html:if>
+                        <html:if expression="!string.IsNullOrEmpty(action)">
+                        <html:if expression="action == "Detail"">
+                        <br>
+                        <div class="CountDetail_head">
+                            <div class="CountDetail_title">综合能力评估</div>
+                            <ul class="clearfix">
+                                <li class="li_1">姓名</li>
+                                <li class="li_2"><$user.RealName$></li>
+                                <li class="li_3">评估名称</li>
+                                <li class="li_4"><$evaluateName.EvaluateName$></li>
+                                <li class="li_5">评估时间段</li>
+                                <li class="li_6"><$evaluateName.StartDate$>到<$evaluateName.EndDate$></li>
+                            </ul>
+                        </div>
+                        </html:if>
+                        <table class="sheet">
+                            <$tableContent.ToString()$>
+                        </table>
+                        <html:if expression="action == "Detail"">
+                        <div class="action">
+                            <input type="button"  value=" 返 回 " class="button" onclick="javascript:history.go(-1);"/>
+                        </div>
+                        </html:if>
+                        </html:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+
+    <script>
+        $(document).ready(function(){
+            var tableWidth = $(".sheet").width();
+            $(".CountDetail_head").width(tableWidth);
+            
+            $("#query").click(function(){
+                var evaluateType=$("#EvaluationType").val(),
+                evaluateNameId=$("#EvaluationName").val();
+                if(evaluateType != "" && evaluateNameId != "")
+                    $("#searchform").submit();
+                else
+                    alert("请选择评估类型和评估名称");
+            });
+            $(".sheet tr:eq(0)").after($(".count").clone());
+        });
+    </script>
+</body>
+</html>

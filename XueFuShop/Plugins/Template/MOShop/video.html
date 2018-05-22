@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>视频 - 孟特</title>
+    <link rel="shortcut icon" type="image/ico" href="./images/favicon.ico">
+    <link rel="bookmark" href="./images/favicon.ico">
+    
+    <link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/willesPlay.css"/>
+    <link rel="stylesheet" href="./css/soboxvideo.css">
+    <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="willesPlay">
+                        <div class="playHeader">
+                            <!-- <div class="videoName">Tara - 懂的那份感觉</div> -->
+                            <a href="javascript:history.go(-1)" class="videoclose">×</a>
+                        </div>
+                        <div class="playContent">
+                            <div class="turnoff">
+                                <ul>
+                                    <li><a href="javascript:;" title="喜欢" class="glyphicon glyphicon-heart-empty"></a></li>
+                                    <li><a href="javascript:;" title="关灯" class="btnLight on glyphicon glyphicon-sunglasses"></a></li>
+                                    <li><a href="javascript:;" title="分享" class="glyphicon glyphicon-share"></a></li>
+                                </ul>
+                            </div>
+                            <video width="100%" height="100%" id="playVideo">
+                                <source src="http://yuntv.letv.com/bcloud.html?uu=debb2235d3&vu=fdb1d50cff&auto_play=1&width=640&height=360&lang=zh_CN" type="video/mp4"></source>
+                                当前浏览器不支持 video直接播放，点击这里下载视频： <a href="/">下载视频</a>
+                            </video>
+                            <div class="playTip glyphicon glyphicon-play"></div>
+                            
+                        </div>
+                        <div class="menu">
+                            <div class="title"><span>视频列表视频列表视频列表</span><a href="javascript:;" class="menu-bar"><img src="./images/video.png" alt="目录"></a></div>
+                            <ul class="content mCustomScrollbar">
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                                <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+                            </ul>
+                        </div>
+                        <div class="playControll">
+                            <div class="playPause playIcon"></div>
+                            <div class="timebar">
+                                <span class="currentTime">0:00:00</span>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                                    </div>
+                                <span class="duration">0:00:00</span>
+                            </div>
+                            <div class="otherControl">
+                                <span class="volume glyphicon glyphicon-volume-down"></span>
+                                <span class="fullScreen glyphicon glyphicon-fullscreen"></span>
+                                <div class="volumeBar">
+                                    <div class="volumewrap">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 8px;height: 40%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/willesPlay.js"></script>
+
+<script src="./js/jquery.sobox.js"></script>
+
+<script>
+    $('.playTip').click(function () {
+    $.sobox.pop({
+        cls:'subsidy-box',
+        drag :false, // 是否可拖动
+        maskClick : true, // 点击背景关闭内容
+
+        title:'视频验证',
+        width:1200,
+        content:'<div class="left"><form>   <div class="clearfix"><label>手机号码：</label><input type="text" name="mphone" id="mphone" value="手机号" class="txt" required="required"></div>   <div class="clearfix"><label>图形验证码：</label><input type="text" name="myzm" id="myzm" value="" class="yzm" required="required"><img class="checkcode" src="./images/checkcode.png"><a class="choose">看不清换一张</a></div>   <div class="clearfix"><a class="freshyzm">重新获取验证码</a></div>   <div class="clearfix"><input type="text" name="myzm2" id="myzm2" value="" class="yzm2" required="required"></div> <div class="clearfix"><input type="submit" name="myzm2" id="myzm2" value="提交" class="submit2" required="required"></div> </form>   </div>   <div class="right"> <ul class="right-ul1">   <div class="title">注意事项：</div> <li>1.同一手机号码每天只可发送十次验证码，请勿随意操作。</li><li>2.验证码两分钟内有效，有限时间内任何视频或多次打开同一视频都无需重发验证码。</li></ul>   <ul class="right-ul2">  <div class="title">使用流程：</div>  <li>1、输入您的手机号</li><li>2、点击短信获取验证码</li><li>3、当手机接收到短信，您将获得验证码</li><li>4、将获得的验证码输入，并点击提交按钮，系统将会自动判断所输入的验证码是否正确</li></ul></div>',
+        btn:[
+        ]
+
+    });
+    return false;
+});
+</script>
+
+<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+    
+    <script>
+        (function($){
+            $(window).on("load",function(){
+                
+                $("#content-1").mCustomScrollbar({
+                    autoHideScrollbar:true,
+                    theme:"rounded"
+                });
+                
+            });
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>

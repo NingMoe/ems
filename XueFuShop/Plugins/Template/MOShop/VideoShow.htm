@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <html:include file="Head.htm" />
+<style>
+body { background: #000; }
+#willesPlay{
+    width: 860px;
+    height: 360px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+#willesPlay .playContent{
+    float: left;
+    width: 640px;
+    height: auto;
+    overflow: hidden;
+    background:#000;
+    cursor: pointer;
+}
+#willesPlay .menu {
+    float: right;
+    width: 220px;
+    height: 100%;
+    background-color: #fff;
+}
+
+#willesPlay .menu .title {
+    position: relative;
+    color: #4e4e4e;
+    font-size: 16px;
+    padding-left: 35px;
+    border-bottom: 1px solid #ccc;
+    line-height: 40px;
+}
+#willesPlay .menu .menu-bar {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+}
+#willesPlay .menu ul li {
+    line-height: 40px;
+    margin: 0 20px;
+    border-bottom: 1px dashed #ccc;
+    font-size: 14px;
+}
+#willesPlay .menu ul li a { color: #6e6e6e; }
+#willesPlay .menu ul li a:hover { color: #18bd9c; }
+</style>
+</head>
+<body>
+<div id="willesPlay">
+    <div class="playContent">
+        <iframe src="http://yuntv.letv.com/bcloud.html?uu=debb2235d3&vu=fdb1d50cff&auto_play=1&width=640&height=360&lang=zh_CN" style=" width: 640px; height: 360px;"></iframe>
+    </div>
+    <div class="menu">
+        <div class="title"><span>视频列表</span><a href="javascript:;" class="menu-bar"><img src="<html:templatePath>/images/video.png" alt="目录"></a></div>
+        <ul class="content mCustomScrollbar">
+            <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+            <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+            <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+            <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+            <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+            <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+            <li><a href="javascript:;">视频名称：汽车销售课程</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

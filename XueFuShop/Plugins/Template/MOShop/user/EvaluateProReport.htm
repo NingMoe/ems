@@ -1,0 +1,66 @@
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <html:include file="user/UserHead.htm" />
+</head>
+<body>
+    <html:include file="user/UserTop.htm" />
+    <div class="ordermain">
+        <div class="clearfix ordermana">
+            <html:include file="user/UserLeft.htm" />
+            <div class="right">
+                <div class="title"><h3 class="slide-title">岗位评估报表</h3></div>
+                <div class="slideTxtBox">
+                    <div class="bd">
+                        <ul>
+                            <table>
+                                <tbody>
+                                <tr class="green">
+                                    <th class="w130"><span class="ml10">序号</span></th>
+                                    <th class="w130"><span class="ml10">评估名称</span></th>
+                                    <th class="w130"><span class="ml10">姓名</span></th>
+                                    <th class="w130"><span class="ml10">岗位</span></th>
+                                    <th class="w130"><span class="ml10">通过率</span></th>
+                                    <th class="w130"><span class="ml10">积分</span></th>
+                                    <th class="w130"><span class="ml10">操作</span></th>
+                                </tr>
+                                <html:csharp>int i=0;</html:csharp>
+                                <html:foreach expression="KPIEvaluateReportInfo kpiEvaluateReport in reportList">
+                                <html:csharp>i++;</html:csharp>
+                                <tr class="border-b">
+                                    <td><$i$></td>
+                                    <td><$kpiEvaluateReport.EvaluateName$></td>
+                                    <td><$kpiEvaluateReport.UserName$></td>
+                                    <td><$kpiEvaluateReport.PostName$></td>
+                                    <td><$kpiEvaluateReport.Rate$>%</td>
+                                    <td><$kpiEvaluateReport.TotalScore$>分</td>
+                                    <td><a class="check" href="javascript:OpenPage('EvaluateShow.aspx?EvaluateName=<$kpiEvaluateReport.EvaluateName$>&UserName=<$kpiEvaluateReport.UserName$>&PostName=<$kpiEvaluateReport.PostName$>&UserId=<$kpiEvaluateReport.UserId$>&PostId=<$kpiEvaluateReport.PostId$>&EvaluateNameId=<$kpiEvaluateReport.EvaluateNameId$>')">查看</a></td>
+                                </tr>
+                                </html:foreach>
+                                </tbody>
+                            </table>
+                        </ul>
+                    </div>
+                </div>
+                <$CommonPager.ShowPage()$>
+            </div>
+        </div>
+    </div>
+
+<html:include file="Foot.htm" />
+<script type="text/javascript">
+var OpenPage = function(url) {
+    layer.open({
+        type: 2,
+        title: '评估结果',
+        skin: 'layui-layer-rim', //加上边框
+        area: ['1000px', '518px'],
+        scrollbar: false,
+        content: url //iframe的url
+    }); 
+}
+</script>
+</body>
+</html>

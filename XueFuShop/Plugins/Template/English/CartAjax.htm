@@ -1,0 +1,67 @@
+﻿<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<div class="orderTitle">购物车</div>
+<div class="tabTitleBox">
+    <table width="700" border="0" cellspacing="0" cellpadding="0" class="tabTitle">
+        <tr>
+            <td style="width:120px" height="40" align="center" valign="middle">艺术品</td>
+            <td style="width:260px"></td>
+            <!--<td style="width:80px">赠送积分</td>-->
+            <td style="width:80px" align="center">单价</td>
+            <td style="width:80px" align="center">数量</td>
+            <td style="width:80px" align="center">小计</td>
+            <td style="width:80px" align="center">操作</td>
+        </tr>
+    </table>
+</div>
+<div class="shopCartTabBox">
+    <table width="700" border="0" cellspacing="0" cellpadding="0" class="shopCartTab">
+        <html:foreach expression="CartGiftPackVirtualInfo cartGiftPackVirtual in cartGiftPackVirtualList">  
+        <tr valign="middle" id="Cart<$cartGiftPackVirtual.StrCartID$>">
+            <td style="width:140px" class="photo"><a href="/GiftPackDetail-I<$cartGiftPackVirtual.GiftPackID$>.aspx" target="_blank"><img src="<$cartGiftPackVirtual.GiftPackPhoto.Replace("Original","150-60")$>"  onload="photoLoad(this,60,60)" /></a></td>
+            <td style="width:260px; text-align:left; text-indent:8px;"><$cartGiftPackVirtual.GiftPackName$>
+                <div class="smallBox">
+                    <html:foreach expression="CartInfo cart in cartGiftPackVirtual.CartList">
+                    <html:csharp>ProductInfo product = ProductBLL.ReadProductByProductList(productList, cart.ProductID);</html:csharp>
+                    <div><img  src="<$product.Photo.Replace("Original","60-60")$>"  onload="photoLoad(this,30,30)" style=" vertical-align:middle"/> <$cart.ProductName$></div>
+                    </html:foreach>
+                </div>
+            </td>
+            <!--<td style="width:80px"><$cartGiftPackVirtual.TotalSendPoint$></td>-->
+            <td style="width:80px">￥<$cartGiftPackVirtual.TotalPrice$></td>
+            <td style="width:80px"><input type="hidden" id="BuyCount<$cartGiftPackVirtual.StrCartID$>" value="<$cartGiftPackVirtual.GiftPackBuyCount$>" /><input  type="text" class="input" value="<$cartGiftPackVirtual.GiftPackBuyCount$>"  onblur="changeOrderProductBuyCount('<$cartGiftPackVirtual.StrCartID$>',this,<$cartGiftPackVirtual.TotalPrice$>,<$cartGiftPackVirtual.CartList.Count$>,<$cartGiftPackVirtual.LeftStorageCount$>,<$cartGiftPackVirtual.TotalProductWeight$>)"/></td>
+            <td style="width:80px" id="CartProductPrice<$cartGiftPackVirtual.StrCartID$>">￥</td>
+            <td><a href='javascript:void(0)' onclick="deleteOrderProduct('<$cartGiftPackVirtual.StrCartID$>',<$cartGiftPackVirtual.TotalPrice$>,<$cartGiftPackVirtual.CartList.Count$>,<$cartGiftPackVirtual.TotalProductWeight$>)">删除</a></td>
+        </tr>
+        </html:foreach>
+        <html:foreach expression="CartCommonProductVirtualInfo cartCommonProductVirtual in cartCommonProductVirtualList">  
+        <html:csharp>ProductInfo product = ProductBLL.ReadProductByProductList(productList, cartCommonProductVirtual.FatherCart.ProductID);</html:csharp>
+        <tr id="Cart<$cartCommonProductVirtual.StrCartID$>">
+            <td style="width:100px" class="photo"><a href="/ProductDetail-I<$product.ID$>.aspx" target="_blank"><img  src="<$product.Photo.Replace("Original","120-120")$>"  onload="photoLoad(this,100,100)"/></a></td>
+            <td style="width:232px; text-align:left; text-indent:8px;">
+                <$cartCommonProductVirtual.FatherCart.ProductName$>
+                <html:if expression="cartCommonProductVirtual.ChildCartList.Count>0">
+                <div class="smallBox">
+                    <html:foreach expression="CartInfo cart in cartCommonProductVirtual.ChildCartList"> 
+                    <html:csharp>ProductInfo childProduct = ProductBLL.ReadProductByProductList(productList, cart.ProductID);</html:csharp>
+                    <div><span style="color:#BF0000">[ 配件 ]</span><img  src="<$childProduct.Photo.Replace("Original","60-60")$>"   onload="photoLoad(this,30,30)" style=" vertical-align:middle"/> <$cart.ProductName$></div>
+                    </html:foreach>
+                </div>
+                </html:if>
+            </td>
+            <td style="width:60px" align="center">￥<$cartCommonProductVirtual.FatherCart.ProductPrice$></td>
+            <td style="width:60px" align="center"><input type="hidden" id="BuyCount<$cartCommonProductVirtual.StrCartID$>" value="<$cartCommonProductVirtual.FatherCart.BuyCount$>" /><input  style="width:20px;" type="text" class="input" value="<$cartCommonProductVirtual.FatherCart.BuyCount$>" onblur="changeOrderProductBuyCount('<$cartCommonProductVirtual.StrCartID$>',this,<$cartCommonProductVirtual.FatherCart.ProductPrice$>,1,<$cartCommonProductVirtual.FatherCart.LeftStorageCount$>,<$cartCommonProductVirtual.FatherCart.ProductWeight$>)" /></td>
+            <td style="width:60px" align="center" id="CartProductPrice<$cartCommonProductVirtual.StrCartID$>">￥</td>
+            <td align="center"><a href='javascript:void(0)' onclick="deleteOrderProduct('<$cartCommonProductVirtual.StrCartID$>',<$cartCommonProductVirtual.FatherCart.ProductPrice$>,1,<$cartCommonProductVirtual.FatherCart.ProductWeight$>)">删除</a></td>
+        </tr>
+        </html:foreach>
+    </table>
+    <div class="shopCartPrice">
+        <span class="totalPrice"><span id="CartProductTotalPrice">￥<$Sessions.ProductTotalPrice$></span></span>
+        <span class="total">商品总金额： </span>
+    </div>
+</div>
+<div class="height10"></div>  
+<div class="cartOperate"><a href="javascript:parent.myLightWindow.deactivate();"> <img src="<html:templatePath>/Images/cart.png"  />继续购物</a>  <a href="javascript:clearCart()"> <img src="<html:templatePath>/Images/delete.gif" /> 清空购物车</a><input  class="shopCartBt" value="立即结算"  type="button" onClick="window.location.href='/CheckOut.aspx'" /></div>

@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ background:#bfbfbf; font-family:14px; font-family:"微软雅黑", "宋体";}
+
+body,div,p,span,form,iframe,table,td,th,input,textarea,button,img,label,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6{margin:0px;padding:0px; border:0px;}
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:normal;}
+ul,ol,li,dl{list-style-type:none;}
+em,i,dfn,cite,strong,small{font-style:normal;} 
+img{border:0;}
+fieldset,button,input,select,option{vertical-align:middle;font:12px/18px "宋体",arial,sans-serif;}
+table{border-collapse:collapse;border-spacing:0}
+textarea{resize:none}
+a,input,textarea:focus{ outline:none;}
+
+.w1300{ width:1200px; margin:0px auto;}
+.h380{ height:380px;}
+.laytop{ position:fixed;background:#595959; width:100%; height:70px;}
+.navarea{height:70px; margin:0 auto; position:relative;}
+.logo{ width:151px; height:70px; margin-top: 5px; position:absolute; background:url(../images/logo.png) no-repeat; margin-left:100px;}
+
+.nav{ position:relative; width:800px; float:right; height:70px;}
+.nav ul li{  position:relative; width:140px; float:left; height:70px; line-height:70px; text-align:center; letter-spacing:0.1em; z-index:2}
+.nav ul li a{ display:block; color:#d8d8d8; font-size:16px; height:70px; text-decoration:none;}
+.nav ul li a:hover{ color:#fff}
+.move-bg{ position:absolute; width:140px; height:70px; background:#4895ea; z-index:1; display:none;}
+.fixedNav{
+	top:0px;
+	_position:absolute;
+	_top:expression(eval(document.documentElement.scrollTop));
+}
+
+#triangle-down { 
+width: 0; 
+height: 0; 
+border-left: 25px solid transparent; 
+border-right: 25px solid transparent; 
+border-top: 50px solid #7d7d7d; 
+} 
+
+.layQ img{ width: 100%;}
+
+.copyright{ height:60px; background:#292929; color:#d5d5d5; font-size:14px; text-align:center; padding-top:30px; position:relative;}
+.copyright .map{ position:absolute; right:200px; top:55px;}
+.copyright .map img{ margin:0px 10px; cursor:pointer;}
+.copyright p{ padding-top:5px;}
+.copyright p span{ font-size:20px; color:#5edfff; padding-left:20px;}
+
+#allmap {width: 300px;height: 300px;overflow: hidden; position:absolute; right:100px; top:-255px; display:none;}
+.divshadow{
+border: 1px solid #d2d2d2;
+text-align: center;
+-webkit-box-shadow: 0px 0px 10px #dddcdc;
+box-shadow: 0px 0px 10px #dddcdc;
+}

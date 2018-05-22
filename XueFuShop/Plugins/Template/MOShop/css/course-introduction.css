@@ -1,0 +1,86 @@
+/* css reset */
+html, body, h1, h2, h3, h4, h5, h6, hr, p,
+dl, dt, dd, ul, ol, li,
+fieldset, button, input, textarea,
+th, td
+{
+    margin: 0;
+    padding: 0;
+}
+
+body{ 
+    font-family: "Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+ul, ol { 
+    list-style: none; 
+}
+
+a { 
+    text-decoration: none;
+}
+
+em,i{
+    font-style: normal;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+hr {
+    border: none;
+    height: 1px;
+}
+
+img {
+    border: none;
+    display: block;
+}
+.slide{
+	position: relative;
+}
+.slide .slide-content{
+	position: absolute;
+	width: 1120px;
+	height: 700px;
+	top: 50%;
+	left: 50%;
+	margin-left: -560px;
+	margin-top: -350px;
+}
+.slide h1{
+	text-align: center; 
+	font: 36px "Microsoft Yahei"; 
+	color: #fff;
+	margin: 20px auto;
+}
+.slide p{
+	text-align: center;
+	font: 24px "Microsoft Yahei"; 
+	color: #fff;
+}
+.slide .example{
+	border: 1px solid #fff; 
+	width: 1000px; 
+	height: 500px;
+	margin: 20px auto 0; 
+	position: relative;
+}
+#slide7 ul li{
+	float: left;
+	margin: 63px 50px;
+}
+#slide7 ul li h3{
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	margin:50px 0;
+}

@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="1" QuestionNum="25" SingleNum="11" MultiNum="1" PanDunNum="13">
+  <Single>
+    <QuestionInfo1 id="113691">
+      <Question>思铂睿的前大灯采用的是（），相比凯美瑞的前大灯，思铂睿的前大灯在亮度，寿命，能耗方面都要更优秀，对此我方顾问可以同客户交流，思铂睿的前大灯虽然先进，但是一旦损坏，维修价格不菲。</Question>
+      <A>激光前大灯</A>
+      <B>OLED前大灯</B>
+      <C>LED前大灯</C>
+      <D>卤素前大灯</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>113691</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="36723">
+      <Question>凯越自动挡车型配置的（   ）系统并不被各大车厂所青睐，除了不实用及油耗问题外，最主要的原因是会影响防盗安全性，针对这项配置，我方销售顾问可以从该防盗安全的角度做回应。</Question>
+      <A>车窗遥控开启</A>
+      <B>后备箱遥控开启</B>
+      <C>车门遥控开启</C>
+      <D>发动机遥控启动</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>36723</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="127101">
+      <Question>在发动机技术方面，高尔夫7具有（）系统，该技术可以减少车辆在等待红绿灯时的油耗，但该系统仅仅只有1.4T的顶配车型才配备，而且油门有响应迟滞现象，在刚起步时，油门迟滞非常明显，因此大多数消费者都将该功能关闭了。这也从侧面说明该技术虽然对环保有一定提升，但是对于日常驾驶感受却没有任何积极的效果。</Question>
+      <A>智能启停系统</A>
+      <B>奥托循环</B>
+      <C>机械增压</C>
+      <D>可变气门升程</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>127101</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="37521">
+      <Question>锐志在动力方面最大的亮点就是（   ），运转十分平稳安静，而且最大扭矩的90%以上都发生在从2,000rpm左右的低转速到最高转速的宽阔区域内，动力十分强劲。</Question>
+      <A>直6布置形式且采用Dual VVT-i技术的发动机</A>
+      <B>V6布置形式且采用Dual VVT-i技术的发动机</B>
+      <C>直6布置形式且采用CVVT技术的发动机</C>
+      <D>V6布置形式且采用i-VTEC技术的发动机</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>37521</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="107718">
+      <Question>新蒙迪欧 的P.A.T.S电子防盗系统采用了</Question>
+      <A>手动滚码技术</A>
+      <B>手动存储技术</B>
+      <C>智能滚码技术</C>
+      <D>智能存储技术</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>107718</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="52055">
+      <Question>新款CX-9将沿用现款3.7L V6引擎+（     ）的动力总成，该引擎能输出204kW[277PS]的最大功率，以及350Nm的峰值扭矩。</Question>
+      <A>6档手自一体变速器</A>
+      <B>CVT变速器</B>
+      <C>双离合变速器</C>
+      <D>6速自动变速器 </D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>52055</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="66681">
+      <Question>荣威350的（）不如奔腾B50，相比之下，奔腾B50的外观更大气，开出去更有面子。</Question>
+      <A>车宽</A>
+      <B>车高</B>
+      <C>轴距</C>
+      <D>车长</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>66681</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="43717">
+      <Question>骏捷FRV车内最大的亮点配置是（   ），反观其低配车型如无后雨刮、雾灯、发动机防盗锁等基本配置的问题是我方的应对方向。</Question>
+      <A>GPS导航</A>
+      <B>DVD主机</B>
+      <C>四门一触升降车窗</C>
+      <D>8向调节座椅</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>43717</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="120590">
+      <Question>在历史方面，翼虎是福特进入中国的（）款SUV，而CR-V则是进入中国最早的SUV车型并且经历数次换代改款，早已深入人心。</Question>
+      <A>第二</A>
+      <B>第三</B>
+      <C>第四</C>
+      <D>第一</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>120590</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="90730">
+      <Question>爱丽舍的驾驶席座椅配备了（       ）调节，能够让不同身型的驾驶者轻松找到适合自己的驾驶姿势，让驾乘更舒适方便。同时也建议销售顾问在6方位绕车时帮助客户进行调整，让其感受爱丽舍座椅的舒适。</Question>
+      <A>八向</A>
+      <B>十向</B>
+      <C>六向</C>
+      <D>四向</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>90730</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="55026">
+      <Question>帕萨特由于车身尺寸略大于B90，所以其整备质量也比B90略重，但是我方顾问可强调，整备质量越轻，车辆的（      ）出色，能够降低车主后期的使用成本。</Question>
+      <A>燃油经济性</A>
+      <B>稳定性</B>
+      <C>操控性</C>
+      <D>滤震性</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>55026</QuestionId>
+    </QuestionInfo11>
+  </Single>
+  <Multi>
+    <QuestionInfo1 id="107308">
+      <Question>新蒙迪欧下列属于SYNC? with MyFord Touch? 导航快速触摸按钮选项的是</Question>
+      <A>设为目的地</A>
+      <B>设为途经点</B>
+      <C>暂停导航</C>
+      <D>取消导航</D>
+      <Answer>ABD</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>2</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>107308</QuestionId>
+    </QuestionInfo1>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="45744">
+      <Question>长安福特旗下车型从产品线来看是比较齐全了，但在众多车型中也只有福克斯一款车型能支撑销量。03年福特把印度产的嘉年华拿到中国来卖，后来发现过时的东西忽悠不了国人，如今终于拿新嘉年华来冲击小型车市场，但究其根本就是马自达2的换壳版，难以对同级别车型形成足够的威胁。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>45744</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="14821">
+      <Question>~虽然F01.0排量和奔奔1.0排量一样，是四缸发动机，但~从售价来说，奔奔更经济，买F0的钱可以买一辆1.3排量的奔奔了，动力更为强劲！</Question>
+      <A>F0是3缸发动机，由于其本身的物理特性，导致低转速时抖动明显，"哒哒哒"的声响十分烦人，而且随着发动机转速的升高，噪音也越来越大，油耗偏高。另外，</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>14821</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="3328">
+      <Question>双区控制的空调可以让~前后排~的乘员完全根据自身需求，对温度进行调控，满足不同乘员的需求。针对这点我们可以说B50后备箱容积更大，对于家庭用车来说，储物能力更出色。</Question>
+      <A>主副驾驶席</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>3328</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="125067">
+      <Question>销售顾问在引导客户回答“非常满意”的时候，可以使用“欠一个人情”，如视频中老师举例“王先生，这次请您帮个忙，在厂商回访的电话里说‘非常满意’，以后您有问题直接来找我。”让客户在得到尊重的同时，还为售后带来很多机会。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>125067</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="91495">
+      <Question>C5全系都配有ESP动态稳定控制系统，当车辆有转向不足或转向过度的趋势时，传感器就会迅速对车轮实施制动，产生相反的转矩而使汽车保持在原来的车道上。我方顾问应向顾客说明，这是当前最先进的主动安全配置！</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>91495</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="69064">
+      <Question>对于凯越在车身尺寸上的优势，我方顾问可以和顾客沟通的是其后备箱容积不如经典福克斯，可见其空间利用率不足，日常使用存放物品行李也不如经典福克斯方便宽敞。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>69064</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="43713">
+      <Question>《汽车族》编辑说道："新奥拓源自雨燕的赛车级平台，无论疾驰、转弯，皆能步调坚定，决不脚软。靠近车身四周的轮胎，将车身稳定性最大化。"由此可见奥拓动力充沛，底盘布置更显车身稳定。 </Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>43713</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="57721">
+      <Question>威驰在国内的C-NCAP中曾荣获了五星碰撞的好成绩，安全性可靠，令人放心，而相比之下，韩国车一直给人钢板薄，质量差的印象，消费者买K2着实让人不放心。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>57721</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="41959">
+      <Question>《汽车导报》编辑："维特拉的车身不仅稳定性出色，而且铃木把它的减震器调得恰到好处，使维特拉对路面的冲击化解得很好。尤其是后轮，对于各种坑洼弹跳，都能很好地过滤。"我方销售顾问在动态试驾时，可引用第三方评论，增加顾客信心。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>41959</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="10397">
+      <Question>在4WD的自动模式时，当车辆在平稳行驶时，它会自动减少对~前轮~扭矩的分配，达到和前轮驱动同等的行进模式。</Question>
+      <A>后轮</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>10397</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="88419">
+      <Question>当确认超车条件后，应先打转向灯，并鸣喇叭示意(夜间超车时应变换灯光予以提示)，等前车有让路表示后，方可从前车的~右侧~超越。</Question>
+      <A>左侧</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>88419</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="17510">
+      <Question>"这具CVT无级变速器的传动稳定而高效，传动率为95%（普通AT约为87%），能量的损耗非常小"--《汽车杂志》。这是汽车杂志对翼神CVT变速器的评价，说明无级变速器除了在加速方面有优势之外，传动效率、节油效率方面都有优势。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>17510</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="103269">
+      <Question>拉角柱用于固定拉角链条和液压缸，可根据设备结构将拉角柱固定在某个需要拉角的位置，通过电动、液压动力使车架或车身结构回到原始位置。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>103269</QuestionId>
+    </QuestionInfo13>
+  </PanDuan>
+</TestPaper>

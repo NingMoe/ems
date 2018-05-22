@@ -1,0 +1,132 @@
+.main {
+	min-height: 440px; 
+	padding-bottom: 80px;
+	background-color: #f4f4f4;
+	border-bottom: 1px solid #fff;
+	padding-top: 2px;
+}
+.section{
+	background-color: #fff;
+	min-height: 800px;
+	padding:10px 0 50px;
+}
+.section .s-left{
+	width: 280px;
+	float: left;
+}
+.section .s-right{
+	width: 918px;
+	float: left;
+	border-left: 1px solid #ccc;
+	min-height: 800px;
+}
+.s-left .category{
+	width:220px;
+	margin-left: 30px;
+}
+.s-left .category li{
+	font-size: 16px;
+	text-align: center;
+	padding:10px 0;
+	border: 1px solid #ccc;
+	margin: 10px auto;
+	cursor: pointer;
+}
+.s-left .category li.active{
+	color:#18bd9c;
+	border: 1px solid #18bd9c;
+}
+.s-left .category li:hover{
+	color:#18bd9c;
+	border: 1px solid #18bd9c;
+}
+.s-right .content{
+	margin-top: 19px;
+	background-color: #fff;
+}
+.s-right .content ul {
+	width: 850px;
+	margin: 0 auto;
+}
+.s-right .content ul li {
+	border-bottom: 1px dashed #ccc;
+	padding: 17px 0;
+}
+.s-right .content ul li:last-child{
+	border-bottom: none;
+}
+.s-right .content ul li .title {
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 8px;
+}
+.s-right .content ul li .title a:hover{
+	color: #18bd9c;
+}
+.s-right .content ul li .article{
+	color: #4e4e4e;
+	font-size: 14px;
+	line-height: 25px;
+}
+.s-right .content ul li .article .hide_btn{
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0px 6px;
+	margin-top: 20px;
+	margin-left: 800px;
+}
+.s-right .content ul li .article .hide_btn:hover{
+	border-color: #18bd9c;
+}
+.hide{
+	display: none;
+}
+.help-search{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	padding: 20px 0;
+	margin:0 35px;
+	border-bottom: 1px solid #ccc;
+}
+.help-search label{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	margin-top: 5px;
+	margin-right: 20px;
+	color:#555;
+}
+.help-search #help-search{
+	height: 28px;
+	line-height: 28px;
+	width: 388px;
+	border: 1px solid #aaa;
+	margin-top: 5px;
+	padding: 0 5px;
+	font-size: 14px;
+	color:#555;
+}
+.help-search .btn-search{
+	display: inline-block;
+	height:28px;
+	line-height: 28px;
+	margin-top: 5px;
+	border: 1px solid #aaa;
+	margin-left: -5px;
+	padding: 0 5px;
+	border-left: none;
+}
+.btn-search .icon-search{
+	height: 18px;
+	width: 18px;
+	background-position: 0 -10px;
+}
+.btn-search:hover i.icon-search{
+	background-position: -18px -10px;
+}
+.help-search .btn-search i{
+	margin-top: 5px;
+}

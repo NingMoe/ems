@@ -1,0 +1,110 @@
+.headShortVideoBox{
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+.headShortVideoBox .headShortVideoBg{
+    /*background: url("../img/shortVideoBg.png") repeat;*/
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 4
+}
+.headShortVideoBox .shortvideoImg{
+    display: block;
+    width: 100%;
+}
+.headShortVideoBox .shortvideo{
+    display: none;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 3;
+}
+.headShortVideoBox .headShortVideoTitle {
+    position: absolute;
+    z-index: 5;
+    left:50%;
+    top:25%;
+    width: 28%;
+    margin-left: -14%;
+}
+.headShortVideoBox .headShortVideoTitle img{
+    position: absolute;
+    width: 100%;
+}
+.headShortVideoBox .headShortVideoButton{
+    position: absolute;
+    z-index: 5;
+    left:50%;
+    top:65%;
+    width: 538px;
+    margin-left: -269px;
+}
+
+.headShortVideoBox .headShortVideoButton1{
+    float: left;
+    background: url("../images/shortVideoButton.png") no-repeat 0 0;
+    height: 56px;
+    width: 207px;
+    margin: 0 31px;
+    cursor: pointer;
+    line-height: 56px;
+    color: #FFF;
+}
+.headShortVideoBox .headShortVideoButton1:hover{
+    background-position: 0 -100px;
+}
+.headShortVideoBox .headShortVideoButton1 span{
+    padding-left: 60px;
+    font-size: 18px;
+}
+.headShortVideoBox .headShortVideoButton2{
+    float: left;
+    background: url("../images/shortVideoButton.png") no-repeat 0 -200px;
+    height: 56px;
+    width: 207px;
+    margin: 0 31px;
+    cursor: pointer;
+    line-height: 56px;
+    color: #FFF;
+}
+.headShortVideoBox .headShortVideoButton2:hover{
+    background-position: 0 -300px;
+}
+.headShortVideoBox .headShortVideoButton2 span{
+    padding-left: 60px;
+    font-size: 18px;
+}
+.headShortVideoBox .headShortVideoClose{
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 32px;
+    height: 32px;
+    background:url("../images/shortVideoButton.png") no-repeat 0 -500px;
+    z-index: 9;
+    cursor: pointer;
+}
+.headShortVideoBox .headShortVideoClose:hover{
+    background-position: -100px -500px;
+}
+.hideVideoBox{
+    display: none;
+}
+#topBar .headShortVideoOpen{
+    width: 36px;
+    height: 36px;
+    background:url("../images/shortVideoButton.png") no-repeat 0 -400px;
+    position: absolute;
+    right: 0;
+    top:0;
+    cursor: pointer;
+    display: none;
+}
+#topBar .headShortVideoOpen:hover{
+    width: 39px;
+    height: 39px;
+    background-position: -100px -400px;
+}

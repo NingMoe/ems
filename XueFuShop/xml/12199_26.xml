@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="26" QuestionNum="25" SingleNum="9" MultiNum="1" PanDunNum="15">
+  <Single>
+    <QuestionInfo1 id="115157">
+      <Question>MPV由于其优秀的乘坐空间以及家用舒适性的特点，在（      ）地区的普及度非常高，深受家庭用户的欢迎。</Question>
+      <A>以上都有</A>
+      <B>亚洲</B>
+      <C>拉美</C>
+      <D>欧美</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115157</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="115161">
+      <Question>为了满足中国消费者日益增长的汽车需求，许多厂商在国内市场推出了轴距加长版的车型，例如奔驰、奥迪等等。而这一类车型通常会在原有名称后面加注英文字母（     ），来区分与原有车型的差别。</Question>
+      <A>L</A>
+      <B>D</B>
+      <C>Z</C>
+      <D>G</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115161</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="115165">
+      <Question>后备箱大小能够反映车辆的储物能力，是客户买车着重考虑的参数之一，而后排座椅翻折后能够进一步提高储物空间，以下（     ）是不属于常见的后排座椅翻折形式。</Question>
+      <A>整体翻折</A>
+      <B>3比7</B>
+      <C>6比4</C>
+      <D>4比2比4</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115165</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="115163">
+      <Question>汽车的整备质量是指，汽车按出厂技术条件装备完整，例如备胎、工具、各种油液添满、燃油量不少于（      ）的质量。</Question>
+      <A>0.9</A>
+      <B>0.95</B>
+      <C>0.85</C>
+      <D>0.8</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115163</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="115158">
+      <Question>车身高度是指从地面起到汽车最高点的距离，这个最高点包含（     ）。前提必须在空载情况下进行测量所得的数据。</Question>
+      <A>选装运动配件</A>
+      <B>车顶行李架</B>
+      <C>天线</C>
+      <D>车顶扰流板</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115158</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="115159">
+      <Question>汽车的轮距有前轮距和后轮距之分，前轮距是前面两个轮中心平面之间的距离，后轮距是后面两个轮中心平面之间的距离，（     ）。</Question>
+      <A>以上都不对</A>
+      <B>两者可以相同，也可以不同</B>
+      <C>两者必须相同</C>
+      <D>两者必须不同</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115159</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="115156">
+      <Question>旅行车通常称为（     ），一般来说大多数旅行车都是以轿车为基础，把轿车的后备厢加高到与车顶齐平，用来增加行李空间。其优点就在于它既有轿车的舒适，也有相当大的行李空间。</Question>
+      <A>Touring</A>
+      <B>Estate</B>
+      <C>Avant</C>
+      <D>wagon</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115156</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="115160">
+      <Question>轴距的长短是判别一辆汽车各方面性能的重要依据，有时购买者关心轴距的长短甚至超过了汽车本身的长宽高。下列哪一项不受轴距直接影响的（     ）。</Question>
+      <A>舒适性、操控性</A>
+      <B>车速</B>
+      <C>乘坐空间</C>
+      <D>车型级别</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115160</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="115164">
+      <Question>通常油箱容积的标准是在汽车完全加满油的情况下有500公里的续航能力，但是因为各个厂商以及车辆种类的不同其油箱容积也会略有不同。以下与油箱容积无关的是（     ）</Question>
+      <A>携带燃油的体积</A>
+      <B>车辆级别</B>
+      <C>转向操控</C>
+      <D>续航能力</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115164</QuestionId>
+    </QuestionInfo9>
+  </Single>
+  <Multi>
+    <QuestionInfo1 id="115168">
+      <Question>MPV是指多用途汽车，从源头上讲，MPV是从旅行轿车逐渐演变而来的，它集（     ）功能于一身，一般为两厢式结构，即多用途车。</Question>
+      <A>强劲的动力</A>
+      <B>宽大的储物空间</B>
+      <C>舒适性</C>
+      <D>厢式货车</D>
+      <Answer>BC</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>2</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115168</QuestionId>
+    </QuestionInfo1>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="115190">
+      <Question>接近角是指在汽车满载静止时，汽车前端突出点向前轮所引切线与地面的夹角，即水平面与切于前轮轮胎外缘的平面之间的最大夹角，接近角越大，就越不容易发生触头事故，汽车的通过性能就越好。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115190</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="115179">
+      <Question>汽车的轴距是指同侧相邻的前后两个车轮间的距离，即：~从前轮的前端位置到后轮的后端位置之间的距离~。</Question>
+      <A>从前轮中心点到后轮中心点之间的距离</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115179</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="115187">
+      <Question>以A级车为例，通常其排量都在1.5L到2.0L之间，轴距则在~2.7m到2.9m~之间，其代表车型有朗逸、卡罗拉、福克斯、思域等。</Question>
+      <A>2.5m到2.7m</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115187</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="115185">
+      <Question>空气阻力是汽车行驶时所遇到最大的也是最重要的外力。空气阻力系数，又称风阻系数，一般轿车的风阻系数通常在0.28-0.35之间，一旦低于该数值，销售顾问可以以此作为亮点向顾客强调自身产品与其他品牌的差异化。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115185</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="115178">
+      <Question>无论何种车型，前、后轮距间的宽度越大，那么相对应的特点其一是该辆车的车内空间也就越大乘坐更舒适；其二在行驶过程中该车的横向稳定性也就越出色。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115178</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="115188">
+      <Question>最大总质量有时人们还把它称为“厂家最大总质量”和“允许最大总质量”。这两个概念是有区别的，前者是由汽车制造厂根据特定的使用条件，考虑到材料的强度、轮胎承载能力等因素而核定出的，后者则是由主管部门根据汽车的使用条件而规定的。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115188</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="115183">
+      <Question>最小转弯半径是指汽车以最低稳定车速转向行驶时，外侧转向轮的中心平面在支承平面上滚过的轨迹圆半径，~数值越大~，通过性越高、机动性能越好。</Question>
+      <A>数值越小</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115183</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="115172">
+      <Question>现在我们最为常见的轿车一般是三厢车，之所以称为三厢车，是因为它的车身结构由三个相互封闭用途各异的“厢”所组成：前部发动机舱、车身中部乘员舱和后部行李舱。比如本田雅阁、宝马3系、奥迪A6等均属于传统的三厢车。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115172</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="115181">
+      <Question>汽车最小离地间隙是指汽车停放在水平地面上时，并在额定满载的前提下，其底盘最下突出部位与水平地面的距离。其标准为分为几个类型，其中轿车的离地间隙通常在110mm-150mm之间，而SUV的最小离地间隙则要稍高于轿车为~150mm-200mm~。</Question>
+      <A>180mm-250mm</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115181</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="115182">
+      <Question>通过前、后车轮外缘做切线交于车体下部较低部位所形成的最小锐角。它表征汽车可无碰撞地通过小丘、拱桥等障碍物的轮廓尺寸。纵向通过角越大，汽车的通过性能就越好。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115182</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="115193">
+      <Question>一般来说，轮距越宽，驾驶舒适性越高，但是有些国产轿车没有方向助力系统，如果前轮轮距过宽其方向盘就会显得很重，影响驾驶的舒适性。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115193</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="115175">
+      <Question>SUV是Sport Utility Vehicle的简写，中文意思是运动型多功能车，是一种同时拥有旅行车般的舒适性和空间和一定越野能力的车型，现在的SUV一般是指那些以轿车平台为基础生产、在一定程度上既具有~MPV的大空间性~，又有越野车的通过性的车型。</Question>
+      <A>轿车的舒适性</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115175</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="115184">
+      <Question>最大设计总质量一般是指，装满乘客（包括驾驶员）、货物时的质量，对于一般的5座乘用车来说，根据国际标准，车辆至少要能承载375kg的质量。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115184</QuestionId>
+    </QuestionInfo13>
+    <QuestionInfo14 id="115191">
+      <Question>通常欧美系车型在与日系车型做比较时，都会将整备质量作为一个标准。质量重的车就一定行驶稳定，安全可靠，而质量轻的车则是偷工减料。这种说法是完全错误的，销售顾问在一定要纠正顾客这种错误的认识。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115191</QuestionId>
+    </QuestionInfo14>
+    <QuestionInfo15 id="115192">
+      <Question>涉水深度通常是指SUV车辆能通过的最深水域，也是指发动机进气口的离地高度。是衡量车辆越野性能的一个重要指标，通常中大型SUV的涉水深度在~600-900mm~之间。</Question>
+      <A>500-900mm</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>115192</QuestionId>
+    </QuestionInfo15>
+  </PanDuan>
+</TestPaper>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Template>
+  <Path Value="MOShop"/>
+  <Name Value="孟特新版"/>
+  <Photo Value="/Plugins/Template/MOShop/cover.jpg"/>  
+  <DisCreateFile Value=""/>
+  <CopyRight Value="MOS"/>
+  <PublishDate Value="2016-10-1"/>
+</Template>

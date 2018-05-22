@@ -1,0 +1,104 @@
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <html:include file="user/UserHead.htm" />
+</head>
+<body>
+    <html:include file="user/UserTop.htm" />
+    <div class="ordermain">
+        <div class="clearfix ordermana">
+            <html:include file="user/UserLeft.htm" />
+            <div class="right">
+                <div class="title"><h3 class="slide-title">综合评估报表</h3></div>
+                <div id="general_evaluation_countdetail" class="choose_company">
+                    <div class="CountDetail">
+                        <form id="searchform" action="" method="get">
+                            <div class="form_group form_center">
+                                <label class="form_txt" for="EvaluateType">评估类型：</label>
+                                <select class="form_select" name="EvaluateType" id="EvaluateType">
+                                    <option value="">请选择评估类型</option>
+                                    <option value="530"<$(evaluateType == 530?" selected":"")$>>员工综合能力评估</option>
+                                    <option value="541"<$(evaluateType == 541?" selected":"")$>>主管综合能力评估</option>
+                                    <option value="564"<$(evaluateType == 564?" selected":"")$>>经理综合能力评估</option>
+                                </select>
+                                <label class="form_txt" for="EvaluateNameId">评估名称：</label>
+                                <select class="form_select" name="EvaluateNameId" id="EvaluateNameId">
+                                    <$EvaluateNameBLL.GetEvaluateNameListHtml(base.GetCompanyIDString(companyID),evaluateNameId)$>
+                                </select>
+                                <input id="action" name="action" type="hidden" value="Detail">
+                                <input id="UserId" name="UserId" type="hidden" value="<$base.UserID.ToString()$>">
+                                <input class="form_button" name="query" id="query" type="button" value="查 询">
+                            </div>
+                        </form>
+                        <html:if expression="!string.IsNullOrEmpty(action)">
+                        <html:if expression="action == "Detail"">
+                        <br>
+                        <div class="CountDetail_head">
+                            <div class="CountDetail_title">综合能力评估</div>
+                            <ul class="clearfix">
+                                <li class="li_1">姓名</li>
+                                <li class="li_2"><$user.RealName$></li>
+                                <li class="li_3">评估名称</li>
+                                <li class="li_4"><$evaluateName.EvaluateName$></li>
+                                <li class="li_5">评估时间段</li>
+                                <li class="li_6"><$evaluateName.StartDate$>到<$evaluateName.EndDate$></li>
+                            </ul>
+                        </div>
+                        </html:if>
+                        <table class="sheet">
+                            <$tableContent.ToString()$>
+                        </table>
+                        <html:if expression="action == "Detail"">
+                        <!-- <div class="action">
+                            <input type="button"  value=" 返 回 " class="button" onclick="javascript:history.go(-1);"/>
+                        </div> -->
+                        </html:if>
+                        </html:if>
+                    </div>
+                </div>
+                <!-- <div class="slideTxtBox">
+                    <div class="bd">
+                        <ul>
+                        <div class="CountDetail_head">
+                            <div class="CountDetail_title">综合能力评估</div>
+                            <ul class="clearfix">
+                                <li class="li_1">姓名</li>
+                                <li class="li_2"><$user.RealName$></li>
+                                <li class="li_3">评估名称</li>
+                                <li class="li_4"><$evaluateName.EvaluateName$></li>
+                                <li class="li_5">评估时间段</li>
+                                <li class="li_6"><$evaluateName.StartDate$>到<$evaluateName.EndDate$></li>
+                            </ul>
+                        </div>
+                        <table class="sheet">
+                            <$tableContent.ToString()$>
+                        </table>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+<html:include file="Foot.htm" />
+
+    <script>
+        $(document).ready(function(){
+            var tableWidth = $(".sheet").width();
+            $(".CountDetail_head").width(tableWidth);
+            
+            $("#query").click(function(){
+                var evaluateType=$("#EvaluationType").val(),
+                evaluateNameId=$("#EvaluationName").val();
+                if(evaluateType != "" && evaluateNameId != "")
+                    $("#searchform").submit();
+                else
+                    alert("请选择评估类型和评估名称");
+            });
+            $(".sheet tr:eq(0)").after($(".count").clone());
+        });
+    </script>
+</body>
+</html>

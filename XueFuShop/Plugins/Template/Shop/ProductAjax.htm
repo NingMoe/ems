@@ -1,0 +1,82 @@
+﻿<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:if expression="RequestHelper.GetQueryString<int>("IsNew")==1">
+    <html:foreach expression="ProductInfo product in productList">
+        <!--新闻块-->
+        <div class="art_newsBox">
+            <!--图片-->
+            <div class="viewImg">
+                <html:csharp>int j=0;</html:csharp>
+                <html:foreach expression="ProductPhotoInfo productPhoto in ProductPhotoBLL.ReadProductPhotoByProduct(product.ID)">                                    
+                    <html:csharp>j++;</html:csharp>
+                    <html:if expression="j==1">
+                    <a href="<$productPhoto.Photo.Replace("340-340","Original")$>" class="lightwindow page-options" rel="new<$product.ID$>[1]" title="<$product.Name$>" caption="<$productPhoto.Name$>" author="" ><img src="<$product.Photo.Replace("Original","340-340")$>">
+                    <html:else>
+                    <a href="<$productPhoto.Photo.Replace("340-340","Original")$>" class="lightwindow page-options" rel="new<$product.ID$>[1]" title="<$product.Name$>" caption="<$productPhoto.Name$>" author="" ></a>
+                    </html:if>
+                 </html:foreach>
+            </div>
+            <!--文字-->
+            <div class="newstext">
+                <h4><$product.Name$></h4>
+                <p><!--<a href="/ProductDetail-I<$product.ID$>.aspx" target="_blank">--><$product.Summary$><!--</a>--></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p><a href="/ProductDetail-I<$product.ID$>.aspx" target="_blank"><$StringHelper.Substring(StringHelper.KillHTML(StringHelper.UBB(ProductBLL.ReadProduct(product.ID).Introduction)), 120)$></a></p>
+            </div>
+        </div>
+    </html:foreach>
+    <!--分页-->
+    <div class="art_pagebox">
+        <$ajaxPagerClass.ShowPage()$>
+    </div>
+<html:else>
+<div class="productBox">
+<html:csharp>int i=0;</html:csharp>
+<html:foreach expression="ProductInfo product in productList">    
+    <html:if expression="productShowWay==(int)ProductShowWay.Picture"> 
+            <!--<ul class="productPicture">-->
+                <li><a href="/ProductDetail-I<$product.ID$>.aspx" target="_blank"><img src="<$product.Photo.Replace("Original","120-120")$>"  onload="photoLoad(this,120,120)" /></a>
+                <p><a href="/ProductDetail-I<$product.ID$>.aspx" target="_blank"><$product.Name$></a></p>
+                </li>
+                <!--<li class="maketPrice">市场价￥<$product.MarketPrice$> </li>
+                <html:if expression="countPriceSingle">
+                <li class="salePrice">售价：￥<$MemberPriceBLL.ReadCurrentMemberPrice(memberPriceList,base.GradeID,product)$></li>
+                <html:else>
+                <li class="salePrice">售价：￥<$product.CurrentMemberPrice$></li>
+                </html:if>
+            </ul> -->
+    <html:else> 
+    <div class="productList">
+        <ul class="productLeft">
+            <li class="photo"><a href="/ProductDetail-I<$product.ID$>.aspx" target="_blank"><img src="<$product.Photo.Replace("Original","120-120")$>"  onload="photoLoad(this,120,120)" /></a></li>
+        </ul>
+        <ul  class="productCenter">
+            <li><a href="/ProductDetail-I<$product.ID$>.aspx" class="productName" target="_blank" title="<$product.Name$>"></a></li>
+            <li>用户综合评分：<span class="grade"><i style="width:<$product.PerPoint*20$>%"></i></span> <span class="point"><$product.PerPoint$></span>（已有 <span class="commentCount"><$product.CommentCount$></span> 人评价）</li>
+            <li></li>
+        </ul>
+        <ul class="productRight">
+            <li class="maketPrice">市场价：￥<$product.MarketPrice$> </li>
+            <html:if expression="countPriceSingle">
+            <li class="salePrice">售价：￥</li>
+            <html:else>
+            <li class="salePrice">售价：￥<$product.CurrentMemberPrice$></li>
+            </html:if>
+            <li><a href="javascript:collectProduct(<$product.ID$>)">收藏</a> | <a href="/ProductDetail-I<$product.ID$>.aspx">查看</a></li>
+        </ul>
+    </div> 
+    <div class="line"></div>
+    </html:if>   
+<html:csharp>i++;</html:csharp>  
+<html:if expression="i%5==0">
+</div><div class="productBox">
+</html:if>     
+</html:foreach>
+</div>
+</html:if>
+<!--<div class="height10"></div>
+<$ajaxPagerClass.ShowPage()$>-->
+#<$ajaxPagerClass.Count$>

@@ -1,0 +1,78 @@
+﻿<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<html:namespace name="XueFuShop.Models" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html:include file="user/ManageHead.htm" />
+</head>
+<body>
+    <html:include file="user/ManageTop.htm" />
+    <div class="container main">
+        <html:include file="user/ManageLeft.htm" />
+        
+        <div class="right">
+            <div class="right_content">
+                <div class="title">
+                    <h1>指标<$base.GetAddUpdate()$></h1>
+                </div>
+                <form action="" method="post" id="add_index" autocomplete="off">
+                    <html:if expression="base.ExistsSonCompany">
+                    <div class="form_group">
+                        <label class="form_txt" for="CompanyID">公司名称：</label>
+                        <select class="form_select form_long {required:true}" id="CompanyID" name="CompanyID">
+                            <option value="">请选择公司</option>
+                            <html:foreach expression="CompanyInfo company in SonCompanyList">
+                            <option value="<$company.CompanyId$>"<$(company.CompanyId == CompanyID?" selected":"") $>><$company.CompanyName$></option>
+                            </html:foreach>
+                        </select>
+                    </div>
+                    </html:if>
+                    <div class="form_group">
+                        <label class="form_txt" for="FatherID">上级分类：</label>
+                        <select class="form_select {required:true}" name="ClassID" id="ClassID">
+                            <option value="">请选择分类</option>
+                            <html:foreach expression="KPIInfo kpiClass in KPIClassList">
+                            <option value="<$kpiClass.ID$>"<$(kpiClass.ID == ClassID?" selected":"") $>><$kpiClass.Name$></option>
+                            </html:foreach>
+                        </select>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="KPIName">指标名称：</label>
+                        <input class="form_con form_long" type="text" name="Name" id="Name" value="<$KPI.Name$>">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="Method">评估人/部门：</label>
+                        <input class="form_con" type="text" name="Method" id="Method" value="<$KPI.Method$>">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="Type">指标类型：</label>
+                        <select class="form_select {required:true}" name="Type" id="Type">
+                            <option value="">请选择指标类型</option>
+                            <html:foreach expression="EnumInfo kpiType in KPITypeList">
+                            <option value="<$kpiType.Value$>"<$((int)KPI.Type == kpiType.Value?" selected":"")$>><$kpiType.ChineseName$></option>
+                            </html:foreach>
+                        </select>
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="Score">分数：</label>
+                        <input class="form_con" type="text" name="Score" id="Score" value="<$KPI.Scorse$>">
+                    </div>
+                    <div class="form_group">
+                        <label class="form_txt" for="OrderID">排序ID：</label>
+                        <input class="form_con" type="text" name="Sort" id="Sort" value="<$KPI.Sort$>">
+                        <div class="tip">ID号为同一个分类中显示的顺序，ID越小越靠上</div>
+                    </div>
+                    <html:if expression="base.CompareUserPower("AddKPI,UpdateKPI",PowerCheckType.OR)">
+                    <div class="form_group form_submit">
+                        <input class="form_zjzb_button" type="submit" id="SubmitButton" name="SubmitButton" value="<$GetAddUpdate()$>">
+                        <input type="hidden" name="Action" value="PostBack" />
+                    </div>
+                    </html:if>
+                </form>
+            </div>
+        </div>
+    </div>
+    <html:include file="user/ManageFoot.htm" />
+</body>
+</html>

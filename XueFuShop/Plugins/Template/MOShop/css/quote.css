@@ -1,0 +1,147 @@
+.layout{
+	background-color: #F7F9FC;
+}
+.quote h2{
+	text-align: center;
+	font-size: 32px;
+	padding-top:60px;
+	color: #18bd9c;
+}
+.quote h3{
+	text-align: center;
+	font-size: 20px;
+	margin-top:50px;
+	padding-bottom: 50px;
+}
+.quote h5{
+	text-align: center;
+	font-size: 16px;
+	margin-top:20px;
+}
+.quote ul.item-block{
+	margin-top:50px;
+}
+.quote .item-block li.item{
+	position: relative;
+	float: left;
+	width: 270px;
+	height: 220px;
+	margin-right:40px;
+	border-bottom: 6px solid #18bd9c;
+	background-color: #fff;
+}
+.quote .item-block li.item:last-child{
+	margin-right:0px;
+}
+.quote .item .item-top{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 220px;
+	color: #18bd9c;
+}
+.quote .item .item-bottom{
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	background-color: #18bd9c;
+	color: #fff;
+	transition: height .3s;
+	-o-transition: height .3s;
+	-ms-transition: height .3s;
+	-moz-transition: height .3s;
+	-webkit-transition: height .3s;
+}
+.quote .item .item-bottom.active{
+	height: 220px;
+}
+.quote .item .item-title{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+}
+.quote .item .item-bottom .item-title{
+	color: #fff;
+}
+.quote .item .item-slogan{
+	position: absolute;
+	top: 140px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	color: #000;
+}
+.quote .item .item-content{
+	position: absolute;
+	top: 80px;
+	left: 0;
+	width: 100%;
+	font-size: 14px;
+	background-color: #18bd9c;
+	color: #fff;
+}
+.quote .item .item-content li{
+	padding: 4px 10px;
+}
+
+.course-introduction h2{
+	text-align: center;
+	font-size: 28px;
+	padding-top:10px;
+	color: #5f9cef;
+}
+.course-introduction .course-module{
+	width: 1200px;
+}
+.course-module .module{
+	display: inline-block;
+	width: 160px;
+	height: 160px;
+	border: 1px solid #dde6ee;
+	border-radius: 5px;
+	margin: 30px 45px 0;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+}
+.course-module .module:hover{
+	cursor: pointer;
+}
+.module .module-icon{
+	text-align: center;
+}
+.module .module-icon .iconfont{
+	font-size: 72px;
+	color: #5f9cef;
+}
+.module h4{
+	font-size: 14px;
+	padding: 30px 0;
+	text-align: center;
+}
+.module .module-content{
+	opacity: 0;
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	padding: 20px;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	transition: opacity .3s;
+	-o-transition: opacity .3s;
+	-ms-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-webkit-transition: opacity .3s;
+}
+.module .module-content p{
+	color: #6d727d;
+}

@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="378" QuestionNum="25" SingleNum="16" MultiNum="0" PanDunNum="9">
+  <Single>
+    <QuestionInfo1 id="122355">
+      <Question>锐界的尾灯采用LED尾灯设计，外形上时尚动感，另外，LED尾灯的优点是（   ）。</Question>
+      <A>节能环保</A>
+      <B>其他选项的优势都有</B>
+      <C>使用寿命长</C>
+      <D>反应速度快，能提高行车安全</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122355</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="122370">
+      <Question>在方向盘功能上，锐界还配备有较为特殊的（）功能，该功能在冬天的时候可以不用套方向盘套，提升了安全性和舒适性。</Question>
+      <A>换挡拨片</A>
+      <B>方向盘电加热</B>
+      <C>方向盘电动调节</C>
+      <D>多功能按键</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122370</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="122365">
+      <Question>锐界的前大灯不但材质出色，而且功能也十分强大，它配备了（）的功能，可以在夜间远光灯开启的情况下识别对向的车辆，并且自动将来车一侧的远光灯关闭，避免对他人产生眩目的效果，十分智能。</Question>
+      <A>前大灯延迟关闭</A>
+      <B>AFS随动转向</B>
+      <C>Glare free防眩目</C>
+      <D>自动前大灯</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122365</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="122368">
+      <Question>锐界的外后视镜功能同样十分强大，除了常见的功能以外，还配备有（）的功能，在夜间下车时可以照亮地面，非常贴心的设计。</Question>
+      <A>倒档联动</A>
+      <B>LED转向灯</B>
+      <C>照地灯</C>
+      <D>阅读灯</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122368</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="122363">
+      <Question>福特锐界的设计平台是（   ）与福特共同针对北美市场在日本完成开发的，资源的整合更凸显了锐界的先进科技。</Question>
+      <A>丰田</A>
+      <B>日产</B>
+      <C>马自达</C>
+      <D>本田</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122363</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="122356">
+      <Question>福特锐界与林肯MKX和（   ）采用相同的CD4平台，使得整车的底盘具有良好的操控性能，并充分考虑到了车内乘员的乘坐舒适性，大大提升了锐界的档次。</Question>
+      <A>本田CR-Z概念车</A>
+      <B>MKZ</B>
+      <C>日产Ellure 概念车</C>
+      <D>丰田RIN概念车</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122356</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="122366">
+      <Question>锐界此次的外观有了较大的变化，其前格栅采用的是（）的设计，视觉效果更加的硬朗和具有力量感，气质更为出色。</Question>
+      <A>椭圆形</A>
+      <B>矩形</B>
+      <C>圆形</C>
+      <D>六边形</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122366</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="122359">
+      <Question>锐界在（）部位采用的是铝制材质，其主要作用在于减轻车身的重量，提高燃油经济系，而且由于铝的散热性能较好，对于发动机的散热也有较大帮助。</Question>
+      <A>引擎盖</A>
+      <B>车门</B>
+      <C>前保险杠</C>
+      <D>翼子板</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122359</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="122369">
+      <Question>锐界的轮胎规格也十分厚道，其顶配车型的轮毂达到了20寸，而运动版车型更是达到了（）寸的规格，大大提升了车辆的档次感。</Question>
+      <A>22</A>
+      <B>24</B>
+      <C>21</C>
+      <D>23</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122369</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="122360">
+      <Question>在倒车辅助方面，锐界配备有先进的（）功能，能够更全面的观察到车辆四周的情况，最大程度的避免意外擦碰，大大提高了日常用车的便利性。</Question>
+      <A>倒车影像</A>
+      <B>360全景倒车影像</B>
+      <C>倒档联动</C>
+      <D>倒车雷达</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122360</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="122361">
+      <Question>锐界的前大灯采用了同级别最先进的（）材质，不但色温更接近日光，而且能耗更低，寿命更长，是十分具有科技含量的配置。</Question>
+      <A>氙气</A>
+      <B>LED</B>
+      <C>卤素</C>
+      <D>激光</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122361</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="122371">
+      <Question>在仪表盘设计上，锐界采用了（）种形式的仪表盘设计，多样化的设计可以满足不同客户的需求，销售顾问在介绍时可以和客户进行沟通。</Question>
+      <A>5</A>
+      <B>2</B>
+      <C>3</C>
+      <D>4</D>
+      <Answer>C</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122371</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="122354">
+      <Question>对于一款SUV车型来说，充足的后备箱容积也显得尤为重要，家庭外出郊游，能够装载更多的物件，锐界的后备箱容积在后排座椅放倒后，最大可以达到（   ），超大的储物空间，完全能够满足家庭用车的需求。</Question>
+      <A>1951L</A>
+      <B>2039L</B>
+      <C>2172L</C>
+      <D>1843L</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122354</QuestionId>
+    </QuestionInfo13>
+    <QuestionInfo14 id="122372">
+      <Question>锐界的顶配车型采用的仪表盘是搭载了（）寸屏幕的豪华全数字彩色仪表盘，具有十分靓丽的显示效果，提升了车辆内饰的整体档次。</Question>
+      <A>10.1</A>
+      <B>5.5</B>
+      <C>6.5</C>
+      <D>8</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122372</QuestionId>
+    </QuestionInfo14>
+    <QuestionInfo15 id="122364">
+      <Question>锐界前倾式的腰线充满了力量感，外扩的轮眉显得很饱满大气，车顶的水平设计经典实用，它能有效（   ），让乘员乘坐更舒适。</Question>
+      <A>提升后座的横向空间</A>
+      <B>提升后排腿部空间</B>
+      <C>提升转向时车辆的平稳性</C>
+      <D>提升后座头部空间</D>
+      <Answer>D</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122364</QuestionId>
+    </QuestionInfo15>
+    <QuestionInfo16 id="122358">
+      <Question>锐界的轴距达到（   ），和奥迪Q5、凯迪拉克SRX、宝马X3相比，都具有明显优势，充分保证了后排乘员的腿部空间，使得乘坐更舒适。</Question>
+      <A>2815mm</A>
+      <B>2850mm</B>
+      <C>2810mm</C>
+      <D>2820mm</D>
+      <Answer>B</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122358</QuestionId>
+    </QuestionInfo16>
+  </Single>
+  <Multi>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="122390">
+      <Question>在变速器方面，锐界所搭载的变速器是一款6速手自一体变速器，其技术十分成熟，搭载在福特旗下多款车型之上，具有良好舒适性和燃油经济性。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122390</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="122387">
+      <Question>锐界的后备箱门具有~后备箱遥控开启~的功能，该功能只需要携带钥匙靠近，将脚在后保险杠下方晃动就可以自动打开后备箱，十分的方便。</Question>
+      <A>后备箱感应开启</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122387</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="122380">
+      <Question>锐界配有防翻滚稳定系统，在车辆有翻滚危险的特殊时刻，~系统将自动熄火，及时避免危险情况的发生，提高行车安全。~</Question>
+      <A>系统将切断发动机动力，或对关键车轮实施制动，帮助车辆重新获得平衡。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122380</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="122373">
+      <Question>锐界采用了福特旗下多款车型都搭载的无盖加油系统，该系统可以非常方便的直接插入油枪加油，不但避免了燃油滴漏的情况，而且可以自动识别油枪，避免加错油的情况发生。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122373</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="122378">
+      <Question>锐界所配备的EcoBoost系统采用了汽油直喷技术，它是~在进气门口进行喷射~，提高了燃烧效率，同时增大了扭矩，保证了锐界良好的动力表现，同时也提升了锐界的运动特性。</Question>
+      <A>直接往气缸内喷射汽油</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122378</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="122385">
+      <Question>锐界所采用的AWD智能四驱系统，让锐界起步、加速和过弯都十分稳定，特别是在雨雪天气，轮胎不易打滑，通过性能更出色，是高档SUV必备的配置。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122385</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="122384">
+      <Question>锐界的第二和第三排座椅具有电动放倒的功能，按下~第二排~侧面的按键就可以进行控制，非常的方便轻松，女性车主也可以进行操作。</Question>
+      <A>后备箱</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122384</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="122386">
+      <Question>锐界的储物空间具有十分灵活的拓展新，在三排座椅全部升起的情况下拥有233L的容积，可以放下常规的几个行李箱，而如果物品较多的话，放下后面两排座椅可以获得高达2039L的超大空间。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122386</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="122376">
+      <Question>锐界的SYNC车载智能系统能够语音对话，USB音频视频连接，还可以通过该系统控制车辆的多媒体系统以及空调系统，大大增加了日常用车的便利性。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>122376</QuestionId>
+    </QuestionInfo9>
+  </PanDuan>
+</TestPaper>

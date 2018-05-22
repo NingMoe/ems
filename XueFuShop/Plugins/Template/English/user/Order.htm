@@ -1,0 +1,62 @@
+<html:namespace name="XueFuShop.Models" />
+<html:namespace name="XueFuShop.Common" />
+<html:namespace name="XueFu.EntLib" />
+<html:namespace name="XueFuShop.BLL" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <html:include file="Head.htm" />
+</head>
+
+<body>
+	<html:include file="Top.htm" />
+        <!--内容部分-->
+        <div  class="artWarp art_content">
+        <html:include file="Menu.htm" />
+        		<div class="art_orderBox">
+                		<div class="orderTitle">Member Center</div>
+                        <div class="art_BuyersBox">
+                        		<!--右侧框架-->
+                                <div class="rightBox">
+                                <form action="" method="get">                                		
+                                        <!--我的订单-->
+                                        <div class="art_BuyersBox">
+                                        		<div class="buyTitle">My Order</div>
+                                                <!--<div class="prodBox">-->
+                                                         <table class="listTable" cellpadding="0" cellpadding="0">
+                <tr class="listTableHead">
+                    <td>No.</td>
+                    <td>Time</td>
+                    <td>Total</td>
+                    <td>Payment</td>
+                    <td>Delivery</td>
+                    <td>Status</td>
+                    <td>Operation</td>
+                </tr>
+                <html:foreach expression="OrderInfo order in orderList">
+                <tr class="listTableMain">
+                    <td><a href="/User/OrderDetail.aspx?ID=<$order.ID$>"><$order.OrderNumber$></a></td>
+                    <td><$order.AddDate$></td>
+                    <td>￥<$(order.ProductMoney-order.FavorableMoney+order.ShippingMoney+order.OtherMoney)$></td>                    
+                    <td><$order.PayName$></td>
+                    <td><$ShippingBLL.ReadShippingCache(order.ShippingID).Name$></td>
+                    <td id="OrderStatus<$order.ID$>"><$OrderBLL.ReadOrderStatus(order.OrderStatus)$></td>
+                    <td id="OrderOperate<$order.ID$>"><a href="/User/OrderDetail.aspx?ID=<$order.ID$>">view</a>  <$OrderBLL.ReadOrderUserOperate(order.ID,order.OrderStatus,order.PayKey)$></td>
+                </tr>
+                </html:foreach>
+            </table>
+                                                		<hr class="art_hr"/>
+                                                        <$commonPagerClass.ShowPage()$>  
+                                                <!--</div>-->
+                                        </div>
+                                </form>
+                                </div>
+                                <script language="javascript" type="text/javascript" src="<html:templatePath>/Js/Order.js" ></script>
+                        		<html:include file="/User/UserLeft.htm" />
+                        </div>
+                </div>
+
+        </div>
+        <html:include file="/Foot.htm" />
+</body>
+</html>

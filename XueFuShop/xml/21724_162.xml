@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPaper CateId="162" QuestionNum="25" SingleNum="2" MultiNum="1" PanDunNum="22">
+  <Single>
+    <QuestionInfo1 id="29984">
+      <Question>给潜在客户打促进电话的目的主要是(    )。</Question>
+      <A>约客户见面</A>
+      <B>打发时间</B>
+      <C>问他买不买</C>
+      <D>完成领导要求</D>
+      <Answer>A</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29984</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="31267">
+      <Question>对于感性的客户，销售顾问应多采用（   ），让客户感受到有车阶级自驾游的欢乐生活，让将结婚的客户沉浸在美好的未来，客户感动又激动，自然也会高兴地向你购车了! </Question>
+      <A>自然成交法</A>
+      <B>霸王硬上法    </B>
+      <C>包子馒头法   </C>
+      <D>情境销售法  </D>
+      <Answer>D</Answer>
+      <CustomerAnswer>A</CustomerAnswer>
+      <Style>1</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31267</QuestionId>
+    </QuestionInfo2>
+  </Single>
+  <Multi>
+    <QuestionInfo1 id="30262">
+      <Question>老客户联系的方法有哪些：（      ）</Question>
+      <A>短信息，问候</A>
+      <B>电话，套近乎约见面</B>
+      <C>活动，吸引客户来店</C>
+      <D>邮件，传递好消息建立信心</D>
+      <Answer>ABCD</Answer>
+      <CustomerAnswer>AB</CustomerAnswer>
+      <Style>2</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30262</QuestionId>
+    </QuestionInfo1>
+  </Multi>
+  <PanDuan>
+    <QuestionInfo1 id="30261">
+      <Question>老客户转介，你可以利用MTV的方法，每月（电）邮件客户一些与公司产品相关的信息，至少~3个月~电话客户一次，保持好长久的关系，自然老客户身边有人要购车时，才会向你介绍。
+</Question>
+      <A>2个月</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30261</QuestionId>
+    </QuestionInfo1>
+    <QuestionInfo2 id="30041">
+      <Question>当客户提出竞争车型对比需求时，到前台拿取“竞车对比目录”给客户做图文并茂的说明，不失为一个正确的选择。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30041</QuestionId>
+    </QuestionInfo2>
+    <QuestionInfo3 id="29983">
+      <Question>客户来店赏车，不作完整的流程也没有关系的，因为我们是做无压力销售的。</Question>
+      <A>对每一个来赏车的客户都要主动引导(劝导)客户做完整的销售流程，也就是要到书面报价然后引导客户进入议价阶段(通常使用优惠的手段吸引)，快乐邀请客户今日购买，能够对每一个顾客做完整销售流程，将提高你的现抓和成</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29983</QuestionId>
+    </QuestionInfo3>
+    <QuestionInfo4 id="30042">
+      <Question>二三级城市的客户来展厅很困难，经常或定期对偏远的小县市举办小型车展及试乘试驾会是扩大展厅销售进行行商很重要的做法。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30042</QuestionId>
+    </QuestionInfo4>
+    <QuestionInfo5 id="30044">
+      <Question>我们经常遇到客户在价格上咄咄逼人，这些人经常是没诚心买车的人，即使答应他们的开价，也会借故离开再去寻价，是很坏的行为，我们要特别当心。</Question>
+      <A>但其实客户都是好人，你努力积极为客户解决购车的困难处，客户感激在心，对价格也就不太坚持了，但如果你都不提供服务，老在展厅等客户主动上门向你买车，你没有了服务的价值，当然只能拼价格，然后抱怨客户很差劲，</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30044</QuestionId>
+    </QuestionInfo5>
+    <QuestionInfo6 id="30000">
+      <Question>卖车是高价位高档次的工作，和客户交谈的时候要100%自信，千万不可以流露出你的业绩不好，坏了客户对你的信心。
+</Question>
+      <A>视情况装可怜，告诉客户这个月业绩还少一个，没达标是要扣工资的，而且已经到月底了，请客户帮忙，欠他一个人情，将来售后服务一定认真为客户服务。同时，你的表情也要做出可怜状。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30000</QuestionId>
+    </QuestionInfo6>
+    <QuestionInfo7 id="30695">
+      <Question>客户说暂时没钱买车了，~表示他的购买力出问题了，这个交易就完不成了。~</Question>
+      <A>“没钱”是最不可能的理由，通常是客户的借口，当你感到客户在推托的时候，你千万不能气馁，而是要更热情的邀约客户，买不买没关系，想办法见到客户，你就成功了。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30695</QuestionId>
+    </QuestionInfo7>
+    <QuestionInfo8 id="31259">
+      <Question>给潜在客户打促进电话的目的主要是~问他买不买~。</Question>
+      <A>约客户见面</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31259</QuestionId>
+    </QuestionInfo8>
+    <QuestionInfo9 id="30264">
+      <Question>“买车既要看外观，最重要的是要亲身体验（试驾）”，试乘试驾是邀约客户见面，培养感情的好方法，通过多次地试驾才会对车辆有更深刻的认识，从而增进与客户的关系。
+</Question>
+      <A>2个月</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30264</QuestionId>
+    </QuestionInfo9>
+    <QuestionInfo10 id="30696">
+      <Question>顾问就是要能够为客户解决问题，现金不够可建议贷款，客户条件不好，在送审之前要小心按揭的额度，不要做过度的承诺，否则让客户觉得没面子就会很麻烦，在公司允许的情况下，可考虑不同的商业银行，审核的条件宽紧会不同。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30696</QuestionId>
+    </QuestionInfo10>
+    <QuestionInfo11 id="30240">
+      <Question>上门是提供便利的销售服务，客户同意让你上门，是给你巨大的机会，你一定要珍惜。不要怕麻烦或懒惰，当电话邀约客户，客户不方便就马上要求上门，切记，只有见到面了，销售才有机会。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30240</QuestionId>
+    </QuestionInfo11>
+    <QuestionInfo12 id="30693">
+      <Question>搞销售被客户拒绝是很正常的，~若客户表示暂时不买车了，我们就可以停止和客户联系了。~</Question>
+      <A>不论客户每次拒绝的理由是什么，在没有做完7次的见面邀约之前，决不停止，能够邀约客户超过5次，你的成功率就能超过80%。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30693</QuestionId>
+    </QuestionInfo12>
+    <QuestionInfo13 id="30694">
+      <Question>给潜在客户打电话的主要目的是~通过电话和客户谈条件。~</Question>
+      <A>不断找机会要求与客户见面，电话里面不谈生意，只有见面了才有机会签合同。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30694</QuestionId>
+    </QuestionInfo13>
+    <QuestionInfo14 id="30692">
+      <Question>TOP销售顾问能把车卖好，~主要是靠展厅找客人。~</Question>
+      <A>光靠展厅来店是不够的，通常他们展厅成交的台数占不到一半，其他更多的是靠外拓与老客户转介绍。所以,想多卖车就要 1：作好值班。2：经常联系服务老客户。3：有计划的外拓,扩大基盘。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>1</CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30692</QuestionId>
+    </QuestionInfo14>
+    <QuestionInfo15 id="30241">
+      <Question>~压力销售法是必要的，客户来看车，我们要不断的给客户施加压力，找很多人围住顾客，让他喘不过气来，他想不定车都不行，我们就顺利完成销售了。~
+</Question>
+      <A>卖车没有捷径的，顾问要用遵守销售原理原则的方法和技巧来提供销售服务，千万不要以为用小聪明，给客户不合适的压力让客户定车，他就会来开票。
+</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30241</QuestionId>
+    </QuestionInfo15>
+    <QuestionInfo16 id="29998">
+      <Question>客户买车都希望是买到最优惠的，也就是价格最便宜的，所以，要多卖车就要和经理搞好关系，才能获得额外的特批。
+</Question>
+      <A>而这个“最优惠”是指客户的心理价位期望值，每个客人都不同，所以需要你和客户去磨，了解客户的消费心理。这里要特别指出的是，除了价格优惠之外，更重要的是你要尽量用价值来替换价格的优惠，如：送赠品，强调售后</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29998</QuestionId>
+    </QuestionInfo16>
+    <QuestionInfo17 id="30238">
+      <Question>向客户问定单的5个指标分别是：1、客户对你有足够的信心。2、你了解客户正确的需求。3、沟通过程全程热情。4、你的销售是诚实、公开的。5、你提供给客户的是能够满足客户的正确的产品： 你在内心里衡量， 与顾客的交流过程已经符合这5 个指标的话，表示你向客户要定单的时机已经到了。
+</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30238</QuestionId>
+    </QuestionInfo17>
+    <QuestionInfo18 id="29999">
+      <Question>记住客户的爱好，并记录在客户信息表上，当客户再次来店时候，提供客户喜欢的饮料或食品香烟或尊重尊贵的关怀服务等，让客户知道你对他的关注，是取得客户认同的不二法则。</Question>
+      <A>而这个“最优惠”是指客户的心理价位期望值，每个客人都不同，所以需要你和客户去磨，了解客户的消费心理。这里要特别指出的是，除了价格优惠之外，更重要的是你要尽量用价值来替换价格的优惠，如：送赠品，强调售后</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29999</QuestionId>
+    </QuestionInfo18>
+    <QuestionInfo19 id="29997">
+      <Question>客户表达了对福克斯十足的满意度，我们还是要巨细靡遗的做好绕车介绍，每个方位都不能马虎。
+</Question>
+      <A>你可以略过产品介绍与试驾的过程, 你要利用时间与客户套近乎尽量拉近关系, 让客户认同你, 创造您的价值, 在和客户议价的时候才会有更多的筹码。</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>29997</QuestionId>
+    </QuestionInfo19>
+    <QuestionInfo20 id="30698">
+      <Question>~在和客户沟通的过程中，若不小心造成客户的误解而争吵了起来，或让客户发脾气了，通常就没法在和客户联系了，即使打电话，客户也不会理会，索性放弃，再重新找新的客户。~</Question>
+      <A>坚持是一种毅力也是一种美德，有时候客户和你发了脾气，即使第二天他后悔了，但因为面子也不愿再和你接触，你要了解客户这种消费心理。这时候，通过他旁边的影响者(第三人)来进行劝说，或者通过你的主管，即换个人来</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>30698</QuestionId>
+    </QuestionInfo20>
+    <QuestionInfo21 id="31265">
+      <Question>结婚用品都要装扮地漂漂亮亮，婚车也不例外，因此附加精品就成了满足客户需求的关键，销售顾问适时地赠送给客户一些精品是不错的方法。</Question>
+      <A>
+      </A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>1</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31265</QuestionId>
+    </QuestionInfo21>
+    <QuestionInfo22 id="31266">
+      <Question>客户喜欢某种颜色的车型，~销售顾问一定要等这个颜色车型到店后再邀约客户来店，以免让客户失望~。 </Question>
+      <A>只要有相同颜色的车型到店，销售顾问就可以以此为邀约借口，邀顾客来店看实际颜色，但切记试驾一定要相同级别车型才可以</A>
+      <B>
+      </B>
+      <C>
+      </C>
+      <D>
+      </D>
+      <Answer>0</Answer>
+      <CustomerAnswer>
+      </CustomerAnswer>
+      <Style>3</Style>
+      <CompanyId>0</CompanyId>
+      <QuestionId>31266</QuestionId>
+    </QuestionInfo22>
+  </PanDuan>
+</TestPaper>
