@@ -400,7 +400,7 @@ $(document).ready(function(){
             // });
             // 
             <html:if expression="string.IsNullOrEmpty(CookiesHelper.ReadCookieValue("PublicCourseView")) && (",251,258,265,276,286,293,302,308,312,318,327,341,354,441,").IndexOf(","+studyPost.PostId.ToString()+",") < 0">
-            <html:if expression="DateTime.Now > Convert.ToDateTime("2018-5-21 0:00:00")">
+            <html:if expression="DateTime.Now < Convert.ToDateTime("2018-5-28 0:00:00")">
             layer.open({
                 type: 1,
                 title: false,
@@ -415,12 +415,12 @@ $(document).ready(function(){
             layer.open({            
                 type: 1,
                 title: false,
-                area: ['895px','501px'],
+                area: ['961px','541px'],
                 skin: 'layui-layer-nobg', //没有背景色
                 anim: 2,
                 resize: false,
                 scrollbar: false,
-                content: '<div class="courselayer"><img src="<html:templatePath>/images/dkj/6054.png"><div class="content"><div id="lookvideo"><i class="iconfont icon-bofang"></i></div></div></div>'
+                content: '<div class="courselayer"><img src="<html:templatePath>/images/dkj/6073.png"><div class="content"><div id="lookvideo"><i class="iconfont icon-bofang"></i></div></div></div>'
             });
             </html:if>
             <html:csharp>CookiesHelper.AddCookie("PublicCourseView","1");</html:csharp>
@@ -441,10 +441,10 @@ $(document).ready(function(){
 
     $("body").on('click', '.courselayer #lookvideo', function(event) {
         layer.closeAll();
-        <html:if expression="DateTime.Now > Convert.ToDateTime("2018-5-21 0:00:00")">
+        <html:if expression="DateTime.Now < Convert.ToDateTime("2018-5-28 0:00:00")">
         OpenVideo(6065,'孟特大课件：做好坦克加步兵，客流订单双丰收');
         <html:else>
-        OpenVideo(6054,'孟特大课件：邀约不简单，用对方法赚钱快');
+        OpenVideo(6073,'孟特大课件：新生代员工管理 之 理性认识新生代员工（上）');
         </html:if>
     });
 

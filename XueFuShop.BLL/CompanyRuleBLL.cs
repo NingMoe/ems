@@ -210,7 +210,7 @@ namespace XueFuShop.BLL
                 //周数
                 PostWeekNum = PostWeekNum - GetPublicWeekNum(PostId, StartDate, EndDate);
                 //默认销售部门两门，其他部门一门
-                if (!StringHelper.CompareString("4,5,7,8,64", PostId.ToString()))
+                if (!StringHelper.CompareString("4,5,8,64,478,484", PostId.ToString()))
                     CourseNum = PostWeekNum;
             }
             return PostWeekNum * 2 - CourseNum;
