@@ -14,7 +14,7 @@
         </li>
         <asp:HiddenField ID="OldStudyPostId" runat="server" />
     </ul>	<ul>		<li class="left">学习岗位：</li>		<li class="right" id="DropList1" runat="server">
-		    <asp:DropDownList ID="StudyPostId" runat="server"></asp:DropDownList> 正在进行哪个岗位的课程学习
+		    <asp:DropDownList ID="StudyPostId" runat="server"></asp:DropDownList> <span id="posttip">正在进行哪个岗位的课程学习</span>
         </li>
     </ul>    <ul id="PostStart" runat="server">		<li class="left">岗位计划开始日期：</li>		<li class="right" runat="server">
         <asp:HiddenField ID="RegDate" runat="server" />
@@ -29,7 +29,24 @@ $(function(){
 			return false;
 		}
 	})
-	
+
+    $("#ctl00_ContentPlaceHolder_StudyPostId").change(function() {
+        var studyPostID = $(this).val();
+        var studyPostTips = "";
+        switch (studyPostID) {
+            case "8":
+                studyPostTips = "提示：此岗位认证考试的前提是通过“<em>销售主管</em>”的认证。";
+                break;
+            case "484":
+                studyPostTips = "提示：此岗位认证考试的前提是通过“<em>销售顾问入门</em>”和“<em>销售顾问练习生</em>”的岗位认证。";
+                break;
+            case "5":
+                studyPostTips = "提示：此岗位认证考试的前提是通过“<em>销售顾问练习生</em>”的岗位认证考试。";
+                break;
+        }
+        $("#posttip").html(studyPostTips);
+    })
+
 	$("#ctl00_ContentPlaceHolder_CompanyName").bigAutocomplete({
 	    width:"304px",
 		url:"Ajax.aspx?Action=SearchCompanyName",
@@ -60,9 +77,10 @@ $(function(){
 		        
 		    });
 		}
-	});
-})
-</script><script language="javascript" type="text/javascript">    function checkMobile(){        var mobile=$("#"+globalIDPrefix+"Mobile").val();        var userID=<%=userID %>;        if(mobile != ""){            var isPass=false;            $.ajax({
+    });
+
+    
+})    function checkMobile(){        var mobile=$("#"+globalIDPrefix+"Mobile").val();        var userID=<%=userID %>;        if(mobile != ""){            var isPass=false;            $.ajax({
                 type: 'POST',
 			  	url: 'Ajax.aspx?Action=CheckMobile',
 			  	data: {Mobile: mobile,UserID: userID},

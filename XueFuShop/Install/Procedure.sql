@@ -8272,19 +8272,20 @@ CREATE PROCEDURE [dbo].[SocoShop_AddTestSetting]
 @lowScore int,
 @testStartTime nvarchar(500),
 @testEndTime nvarchar(500),
-@companyId int
+@companyId int,
+@testInterval int
 AS 
     declare @recordID int
 	set @recordID=0
     select @recordID=[Id] from [SocoShop_TestSetting] where [CourseId]=@courseId and [CompanyId]=@companyId
     if (@recordID>0)
 	begin
-		Update [SocoShop_TestSetting] set PaperScore=@paperScore,TestQuestionsCount=@TestQuestionsCount,TestTimeLength=@testTimeLength,LowScore=@lowScore,TestStartTime=@testStartTime,TestEndTime=@testEndTime where [CourseId]=@courseId and CompanyId=@CompanyId
+		Update [SocoShop_TestSetting] set PaperScore=@paperScore,TestQuestionsCount=@TestQuestionsCount,TestTimeLength=@testTimeLength,LowScore=@lowScore,TestStartTime=@testStartTime,TestEndTime=@testEndTime,TestInterval=@testInterval where [CourseId]=@courseId and CompanyId=@CompanyId
 		SELECT @recordID
 	end
 	else
 	begin
-		Insert into [SocoShop_TestSetting] (CourseId,PaperScore,TestQuestionsCount,TestTimeLength,LowScore,TestStartTime,TestEndTime,CompanyId) values(@courseId,@paperScore,@testQuestionsCount,@testTimeLength,@lowScore,@testStartTime,@testEndTime,@companyId)
+		Insert into [SocoShop_TestSetting] (CourseId,PaperScore,TestQuestionsCount,TestTimeLength,LowScore,TestStartTime,TestEndTime,CompanyId,TestInterval) values(@courseId,@paperScore,@testQuestionsCount,@testTimeLength,@lowScore,@testStartTime,@testEndTime,@companyId,@testInterval)
 		SELECT @@identity
 	end
 ' 

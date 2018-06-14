@@ -425,6 +425,32 @@
                         content: '/User/CourseURL.aspx?Url='+ $(this).data('src') //iframe的url
                     }); 
                 });
+
+                
+
+                <html:if expression="StringHelper.CompareSingleString("478,484",User.StudyPostID.ToString())">
+
+                    
+                layer.open({
+                    type: 1,
+                    title: '调整通知',
+                    closeBtn: 0, //不显示关闭按钮
+                    shade: [0],
+                    area: ['340px', '215px'],
+                    offset: 'rb', //右下角弹出
+                    time: 4000, //2秒后自动关闭
+                    anim: 2,
+                    <html:if expression="StringHelper.CompareString(ParentCompanyID,"517,399,581")">
+                    content: '<div style="font-size:16px; padding:10px 10px;"><p style="line-height:180%;">从2018-6-4起，"销售顾问练习生"和"销售顾问进阶"两个岗位，学习进度由一周一门调整为一周两门，同时学习进度重新从0开始计算，请大家知悉。</p></div>'
+                    <html:else>
+                    content: '<div style="font-size:16px; padding:10px 10px;"><p style="line-height:180%;">从2018-6-4起，"销售顾问练习生"和"销售顾问进阶"两个岗位，学习进度由一周一门调整为一周两门，请大家知悉。</p></div>'
+                    </html:if>
+                });
+
+                </html:if>
+
+
+                
             });
 
             $(".origin .module").hover(function() {

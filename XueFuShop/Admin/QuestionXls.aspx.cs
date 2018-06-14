@@ -6,6 +6,7 @@ using XueFu.EntLib;
 using XueFuShop.BLL;
 using XueFuShop.Models;
 using XueFuShop.Pages;
+using XueFuShop.Common;
 
 namespace XueFuShop.Admin
 {
@@ -112,6 +113,7 @@ namespace XueFuShop.Admin
             if (Action == "TestCateFileOut")
             {
                 ProductInfo product = ProductBLL.ReadProduct(CateId);
+                AdminLogBLL.AddAdminLog(ShopLanguage.ReadLanguage("TestCateFileOut"), product.Name);
                 if (!string.IsNullOrEmpty(product.Accessory)) ExcelOut(product.Accessory, product.Name, QuestionOutNum, 1);
             }
             else if (Action == "BatchFileOut")
@@ -124,6 +126,7 @@ namespace XueFuShop.Admin
                 foreach (string courseID in courseIDStr.Split(','))
                 {
                     string courseName = CourseBLL.ReadCourse(int.Parse(courseID)).CourseName;
+                    AdminLogBLL.AddAdminLog(ShopLanguage.ReadLanguage("TestCateFileOut"), courseName);
                     ExcelOut(xls, courseID, courseName, QuestionOutNum, 1);
                 }
 
@@ -138,6 +141,7 @@ namespace XueFuShop.Admin
             }
             else
             {
+                AdminLogBLL.AddAdminLog(ShopLanguage.ReadLanguage("TestCateFileOut"), CourseName.Text);
                 ExcelOut(CateId.ToString(), CourseName.Text, QuestionOutNum, 1);
             }
         }
@@ -152,10 +156,12 @@ namespace XueFuShop.Admin
             if (Action == "TestCateFileOut")
             {
                 ProductInfo product = ProductBLL.ReadProduct(CateId);
+                AdminLogBLL.AddAdminLog(ShopLanguage.ReadLanguage("TestCateFileOut"), product.Name);
                 if (!string.IsNullOrEmpty(product.Accessory)) ExcelOut(product.Accessory, product.Name, QuestionOutNum, 2);
             }
             else
             {
+                AdminLogBLL.AddAdminLog(ShopLanguage.ReadLanguage("TestCateFileOut"), CourseName.Text);
                 ExcelOut(CateId.ToString(), CourseName.Text, QuestionOutNum, 2);
             }
         }

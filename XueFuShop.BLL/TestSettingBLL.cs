@@ -221,6 +221,8 @@ namespace XueFuShop.BLL
                     testSetting.TestQuestionsCount = systemTestSetting.TestQuestionsCount;
                 if (testSetting.LowScore <= 0)
                     testSetting.LowScore = systemTestSetting.LowScore;
+                if (testSetting.TestInterval <= 0)
+                    testSetting.TestInterval = systemTestSetting.TestInterval;
 
                 //下面两项任一项为空，都采用公司默认设置
                 if (testSetting.TestStartTime == null || testSetting.TestEndTime == null)

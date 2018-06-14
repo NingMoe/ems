@@ -11,6 +11,7 @@
     @media screen and (max-width: 640px) {
         .layui-layer { left: 90px !important; top: 100px !important;}
     }
+    em{ color: red; }
     .QRCode { width: 221px; height: 261px; text-align: center; background: #fff; }
     .QRCode .codename { font-size: 14px; line-height: 180%; padding: 10px; white-space:nowrap; overflow: hidden; }
     .courselayer { margin: 0 auto; position: relative; color: #fff; }
@@ -48,10 +49,10 @@
         box-sizing: content-box;
     }
     .courselayer .tips {top:280px; left:240px; color: #ccc;}
-    .courselayer .iconfont { font-size: 100px; line-height: 50px; cursor: pointer; }
+    .courselayer .iconfont { font-size: 50px; line-height: 50px; cursor: pointer; }
     .courselayer .iconfont:hover { color: #18bd9c; }
     .courselayer .content:hover{background-color: rgb(0, 0, 0); opacity: 0.3;}
-    #lookvideo { left: calc(50% - 50px); top: calc(50% - 51px);}
+    #lookvideo { left: calc(50% - 25px); top: calc(50% - 25px);}
     </style>
     <link href='//cdn.webfont.youziku.com/webfonts/nomal/97729/19491/587af53df629d81b881ebe20.css' rel='stylesheet' type='text/css' />
     <link href='<$ShopConfig.ReadConfigInfo().IconFontPath$>' rel='stylesheet' type='text/css' />
@@ -64,8 +65,14 @@
             <p>当前位置：<a href="/">首页</a>>><a href="javascript:void(0);" class="active">学习大厅</a><span class="returnhome"><a href="/">返回首页</a></span></p>
         </div>
         <div class="left">
-            <div class="head">
-                <img src="<html:templatePath>/images/<$postImageName$>">
+            <div class="head" style="width:100%;">
+                <div class="courselayer">
+                    <img src="<html:templatePath>/images/dkj/6098.png">
+                    <div class="content">
+                        <div id="lookvideo"><i class="iconfont icon-bofang"></i></div>
+                    </div>
+                </div>
+                <!-- <img src="<html:templatePath>/images/<$postImageName$>"> -->
             </div>
             <!-- <a class="joincourse" href="javascript:;">参加该课程</a> -->
             <!-- <div class="info">
@@ -78,13 +85,39 @@
                     <ul>
                         <html:foreach expression="ProductInfo product in newProductList">
                         <li>
-                            <a href="javascript:void"><$product.Name$></a>
+                            <a style="width:98%;" href="javascript:void"><$product.Name$></a>
+                            <html:csharp>/*</html:csharp>
                             <span><$AttributeRecordBLL.ReadAttributeRecord(newProductAttributeRecordList, 3, product.ID).Value$></span>
+                            <html:csharp>*/</html:csharp>
                         </li>
                         </html:foreach>
                     </ul>
                 </div>
             </div>
+
+            <html:if expression="StringHelper.CompareSingleString("5,484,8",User.StudyPostID.ToString())">
+            <div class="notice-board">
+                <div class="title">友情提示</div>
+                <div class="board" style="width:238px; height: 80px; padding:10px; line-height: 180%;">
+                    <html:csharp>
+                    string studyPostTips="";
+                        switch (User.StudyPostID) {
+                            case 8:
+                                studyPostTips = "<em>销售经理</em> 岗位认证考试的前置条件是需要通过 <em>销售主管</em> 的认证考试，";
+                                break;
+                            case 484:
+                                studyPostTips = "<em>销售顾问进阶</em> 岗位认证考试的前置条件是通过 <em>销售顾问入门</em> 和 <em>销售顾问练习生</em> 的岗位认证考试，";
+                                break;
+                            case 5:
+                                studyPostTips = "<em>销售顾问入门</em> 岗位认证考试的前置条件是通过 <em>销售顾问练习生</em> 的岗位认证考试，";
+                                break;
+                        }
+                    </html:csharp>
+                    <$studyPostTips$>请您知悉。
+                </div>
+            </div>
+            </html:if>
+                
         </div>
         <div class="layer-container">
             <div class="plan-main">
@@ -386,7 +419,7 @@ $(document).ready(function(){
             }
             $(".step-item:not(.xx) .step-anchor:first").click();
         }
-        
+        <html:csharp>/*</html:csharp>
         layer.ready(function(){
             // layer.open({            
             //     type: 1,
@@ -400,33 +433,64 @@ $(document).ready(function(){
             // });
             // 
             <html:if expression="string.IsNullOrEmpty(CookiesHelper.ReadCookieValue("PublicCourseView")) && (",251,258,265,276,286,293,302,308,312,318,327,341,354,441,").IndexOf(","+studyPost.PostId.ToString()+",") < 0">
-            <html:if expression="DateTime.Now < Convert.ToDateTime("2018-5-28 0:00:00")">
+            <html:if expression="DateTime.Now < Convert.ToDateTime("2018-6-11 0:00:00")">
             layer.open({
                 type: 1,
                 title: false,
-                area: ['897px','507px'],
+                area: ['961px','540px'],
                 skin: 'layui-layer-nobg', //没有背景色
                 anim: 2,
                 resize: false,
                 scrollbar: false,
-                content: '<div class="courselayer"><img src="<html:templatePath>/images/dkj/6065.png"><div class="content"><div id="lookvideo"><i class="iconfont icon-bofang"></i></div></div></div>'
+                content: '<div class="courselayer"><img src="<html:templatePath>/images/dkj/6082.png"><div class="content"><div id="lookvideo"><i class="iconfont icon-bofang"></i></div></div></div>'
             });
             <html:else>
             layer.open({            
                 type: 1,
                 title: false,
-                area: ['961px','541px'],
+                area: ['894px','503px'],
                 skin: 'layui-layer-nobg', //没有背景色
                 anim: 2,
                 resize: false,
                 scrollbar: false,
-                content: '<div class="courselayer"><img src="<html:templatePath>/images/dkj/6073.png"><div class="content"><div id="lookvideo"><i class="iconfont icon-bofang"></i></div></div></div>'
+                content: '<div class="courselayer"><img src="<html:templatePath>/images/dkj/6098.png"><div class="content"><div id="lookvideo"><i class="iconfont icon-bofang"></i></div></div></div>'
             });
             </html:if>
             <html:csharp>CookiesHelper.AddCookie("PublicCourseView","1");</html:csharp>
             </html:if>
         });
 
+        <html:if expression="StringHelper.CompareSingleString("5,484,8",User.StudyPostID.ToString())">
+        var studyPostID=<$User.StudyPostID$>;
+        var studyPostTips="";
+                switch (studyPostID) {
+                    case 8:
+                        studyPostTips = "<em>销售经理</em> 岗位认证考试的前置条件是需要通过 <em>销售主管</em> 的认证考试，";
+                        break;
+                    case 484:
+                        studyPostTips = "<em>销售顾问进阶</em> 岗位认证考试的前置条件是通过 <em>销售顾问入门</em> 和 <em>销售顾问练习生</em> 的岗位认证考试，";
+                        break;
+                    case 5:
+                        studyPostTips = "<em>销售顾问入门</em> 岗位认证考试的前置条件是通过 <em>销售顾问练习生</em> 的岗位认证考试，";
+                        break;
+                }
+                    
+                layer.open({
+                    type: 1,
+                    title: '友情提示',
+                    closeBtn: 0, //不显示关闭按钮
+                    shade: [0],
+                    area: ['340px', '185px'],
+                    offset: 'rb', //右下角弹出
+                    time: 5000, //4秒后自动关闭
+                    anim: 2,
+                    content: '<div style="font-size:16px; padding:10px 10px;"><p style="line-height:180%;">'+studyPostTips+'请您知悉。</p></div>'
+                });
+
+                </html:if>
+
+
+        <html:csharp>*/</html:csharp>
     });
 
     $("body").on('click', '.courselayer #closelayer', function(event) {
@@ -441,10 +505,10 @@ $(document).ready(function(){
 
     $("body").on('click', '.courselayer #lookvideo', function(event) {
         layer.closeAll();
-        <html:if expression="DateTime.Now < Convert.ToDateTime("2018-5-28 0:00:00")">
-        OpenVideo(6065,'孟特大课件：做好坦克加步兵，客流订单双丰收');
+        <html:if expression="DateTime.Now < Convert.ToDateTime("2018-6-11 0:00:00")">
+        OpenVideo(6082,'孟特大课件：做好坦克加步兵，客流订单双丰收');
         <html:else>
-        OpenVideo(6073,'孟特大课件：新生代员工管理 之 理性认识新生代员工（上）');
+        OpenVideo(6098,'孟特大课件：好的5S是成功赚钱的开始（整理）');
         </html:if>
     });
 

@@ -444,7 +444,8 @@ namespace XueFuShop.BLL
             TestPaperInfo PaperModel = new TestPaperInfo();
             string filePath = ReadTestPaperPath(userID, productID);
             TestPaperReportInfo testPaper = ReadTheLatestPaper(userID, productID);
-            if (File.Exists(filePath) && (testPaper.TestDate == DateTime.MinValue || (DateTime.Now - testPaper.TestDate).TotalHours >= ShopConfig.ReadConfigInfo().TestInterval))
+            TestSettingInfo testSetting = TestSettingBLL.ReadTestSetting(companyID, productID);
+            if (File.Exists(filePath) && (testPaper.TestDate == DateTime.MinValue || (DateTime.Now - testPaper.TestDate).TotalHours >= testSetting.TestInterval))
             {
                 XmlHelper XmlDoc = new XmlHelper(filePath);
 
@@ -479,7 +480,7 @@ namespace XueFuShop.BLL
                 }
 
                 //UserInfo user = UserBLL.ReadUser(userID);
-                TestSettingInfo testSetting = TestSettingBLL.ReadTestSetting(companyID, productID);
+                //TestSettingInfo testSetting = TestSettingBLL.ReadTestSetting(companyID, productID);
                 if (QuestionNum == 0)
                     Scorse = 0;
                 else
@@ -511,7 +512,7 @@ namespace XueFuShop.BLL
                 TestPaperBLL.AddPaper(PaperModel);
                 File.SetLastWriteTime(filePath, DateTime.Now);
             }
-            if ((testPaper.TestDate > DateTime.MinValue && (DateTime.Now - testPaper.TestDate).TotalHours < ShopConfig.ReadConfigInfo().TestInterval))
+            if ((testPaper.TestDate > DateTime.MinValue && (DateTime.Now - testPaper.TestDate).TotalHours < testSetting.TestInterval))
             {
                 PaperModel.Scorse = testPaper.Score;
             }

@@ -639,11 +639,11 @@ namespace XueFuShop.Pages
                                     isPass = true;
                                     break;
                                 }
-                                else if (!isSpecial && info.IsPass == 0 && ((DateTime.Now - info.TestDate).TotalHours < ShopConfig.ReadConfigInfo().TestInterval))
+                                else if (!isSpecial && info.IsPass == 0 && ((DateTime.Now - info.TestDate).TotalHours < testSetting.TestInterval))
                                 {
                                     singleData += "\"istest\":\"false\",";
                                     singleData += "\"pass\":\"false\",";
-                                    singleData += "\"hour\":\"" + (ShopConfig.ReadConfigInfo().TestInterval - (int)(DateTime.Now - info.TestDate).TotalHours) + "\",";
+                                    singleData += "\"hour\":\"" + (testSetting.TestInterval - (int)(DateTime.Now - info.TestDate).TotalHours) + "\",";
                                     isTest = false;
                                     break;
                                 }

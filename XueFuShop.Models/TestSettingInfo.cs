@@ -91,5 +91,10 @@ namespace XueFuShop.Models
             set { companyId = value; }
             get { return companyId; }
         }
+
+        /// <summary>
+        /// øº ‘º‰∏Ù
+        /// </summary>
+        public int TestInterval { get; set; } = 36;
     }
 }

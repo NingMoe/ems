@@ -69,18 +69,18 @@ namespace MobileEMS
                             Response.Write("<script>alert('您已通过，请选择其它课程！');</script>");
                             Response.End();
                         }
-                        if ((DateTime.Now - Item.TestDate).TotalHours < ShopConfig.ReadConfigInfo().TestInterval)
+                        if ((DateTime.Now - Item.TestDate).TotalHours < testSetting.TestInterval)
                         {
                             if (testSetting.TestStartTime != null || testSetting.TestEndTime != null)
                                 Response.Write("<script>alert('您已经参加过考试，暂不能重考！');window.close();</script>");
                             else
-                                Response.Write("<script>alert('考完" + ShopConfig.ReadConfigInfo().TestInterval + "小时后才能重考，请选择其它课程！');history.go(-1);</script>");
+                                Response.Write("<script>alert('考完" + testSetting.TestInterval + "小时后才能重考，请选择其它课程！');history.go(-1);</script>");
                             Response.End();
                         }
                     }
                 }
 
-                if ((File.Exists(filePath) && (DateTime.Now - File.GetLastWriteTime(filePath)).TotalHours < ShopConfig.ReadConfigInfo().TestInterval))//TempPaperInfo != null && (DateTime.Now - TempPaperInfo.TestDate).TotalHours < 72
+                if ((File.Exists(filePath) && (DateTime.Now - File.GetLastWriteTime(filePath)).TotalHours < testSetting.TestInterval))//TempPaperInfo != null && (DateTime.Now - TempPaperInfo.TestDate).TotalHours < 72
                 {
                     bool HaveTest = false;
                     XmlHelper XmlDoc1 = new XmlHelper(filePath);

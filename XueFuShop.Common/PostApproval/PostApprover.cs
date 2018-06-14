@@ -7,7 +7,7 @@ namespace XueFuShop.Common
 {
     public class PostApprover
     {
-        private string approvalPostString = "|478|5|484|64|$|4|8|";
+        private string approvalPostString = "|478|5|484|$|4|8|";
         private List<PostPassInfo> postPassList = null;
 
         public int NextPostID { get; private set; }

@@ -197,7 +197,7 @@ namespace MobileEMS
                         Model.UserId = base.UserID;
                         Model.CateIdCondition = Info.ID.ToString();
                         Model.GroupCondition = "CateId";
-                        TestPaperInfo TestPaperModel = TestPaperBLL.ReadList(Model).Find(delegate(TestPaperInfo TempModel) { return TempModel.CateId == Info.ID; });
+                        TestPaperInfo TestPaperModel = TestPaperBLL.ReadList(Model).Find(delegate (TestPaperInfo TempModel) { return TempModel.CateId == Info.ID; });
                         if (TestPaperModel != null) CourseModel.TestCount = TestPaperModel.TestNum;
                         else CourseModel.TestCount = 0;
                         CourseModel.IsPass = StringHelper.CompareSingleString(PassCourseId, Info.ID.ToString());
@@ -610,16 +610,18 @@ namespace MobileEMS
                 //通过的课程不用显示
                 //if (!StringHelper.CompareSingleString(passPostCourseID, Info.ID.ToString()))
                 {
+                    TestSettingInfo testSetting = TestSettingBLL.ReadTestSetting(base.UserCompanyID, Info.ID);
+
                     MCourseInfo CourseModel = new MCourseInfo();
                     CourseModel.ClassID = Info.ID.ToString();
                     CourseModel.Title = Info.Name;
                     CourseModel.IsPass = false;
                     CourseModel.PageCount = pageCount;
-                    TestPaperReportInfo currentPaper = noPassTestPaperList.Find(delegate(TestPaperReportInfo tempPaper) { return tempPaper.CourseID == Info.ID; });
+                    TestPaperReportInfo currentPaper = noPassTestPaperList.Find(delegate (TestPaperReportInfo tempPaper) { return tempPaper.CourseID == Info.ID; });
                     if (currentPaper != null)
                     {
                         //剩余时间
-                        int remainingTime = (ShopConfig.ReadConfigInfo().TestInterval - (int)(DateTime.Now - currentPaper.TestDate).TotalHours);
+                        int remainingTime = (testSetting.TestInterval - (int)(DateTime.Now - currentPaper.TestDate).TotalHours);
                         CourseModel.ValidDateShow = remainingTime > 0 ? remainingTime.ToString() : "";
                     }
                     CourseModel.OriginalPrice = Info.MarketPrice.ToString();
@@ -633,7 +635,6 @@ namespace MobileEMS
                         if (StringHelper.CompareSingleString(passPostCourseID, Info.ID.ToString()))
                             CourseModel.IsTest = false;
 
-                        TestSettingInfo testSetting = TestSettingBLL.ReadTestSetting(base.UserCompanyID, Info.ID);
                         if (testSetting != null && (testSetting.TestStartTime != null || testSetting.TestEndTime != null))
                         {
                             //指定时间考试考过了就不要再考了

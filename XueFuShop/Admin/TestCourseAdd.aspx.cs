@@ -255,6 +255,7 @@ namespace XueFuShop.Admin
                 TestTimeLength.Text = systemTestSetting.TestTimeLength.ToString();
                 QuestionsNum.Text = systemTestSetting.TestQuestionsCount.ToString();
                 LowScore.Text = systemTestSetting.LowScore.ToString();
+                TestInterval.Text = systemTestSetting.TestInterval.ToString();
             }
         }
 
@@ -265,6 +266,7 @@ namespace XueFuShop.Admin
             TestTimeLengthTips.Text = TestTimeLength.HintInfo = "留空考试时长则为" + systemTestSetting.TestTimeLength + "分钟";
             QuestionsNumTips.Text = QuestionsNum.HintInfo = "留空则为" + systemTestSetting.TestQuestionsCount + "道试题";
             LowScoreTips.Text = LowScore.HintInfo = "留空则及格线为" + systemTestSetting.LowScore + "分";
+            TestIntervalTips.Text = TestInterval.HintInfo = "两次考试相隔的小时数，留空为" + systemTestSetting.TestInterval + "小时。";
         }
 
         protected void HanderTestSetting(ProductInfo product)
@@ -277,6 +279,7 @@ namespace XueFuShop.Admin
                 string lowScore = LowScore.Text.Trim();
                 string testStartTime = TestStartTime.Text.Trim();
                 string testEndTime = TestEndTime.Text.Trim();
+                string testInterval = TestInterval.Text.Trim();
 
                 TestSettingInfo testSetting = new TestSettingInfo();
                 if (!string.IsNullOrEmpty(paperScore))
@@ -291,6 +294,10 @@ namespace XueFuShop.Admin
                 {
                     testSetting.TestStartTime = Convert.ToDateTime(testStartTime);
                     testSetting.TestEndTime = Convert.ToDateTime(testEndTime);
+                }
+                if (!string.IsNullOrEmpty(testInterval))
+                {
+                    testSetting.TestInterval = Convert.ToInt32(testInterval);
                 }
                 TestSettingBLL.UpdateTestSetting(product.CompanyID, product.ID, testSetting);
             }

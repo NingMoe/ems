@@ -31,7 +31,7 @@ namespace XueFuShop.DAL
         public void UpdateTestSetting(TestSettingInfo Model)
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("Update [" + ShopMssqlHelper.TablePrefix + "TestSetting] set [CourseId]=@courseId,[PaperScore]=@paperScore,[TestQuestionsCount]=@testQuestionsCount,[TestTimeLength]=@testTimeLength,[LowScore]=@lowScore,[TestStartTime]=@testStartTime,[TestEndTime]=@testEndTime,[CompanyId]=@companyId where [Id]=@id");
+            sql.Append("Update [" + ShopMssqlHelper.TablePrefix + "TestSetting] set [CourseId]=@courseId,[PaperScore]=@paperScore,[TestQuestionsCount]=@testQuestionsCount,[TestTimeLength]=@testTimeLength,[LowScore]=@lowScore,[TestStartTime]=@testStartTime,[TestEndTime]=@testEndTime,[CompanyId]=@companyId,[TestInterval]=@testInterval where [Id]=@id");
             SqlParameter[] par = (SqlParameter[])this.ValueParas(Model);
             DbSQLHelper.ExecuteSql(sql.ToString(), par);
         }
@@ -98,7 +98,8 @@ namespace XueFuShop.DAL
                                     new SqlParameter ("@lowScore",SqlDbType.Int),
                                     new SqlParameter ("@testStartTime",SqlDbType.DateTime),
                                     new SqlParameter ("@testEndTime",SqlDbType.DateTime),
-                                    new SqlParameter ("@companyId",SqlDbType.Int)
+                                    new SqlParameter ("@companyId",SqlDbType.Int),
+                                    new SqlParameter("@testInterval",SqlDbType.Int)
                                 };
             par[0].Value = Model.Id;
             par[1].Value = Model.CourseId;
@@ -123,6 +124,7 @@ namespace XueFuShop.DAL
                 par[7].Value = DBNull.Value;
             }
             par[8].Value = Model.CompanyId;
+            par[9].Value = Model.TestInterval;
             return par;
         }
 
@@ -155,6 +157,7 @@ namespace XueFuShop.DAL
                     }
                     Model.LowScore = dr.GetInt32(7);
                     Model.CompanyId = dr.GetInt32(8);
+                    Model.TestInterval = dr.GetInt32(9);
                 }
                 List.Add(Model);
             }
@@ -196,6 +199,7 @@ namespace XueFuShop.DAL
                 }
                 Model.LowScore = dr.GetInt32(5);
                 Model.CompanyId = dr.GetInt32(8);
+                Model.TestInterval = dr.GetInt32(9);
             }
             return Model;
         }
